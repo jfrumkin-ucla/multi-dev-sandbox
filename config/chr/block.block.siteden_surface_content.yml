@@ -1,0 +1,32 @@
+uuid: 4aea27c7-eb97-4c3d-a897-912304f2fb98
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+_core:
+  default_config_hash: CeM7x9cve0hAgwQMrkQhXPiIdvBubZ85EYLKWoh8WQI
+id: siteden_surface_content
+theme: siteden_surface
+region: content
+weight: -16
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '<front>'

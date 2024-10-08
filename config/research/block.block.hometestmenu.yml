@@ -1,0 +1,41 @@
+uuid: 34c569b8-b03a-4433-b67c-895c329feb5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.home-test-menu
+  module:
+    - block_style_plugins
+    - menu_block
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: hometestmenu
+theme: siteden_surface
+region: navigation
+weight: 0
+provider: null
+plugin: 'menu_block:home-test-menu'
+settings:
+  id: 'menu_block:home-test-menu'
+  label: 'Home Test Menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'home-test-menu:'
+  suggestion: main
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /home-test

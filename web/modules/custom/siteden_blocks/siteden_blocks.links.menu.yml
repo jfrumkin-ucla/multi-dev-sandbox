@@ -1,0 +1,6 @@
+siteden_blocks.admin:
+  title: 'Status Alert Message Settings'
+  description: 'Set text for status alert messaging'
+  parent: system.admin_config_development
+  route_name: siteden_blocks.settings
+  weight: 100

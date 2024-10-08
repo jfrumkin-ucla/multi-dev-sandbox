@@ -1,0 +1,34 @@
+uuid: cc1d3ae6-15e0-49cc-88e9-720441acce80
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - menu_block
+  theme:
+    - stable
+_core:
+  default_config_hash: QCu0GDMJH4OmyrY-jM0MUdd6o720WoHVuHmVooDg0wo
+id: stable_footer_menu1
+theme: stable
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: 'Footer Menu'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 1
+  expand_all_items: false
+  parent: 'footer:'
+  suggestion: footer
+  expand: 0
+visibility: {  }

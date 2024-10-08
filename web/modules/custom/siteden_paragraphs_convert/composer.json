@@ -1,0 +1,14 @@
+{
+    "name": "ucla/siteden_paragraphs_convert",
+    "type": "drupal-module",
+    "description": "Convert nodes to Layout Paragraphs.",
+    "minimum-stability": "dev",
+    "require": { },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "^9 || ^10"
+            }
+        }
+    }
+}

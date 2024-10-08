@@ -1,0 +1,25 @@
+uuid: 59700fc8-7243-4b97-b633-9064aa8a60fc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:e647662d-0276-489a-9de4-04b847b9d13c'
+  module:
+    - block_content
+  theme:
+    - siteden_surface
+id: bbresearchcreativeactivities
+theme: siteden_surface
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:e647662d-0276-489a-9de4-04b847b9d13c'
+settings:
+  id: 'block_content:e647662d-0276-489a-9de4-04b847b9d13c'
+  label: 'BB: Research & Creative Activities'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

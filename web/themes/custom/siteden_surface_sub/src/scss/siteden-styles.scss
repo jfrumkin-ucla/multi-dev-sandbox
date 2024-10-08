@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+// Global styles from the UCLA Web Component Library.
+@use "utilities/helper";
+@use "utilities/reset";
+@use "utilities/normalize";
+@use "utilities/spacing";
+@use "utilities/grid";
+@use "utilities/text-formatted";
+@use "utilities/typography";
+@use "utilities/backgrounds";
+@use "utilities/category-colors";
+@use "utilities/settings-tray";
+
+// Page layouts.
+@use "layout/layout";
+@use "layout/layout-builder";
+@use "layout/layout-paragraph";
+@use "layout/layout-fourcol";
+@use "layout/layout-threecol";
+@use "layout/layout-twocol";
+@use "layout/basic";
+
+// Content types.
+@use "content/node-general";
+@use "content/article";
+@use "content/event";
+@use "content/person";
+@use "content/photo-gallery";
+
+// Views.
+@use "views/articles";
+@use "views/events";
+@use "views/people";
+@use "views/photo-galleries";
+@use "views/taxonomy";
+@use "views/views";
+
+// Styles for components, using our own styles and those from the UCLA Web Component Library where feasible.
+@use "components/accordion";
+@use "components/admin-toolbar";
+@use "components/alerts";
+@use "components/banner-box";
+@use "components/banner-ribbon-text";
+@use "components/banner-text";
+@use "components/blockquote";
+@use "components/button";
+@use "components/cards";
+@use "components/card-grid";
+@use "components/card-person";
+@use "components/card-story";
+@use "components/category-filter";
+@use "components/dropdown";
+@use "components/focal-link";
+@use "components/footer";
+@use "components/form";
+@use "components/give-now";
+@use "components/google_cse";
+@use "components/headings";
+@use "components/hero-banner";
+@use "components/icon-link";
+@use "components/iframe";
+@use "components/links";
+@use "components/labels";
+@use "components/lists";
+@use "components/marketing-highlight";
+@use "components/marketing-highlight-horizontal";
+@use "components/material-icons";
+@use "components/media";
+@use "components/pagination";
+@use "components/people-grid";
+@use "components/responsive-iframe";
+@use "components/ribbons";
+@use "components/slider";
+@use "components/social";
+@use "components/social-follow";
+@use "components/surface-icons";
+@use "components/tables";
+@use "components/tabs";
+@use "components/tags";
+@use "components/wysiwyg-feature-block";
+
+@use "components/header/header";
+@use "components/header/search-bar";
+
+@use "components/navigation/breadcrumb";
+@use "components/navigation/drupal-tabs";
+@use "components/navigation/footer-menu";
+@use "components/navigation/hamburger";
+@use "components/navigation/navigation";
+@use "components/navigation/primary-menu";
+@use "components/navigation/secondary-menu";
+@use "components/navigation/sidebar";
+
+// Legacy styles from Pattern Lab.
+@use "legacy/o-box";
+@use "legacy/o-flex-region";
+@use "legacy/o-media";
+@use "legacy/o-pack";
+@use "legacy/card-basic";
+
+// Site-specific additions and overrides.
+@use "site-specific/chr__project";
+@use "site-specific/dgc__fact_sheet";
+@use "site-specific/dgc__newsroom";
+@use "site-specific/insiders__circuit";

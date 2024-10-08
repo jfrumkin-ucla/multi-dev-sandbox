@@ -1,0 +1,31 @@
+uuid: 3474df7f-1af0-4bdc-8c88-5886b3d555d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_circuit_shows
+    - node.type.circuit_profile
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    sf_basic_html: '0'
+    sf_restricted_html: '0'
+    sf_full_html: '0'
+    plain_text: '0'
+    sf_plain_text: '0'
+_core:
+  default_config_hash: U1Kw-f8qCpqBFeJX1qXO8zPxwgf83jHsh4vHsseM4Xg
+id: node.circuit_profile.field_circuit_shows
+field_name: field_circuit_shows
+entity_type: node
+bundle: circuit_profile
+label: 'Binge-worthy show(s) we need to see'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

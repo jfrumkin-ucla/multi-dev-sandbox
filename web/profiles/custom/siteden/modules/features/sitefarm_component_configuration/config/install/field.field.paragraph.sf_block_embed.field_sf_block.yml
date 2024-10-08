@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sf_block
+    - paragraphs.paragraphs_type.sf_block_embed
+  module:
+    - block_field
+id: paragraph.sf_block_embed.field_sf_block
+field_name: field_sf_block
+entity_type: paragraph
+bundle: sf_block_embed
+label: Block
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: categories
+  selection_settings:
+    categories:
+      Block: Block
+      core: core
+      Custom: Custom
+      'Lists (Views)': 'Lists (Views)'
+      Menus: Menus
+      System: System
+      Views: Views
+      Webform: Webform
+      'Chaos Tools': '0'
+      'Content fields': '0'
+      'Content moderation state fields': '0'
+      'Crop fields': '0'
+      'Custom block fields': '0'
+      'Custom menu link fields': '0'
+      'File fields': '0'
+      Forms: '0'
+      Help: '0'
+      'Inline blocks': '0'
+      'Media fields': '0'
+      'Paragraph fields': '0'
+      Person: '0'
+      'Photo Gallery': '0'
+      'Redirect fields': '0'
+      'RSS Feed Block': '0'
+      'Shortcut link fields': '0'
+      'Site Credits': '0'
+      Sitemap: '0'
+      'Social Media Links Block': '0'
+      'Taxonomy term fields': '0'
+      'URL alias fields': '0'
+      User: '0'
+      'User fields': '0'
+      'Webform submission fields': '0'
+field_type: block_field

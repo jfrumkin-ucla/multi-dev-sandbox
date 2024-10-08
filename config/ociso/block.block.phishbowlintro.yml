@@ -1,0 +1,39 @@
+uuid: b1a5e864-7838-4a17-9f65-00c29d54f81c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:120c3fa3-ffc0-4c73-bcca-228675b2e734'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+    full_width:
+      full_width: 0
+id: phishbowlintro
+theme: siteden_surface
+region: content
+weight: -19
+provider: null
+plugin: 'block_content:120c3fa3-ffc0-4c73-bcca-228675b2e734'
+settings:
+  id: 'block_content:120c3fa3-ffc0-4c73-bcca-228675b2e734'
+  label: 'Phish Bowl Intro'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /phish-bowl

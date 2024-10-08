@@ -1,0 +1,7 @@
+siteden_paragraphs_convert.nodes:
+  path: '/admin/config/siteden-paragraphs-convert/nodes'
+  defaults:
+    _form: '\Drupal\siteden_paragraphs_convert\Form\ConvertNodesForm'
+    _title: 'Convert Nodes to Layout Paragraphs'
+  requirements:
+    _permission: 'administer site configuration'

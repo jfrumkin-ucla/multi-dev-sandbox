@@ -1,0 +1,30 @@
+uuid: 24645644-f332-4ccc-92ca-860dd43f2240
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:b07d2424-625f-4f4c-aa44-5b9e73f29155'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: bbsenatefooterlogo
+theme: siteden_surface
+region: footer
+weight: -16
+provider: null
+plugin: 'block_content:b07d2424-625f-4f4c-aa44-5b9e73f29155'
+settings:
+  id: 'block_content:b07d2424-625f-4f4c-aa44-5b9e73f29155'
+  label: 'BB: Senate footer logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

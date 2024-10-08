@@ -1,0 +1,8 @@
+uuid: c6b3eb84-4e79-4a07-93ed-08545b849a92
+langcode: en
+status: true
+dependencies: {  }
+name: 'TPRM Functionality'
+vid: gcr_functionality
+description: 'Primary categories of functions'
+weight: 0

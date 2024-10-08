@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_marketing_highlight_horizntl
+    - field.storage.block_content.field_sf_block_pimg
+    - media.type.sf_image_media_type
+_core:
+  default_config_hash: iE7lDkDJDwC4_nZ6UmLTQRN47y9XloL3fJzdkAi_e9I
+id: block_content.sf_marketing_highlight_horizntl.field_sf_block_pimg
+field_name: field_sf_block_pimg
+entity_type: block_content
+bundle: sf_marketing_highlight_horizntl
+label: 'Primary Image'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      sf_image_media_type: sf_image_media_type
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

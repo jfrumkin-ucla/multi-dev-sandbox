@@ -1,0 +1,23 @@
+uuid: b99971f7-cf27-4920-9f5c-c2bdfb73cf07
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - siteden_surface
+_core:
+  default_config_hash: u9NvC-Zc1JriLrZFtswk8exu4GjrYJJE5cyHhQNK7JE
+id: siteden_surface_search
+theme: siteden_surface
+region: navigation
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: google_cse_search
+visibility: {  }

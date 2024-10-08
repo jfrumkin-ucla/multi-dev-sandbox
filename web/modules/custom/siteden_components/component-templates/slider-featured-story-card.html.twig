@@ -1,0 +1,67 @@
+{{ attach_library('siteden_components/sf_slider') }}
+
+<section class="sf_featured_story_slider splide" aria-label="Sliding banner">
+  <div class="splide__track">
+    <ul class="splide__list">
+
+      {% for i, slideritem in slideritems %}
+        <li class="splide__slide">
+
+          <div class="story-card-banner panel">
+            {% if slideritem.image %}
+              <div class="story-card-banner__image">
+                {{ slideritem.image }}
+              </div>
+            {% endif %}
+
+            <div class="story-card-banner__body">
+              <div class="story-card-banner__body-inner">
+                <div class="story-card-banner__date">
+                  <p>{{ slideritem.date }}</p>
+                </div>
+
+               {% if slideritem.title %}
+                 <h2 class="story-card-banner__title">
+                   <a href="{{ slideritem.url }}">{{ slideritem.title }}</a>
+                 </h2>
+               {% endif %}
+
+                <div class="story-card-banner__author">
+                  {% if slideritem.author1 %}
+                    <p>
+                      {{ slideritem.author1|nl2br }}
+                    </p>
+                  {% endif %}
+
+                  {% if slideritem.byline and slideritem.author1 is empty %}
+                    <p>{{ slideritem.byline }}</p>
+                  {% endif %}
+
+                  {% if slideritem.byline is empty and slideritem.author1 is empty %}
+                    {% if slideritem.fullname %}
+                      <p>By {{ slideritem.fullname }}</p>
+                    {% endif %}
+                  {% endif %}
+                </div>
+
+                {% if slideritem.text %}
+                  <div class="story-card-banner__summary">
+                    {% autoescape false %}
+                      {{ slideritem.text }}
+                    {% endautoescape %}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+        </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+  <button class="splide__toggle" type="button">
+    <span class="splide__toggle__play"><img src="/themes/custom/siteden_surface/assets/images/icons/denotive/play-white.svg"></span>
+    <span class="splide__toggle__pause"><img src="/themes/custom/siteden_surface/assets/images/icons/denotive/pause-white.svg"></span>
+  </button>
+</section>

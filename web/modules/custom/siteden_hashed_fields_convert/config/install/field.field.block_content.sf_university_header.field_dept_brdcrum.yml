@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_university_header
+    - field.storage.block_content.field_dept_brdcrum
+  module:
+    - link
+_core:
+  default_config_hash: qMX7twpx7kOCf442OSPjYFWLsOKDKR1BEaoigXNwkUc
+id: block_content.sf_university_header.field_dept_brdcrum
+field_name: field_dept_brdcrum
+entity_type: block_content
+bundle: sf_university_header
+label: 'Departmental Breadcrumb'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

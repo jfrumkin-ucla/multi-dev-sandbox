@@ -1,0 +1,36 @@
+uuid: d227e89c-b301-4dd4-b804-c9626e701795
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_card:e23937cf-187b-41a0-a62b-339b33aa15b7'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    card_type:
+      card_type: gray
+      card_accent: 0
+id: cnotsurewhatyouneed
+theme: siteden_surface
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'block_content:e23937cf-187b-41a0-a62b-339b33aa15b7'
+settings:
+  id: 'block_content:e23937cf-187b-41a0-a62b-339b33aa15b7'
+  label: 'C: Not sure what you need?'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /purchasing/purchasing-methods/pcard

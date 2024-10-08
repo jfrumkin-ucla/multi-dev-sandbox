@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_sf_unit_leaders
+    - node.type.circuit_profile
+    - taxonomy.vocabulary.circuit_team
+id: taxonomy_term.circuit_team.field_sf_unit_leaders
+field_name: field_sf_unit_leaders
+entity_type: taxonomy_term
+bundle: circuit_team
+label: 'Team Leader'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      circuit_profile: circuit_profile
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sf_article
+    - node.type.sf_event
+    - node.type.sf_landing
+    - node.type.sf_page
+    - node.type.sf_person
+    - node.type.sf_photo_gallery
+id: anything_to_published
+label: 'Anything to Published'
+format: null
+subject: 'Content has been published on [site:name]'
+recipient_types:
+  last_revision_author:
+    id: last_revision_author
+    provider: workbench_email
+    status: true
+    settings: {  }
+bundles:
+  'node:sf_article': 'node:sf_article'
+  'node:sf_event': 'node:sf_event'
+  'node:sf_landing': 'node:sf_landing'
+  'node:sf_page': 'node:sf_page'
+  'node:sf_person': 'node:sf_person'
+  'node:sf_photo_gallery': 'node:sf_photo_gallery'
+body:
+  value: "Hello,\r\n\r\nContent titled [node:title] has been published on [site:name]. It can be accessed here: [node:url].\r\n\r\nThank you,\r\n[site:name]"
+  format: plain_text
+replyTo: null

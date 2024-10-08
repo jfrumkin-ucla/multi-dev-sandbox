@@ -1,0 +1,35 @@
+uuid: f69fabe9-04be-400b-8afe-fe0b615a2650
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_focal_link:102535ac-611e-47eb-b4ed-67ace421d6fd'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: flcovid19accommodationrequestformdocusign
+theme: siteden_surface
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:102535ac-611e-47eb-b4ed-67ace421d6fd'
+settings:
+  id: 'block_content:102535ac-611e-47eb-b4ed-67ace421d6fd'
+  label: 'FL: COVID-19 Accommodation Request Form (Docusign)'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /covid-19-accommodation-request

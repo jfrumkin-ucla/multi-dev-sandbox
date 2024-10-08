@@ -1,0 +1,17 @@
+<article{{ attributes.addClass(classes) }}>
+  {% if media.0 %}
+    <div class="node-general__media">
+      {{ media }}
+    </div>
+  {% endif %}
+
+  <div class="node-general__info">
+    <div class="node-general__title">
+      {% if url %}
+        <h3><a href="{{ url }}">{{ title }}</a></h3>
+      {% else %}
+        <h3>{{ title }}</h3>
+      {% endif %}
+    </div>
+  </div>
+</article>

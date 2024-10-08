@@ -1,0 +1,5 @@
+name: Sitefarm Taxonomy
+type: module
+description: 'Provide a formatter for taxonomy reference field only.'
+package: SiteFarm
+core_version_requirement: ^9 || ^10

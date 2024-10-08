@@ -1,0 +1,51 @@
+uuid: fdd35139-dbdf-4d5e-b2a3-47ee24579a11
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.chr_project.body
+    - field.field.node.chr_project.field_chr_end_date
+    - field.field.node.chr_project.field_chr_key_stakeholders
+    - field.field.node.chr_project.field_chr_percent_complete
+    - field.field.node.chr_project.field_chr_project_phase
+    - field.field.node.chr_project.field_chr_start_date
+    - field.field.node.chr_project.field_chr_support
+    - field.field.node.chr_project.field_sf_tabs
+    - node.type.chr_project
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: JtXtbNsLB7UrwgJd2I8p2nPLIQafe1vwZOB9_Q7AZIs
+id: node.chr_project.teaser
+targetEntityType: node
+bundle: chr_project
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_chr_end_date: true
+  field_chr_key_stakeholders: true
+  field_chr_percent_complete: true
+  field_chr_project_phase: true
+  field_chr_start_date: true
+  field_chr_support: true
+  field_sf_tabs: true

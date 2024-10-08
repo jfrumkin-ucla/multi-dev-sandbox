@@ -1,0 +1,16 @@
+_core:
+  default_config_hash: yHBuI_J_kdrugm0JRNsxHODZ0qQyPzejI6r1ZPacK5Q
+shield_enable: false
+credential_provider: shield
+credentials:
+  shield:
+    user: ociso
+    pass: uclaits
+allow_cli: true
+debug_header: false
+unset_basic_auth_headers: true
+print: Hello!
+method: 0
+allowlist: ''
+domains: ''
+paths: ''

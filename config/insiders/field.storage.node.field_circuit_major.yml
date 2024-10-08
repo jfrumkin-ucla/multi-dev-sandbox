@@ -1,0 +1,23 @@
+uuid: 397aeaad-6b34-424d-80c5-0e53ab352162
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: GWDPiw3xxAVHIGB1DqT6sN4hi0Tip2KNMHmhuxlFNlQ
+id: node.field_circuit_major
+field_name: field_circuit_major
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

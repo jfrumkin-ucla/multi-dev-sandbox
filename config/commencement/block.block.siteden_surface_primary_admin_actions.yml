@@ -1,0 +1,20 @@
+uuid: bec90503-cc8b-441e-8f62-fd23dffdbb53
+langcode: en
+status: true
+dependencies:
+  theme:
+    - siteden_surface
+_core:
+  default_config_hash: shL48jMXYAlbzMzZrPfv-hOCNb_4SCupengKTOFYb6M
+id: siteden_surface_primary_admin_actions
+theme: siteden_surface
+region: pre_content
+weight: -15
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

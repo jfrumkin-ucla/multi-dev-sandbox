@@ -1,0 +1,36 @@
+uuid: 1057d461-9d3a-4da1-926d-f5bdc3a3f893
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_card:8f08d4e5-6eff-4c31-b530-49faeb685f6e'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    card_type:
+      card_type: blue
+      card_accent: 0
+id: cpumquestions
+theme: siteden_surface
+region: sidebar_first
+weight: 2
+provider: null
+plugin: 'block_content:8f08d4e5-6eff-4c31-b530-49faeb685f6e'
+settings:
+  id: 'block_content:8f08d4e5-6eff-4c31-b530-49faeb685f6e'
+  label: 'C: PUM questions?'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /pum-upgrade-project

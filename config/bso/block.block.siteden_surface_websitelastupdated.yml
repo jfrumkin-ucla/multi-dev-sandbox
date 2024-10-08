@@ -1,0 +1,30 @@
+uuid: eec87e37-1e58-48d0-ac4e-8fa1f1e03fc0
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_style_plugins
+    - siteden_blocks
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: siteden_surface_websitelastupdated
+theme: siteden_surface
+region: content
+weight: -15
+provider: null
+plugin: last_site_update_block
+settings:
+  id: last_site_update_block
+  label: 'Website Last Updated'
+  label_display: '0'
+  provider: siteden_blocks
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

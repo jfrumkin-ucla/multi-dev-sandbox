@@ -1,0 +1,30 @@
+uuid: 27778674-d6fd-437f-83d5-b0a17574585b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:cf2ca3d3-5db8-4eac-94d8-4b906919937e'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: bb
+theme: siteden_surface
+region: footer
+weight: -17
+provider: null
+plugin: 'block_content:cf2ca3d3-5db8-4eac-94d8-4b906919937e'
+settings:
+  id: 'block_content:cf2ca3d3-5db8-4eac-94d8-4b906919937e'
+  label: 'BB: '
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

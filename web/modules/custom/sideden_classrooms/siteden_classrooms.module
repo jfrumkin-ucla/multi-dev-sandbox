@@ -1,0 +1,104 @@
+<?php
+
+/**
+ * @file
+ * Module for SiteDen Classrooms.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\menu_ui\MenuForm;
+use Drupal\user\Entity\User;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function siteden_classrooms_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  //$field_bruincast_video_value = $form['field_bruincast_video_value'];
+  //unset($form['field_bruincast_video_value']);
+  if($form['#id']=="views-exposed-form-classroom-search-page-1"){
+    $form['field_set_one'] = array(
+        '#type' => 'fieldset'
+    );
+    $form['field_set_two'] = array(
+        '#type' => 'fieldset',
+        '#title' => 'AV Options'
+    );
+
+    $form['field_set_one']['field_room_type_value'] = $form['field_room_type_value'];
+    $form['field_set_one']['field_moveable_chairs_value'] = $form['field_moveable_chairs_value'];
+    $form['field_set_one']['field_moveable_tables_value'] = $form['field_moveable_tables_value'];
+    $form['field_set_one']['field_tablet_desk_value'] = $form['field_tablet_desk_value'];
+
+    $form['field_set_two']['field_voice_amplification_value'] = $form['field_voice_amplification_value'];
+    $form['field_set_two']['field_classroom_computer_value'] = $form['field_classroom_computer_value'];
+    $form['field_set_two']['field_interactive_display_value'] = $form['field_interactive_display_value'];
+
+    $form['field_set_two']['field_bruincast_video_value'] = $form['field_bruincast_video_value'];
+    $form['field_set_two']['field_bruincast_audio_value'] = $form['field_bruincast_audio_value'];
+    $form['field_set_two']['field_zoom_streaming_value'] = $form['field_zoom_streaming_value'];    
+    unset($form['field_room_type_value']);
+    unset($form['field_moveable_chairs_value']);
+    unset($form['field_moveable_tables_value']);
+    unset($form['field_tablet_desk_value']);
+    unset($form['field_voice_amplification_value']);
+    unset($form['field_classroom_computer_value']);
+    unset($form['field_interactive_display_value']);
+    unset($form['field_bruincast_video_value']);
+    unset($form['field_bruincast_audio_value']);
+    unset($form['field_zoom_streaming_value']);
+    $a = 26;
+    $b = 3;
+    $out = array_splice($form, $a, 1);
+    array_splice($form, $b, 0, $out);
+
+
+  }
+}
+
+
+/**
+ * Implements hook_system_breadcrumb_alter().
+ */
+
+function siteden_classrooms_system_breadcrumb_alter(\Drupal\Core\Breadcrumb\Breadcrumb &$breadcrumb, \Drupal\Core\Routing\RouteMatchInterface $route_match, array $context) {
+    if($_SERVER['REQUEST_URI']=='/classroom-search'){
+      foreach($breadcrumb->getLinks() as $breadcrumb_link){
+        if($breadcrumb_link->getText()=="Classroom"){
+          $breadcrumb_link->setText('Classroom Search');
+        }
+      }
+    }
+}
+
+function siteden_classrooms_entity_presave(\Drupal\Core\Entity\EntityInterface $entity) {
+  if($entity->bundle() == 'classroom'){
+    $capacity = (int)$entity->get('field_capacity')->getValue()[0]['value'];
+    if($capacity < 20){
+      $capacity_range = "10_19";
+    } 
+    if($capacity > 19 && $capacity < 40){
+      $capacity_range = "20_39";
+    } 
+    if($capacity > 39 && $capacity < 60){
+      $capacity_range = "40_59";
+    }
+    if($capacity > 59 && $capacity < 100){
+      $capacity_range = "60_99";
+    }
+    if($capacity > 99 && $capacity < 150){
+      $capacity_range = "100_149";
+    } 
+    if($capacity > 149 && $capacity < 200){
+      $capacity_range = "150_199";
+    }
+    if($capacity > 199 && $capacity < 300){
+      $capacity_range = "200_299";
+    }
+    if($capacity > 299){
+      $capacity_range = "300";
+    }
+    $entity->set('field_capacity_range', $capacity_range);
+  }
+}

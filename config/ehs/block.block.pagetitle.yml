@@ -1,0 +1,24 @@
+uuid: 43de22cd-e038-43f5-a94c-e5dbdcf3779c
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: pagetitle
+theme: siteden_surface
+region: pre_content
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: visible
+  provider: core
+visibility: {  }

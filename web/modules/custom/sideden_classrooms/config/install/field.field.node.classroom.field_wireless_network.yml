@@ -1,0 +1,21 @@
+uuid: 33c50e3b-3ade-47db-9b88-ff06cd759106
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_wireless_network
+    - node.type.classroom
+id: node.classroom.field_wireless_network
+field_name: field_wireless_network
+entity_type: node
+bundle: classroom
+label: 'Wireless Network'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: 5485b66d-ce5a-4add-aeba-b3b32b6669d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_circuit_contact
+    - taxonomy.vocabulary.circuit_team
+_core:
+  default_config_hash: gVTGhabB935P7Hshw2vpTAKmXUPI5cWmZjyhoZ26xJE
+id: taxonomy_term.circuit_team.field_circuit_contact
+field_name: field_circuit_contact
+entity_type: taxonomy_term
+bundle: circuit_team
+label: 'Contact Us'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

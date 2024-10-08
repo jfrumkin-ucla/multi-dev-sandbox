@@ -1,0 +1,113 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - siteden_surface
+id: siteden_surface_social
+theme: siteden_surface
+region: footer
+weight: 0
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    facebook:
+      value: '#'
+      description: ''
+      weight: '-30'
+    twitter:
+      value: '#'
+      description: ''
+      weight: '-29'
+    instagram:
+      value: '#'
+      description: ''
+      weight: '-28'
+    rss:
+      value: ''
+      description: ''
+      weight: '-27'
+    email:
+      value: ''
+      description: ''
+      weight: '-26'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '-25'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '-24'
+    github:
+      value: ''
+      description: ''
+      weight: '-23'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '-22'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-21'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '-20'
+    contact:
+      value: ''
+      description: ''
+      weight: '-19'
+    behance:
+      value: ''
+      description: ''
+      weight: '-18'
+    flickr:
+      value: ''
+      description: ''
+      weight: '-17'
+    linkedin:
+      value: ''
+      description: ''
+      weight: '-16'
+    youtube:
+      value: ''
+      description: ''
+      weight: '-15'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '-14'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '-13'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-12'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '-11'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'sitefarm_custom_social_links:default'
+    installed_iconsets:
+      sitefarm_custom_social_links:
+        examples: ''
+      fontawesome:
+        examples: ''
+visibility: {  }

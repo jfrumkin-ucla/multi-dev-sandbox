@@ -1,0 +1,29 @@
+uuid: fc9132b2-7d83-44d1-b13a-c6c0a4a6fbbe
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - stable
+_core:
+  default_config_hash: 1NlE-YR1tvgbH1CBE12uxhRVwYKyGRnqj5Gq0OJ2cEY
+id: stable_tabs
+theme: stable
+region: sidebar_first
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '/search*'

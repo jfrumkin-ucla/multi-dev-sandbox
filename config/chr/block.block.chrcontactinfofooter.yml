@@ -1,0 +1,32 @@
+uuid: 9dee5cdf-d4f9-4ee8-b91b-8a5e802873ff
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:5a1fa185-d925-4d1f-8819-859b03c886ef'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: chrcontactinfofooter
+theme: siteden_surface
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:5a1fa185-d925-4d1f-8819-859b03c886ef'
+settings:
+  id: 'block_content:5a1fa185-d925-4d1f-8819-859b03c886ef'
+  label: 'CHR contact info footer'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

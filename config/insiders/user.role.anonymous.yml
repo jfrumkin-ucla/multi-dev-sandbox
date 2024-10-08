@@ -1,0 +1,30 @@
+uuid: d20b513f-64d2-4a73-b64d-913d435a1501
+langcode: en
+status: true
+dependencies:
+  module:
+    - google_cse
+    - paragraphs_type_permissions
+    - search
+_core:
+  default_config_hash: 9LjlFFwwpgDrrtcUMxkVx15hWfOSXWgJYQBWEXwtX54
+id: anonymous
+label: 'Anonymous user'
+weight: -10
+is_admin: false
+permissions:
+  - 'search Google CSE'
+  - 'search content'
+  - 'view paragraph content article_embed_banner'
+  - 'view paragraph content article_embed_secondary'
+  - 'view paragraph content events_slider'
+  - 'view paragraph content evnt_sl_itm'
+  - 'view paragraph content p_slider_item'
+  - 'view paragraph content photo_slider'
+  - 'view paragraph content sf_section'
+  - 'view paragraph content sf_slider_featured_story_card'
+  - 'view paragraph content sf_slider_fsc_item'
+  - 'view paragraph content sf_slider_sc_item'
+  - 'view paragraph content sf_slider_story_card'
+  - 'view paragraph content sf_text_banner'
+  - 'view paragraph content sf_view_embed'

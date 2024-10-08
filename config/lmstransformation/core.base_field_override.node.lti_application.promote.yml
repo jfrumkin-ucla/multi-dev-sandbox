@@ -1,0 +1,22 @@
+uuid: f9ea3b0c-8054-4aef-8a5b-455ad4268f28
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lti_application
+id: node.lti_application.promote
+field_name: promote
+entity_type: node
+bundle: lti_application
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

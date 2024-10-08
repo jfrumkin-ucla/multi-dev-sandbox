@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - svg_image_field
+third_party_settings:
+  crop:
+    image_field: null
+id: sf_svg_media_type
+label: SVG
+description: 'Handles SVG image files.'
+source: svg
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_svg
+field_map:
+  name: name

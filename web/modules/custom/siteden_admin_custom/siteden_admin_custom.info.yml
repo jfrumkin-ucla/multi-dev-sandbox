@@ -1,0 +1,5 @@
+name: SiteDen Admin Customizations
+type: module
+description: Provides integration with SiteDen and the admin theme.
+package: SiteDen
+core_version_requirement: ^9 || ^10

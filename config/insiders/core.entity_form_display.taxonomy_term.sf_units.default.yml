@@ -1,0 +1,82 @@
+uuid: 3b11bb73-8d31-45b0-9a8e-6abda606b2ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sf_units.field_sf_leader_title
+    - field.field.taxonomy_term.sf_units.field_sf_unit_leaders
+    - field.field.taxonomy_term.sf_units.field_sf_unit_leaders_title
+    - taxonomy.vocabulary.sf_units
+  module:
+    - path
+    - text
+_core:
+  default_config_hash: oEDQ0K9XXeb1qbAN-9BjlFAEza7AHFD5p3mUqphP_iY
+id: taxonomy_term.sf_units.default
+targetEntityType: taxonomy_term
+bundle: sf_units
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_sf_leader_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sf_unit_leaders:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  tvi:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_sf_unit_leaders_title: true
+  publish_on: true
+  publish_state: true
+  unpublish_on: true
+  unpublish_state: true

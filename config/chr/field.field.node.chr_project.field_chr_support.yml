@@ -1,0 +1,28 @@
+uuid: 30c3e222-70e2-4306-9b6c-472fc1d7a007
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chr_support
+    - node.type.chr_project
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - sf_basic_html
+_core:
+  default_config_hash: JFmbThROw1EvdgM01Ah5hFiuYzs8ZSrP51mPTmtMWVo
+id: node.chr_project.field_chr_support
+field_name: field_chr_support
+entity_type: node
+bundle: chr_project
+label: Support
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

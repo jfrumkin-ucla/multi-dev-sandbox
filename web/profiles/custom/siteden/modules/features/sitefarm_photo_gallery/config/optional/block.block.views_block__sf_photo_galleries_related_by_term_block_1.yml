@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sf_photo_galleries_related_by_term
+  module:
+    - block_style_plugins
+    - ctools
+    - views
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: views_block__sf_photo_galleries_related_by_term_block_1
+theme: siteden_surface
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:sf_photo_galleries_related_by_term-block_1'
+settings:
+  id: 'views_block:sf_photo_galleries_related_by_term-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      sf_photo_gallery: sf_photo_gallery
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,75 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.circuit_team.field_circuit_contact
+    - field.field.taxonomy_term.circuit_team.field_circuit_core_services
+    - field.field.taxonomy_term.circuit_team.field_circuit_mascot
+    - field.field.taxonomy_term.circuit_team.field_circuit_motto
+    - field.field.taxonomy_term.circuit_team.field_sf_m_tax_primary_image
+    - field.field.taxonomy_term.circuit_team.field_sf_unit_leaders
+    - field.field.taxonomy_term.circuit_team.field_sf_unit_leaders_title
+    - image.style.sf_card_person
+    - taxonomy.vocabulary.circuit_team
+  module:
+    - media
+    - text
+id: taxonomy_term.circuit_team.default
+targetEntityType: taxonomy_term
+bundle: circuit_team
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_circuit_contact:
+    type: email_mailto
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_circuit_core_services:
+    type: text_default
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_circuit_mascot:
+    type: text_default
+    weight: 4
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_circuit_motto:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sf_m_tax_primary_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: sf_card_person
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+  field_sf_unit_leaders:
+    type: entity_reference_label
+    weight: 7
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  field_sf_unit_leaders_title: true

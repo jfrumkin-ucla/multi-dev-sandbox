@@ -1,0 +1,30 @@
+uuid: 3b230ad7-174a-4e79-8e11-9faceb445731
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:a9a07f74-cfb1-43bd-83d8-1ecf8e68cbef'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: bbfooterlogo
+theme: siteden_surface
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:a9a07f74-cfb1-43bd-83d8-1ecf8e68cbef'
+settings:
+  id: 'block_content:a9a07f74-cfb1-43bd-83d8-1ecf8e68cbef'
+  label: 'BB: footer logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,40 @@
+uuid: d4a01afe-de3f-4645-97cb-5de700a1e1ec
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:6d26a957-86f5-4ed1-8389-0d8bfca38554'
+  module:
+    - block_content
+    - block_style_plugins
+    - node
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: factsheetbannertest
+theme: siteden_surface
+region: title
+weight: -16
+provider: null
+plugin: 'block_content:6d26a957-86f5-4ed1-8389-0d8bfca38554'
+settings:
+  id: 'block_content:6d26a957-86f5-4ed1-8389-0d8bfca38554'
+  label: 'Fact Sheet Banner Test'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      dgc_fact_sheet: dgc_fact_sheet

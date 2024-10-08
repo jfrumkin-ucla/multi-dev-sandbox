@@ -1,0 +1,30 @@
+@use "../utilities/_mixins/breakpoints";
+
+.photo-gallery__content {
+  margin-bottom: 2.5rem;
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.photo-gallery__images {
+  .gallery {
+    margin-bottom: 2.5rem;
+
+    @media (min-width: breakpoints.breakpoint-min(xs)) {
+      display: grid;
+      grid-column-gap: 0.25rem;
+      grid-row-gap: 0.25rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: breakpoints.breakpoint-min(sm)) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

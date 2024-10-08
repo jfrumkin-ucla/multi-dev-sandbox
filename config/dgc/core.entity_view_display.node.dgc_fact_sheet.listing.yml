@@ -1,0 +1,61 @@
+uuid: f5a36807-39ac-4de2-ae13-ea3d2df081ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.listing
+    - field.field.node.dgc_fact_sheet.body
+    - field.field.node.dgc_fact_sheet.field_dgc_duration
+    - field.field.node.dgc_fact_sheet.field_dgc_external_funders
+    - field.field.node.dgc_fact_sheet.field_dgc_fact_sheet
+    - field.field.node.dgc_fact_sheet.field_dgc_factsheet_category
+    - field.field.node.dgc_fact_sheet.field_dgc_findings
+    - field.field.node.dgc_fact_sheet.field_dgc_focus_area
+    - field.field.node.dgc_fact_sheet.field_dgc_funding_source
+    - field.field.node.dgc_fact_sheet.field_dgc_main_goal
+    - field.field.node.dgc_fact_sheet.field_dgc_news_keyword
+    - field.field.node.dgc_fact_sheet.field_dgc_participants
+    - field.field.node.dgc_fact_sheet.field_dgc_project_news
+    - field.field.node.dgc_fact_sheet.field_dgc_project_webpage
+    - field.field.node.dgc_fact_sheet.field_dgc_publications
+    - field.field.node.dgc_fact_sheet.field_dgc_related_projects
+    - field.field.node.dgc_fact_sheet.field_dgc_status
+    - field.field.node.dgc_fact_sheet.field_dgc_team
+    - field.field.node.dgc_fact_sheet.field_sf_featured_media
+    - field.field.node.dgc_fact_sheet.field_sf_related_links
+    - node.type.dgc_fact_sheet
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: 5uVokK4bpCPiu_nWExka7r8aeKz2O3wDYNKvSqasfTA
+id: node.dgc_fact_sheet.listing
+targetEntityType: node
+bundle: dgc_fact_sheet
+mode: listing
+content: {  }
+hidden:
+  body: true
+  field_dgc_duration: true
+  field_dgc_external_funders: true
+  field_dgc_fact_sheet: true
+  field_dgc_factsheet_category: true
+  field_dgc_findings: true
+  field_dgc_focus_area: true
+  field_dgc_funding_source: true
+  field_dgc_main_goal: true
+  field_dgc_news_keyword: true
+  field_dgc_participants: true
+  field_dgc_project_news: true
+  field_dgc_project_webpage: true
+  field_dgc_publications: true
+  field_dgc_related_projects: true
+  field_dgc_status: true
+  field_dgc_team: true
+  field_sf_featured_media: true
+  field_sf_related_links: true
+  links: true

@@ -1,0 +1,31 @@
+uuid: 3b8e07c9-79ff-4571-8e5e-fecf7eeae329
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_circuit_quarantine
+    - node.type.circuit_profile
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    sf_basic_html: '0'
+    sf_restricted_html: '0'
+    sf_full_html: '0'
+    plain_text: '0'
+    sf_plain_text: '0'
+_core:
+  default_config_hash: B8NDMi9iOyri6lMXQfIg4mhM0I6nhvIXW-wwr7X5PVA
+id: node.circuit_profile.field_circuit_quarantine
+field_name: field_circuit_quarantine
+entity_type: node
+bundle: circuit_profile
+label: 'Favorite quarantine activity'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

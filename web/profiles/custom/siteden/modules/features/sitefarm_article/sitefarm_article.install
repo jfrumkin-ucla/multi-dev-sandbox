@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the SiteFarm Article module.
+ */
+
+/**
+ * Reverts the Article Filter view to include branding classes.
+ */
+function sitefarm_article_update_8001() {
+  /** @var \Drupal\config_update\ConfigReverter $config_revert */
+  $config_revert = \Drupal::service('config_update.config_update');
+  $config_revert->revert('view', 'sf_article_filter');
+
+  return t('Updated sf_article_filter view with new classes.');
+}
+
+/**
+ * Update Article with Byline field and reordering of other authoring fields.
+ */
+function sitefarm_article_update_9201() {
+  /** @var \Drupal\config_update\ConfigReverter $config_revert */
+  $config_revert = \Drupal::service('config_update.config_update');
+  $config_revert->import('field_storage_config', 'node.field_sf_article_byline');
+  $config_revert->import('field_config', 'node.sf_article.field_sf_article_byline');
+  $config_revert->revert('field_config', 'node.sf_article.field_sf_authors');
+  $config_revert->revert('entity_form_display', 'node.sf_article.default');
+  $config_revert->revert('entity_view_display', 'node.sf_article.default');
+  $config_revert->revert('entity_view_display', 'node.sf_article.card');
+  $config_revert->revert('entity_view_display', 'node.sf_article.featured');
+  $config_revert->revert('entity_view_display', 'node.sf_article.listing');
+  $config_revert->revert('entity_view_display', 'node.sf_article.teaser');
+
+  return t('Article Content type authoring fields updated.');
+}
+
+/**
+ * Update Article views with exposed filters for Created Date and Keywords.
+ */
+function sitefarm_article_update_9202() {
+  /** @var \Drupal\config_update\ConfigReverter $config_revert */
+  $config_revert = \Drupal::service('config_update.config_update');
+  $config_revert->revert('view', 'sf_articles_recent');
+  $config_revert->revert('block', 'sf_default__front_articles_recent');
+  $config_revert->revert('block', 'views_block__sf_article_filter_block_2');
+  $config_revert->import('block', 'exposedformsf_articles_recentpage_2');
+  $config_revert->import('block', 'exposedformtaxonomy_termpage_1');
+
+  return t('Article views updated.');
+}

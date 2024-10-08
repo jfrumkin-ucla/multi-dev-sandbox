@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+_core:
+id: sf_text
+label: Text
+icon_uuid: null
+icon_default: null
+description: 'The text component allows users to add content via a WYSIWYG.'
+behavior_plugins:
+  style_options:
+    enabled: true

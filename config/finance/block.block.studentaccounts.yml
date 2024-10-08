@@ -1,0 +1,38 @@
+uuid: 16d199fc-3f8e-4bae-840b-64e8992b010c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:6fb9ffac-9b14-4409-9dd5-02dc2499d0c0'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: studentaccounts
+theme: siteden_surface
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:6fb9ffac-9b14-4409-9dd5-02dc2499d0c0'
+settings:
+  id: 'block_content:6fb9ffac-9b14-4409-9dd5-02dc2499d0c0'
+  label: 'Student Accounts'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /business-finance-services/student-accounts

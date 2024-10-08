@@ -1,0 +1,51 @@
+@use "../utilities/colors";
+
+.view {
+  .view-content {
+    > div {
+      //border-bottom: 1px solid colors.$grey-8;
+      //margin-bottom: 1.5rem;
+      //padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.layout__sidebar-first,
+.layout__sidebar-second {
+  .views-exposed-form {
+    label {
+      display: block;
+    }
+
+    .form-item {
+      width: 100%;
+    }
+
+    .description {
+      margin-top: 0.5rem;
+    }
+
+    #views-exposed-form-internal-funding-opportunities-listing-funding-page {
+      .form-item-funding-admin-unit {
+        height: 400px;
+        display: grid;
+
+        option {
+        text-wrap: pretty;
+        padding-bottom: 6px;
+        }
+      }
+    }
+  }
+}
+
+.view-sf-content-related-by-tags.view-display-id-block_1 {
+  .view-content > div {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.feed-icons {
+  display: none;
+}

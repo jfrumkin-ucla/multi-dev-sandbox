@@ -1,0 +1,37 @@
+uuid: 3c89f4e0-70b1-4b37-bf26-d76cd0c98a35
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:5475b408-340a-4825-9198-3d3d0cf547a1'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: coveredserviceshelpfullinks
+theme: siteden_surface
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'block_content:5475b408-340a-4825-9198-3d3d0cf547a1'
+settings:
+  id: 'block_content:5475b408-340a-4825-9198-3d3d0cf547a1'
+  label: 'Covered Services: Helpful Links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /purchasing/campus-purchasing/outsourcing-covered-services

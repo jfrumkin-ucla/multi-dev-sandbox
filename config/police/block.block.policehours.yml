@@ -1,0 +1,38 @@
+uuid: 4b2d8770-5ba7-4b28-b1e3-4845ab723345
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:3dfac701-7feb-4728-84b0-c95b2c8ab281'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: policehours
+theme: siteden_surface
+region: footer_undernav
+weight: -19
+provider: null
+plugin: 'block_content:3dfac701-7feb-4728-84b0-c95b2c8ab281'
+settings:
+  id: 'block_content:3dfac701-7feb-4728-84b0-c95b2c8ab281'
+  label: Hours
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "/ems*\r\n/cso*"

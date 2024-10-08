@@ -1,0 +1,12 @@
+uuid: 76593067-a2b6-4a61-ba03-638b16adeb65
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: H9T-qC-7qcp3V8DuirkmSJEhSIlEabnV6V8oWXq1wro
+id: events_slider
+label: 'Slider - Events'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

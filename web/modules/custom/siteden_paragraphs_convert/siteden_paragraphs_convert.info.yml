@@ -1,0 +1,10 @@
+name: SiteDen Paragraphs Convert
+type: module
+description: Convert SiteDen nodes to use Layout Paragraphs.
+package: SiteDen
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - block_style_plugins:block_style_plugins
+  - layout_paragraphs:layout_paragraphs
+  - paragraphs:paragraphs
+  - style_options:style_options

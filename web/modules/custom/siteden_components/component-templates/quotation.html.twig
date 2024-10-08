@@ -1,0 +1,26 @@
+<div class="sf-quotation">
+
+  <div class="sf-quotation__wrapper">
+    {% if image %}
+      <figure class="sf-quotation__image">
+        {{ image }}
+      </figure>
+    {% endif %}
+
+    <blockquote class="sf-quotation__body has-background-ucla-blue has-white-text">
+      <span class="sf-quotation__decoration-line"></span>
+
+      <p class="sf-quotation__quote">
+        {{ text|striptags }}
+      </p>
+
+      <cite class="sf-quotation__cite">
+      <em>— {{ credit }}</em>
+      </cite>
+
+      {% if link.url and link.title %}
+        <a class="btn btn--transparent" href="{{ link.url }}">{{ link.title }}</a>
+      {% endif %}
+    </blockquote>
+  </div>
+</div>

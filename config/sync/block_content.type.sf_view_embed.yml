@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+id: sf_view_embed
+label: 'View embed'
+revision: 0
+description: 'The view embed component allows users to select from a list of views to place on a page.'

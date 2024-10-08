@@ -1,0 +1,21 @@
+uuid: e1362d1a-2852-4193-aea3-7006e00d723c
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+_core:
+  default_config_hash: 8kaH3sOIUcS8J2uAtWK4uXfNxJd0H0t3NQA-TsrZ4_U
+id: taxonomy_term.field_dgc_focusarea_link
+field_name: field_dgc_focusarea_link
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

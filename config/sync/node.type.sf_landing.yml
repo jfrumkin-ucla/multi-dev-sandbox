@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+name: 'Landing Page'
+type: sf_landing
+description: 'Use <em>landing pages</em> for unusual content like home pages or top-level pages of sections.'
+help: '<strong>Important note:</strong> Landing pages should be used very sparingly, for unusual content like your home page or top-level pages of sections. In most cases a <em>basic page</em> is the correct content type to use.'
+new_revision: true
+preview_mode: 0
+display_submitted: false

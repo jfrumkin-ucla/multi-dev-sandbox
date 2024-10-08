@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_university_header
+    - field.field.block_content.sf_university_header.field_sf_departmental_breadcrumb
+  module:
+    - link
+id: block_content.sf_university_header.default
+targetEntityType: block_content
+bundle: sf_university_header
+mode: default
+content:
+  field_sf_departmental_breadcrumb:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

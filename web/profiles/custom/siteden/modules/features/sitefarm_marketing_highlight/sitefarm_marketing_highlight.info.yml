@@ -1,0 +1,17 @@
+name: 'Marketing Highlight'
+description: 'Custom Block for the Marketing Highlight component.'
+type: module
+core_version_requirement: '^9 || ^10'
+dependencies:
+  - 'drupal:block_content'
+  - 'drupal:field'
+  - 'drupal:image'
+  - 'drupal:link'
+  - 'drupal:media_library'
+  - 'focal_point:focal_point'
+  - 'sitefarm_core:sitefarm_core'
+  - 'sitefarm_focus_box:sitefarm_focus_box'
+  - 'sitefarm_image_styles:sitefarm_image_styles'
+  - 'sitefarm_media:sitefarm_media'
+package: SiteFarm
+core_incompatible: false

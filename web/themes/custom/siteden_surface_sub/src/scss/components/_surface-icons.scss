@@ -1,0 +1,41 @@
+//------------------------------------
+//  Icon
+//------------------------------------
+
+// All of the icon SVGs should have a Square artboard.
+.icon {
+  &:before {
+    display: inline-block;
+    content: "";
+    margin-bottom: -.25em;
+    margin-right: .5em;
+    height: 1.25em;
+    width: 1.25em;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--calendar {
+    &:before {
+      background-image: url("../images/surface-icons/calendar.svg");
+    }
+  }
+
+  &--location {
+    &:before {
+      background-image: url("../images/surface-icons/location.svg");
+    }
+  }
+
+  &--map {
+    &:before {
+      background-image: url("../images/surface-icons/map.svg");
+    }
+  }
+
+  &--time {
+    &:before {
+      background-image: url("../images/surface-icons/time.svg");
+    }
+  }
+}

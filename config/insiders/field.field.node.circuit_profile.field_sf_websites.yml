@@ -1,0 +1,25 @@
+uuid: 370241f0-2699-4538-9868-7a504db2db8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sf_websites
+    - node.type.circuit_profile
+  module:
+    - link
+_core:
+  default_config_hash: tQFYmGkIAWTOURhoH0UvsRII1j03rDS3K7-aEOHRQBA
+id: node.circuit_profile.field_sf_websites
+field_name: field_sf_websites
+entity_type: node
+bundle: circuit_profile
+label: Website
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

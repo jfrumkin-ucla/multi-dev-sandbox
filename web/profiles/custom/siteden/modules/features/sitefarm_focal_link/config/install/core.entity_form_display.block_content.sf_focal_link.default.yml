@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_focal_link
+    - field.field.block_content.sf_focal_link.field_sf_icon_choice
+    - field.field.block_content.sf_focal_link.field_sf_icons
+    - field.field.block_content.sf_focal_link.field_sf_link
+    - field.field.block_content.sf_focal_link.field_sf_m_block_primary_img
+    - field.field.block_content.sf_focal_link.field_sf_title
+  module:
+    - link
+    - media_library
+id: block_content.sf_focal_link.default
+targetEntityType: block_content
+bundle: sf_focal_link
+mode: default
+content:
+  field_sf_icon_choice:
+    weight: 3
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sf_icons:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sf_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_sf_m_block_primary_img:
+    weight: 4
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_sf_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

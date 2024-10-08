@@ -1,0 +1,9 @@
+uuid: 3a8d8b0a-04f8-4838-b679-b28b373ee47b
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: MbTbUeeaumH8DjENUwT0-8uW9UuxyNHbF6jbKCLhYkk
+formId: contact_message_feedback_form
+captchaType: default
+label: contact_message_feedback_form

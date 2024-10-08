@@ -1,0 +1,23 @@
+uuid: 8254e395-e28f-4b11-abd1-9160864324f7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - stable
+_core:
+  default_config_hash: qKzhlYCkQRVWb_h6LQKGeT4u7e83vBzSfJKS5Mkfh4g
+id: stable_sf_default__uh_main_dept_header
+theme: stable
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:ae7745c4-07f4-4a33-adbe-48cf5766df86'
+settings:
+  id: 'block_content:ae7745c4-07f4-4a33-adbe-48cf5766df86'
+  label: 'Main Departmental Header'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

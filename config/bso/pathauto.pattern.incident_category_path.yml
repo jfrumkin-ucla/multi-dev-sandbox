@@ -1,0 +1,23 @@
+uuid: 59652b1c-6928-472d-9de0-affe9caaeb4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: incident_category_path
+label: 'Incident Category Path'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'incident/[term:name]'
+selection_criteria:
+  3195ed61-0514-42b6-8ec2-04d382b62b9a:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 3195ed61-0514-42b6-8ec2-04d382b62b9a
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      bso_update_categories: bso_update_categories
+selection_logic: and
+weight: -5
+relationships: {  }

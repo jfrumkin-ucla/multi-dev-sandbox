@@ -1,0 +1,6 @@
+name: 'Siteden Taxonomy Terms'
+type: module
+description: 'Provides a form alter for special charecter replacement upon taxonomy term creation'
+package: 'Siteden'
+version: '1.0.0'
+core_version_requirement: ^9 || ^10

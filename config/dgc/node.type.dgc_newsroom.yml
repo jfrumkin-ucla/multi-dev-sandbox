@@ -1,0 +1,19 @@
+uuid: 5652bde6-667e-44c3-ab0a-c335b6f61f63
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: TauFJHXumUa8qU4BgqP7PjQ6zpxH1fHhVB9IVoafyR4
+name: 'DGC Newsroom'
+type: dgc_newsroom
+description: 'News stories for Depression Grand Challenge. Use instead of the standard Article content type.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

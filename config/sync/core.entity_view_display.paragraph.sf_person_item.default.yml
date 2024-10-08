@@ -1,0 +1,77 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sf_person_item.field_sf_image
+    - field.field.paragraph.sf_person_item.field_sf_link
+    - field.field.paragraph.sf_person_item.field_sf_name
+    - field.field.paragraph.sf_person_item.field_sf_position
+    - field.field.paragraph.sf_person_item.field_sf_pronouns
+    - field.field.paragraph.sf_person_item.field_sf_wysiwyg
+    - image.style.sf_card_person
+    - paragraphs.paragraphs_type.sf_person_item
+  module:
+    - link
+    - media
+    - text
+_core:
+id: paragraph.sf_person_item.default
+targetEntityType: paragraph
+bundle: sf_person_item
+mode: default
+content:
+  field_sf_image:
+    type: media_thumbnail
+    label: above
+    settings:
+      image_link: ''
+      image_style: sf_card_person
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_sf_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_sf_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_sf_position:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sf_pronouns:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_sf_wysiwyg:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

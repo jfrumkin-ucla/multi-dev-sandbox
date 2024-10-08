@@ -1,0 +1,30 @@
+uuid: 73336767-2a2c-4238-ae6b-2a65357699ee
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.sf_article_filter
+  module:
+    - system
+    - views
+  theme:
+    - siteden_surface
+id: views_block__sf_article_filter_block_2_2
+theme: siteden_surface
+region: sidebar_second
+weight: -15
+provider: null
+plugin: 'views_block:sf_article_filter-block_2'
+settings:
+  id: 'views_block:sf_article_filter-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/articles/*'

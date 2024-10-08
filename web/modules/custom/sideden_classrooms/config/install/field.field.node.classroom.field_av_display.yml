@@ -1,0 +1,21 @@
+uuid: 6e943d48-4add-4bdf-9817-051c335f59aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_av_display
+    - node.type.classroom
+  module:
+    - options
+id: node.classroom.field_av_display
+field_name: field_av_display
+entity_type: node
+bundle: classroom
+label: 'AV Display'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

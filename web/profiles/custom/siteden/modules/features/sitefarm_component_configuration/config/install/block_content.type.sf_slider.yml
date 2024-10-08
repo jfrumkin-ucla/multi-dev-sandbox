@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: sf_slider
+label: Slider
+revision: 0
+description: "The slider component allows users to add a slideshow with an Image, Title, Text, and a Link.\t"

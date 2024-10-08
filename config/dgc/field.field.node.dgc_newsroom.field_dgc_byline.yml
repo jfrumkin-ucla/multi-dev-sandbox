@@ -1,0 +1,21 @@
+uuid: fc2eb27f-1a67-4618-881a-6c17edd05027
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dgc_byline
+    - node.type.dgc_newsroom
+_core:
+  default_config_hash: FGwh2LzKLNHa7quNBmo8bEwGTPjC1CwZQULhP472dn8
+id: node.dgc_newsroom.field_dgc_byline
+field_name: field_dgc_byline
+entity_type: node
+bundle: dgc_newsroom
+label: Byline
+description: 'Byline listing the author(s) of this story. Leave blank to use the Drupal user as the author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

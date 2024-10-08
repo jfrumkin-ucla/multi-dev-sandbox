@@ -1,0 +1,36 @@
+uuid: a12489d0-56b2-4d15-b036-a5d55aeac28f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.ems-menu
+  module:
+    - menu_block
+    - system
+  theme:
+    - siteden_surface
+id: emsmenu
+theme: siteden_surface
+region: navigation
+weight: 0
+provider: null
+plugin: 'menu_block:ems-menu'
+settings:
+  id: 'menu_block:ems-menu'
+  label: 'EMS Menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'ems-menu:'
+  suggestion: ems_menu
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/ems*'

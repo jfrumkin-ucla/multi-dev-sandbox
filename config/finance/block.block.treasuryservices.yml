@@ -1,0 +1,38 @@
+uuid: a6b42354-2cf7-42c4-9b4b-59dd5e2cfd7e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:9c20d30d-cf30-42bb-b80d-a9a656f9c5e6'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: treasuryservices
+theme: siteden_surface
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:9c20d30d-cf30-42bb-b80d-a9a656f9c5e6'
+settings:
+  id: 'block_content:9c20d30d-cf30-42bb-b80d-a9a656f9c5e6'
+  label: 'Treasury Services'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /treasury

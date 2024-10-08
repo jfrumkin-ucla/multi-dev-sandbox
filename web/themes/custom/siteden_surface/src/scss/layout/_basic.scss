@@ -1,0 +1,113 @@
+@use "../utilities/_mixins/breakpoints";
+@use "_mixins/layout";
+
+//------------------------------------
+//  Basic sidebar layout
+//------------------------------------
+
+.layout--basic {
+  padding-bottom: 6rem;
+  padding-top: 3rem;
+
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
+    @include layout.layout-default-settings();
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+    ". title"
+    "first content";
+  }
+
+  .layout__title {
+    grid-area: title;
+    margin-bottom: 3.5rem;
+  }
+
+  .layout__content {
+    grid-area: content;
+    min-width: 0;
+    padding-top: 0;
+  }
+
+  .layout__sidebar-first {
+    grid-area: first;
+    min-width: 0;
+  }
+
+  .layout__sidebar-second {
+    grid-area: second;
+    min-width: 0;
+  }
+
+  &--reverse {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      @include layout.layout-default-settings();
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas:
+      "title ."
+      "content second";
+    }
+  }
+
+  &--3col,
+  &--3-column {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      @include layout.layout-default-settings();
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas:
+      ". title ."
+      "first content second";
+    }
+  }
+
+  &--left-split {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      grid-template-areas:
+      ". title"
+      "first content"
+      "second content";
+    }
+    @media (max-width: breakpoints.breakpoint-min(lg)) {
+      display: grid;
+      grid-template-areas: "title" "first" "content" "second";
+    }
+  }
+
+  &--right-split {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+      "title ."
+      "content first"
+      "content second";
+    }
+    @media (max-width: breakpoints.breakpoint-min(lg)) {
+      display: grid;
+      grid-template-areas: "title" "first" "content" "second";
+    }
+  }
+}
+
+// Remove the padding from the content layout container if it follows a title-block Layout Builder section.
+.layout__title-block + .layout--basic,
+.layout__title-block + .layout--default {
+  padding-top: 0;
+}
+
+.layout--basic .node__content .layout__title,
+.layout--default .node__content .layout__title {
+  display: none;
+}
+
+.layout--basic .layout__title.js-layout-builder-region {
+  border: 5px solid red;
+  display: block;
+
+  &::before {
+    background-color: red;
+    color: white;
+    content: "This area will not render on the page. Move any needed content to a different area.";
+    display: block;
+    padding: 5px 10px;
+  }
+}
+

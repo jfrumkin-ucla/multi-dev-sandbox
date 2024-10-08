@@ -1,0 +1,71 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_marketing_highlight_horizntl
+    - field.field.block_content.sf_marketing_highlight_horizntl.field_sf_block_pimg
+    - field.field.block_content.sf_marketing_highlight_horizntl.field_sf_cta
+    - field.field.block_content.sf_marketing_highlight_horizntl.field_sf_link
+    - field.field.block_content.sf_marketing_highlight_horizntl.field_sf_m_block_primary_img
+    - field.field.block_content.sf_marketing_highlight_horizntl.field_sf_mh_call_to_action
+    - field.field.block_content.sf_marketing_highlight_horizntl.field_sf_mh_description
+    - field.field.block_content.sf_marketing_highlight_horizntl.field_sf_title
+  module:
+    - link
+    - media_library
+_core:
+id: block_content.sf_marketing_highlight_horizntl.default
+targetEntityType: block_content
+bundle: sf_marketing_highlight_horizntl
+mode: default
+content:
+  field_sf_block_pimg:
+    weight: 4
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_sf_cta:
+    weight: 6
+    settings:
+      size: 40
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sf_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_sf_mh_description:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sf_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_sf_m_block_primary_img: true
+  field_sf_mh_call_to_action: true

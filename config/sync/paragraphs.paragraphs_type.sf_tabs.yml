@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+_core:
+id: sf_tabs
+label: Tabs
+icon_uuid: null
+icon_default: null
+description: 'The tabs component allows users to add one or more tab items to create a tabbed interface.'
+behavior_plugins:
+  style_options:
+    enabled: true

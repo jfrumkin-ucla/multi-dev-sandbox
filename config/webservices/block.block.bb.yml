@@ -1,0 +1,25 @@
+uuid: 8bfe4277-1bb4-4e47-ac9c-dfa235df3811
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:74733fb9-183b-4017-9169-e98de80892c8'
+  module:
+    - block_content
+  theme:
+    - siteden_surface
+id: bb
+theme: siteden_surface
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:74733fb9-183b-4017-9169-e98de80892c8'
+settings:
+  id: 'block_content:74733fb9-183b-4017-9169-e98de80892c8'
+  label: 'BB: IT Services Logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

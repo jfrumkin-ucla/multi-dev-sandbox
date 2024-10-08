@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the SiteFarm Core module.
+ */
+
+/**
+ * Enables the siteden_update module.
+ */
+function sitefarm_core_update_8001() {
+  \Drupal::service('module_installer')->install(['siteden_update']);
+}
+
+/**
+ * Add new color options to article category vocabulary.
+ */
+function sitefarm_core_update_8002() {
+  // Update any legacy color references to use the new brand options.
+  $tids = \Drupal::entityQuery('taxonomy_term')
+    ->accessCheck(FALSE)
+    ->execute();
+  $updated_value_map = [
+    'label--primary' => 'category-brand--ucla-blue',
+    'label--secondary' => 'category-brand--ucla-gold',
+    'label--outline' => 'category-brand--ucla-blue-outline',
+    'label--gray' => 'category-brand--gray',
+  ];
+  foreach ($tids as $tid) {
+    $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+    if ($term->hasField('field_sf_brand_color')) {
+      $old_value = $term->get('field_sf_brand_color')->value ?? 'label--primary';
+      if (array_key_exists($old_value, $updated_value_map)) {
+        $term
+          ->set('field_sf_brand_color', $updated_value_map[$old_value])
+          ->save();
+      }
+    }
+  }
+
+  // Then revert the field storage config on the brand color field.
+  /** @var \Drupal\config_update\ConfigReverter $config_revert */
+  $config_revert = \Drupal::service('config_update.config_update');
+  $config_revert->revert('field_storage_config', 'taxonomy_term.field_sf_brand_color');
+
+  return t('Added new colors to article category vocabulary.');
+}
+
+/**
+ * Remove the ucla-blue-outline option from brand color options.
+ */
+function sitefarm_core_update_8003() {
+  // Update any legacy color references to use the new brand options.
+  $tids = \Drupal::entityQuery('taxonomy_term')
+    ->accessCheck(FALSE)
+    ->execute();
+  $updated_value_map = [
+    'category-brand--ucla-blue-outline' => 'category-brand--ucla-blue',
+  ];
+  foreach ($tids as $tid) {
+    $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+    if ($term->hasField('field_sf_brand_color')) {
+      $old_value = $term->get('field_sf_brand_color')->value ?? 'label--primary';
+      if (array_key_exists($old_value, $updated_value_map)) {
+        $term
+          ->set('field_sf_brand_color', $updated_value_map[$old_value])
+          ->save();
+      }
+    }
+  }
+
+  // Then revert the field storage config on the brand color field.
+  /** @var \Drupal\config_update\ConfigReverter $config_revert */
+  $config_revert = \Drupal::service('config_update.config_update');
+  $config_revert->revert('field_storage_config', 'taxonomy_term.field_sf_brand_color');
+
+  return t('Updated brand color options.');
+}

@@ -1,0 +1,60 @@
+@use "../utilities/_mixins/breakpoints";
+
+//------------------------------------
+//  Flex Region Object
+//------------------------------------
+
+// The flex region object makes a section easy to drop multiple items in and
+// receive a sensible layout.
+// @group Objects
+
+// Flex Region Object: Default Spacing unit
+$o-flex-region-spacer:    1rem !default;
+
+// Flex Region Object: Allow content in this region to arrange itself into
+// sensible columns.
+//
+// @example markup
+// <div class="o-flex-region">
+//   <div>content</div>
+//   <div>content</div>
+//   <div>content</div>
+// </div>
+@mixin o-flex-region() {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    flex-wrap: nowrap;
+  }
+
+  > * {
+    flex-grow: 1;
+    margin-bottom: $o-flex-region-spacer;
+    width: 100%;
+
+    @media (min-width: breakpoints.breakpoint-min(sm)) {
+      width: 50%;
+    }
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      width: auto;
+      flex-grow: 0;
+    }
+  }
+}
+
+@mixin o-flex-region--flush() {
+  > * {
+    margin-bottom: 0;
+  }
+}
+
+.o-flex-region {
+  @include o-flex-region();
+}
+
+.o-flex-region--flush {
+  @include o-flex-region--flush();
+}

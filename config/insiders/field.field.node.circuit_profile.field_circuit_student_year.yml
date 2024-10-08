@@ -1,0 +1,23 @@
+uuid: a8e71f57-0b6a-4666-8a87-89a00ac87da3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_circuit_student_year
+    - node.type.circuit_profile
+  module:
+    - options
+_core:
+  default_config_hash: rwiwxYQgy3zH87lZ-odOJ_68e-KLlBEDGecj_S8GrOM
+id: node.circuit_profile.field_circuit_student_year
+field_name: field_circuit_student_year
+entity_type: node
+bundle: circuit_profile
+label: Year
+description: 'This field is intended only for Student Staff members.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

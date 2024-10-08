@@ -1,0 +1,28 @@
+uuid: 6cb0df11-c817-448b-ae5a-16e9e8346f15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sf_wysiwyg
+    - paragraphs.paragraphs_type.sf_text
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+_core:
+  default_config_hash: M5zKFSc2P6snRY1R83TULqG9zbmSrEOphbFyJai8DD8
+id: paragraph.sf_text.field_sf_wysiwyg
+field_name: field_sf_wysiwyg
+entity_type: paragraph
+bundle: sf_text
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

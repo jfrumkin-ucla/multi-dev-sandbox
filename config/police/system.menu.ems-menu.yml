@@ -1,0 +1,8 @@
+uuid: 0a18571a-8c02-4931-a873-6f04692b0399
+langcode: en
+status: true
+dependencies: {  }
+id: ems-menu
+label: 'EMS Menu'
+description: 'Emergency Medical Services microsite menu'
+locked: false

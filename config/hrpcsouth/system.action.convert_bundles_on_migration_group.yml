@@ -1,0 +1,11 @@
+uuid: 15577fd3-7eb1-4b69-b4a8-67410ad0786f
+langcode: en
+status: true
+dependencies:
+  module:
+    - convert_bundles
+id: convert_bundles_on_migration_group
+label: 'Convert Migration Group Entity Bundles'
+type: migration_group
+plugin: convert_bundles_action_base
+configuration: {  }

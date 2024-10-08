@@ -1,0 +1,9 @@
+name: SiteDen SSO
+type: module
+description: "Configure Backdoor login for Admin and redirect other user for SSO login."
+core_version_requirement: ^9 || ^10
+package: 'SiteDen'
+
+dependencies:
+  - sitefarm_sso
+  - simplesamlphp_auth

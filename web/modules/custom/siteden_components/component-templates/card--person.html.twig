@@ -1,0 +1,27 @@
+<div class="person-card {{ card_class }}">
+  {% if image %}
+  <div class="person-card__image">
+    {% if link %}<a href="{{ link.url }}">{% endif %}
+      {{ image }}
+    {% if link %}</a>{% endif %}
+  </div>
+  {% endif %}
+  <div class="person-card__info-wrapper">
+    {% if name %}
+      <div class="person-card__name">
+        {% if link %}<a href="{{ link.url }}">{% endif %}
+          {{ name }}
+          {% if link %}</a>{% endif %}
+        {% if pronouns %}
+          <div class="person-card__pronouns">({{ pronouns }})</div>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if position %}
+      <div class="person-card__position">{{ position }}</div>
+    {% endif %}
+    {% if text %}
+      <div class="person-card__text text-formatted">{{ text }}</div>
+    {% endif %}
+  </div>
+</div>

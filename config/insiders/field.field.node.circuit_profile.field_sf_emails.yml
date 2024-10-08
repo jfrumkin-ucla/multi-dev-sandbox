@@ -1,0 +1,21 @@
+uuid: baac630b-7c1b-4b50-b38e-724c4dbf9a88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sf_emails
+    - node.type.circuit_profile
+_core:
+  default_config_hash: oh4nBNvhsPEpOnGyLyERba8Sb4cIw8M0G7Ti_q5AlUA
+id: node.circuit_profile.field_sf_emails
+field_name: field_sf_emails
+entity_type: node
+bundle: circuit_profile
+label: Email
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

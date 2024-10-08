@@ -1,0 +1,37 @@
+uuid: 3800b615-8136-49a1-86a6-f79bd07e8ce2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:1d11a615-838d-4aa0-8f93-485cf513cba5'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: inventorialequipment_helpfullinks
+theme: siteden_surface
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:1d11a615-838d-4aa0-8f93-485cf513cba5'
+settings:
+  id: 'block_content:1d11a615-838d-4aa0-8f93-485cf513cba5'
+  label: 'Inventorial Equipment_Helpful Links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /custody-codes

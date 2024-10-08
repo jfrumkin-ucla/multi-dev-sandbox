@@ -1,0 +1,8 @@
+uuid: 9712e2c0-a882-4f58-8fbf-92acdaecbaf5
+langcode: en
+status: true
+dependencies: {  }
+name: 'LTI Estimated Availability'
+vid: lti_projected_availability
+description: 'Anticipated academic terms for integration into Bruin Learn.'
+weight: 0

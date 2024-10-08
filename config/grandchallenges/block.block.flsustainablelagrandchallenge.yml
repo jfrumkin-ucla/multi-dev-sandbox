@@ -1,0 +1,30 @@
+uuid: 8c48414b-a7e1-4c59-b00e-c5c0bb7578f9
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_focal_link:20d146d0-2668-43e8-ba0b-8604ce34dd20'
+  module:
+    - block_content
+    - system
+  theme:
+    - siteden_surface
+id: flsustainablelagrandchallenge
+theme: siteden_surface
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:20d146d0-2668-43e8-ba0b-8604ce34dd20'
+settings:
+  id: 'block_content:20d146d0-2668-43e8-ba0b-8604ce34dd20'
+  label: 'FL: Sustainable LA Grand Challenge'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

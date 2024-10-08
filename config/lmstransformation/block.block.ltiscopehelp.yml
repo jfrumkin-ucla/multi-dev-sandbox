@@ -1,0 +1,38 @@
+uuid: ccc84e55-3543-453a-a93f-adbf6d01f7f8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:31f81547-0c23-491e-a83e-115b2d624393'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 1
+    full_width:
+      full_width: 0
+id: ltiscopehelp
+theme: siteden_surface
+region: sidebar_second
+weight: -15
+provider: null
+plugin: 'block_content:31f81547-0c23-491e-a83e-115b2d624393'
+settings:
+  id: 'block_content:31f81547-0c23-491e-a83e-115b2d624393'
+  label: 'LTI Scope Definitions'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /lti-tool

@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sf_summary
+    - node.type.sf_page
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - sf_restricted_html
+id: node.sf_page.field_sf_summary
+field_name: field_sf_summary
+entity_type: node
+bundle: sf_page
+label: Summary
+description: 'A short summary that is displayed in page views and also as the link description when pasted into Slack, Facebook, Outlook, etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

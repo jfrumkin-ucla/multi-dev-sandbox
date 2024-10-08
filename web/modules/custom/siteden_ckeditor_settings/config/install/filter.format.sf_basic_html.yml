@@ -1,0 +1,123 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.landscape_16x9
+    - core.entity_view_mode.media.landscape_4x3
+    - core.entity_view_mode.media.profile
+    - core.entity_view_mode.media.thumbnail
+  module:
+    - ckeditor5_plugin_pack_todo_document_list
+    - editor
+    - entity_embed
+    - media
+    - url_embed
+name: 'Basic HTML'
+format: sf_basic_html
+weight: 0
+filters:
+  ckeditor5_plugin_pack_todo_list_filter:
+    id: ckeditor5_plugin_pack_todo_list_filter
+    provider: ckeditor5_plugin_pack_todo_document_list
+    status: false
+    weight: -50
+    settings: {  }
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: -45
+    settings: {  }
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
+    status: false
+    weight: -37
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: -47
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -44
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: -46
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -49
+    settings:
+      allowed_html: '<img alt src class> <a id target rel class="ck-anchor btn btn--primary btn--secondary btn--invert icon-link icon-link--internal icon-link--download icon-link--external" href data-entity-type data-entity-uuid data-entity-substitution> <br> <p class="alert alert--success alert--warning alert--error label label--primary label--gray label--secondary label--outline lead text-align-left text-align-center text-align-right text-align-justify"> <h2 class="heading--bar heading--highlight heading--ribbon-branding heading--ribbon-highlight text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <div class> <blockquote class="pullquote u-align--left u-width--half u-align--right"> <ul class="list--link list--link-icon list--flush list--pipe list--wraparound"> <ol class="list--wraparound list--upper-roman list--upper-alpha list--lower-roman list--lower-alpha list--alpha-numeric-roman"> <table class="table--striped-column-gb table--brd-striped-column-gb table table--striped-gb table--striped-bordered table--striped-bordered-gb table--plain table--plain-border table--options"> <tr class="tr-striped-col-gb tr-lightest-blue tr-lighter-blue tr-darker-gold"> <strong> <em> <s> <sup> <li> <hr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-view-mode data-caption data-align>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -48
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -40
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: false
+    weight: -39
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: -38
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: -43
+    settings:
+      filter_url_length: 72
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: -36
+    settings:
+      default_view_mode: default
+      allowed_view_modes:
+        default: default
+        landscape_16x9: landscape_16x9
+        landscape_4x3: landscape_4x3
+        profile: profile
+        thumbnail: thumbnail
+      allowed_media_types:
+        sf_image_media_type: sf_image_media_type
+        sf_video_media_type: sf_video_media_type
+  url_embed:
+    id: url_embed
+    provider: url_embed
+    status: false
+    weight: -42
+    settings: {  }
+  url_embed_convert_links:
+    id: url_embed_convert_links
+    provider: url_embed
+    status: false
+    weight: -41
+    settings:
+      url_prefix: ''

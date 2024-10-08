@@ -1,0 +1,95 @@
+@use "../utilities/colors";
+
+.icon-link {
+  align-items: center;
+  border-bottom: 1px solid colors.$grey-8;
+  border-radius: 0;
+  display: flex;
+  font-weight: bold;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+
+  &:visited {
+    color: colors.$default-state;
+  }
+
+  &:hover {
+    background-color: colors.$hover-state;
+    color: colors.$white;
+  }
+
+  &:focus {
+    background-color: colors.$hover-state;
+    color: colors.$white;
+    outline-color: colors.$white;
+    outline-offset: -.45em;
+  }
+
+  &:after {
+    margin-left: auto;
+  }
+
+  &:hover:after,
+  &:focus:after {
+    filter: colors.$filter-color-white;
+  }
+
+  &--internal {
+    &:after {
+      width: 1.5em;
+      height: .875em;
+    }
+  }
+
+  &--external {
+    &:after {
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  &--download {
+    &:after {
+      width: 1.375em;
+      height: 1.375em;
+    }
+  }
+
+  &:after {
+    display: block;
+    content: "";
+    padding-left: 2rem;
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 1px);
+  }
+
+  &--internal {
+    &:after {
+      background-image: url("../images/surface-icons/internal-link.svg");
+    }
+  }
+
+  &--external {
+    &:after {
+      background-image: url("../images/surface-icons/external-link.svg");
+    }
+  }
+
+  &--download {
+    &:after {
+      background-image: url("../images/surface-icons/download.svg");
+    }
+  }
+
+  &--play {
+    &:after {
+      background-image: url("../images/surface-icons/play.svg");
+    }
+  }
+}
+
+a.icon-link.link--external:after {
+  margin-left: auto;
+  margin-right: 0.25rem;
+}

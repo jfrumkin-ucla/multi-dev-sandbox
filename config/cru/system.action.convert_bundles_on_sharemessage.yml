@@ -1,0 +1,11 @@
+uuid: b40f2b3b-06c6-44c4-8e83-1a17c1983b85
+langcode: en
+status: true
+dependencies:
+  module:
+    - convert_bundles
+id: convert_bundles_on_sharemessage
+label: 'Convert Share Message Entity Bundles'
+type: sharemessage
+plugin: convert_bundles_action_base
+configuration: {  }

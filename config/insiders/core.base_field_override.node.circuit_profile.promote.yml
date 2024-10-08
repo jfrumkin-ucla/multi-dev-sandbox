@@ -1,0 +1,24 @@
+uuid: 249d342f-1006-4d92-b3e0-3677c9f093d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.circuit_profile
+_core:
+  default_config_hash: SCrHHPfh3Cuq8BQPHFwBIpkYryYk_ha3smIzOGbQW74
+id: node.circuit_profile.promote
+field_name: promote
+entity_type: node
+bundle: circuit_profile
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

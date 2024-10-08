@@ -1,0 +1,36 @@
+uuid: 54c0ab6c-d979-4314-be16-b033dbeb0062
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_card:d4678a3f-47fe-4e67-8de2-b611b5d7d4db'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    card_type:
+      card_type: light
+      card_accent: 0
+id: cforgeneralstandprograminquiriescontactdepressiongcucla.edu.
+theme: siteden_surface
+region: full_width_bottom
+weight: -14
+provider: null
+plugin: 'block_content:d4678a3f-47fe-4e67-8de2-b611b5d7d4db'
+settings:
+  id: 'block_content:d4678a3f-47fe-4e67-8de2-b611b5d7d4db'
+  label: 'C: For general STAND program inquiries, contact depressionGC@ucla.edu.'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

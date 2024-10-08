@@ -1,0 +1,25 @@
+uuid: 3398232b-75a7-48de-8d5f-800b29945501
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - siteden_surface
+_core:
+  default_config_hash: _y0PJThP0E4EB839eea5J07xrPRfIzyZPUn2e3ck6w0
+id: siteden_surface_branding
+theme: siteden_surface
+region: header
+weight: -16
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

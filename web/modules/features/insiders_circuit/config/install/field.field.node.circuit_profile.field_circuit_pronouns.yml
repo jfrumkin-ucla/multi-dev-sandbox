@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_circuit_pronouns
+    - node.type.circuit_profile
+  module:
+    - options
+id: node.circuit_profile.field_circuit_pronouns
+field_name: field_circuit_pronouns
+entity_type: node
+bundle: circuit_profile
+label: 'Personal Pronouns'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

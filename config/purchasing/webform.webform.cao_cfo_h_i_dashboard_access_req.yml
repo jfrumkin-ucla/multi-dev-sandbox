@@ -1,0 +1,511 @@
+uuid: cfb433d6-d777-498c-95d2-33a39410c8e5
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 246
+template: false
+archive: false
+id: cao_cfo_h_i_dashboard_access_req
+title: 'CAO/CFO H&I Dashboard Request Form'
+description: ''
+categories:
+  - Webform
+elements: |-
+  request_type:
+    '#type': webform_wizard_page
+    '#title': 'Request Type'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    request_type_intro:
+      '#type': processed_text
+      '#text': |
+        <p class="lead">Please select your request type:</p>
+      '#format': sf_basic_html
+    what_type_of_request_is_this_:
+      '#type': radios
+      '#title': 'What type of request is this?'
+      '#title_display': invisible
+      '#options':
+        'New Access': 'New Access'
+        'Remove Access': 'Remove Access'
+        'Dashboard Usability Question': 'Dashboard Usability Question'
+      '#options_display': buttons
+      '#required': true
+      '#options__properties': ''
+  request_type_for_whom:
+    '#type': webform_wizard_page
+    '#title': 'Request Type_For Whom'
+    '#states':
+      visible:
+        - ':input[name="what_type_of_request_is_this_"]':
+            value: 'New Access'
+        - or
+        - ':input[name="what_type_of_request_is_this_"]':
+            value: 'Remove Access'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    for_who_text:
+      '#type': processed_text
+      '#text': |
+        <p class="lead">Is this request for you or on behalf of someone else?</p>
+      '#format': sf_basic_html
+    are_you_requesting_access_on_behalf_of_someone_else_:
+      '#type': select
+      '#title': 'Is this request for you or on behalf of someone else?'
+      '#title_display': invisible
+      '#options':
+        'For myself': 'For myself'
+        'For someone else': 'For someone else'
+      '#required': true
+  access_request_on_behalf_of:
+    '#type': webform_wizard_page
+    '#title': 'Access Request_On Behalf Of'
+    '#states':
+      visible:
+        ':input[name="what_type_of_request_is_this_"]':
+          value: 'New Access'
+        ':input[name="are_you_requesting_access_on_behalf_of_someone_else_"]':
+          value: 'For someone else'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    new_access_request:
+      '#type': processed_text
+      '#text': |
+        <h2 class="heading--ribbon-highlight">New Access Request</h2>
+      '#format': sf_basic_html
+    on_behalf_intro:
+      '#type': processed_text
+      '#text': |
+        <p class="lead">Please provide the details of the <strong>CAO/CFO who needs to be granted access</strong>:</p>
+      '#format': sf_basic_html
+    on_behalf_name:
+      '#type': textfield
+      '#title': 'CAO''s/CFO''s Name'
+      '#required': true
+    on_behalf_email:
+      '#type': email
+      '#title': 'CAO''s/CFO''s Email'
+      '#required': true
+    on_behalf_uid:
+      '#type': textfield
+      '#title': 'CAO''s/CFO''s UID'
+      '#required': true
+    on_behalf_org:
+      '#type': textfield
+      '#title': 'CAO''s/CFO''s Organization Code'
+      '#required': true
+    on_behalf_dept:
+      '#type': textfield
+      '#title': 'CAO''s/CFO''s Department Code(s)'
+      '#required': true
+    on_behalf_position:
+      '#type': webform_select_other
+      '#title': Position
+      '#options':
+        CAO: CAO
+        CFO: CFO
+      '#other__placeholder': 'Enter title...'
+      '#required': true
+  access_request_requestor_info:
+    '#type': webform_wizard_page
+    '#title': 'Access Request_Requestor Info'
+    '#states':
+      visible:
+        ':input[name="what_type_of_request_is_this_"]':
+          value: 'New Access'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    new_access_request_1:
+      '#type': processed_text
+      '#text': |
+        <h2 class="heading--ribbon-highlight">New Access Request</h2>
+      '#format': sf_basic_html
+    your_info_intro:
+      '#type': processed_text
+      '#text': |
+        <p class="lead">Please provide <strong>your information</strong>:</p>
+      '#format': sf_basic_html
+    requestor_name:
+      '#type': textfield
+      '#title': Name
+      '#required': true
+    requestor_email:
+      '#type': email
+      '#title': Email
+      '#required': true
+    requestor_uid:
+      '#type': textfield
+      '#title': UID
+      '#required': true
+    requestor_org:
+      '#type': textfield
+      '#title': 'Organization Code'
+      '#required': true
+    requestor_dept:
+      '#type': textfield
+      '#title': 'Department Code(s)'
+      '#required': true
+    requestor_position:
+      '#type': webform_select_other
+      '#title': Position
+      '#options':
+        CAO: CAO
+        CFO: CFO
+      '#other__placeholder': 'Enter title...'
+      '#required': true
+  remove_request_on_behalf_of:
+    '#type': webform_wizard_page
+    '#title': 'Remove Request_On Behalf Of'
+    '#states':
+      visible:
+        ':input[name="what_type_of_request_is_this_"]':
+          value: 'Remove Access'
+        ':input[name="are_you_requesting_access_on_behalf_of_someone_else_"]':
+          value: 'For someone else'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    remove_access_request:
+      '#type': processed_text
+      '#text': |
+        <h2 class="heading--ribbon-highlight">Remove Access Request</h2>
+      '#format': sf_basic_html
+    on_behalf_intro_1:
+      '#type': processed_text
+      '#text': |
+        <p class="lead">Please provide the details of the<strong> individual who needs their access removed</strong>:</p>
+      '#format': sf_basic_html
+    on_behalf_name_1:
+      '#type': textfield
+      '#title': Name
+      '#required': true
+    on_behalf_email_1:
+      '#type': email
+      '#title': Email
+      '#required': true
+    on_behalf_uid_1:
+      '#type': textfield
+      '#title': UID
+      '#required': true
+    on_behalf_org_1:
+      '#type': textfield
+      '#title': 'Organization Code'
+      '#required': true
+    on_behalf_dept_1:
+      '#type': textfield
+      '#title': 'Department Code(s)'
+      '#required': true
+    on_behalf_position_1:
+      '#type': webform_select_other
+      '#title': Position
+      '#options':
+        CAO: CAO
+        CFO: CFO
+      '#other__placeholder': 'Enter title...'
+      '#required': true
+  remove_request_requestor_info:
+    '#type': webform_wizard_page
+    '#title': 'Remove Request_Requestor Info'
+    '#states':
+      visible:
+        ':input[name="what_type_of_request_is_this_"]':
+          value: 'Remove Access'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    remove_access_request_1:
+      '#type': processed_text
+      '#text': |
+        <h2 class="heading--ribbon-highlight">Remove Access Request</h2>
+      '#format': sf_basic_html
+    your_info_intro_1:
+      '#type': processed_text
+      '#text': |
+        <p class="lead">Please provide <strong>your information</strong>:</p>
+      '#format': sf_basic_html
+    requestor_name_1:
+      '#type': textfield
+      '#title': Name
+      '#required': true
+    requestor_email_1:
+      '#type': email
+      '#title': Email
+      '#required': true
+    requestor_uid_1:
+      '#type': textfield
+      '#title': UID
+      '#required': true
+    requestor_org_1:
+      '#type': textfield
+      '#title': 'Organization Code'
+      '#required': true
+    requestor_dept_1:
+      '#type': textfield
+      '#title': 'Department Code(s)'
+      '#required': true
+    requestor_position_1:
+      '#type': webform_select_other
+      '#title': Position
+      '#options':
+        CAO: CAO
+        CFO: CFO
+      '#other__placeholder': 'Enter title...'
+      '#required': true
+  request_type_usability_question:
+    '#type': webform_wizard_page
+    '#title': 'Request Type_Usability Question'
+    '#states':
+      visible:
+        ':input[name="what_type_of_request_is_this_"]':
+          value: 'Dashboard Usability Question'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    usability_question:
+      '#type': processed_text
+      '#text': |
+        <h2 class="heading--ribbon-highlight">Dashboard Usability Question</h2>
+      '#format': sf_basic_html
+    requestor_name_2:
+      '#type': textfield
+      '#title': Name
+      '#required': true
+    requestor_email_2:
+      '#type': email
+      '#title': Email
+      '#required': true
+    requestor_question:
+      '#type': textarea
+      '#title': Question
+      '#required': true
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: /dashboard-request-form
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: false
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: '<p class="lead">Thank you for your request! We&#39;ll be in touch.</p>'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: completed
+  purge_days: 1
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  ucla_procurement_reporting_email:
+    id: email
+    handler_id: ucla_procurement_reporting_email
+    label: 'UCLA Procurement Reporting Email'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: 'jmalott@finance.ucla.edu,psg-reporting@finance.ucla.edu'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: 'PSG Dashboard Request'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'NEW! CAO/CFO Request Form Submission '
+      body: "Submitted on [webform_submission:created]\r\nSubmitted by: [webform_submission:user]\r\n\r\nSubmitted values are:\r\n[webform_submission:values]\r\n"
+      excluded_elements:
+        for_who_text: for_who_text
+        new_access_request: new_access_request
+        on_behalf_intro: on_behalf_intro
+        new_access_request_1: new_access_request_1
+        your_info_intro: your_info_intro
+        remove_access_request: remove_access_request
+        on_behalf_intro_1: on_behalf_intro_1
+        remove_access_request_1: remove_access_request_1
+        your_info_intro_1: your_info_intro_1
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

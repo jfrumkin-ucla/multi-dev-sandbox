@@ -1,0 +1,25 @@
+uuid: e802cdfa-1d60-4290-9dbe-347a3f261817
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_circuit_leader
+    - node.type.circuit_profile
+_core:
+  default_config_hash: scFYuL3-mButzknbHLhvlyEJdxxX3QXqQ3byQfJGnSg
+id: node.circuit_profile.field_circuit_leader
+field_name: field_circuit_leader
+entity_type: node
+bundle: circuit_profile
+label: 'Show on Circuit Leaders'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

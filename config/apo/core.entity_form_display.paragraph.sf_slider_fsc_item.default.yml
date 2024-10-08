@@ -1,0 +1,23 @@
+uuid: fe599a50-abf5-45f5-988b-8a57a9f2bf2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sf_slider_fsc_item.field_article
+    - paragraphs.paragraphs_type.sf_slider_fsc_item
+_core:
+  default_config_hash: HnheG0Q21Wm1mZfaw9N_XoDGZfkpUaG2mSFUczyFd5o
+id: paragraph.sf_slider_fsc_item.default
+targetEntityType: paragraph
+bundle: sf_slider_fsc_item
+mode: default
+content:
+  field_article:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sf_article_banner
+    - node.type.sf_article
+    - paragraphs.paragraphs_type.article_embed_banner
+_core:
+id: paragraph.article_embed_banner.field_sf_article_banner
+field_name: field_sf_article_banner
+entity_type: paragraph
+bundle: article_embed_banner
+label: Article
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sf_article: sf_article
+    sort:
+      field: created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

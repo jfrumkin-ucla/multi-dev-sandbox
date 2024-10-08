@@ -1,0 +1,41 @@
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  {% if date or time or location %}
+    <div class="event__meta">
+      <ul>
+        {% if date %}
+          <li class="icon icon--calendar">{{ date }}</li>
+        {% endif %}
+        {% if time %}
+          <li class="icon icon--time">{{ time }}</li>
+        {% endif %}
+      </ul>
+      {% if location %}
+        <div class="icon icon--location">{{ location }}</div>
+      {% endif %}
+      {% if map_link %}
+        <div class="icon icon--map"><a href="{{ map_link.url }}" target="_blank">{{ map_link.title }}</a></div>
+      {% endif %}
+    </div>
+    <div class="add-to-calendar-button" start='{{ datetime }}' date='{{ datetime }}' time='{{ time }}' location='{{ location }}' title='{{ title }}' description='{{ title }}'>&nbsp;</div>
+  {% endif %}
+
+  {% if media %}
+  <div class="event__media">
+    {{ media }}
+  </div>
+  {% endif %}
+
+
+  {% if body %}
+  <div class="event__content">
+    {{ body }}
+  </div>
+  {% endif %}
+
+  {% if extra_content %}
+    {{ extra_content }}
+  {% endif %}
+
+  {{ tags }}
+</article>

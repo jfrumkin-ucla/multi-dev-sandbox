@@ -1,0 +1,21 @@
+uuid: 856a303d-39c3-43fe-80b5-6424f380c21c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: Hw6OWRg9YfZem_e1evr0WqCXa90ZGp_0a1_AT9SfKz0
+id: node.field_dgc_participants
+field_name: field_dgc_participants
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

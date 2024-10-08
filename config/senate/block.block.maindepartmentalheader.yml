@@ -1,0 +1,30 @@
+uuid: 1ead8ea0-3263-45b3-9698-da9f5e1387c2
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_university_header:ae7745c4-07f4-4a33-adbe-48cf5766df86'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: maindepartmentalheader
+theme: siteden_surface
+region: title
+weight: 0
+provider: null
+plugin: 'block_content:ae7745c4-07f4-4a33-adbe-48cf5766df86'
+settings:
+  id: 'block_content:ae7745c4-07f4-4a33-adbe-48cf5766df86'
+  label: 'Main Departmental Header'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

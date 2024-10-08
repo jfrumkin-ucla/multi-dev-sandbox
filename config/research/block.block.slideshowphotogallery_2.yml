@@ -1,0 +1,33 @@
+uuid: 57b8d5e8-919d-4c7f-bba4-8c69b838f434
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_style_plugins
+    - sitefarm_photo_gallery
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: slideshowphotogallery_2
+theme: siteden_surface
+region: content
+weight: -25
+provider: null
+plugin: slideshow_gallery_block
+settings:
+  id: slideshow_gallery_block
+  label: 'Town Hall with NSF Director Sethuraman Panchanathan'
+  label_display: '0'
+  provider: sitefarm_photo_gallery
+  show_title: 0
+  slider_nav: 0
+  gallery: '3801'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news/director-national-science-foundation-sethuraman-panchanathan-visits-ucla

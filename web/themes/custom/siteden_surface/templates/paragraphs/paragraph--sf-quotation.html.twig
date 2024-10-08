@@ -1,0 +1,22 @@
+{% extends "paragraph.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a Ribbon text banner paragraph.
+ *
+ * Available variables:
+ * - Look in the paragraph.html.twig file for available variables.
+ */
+#}
+
+{% block content %}
+  {% include '@siteden-components/quotation.html.twig' with {
+    credit: content.field_sf_title.0,
+    image: content.field_sf_image.0,
+    text: content.field_sf_wysiwyg.0['#text'],
+    link: {
+      title: content.field_sf_link.0['#title'],
+      url: content.field_sf_link.0['#url'],
+    }
+  } %}
+{% endblock %}

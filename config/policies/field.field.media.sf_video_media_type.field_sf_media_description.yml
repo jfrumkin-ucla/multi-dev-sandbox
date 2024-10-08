@@ -1,0 +1,24 @@
+uuid: a1b1bd38-c158-474c-ae32-3cbbc48d9d99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_sf_media_description
+    - media.type.sf_video_media_type
+  module:
+    - text
+_core:
+  default_config_hash: WBnin5Jn5movjTRHdsx3ei2ppMF3vk9ocxu3i7Ouxsw
+id: media.sf_video_media_type.field_sf_media_description
+field_name: field_sf_media_description
+entity_type: media
+bundle: sf_video_media_type
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

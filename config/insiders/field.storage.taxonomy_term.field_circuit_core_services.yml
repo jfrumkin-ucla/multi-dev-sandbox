@@ -1,0 +1,21 @@
+uuid: c10a6162-ebbf-4681-8527-41fadb9a140b
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - text
+_core:
+  default_config_hash: 7CsRdACyt3LYECNqumeGhboHdk93tjLrxcnnuoyXybM
+id: taxonomy_term.field_circuit_core_services
+field_name: field_circuit_core_services
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

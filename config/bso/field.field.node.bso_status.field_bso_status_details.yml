@@ -1,0 +1,21 @@
+uuid: c7295300-70bf-4444-9263-b0ad5a31ef00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bso_status_details
+    - node.type.bso_status
+  module:
+    - text
+id: node.bso_status.field_bso_status_details
+field_name: field_bso_status_details
+entity_type: node
+bundle: bso_status
+label: 'Status Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,38 @@
+uuid: 99cb3dbe-32a4-41e3-bcdf-93713981b5ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sf_landing
+    - node.type.sf_person
+    - node.type.sf_photo_gallery
+  module:
+    - file
+    - media
+    - node
+    - system
+    - toolbar
+    - tour
+    - webform
+_core:
+  default_config_hash: VbfksRSvySyh37teVWd4ub3VFU4Mw28--1EADrAXqL4
+id: contributor
+label: Contributor
+weight: -8
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'create media'
+  - 'delete own files'
+  - 'edit own sf_landing content'
+  - 'edit own sf_person content'
+  - 'edit own sf_photo_gallery content'
+  - 'edit own webform'
+  - 'update any media'
+  - 'update media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'

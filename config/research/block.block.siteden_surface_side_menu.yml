@@ -1,0 +1,49 @@
+uuid: 84ac567e-2407-4d53-934c-9de7d44e915a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_style_plugins
+    - menu_block
+    - node
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: siteden_surface_side_menu
+theme: siteden_surface
+region: sidebar_first
+weight: -19
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Side navigation'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: true
+  label_type: root
+  level: 2
+  depth: 0
+  expand_all_items: false
+  parent: 'main:'
+  suggestion: main
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/initiatives\r\n/initiatives/datax\r\n/research-data-working-group"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      sf_page: sf_page

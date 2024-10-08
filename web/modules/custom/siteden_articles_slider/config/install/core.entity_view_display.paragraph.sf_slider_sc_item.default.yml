@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sf_slider_sc_item.field_article
+    - paragraphs.paragraphs_type.sf_slider_sc_item
+id: paragraph.sf_slider_sc_item.default
+targetEntityType: paragraph
+bundle: sf_slider_sc_item
+mode: default
+content:
+  field_article:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

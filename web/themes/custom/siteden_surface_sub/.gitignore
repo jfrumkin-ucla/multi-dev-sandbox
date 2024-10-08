@@ -1,0 +1,13 @@
+# Ignore compiled files
+package-lock.json
+assets
+
+# Dependencies
+bower_components
+node_modules
+
+# Ignore Js and Sass map files since they only work locally anyway
+*.map
+
+# Custom Local config
+/gulp-config.local.yml

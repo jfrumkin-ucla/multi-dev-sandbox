@@ -1,0 +1,41 @@
+uuid: 042b6092-b1a3-431e-bd71-b3e197a05c91
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer3
+  module:
+    - block_style_plugins
+    - menu_block
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: footer3
+theme: siteden_surface
+region: footer_nav
+weight: -15
+provider: null
+plugin: 'menu_block:footer3'
+settings:
+  id: 'menu_block:footer3'
+  label: 'Find Answers'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'footer3:'
+  suggestion: footer3
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/it-ucla/key-initiatives/bruin-voice*'

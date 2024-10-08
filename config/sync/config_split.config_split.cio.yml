@@ -1,0 +1,83 @@
+uuid: bb197d1c-2781-47fd-9374-53522743874d
+langcode: en
+status: false
+dependencies: {  }
+id: cio
+label: cio.ucla.edu
+description: 'Config split for https://cio.ucla.edu/ Office of the CIO website'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/cio
+module: {  }
+theme: {  }
+complete_list:
+  - block.block.bb
+  - block.block.siteden_surface_branding
+  - block.block.siteden_surface_breadcrumbs
+  - block.block.siteden_surface_content
+  - block.block.siteden_surface_main_menu
+  - block.block.siteden_surface_messages
+  - block.block.siteden_surface_page_title
+  - block.block.siteden_surface_search
+  - block.block.siteden_surface_side_menu
+  - block.block.siteden_surface_sitecredits
+  - block.block.siteden_surface_tabs
+  - block.block.views_block__sf_events_upcoming_block_1
+  - block.block.views_block__sf_persons_related_to_content_block_1
+  - block.block.views_block__sf_photo_galleries_related_by_term_block_1
+  - block.block.views_block__sf_photo_galleries_related_to_content_block_1
+  - captcha.captcha_point.contact_message_feedback_form
+  - captcha.captcha_point.search_block_form
+  - captcha.captcha_point.search_form
+  - config_suite.settings
+  - core.base_field_override.node.commitment.promote
+  - core.base_field_override.node.commitment.title
+  - core.entity_form_display.node.commitment.default
+  - core.entity_form_display.node.sf_page.default
+  - core.entity_view_display.node.commitment.default
+  - core.entity_view_display.node.commitment.teaser
+  - core.entity_view_display.node.sf_landing.default
+  - core.extension
+  - core.menu.static_menu_link_overrides
+  - css_editor.theme.siteden_surface
+  - dblog.settings
+  - field.field.node.commitment.body
+  - field.field.node.commitment.field_activities
+  - field.field.node.commitment.field_benefits
+  - field.field.node.commitment.field_description
+  - field.field.node.commitment.field_link
+  - field.field.node.commitment.field_name
+  - field.storage.node.field_activities
+  - field.storage.node.field_benefits
+  - field.storage.node.field_description
+  - field.storage.node.field_link
+  - field.storage.node.field_name
+  - google_analytics.settings
+  - honeypot.settings
+  - node.type.commitment
+  - pantheon_advanced_page_cache.settings
+  - recaptcha.settings
+  - search.page.google_cse_search
+  - siteden_menu_item_limit.settings
+  - siteden_surface.settings
+  - system.action.convert_bundles_on_sharemessage
+  - system.action.media_edit_action
+  - system.action.node_edit_action
+  - system.action.taxonomy_term_edit_action
+  - system.action.user_edit_action
+  - system.feature_flags
+  - system.site
+  - views.view.commitment_s_
+  - views.view.commitments
+  - views.view.editoria11y_dismissals
+  - views.view.editoria11y_results
+  - views.view.executive_board
+  - views.view.layout_override
+  - views.view.published_node_filter
+  - views.view.sf_events_upcoming
+  - views.view.taxonomy_term
+  - views.view.watchdog
+  - webform.settings
+partial_list: {  }

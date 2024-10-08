@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * @file
+ * Module for SiteDen Admin Customizations.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function siteden_admin_custom_page_attachments(array &$attachments): void {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $route_is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
+
+  // Attach the layout-paragraphs library if the active route is admin and the page is the add or edit node form.
+  if ($route_is_admin && ($route_name == 'entity.node.edit_form' || $route_name == 'node.add')) {
+    $attachments['#attached']['library'][] = 'siteden_surface/layout-paragraphs';
+    $attachments['#attached']['library'][] = 'sitefarm_focal_link/material-icons';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * We want to render certain templates from the site theme, even if we are
+ * in the admin theme. This is to give Layout Paragraphs fields the same
+ * look and feel as the site to improve the editing experience.
+ */
+function siteden_admin_custom_theme($existing, $type, $theme, $path) {
+  $theme_array = [];
+  $theme_path = \Drupal::service('extension.list.theme')
+    ->getPath(\Drupal::config('system.theme')->get('default'));
+  $template_path = $theme_path . '/templates';
+
+  /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+  $file_system = \Drupal::service('file_system');
+
+  // Scan for template files ending in .html.twig inside template folder and subfolders.
+  $template_objects = $file_system->scanDirectory($template_path, '/\.html\.twig$/');
+
+  foreach (array_keys($template_objects) as $template_object) {
+    // Get the mame, type and path of the template.
+    $template_name = substr($template_object, strrpos($template_object, '/') + 1, -10);
+    $type_name = str_replace('-', '_', $template_name);
+    $path_name = substr($template_objects[$template_object]->uri, 0, strrpos($template_objects[$template_object]->uri, '/'));
+
+    if (str_starts_with($type_name, 'paragraph')) {
+      // Override the paragraph theme hook to use the site theme templates.
+      $theme_array[$type_name]['base hook'] = 'paragraph';
+      $theme_array[$type_name]['path'] = $path_name;
+      $theme_array[$type_name]['theme path'] = $theme_path;
+      $theme_array[$type_name]['template'] = $template_name;
+      // $theme_array[$type_name]['preprocess functions'] = ['template_preprocess', 'template_preprocess_paragraph', 'contextual_preprocess', 'field_group_build_entity_groups'];
+    }
+    if (str_starts_with($type_name, 'node')) {
+      // Override the node theme hook to use the site theme templates.
+      $theme_array[$type_name]['base hook'] = 'node';
+      $theme_array[$type_name]['path'] = $path_name;
+      $theme_array[$type_name]['theme path'] = $theme_path;
+      $theme_array[$type_name]['template'] = $template_name;
+      // $theme_array[$type_name]['preprocess functions'] = ['template_preprocess', 'template_preprocess_node', 'contextual_preprocess', 'field_group_build_entity_groups'];
+    }
+  }
+
+  return $theme_array;
+}
+
+/**
+ * Implements hook_entity_view_mode_alter().
+ */
+function siteden_admin_custom_entity_view_mode_alter(&$view_mode, EntityInterface $entity) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $route_is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
+
+  // If we're on the node add or edit form, render certain paragraph types in preview mode.
+  if ($route_is_admin && ($route_name == 'entity.node.edit_form' || $route_name == 'node.add')) {
+    if ($entity->getEntityTypeId() == 'paragraph' && $entity->bundle() == 'sf_block_embed' && $view_mode == 'default') {
+      if ($entity->get('field_sf_block')->plugin_id == 'webform_block') {
+        $view_mode = 'preview';
+      }
+    }
+  }
+}

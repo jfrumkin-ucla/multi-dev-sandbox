@@ -1,0 +1,8 @@
+uuid: 03e4aa71-92b7-4016-ab1c-28e72388711d
+langcode: en
+status: true
+dependencies: {  }
+id: footer-2
+label: 'Bruin Safe Apps'
+description: ''
+locked: false

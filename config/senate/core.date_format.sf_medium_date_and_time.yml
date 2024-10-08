@@ -1,0 +1,8 @@
+uuid: b79eedab-3d50-4291-a63d-da0700c219e2
+langcode: en
+status: true
+dependencies: {  }
+id: sf_medium_date_and_time
+label: 'Medium Date and Time'
+locked: false
+pattern: 'F d, Y - g:ia'

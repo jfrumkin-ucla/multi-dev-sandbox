@@ -1,0 +1,17 @@
+locked_prefix_patterns:
+  - sf_
+locked_node_types: {  }
+locked_block_content_types: {  }
+locked_filter_formats: {  }
+locked_pathauto_patterns: {  }
+locked_taxonomy_vocabularies: {  }
+locked_views: {  }
+locked_image_styles: {  }
+locked_themes: {  }
+locked_meta_defaults:
+  - node__sf_article
+  - node__sf_event
+  - node__sf_page
+  - node__sf_person
+  - node__sf_photo_gallery
+_core:

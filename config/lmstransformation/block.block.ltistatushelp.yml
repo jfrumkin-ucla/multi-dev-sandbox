@@ -1,0 +1,38 @@
+uuid: d1bee3fc-78f2-4b37-9eba-02fd4c63eb91
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:44dd4bdb-3163-49b8-b054-6c85d964ac15'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 1
+    full_width:
+      full_width: 0
+id: ltistatushelp
+theme: siteden_surface
+region: sidebar_second
+weight: -14
+provider: null
+plugin: 'block_content:44dd4bdb-3163-49b8-b054-6c85d964ac15'
+settings:
+  id: 'block_content:44dd4bdb-3163-49b8-b054-6c85d964ac15'
+  label: 'LTI Status Definitions'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /lti-tool

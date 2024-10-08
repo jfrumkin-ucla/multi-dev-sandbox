@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.landscape_16x9
+label: 'Landscape 16x9'
+targetEntityType: media
+cache: true

@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.dgc_newsroom_categories.field_sf_brand_color
+    - taxonomy.vocabulary.dgc_newsroom_categories
+id: taxonomy_term.dgc_newsroom_categories.default
+targetEntityType: taxonomy_term
+bundle: dgc_newsroom_categories
+mode: default
+content:
+  field_sf_brand_color:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  simple_sitemap: true

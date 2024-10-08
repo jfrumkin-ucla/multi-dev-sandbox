@@ -1,0 +1,22 @@
+uuid: 05e1282b-7793-4796-ac75-451b1857cba3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: 7SOqSzHHqg7X-zlPrAk-oHeLuPOR7tsznB859u8lacc
+id: node.field_dgc_newsroom_category
+field_name: field_dgc_newsroom_category
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

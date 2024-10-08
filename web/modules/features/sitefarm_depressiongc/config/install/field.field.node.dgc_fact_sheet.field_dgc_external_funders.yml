@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dgc_external_funders
+    - node.type.dgc_fact_sheet
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.dgc_fact_sheet.field_dgc_external_funders
+field_name: field_dgc_external_funders
+entity_type: node
+bundle: dgc_fact_sheet
+label: 'External Collaborators'
+description: 'Enter external collaborators.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

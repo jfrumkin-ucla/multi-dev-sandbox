@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: dgc_fact_sheet
+label: 'DGC Fact Sheet'
+type: 'canonical_entities:node'
+pattern: 'project/[node:title]'
+selection_criteria:
+  ce2732c1-1a04-496c-8339-2ee43779a74f:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: ce2732c1-1a04-496c-8339-2ee43779a74f
+    context_mapping:
+      node: node
+    bundles:
+      dgc_fact_sheet: dgc_fact_sheet
+selection_logic: and
+weight: -5
+relationships: {  }

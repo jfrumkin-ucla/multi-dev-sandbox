@@ -1,0 +1,57 @@
+uuid: 74c021b8-1cab-416f-97e7-69111f589ac6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_card
+    - field.field.block_content.sf_card.body
+    - field.field.block_content.sf_card.field_sf_card_image
+    - field.field.block_content.sf_card.field_sf_card_link
+    - field.field.block_content.sf_card.field_sf_title
+  module:
+    - link
+    - text
+_core:
+  default_config_hash: FTsXe8iMzeqyMlh0cipe24BOD5S62i9RcFlZX5FMaO0
+id: block_content.sf_card.default
+targetEntityType: block_content
+bundle: sf_card
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sf_card_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: card
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_sf_card_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_sf_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

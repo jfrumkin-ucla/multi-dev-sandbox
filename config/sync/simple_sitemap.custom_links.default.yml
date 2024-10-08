@@ -1,0 +1,6 @@
+_core:
+links:
+  -
+    path: /
+    priority: '1.0'
+    changefreq: daily

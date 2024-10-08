@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_branding_block
+    - field.storage.block_content.field_sf_svg_image
+    - media.type.sf_svg_media_type
+_core:
+id: block_content.sf_branding_block.field_sf_svg_image
+field_name: field_sf_svg_image
+entity_type: block_content
+bundle: sf_branding_block
+label: 'SVG Image'
+description: 'Choose an SVG image to be used as a logo.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      sf_svg_media_type: sf_svg_media_type
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

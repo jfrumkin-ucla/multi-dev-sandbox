@@ -1,0 +1,21 @@
+uuid: d8aa40be-c0b9-4f01-ba5f-32c2900ec066
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_funding_internal_notes
+    - node.type.funding_opportunity
+  module:
+    - text
+id: node.funding_opportunity.field_funding_internal_notes
+field_name: field_funding_internal_notes
+entity_type: node
+bundle: funding_opportunity
+label: 'Internal Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

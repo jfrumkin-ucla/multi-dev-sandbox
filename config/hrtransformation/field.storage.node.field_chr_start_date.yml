@@ -1,0 +1,23 @@
+uuid: 53aaa0f0-b935-493f-a674-eb0cf7a52cc8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: VEszH_pWlINuKahifNUZNFwBgyqU5DBSyavJb_6WTdo
+id: node.field_chr_start_date
+field_name: field_chr_start_date
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

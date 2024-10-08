@@ -1,0 +1,5 @@
+siteden_ckeditor_configs.ckeditor:
+  version: VERSION
+  css:
+    theme:
+      css/ckeditor.css: {}

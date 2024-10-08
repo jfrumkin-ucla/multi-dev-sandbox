@@ -1,0 +1,36 @@
+uuid: 39612cf2-3964-4646-82a8-9c098b7c13e2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_focal_link:e1a5e6cc-1d58-4f88-992f-00f4165ff8e4'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: fluclarealestatedepartment
+theme: siteden_surface
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'block_content:e1a5e6cc-1d58-4f88-992f-00f4165ff8e4'
+settings:
+  id: 'block_content:e1a5e6cc-1d58-4f88-992f-00f4165ff8e4'
+  label: 'FL: UCLA Real Estate Department'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

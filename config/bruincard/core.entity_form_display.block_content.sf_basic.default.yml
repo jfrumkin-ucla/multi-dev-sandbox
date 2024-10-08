@@ -1,0 +1,34 @@
+uuid: a7379df5-32ad-4a83-ad61-cf2a22d0d943
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_basic
+    - field.field.block_content.sf_basic.body
+  module:
+    - text
+_core:
+  default_config_hash: Z6Y8AajWT7JfIZ5iHRI6U7TRJ4kYKaGJTrOIzIRyHiE
+id: block_content.sf_basic.default
+targetEntityType: block_content
+bundle: sf_basic
+mode: default
+content:
+  body:
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

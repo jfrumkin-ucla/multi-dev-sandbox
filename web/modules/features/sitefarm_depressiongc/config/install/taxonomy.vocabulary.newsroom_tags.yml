@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Newsroom Tags'
+vid: newsroom_tags
+description: 'Tags for newsroom stories'
+weight: 0

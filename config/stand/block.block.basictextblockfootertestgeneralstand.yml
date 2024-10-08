@@ -1,0 +1,37 @@
+uuid: 7c4a52d4-971e-4b01-9083-e56a951a411b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:db5f70dc-1546-4ec8-9279-684c363693ed'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: basictextblockfootertestgeneralstand
+theme: siteden_surface
+region: full_width_bottom
+weight: -22
+provider: null
+plugin: 'block_content:db5f70dc-1546-4ec8-9279-684c363693ed'
+settings:
+  id: 'block_content:db5f70dc-1546-4ec8-9279-684c363693ed'
+  label: 'Basic Text block footer test (general STAND)'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

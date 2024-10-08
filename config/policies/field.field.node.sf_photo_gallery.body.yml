@@ -1,0 +1,26 @@
+uuid: 4c062ce1-65b3-472f-99ea-c8c1f579c3e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sf_photo_gallery
+  module:
+    - text
+_core:
+  default_config_hash: _tZoPZvmdu_xsbWM20h0imb4yc35KDCAo7y-0-gtbfM
+id: node.sf_photo_gallery.body
+field_name: body
+entity_type: node
+bundle: sf_photo_gallery
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

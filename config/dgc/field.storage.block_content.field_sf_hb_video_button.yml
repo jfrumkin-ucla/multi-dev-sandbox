@@ -1,0 +1,23 @@
+uuid: b0fd7905-f3ad-4075-be93-5f675ed4db5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: hnW7nnc7Uu_OdRwiq0A7j4AdryX5gh3EENoiTvkircc
+id: block_content.field_sf_hb_video_button
+field_name: field_sf_hb_video_button
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

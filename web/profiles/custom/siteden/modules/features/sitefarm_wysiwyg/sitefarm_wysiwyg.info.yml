@@ -1,0 +1,21 @@
+name: WYSIWYG
+description: 'A WYSIWYG Editor config for CKEditor'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - 'ck_columns:ck_columns'
+  - 'ck_feature_block:ck_feature_block'
+  - 'ck_media_link:ck_media_link'
+  - 'drupal:ckeditor'
+  - 'drupal:editor'
+  - 'drupal:filter'
+  - 'drupal:media'
+  - 'editor_file:editor_file'
+  - 'sitefarm_focus_box:sitefarm_focus_box'
+  - 'sitefarm_hero_banner:sitefarm_hero_banner'
+  - 'sitefarm_media:sitefarm_media'
+  - 'url_embed:url_embed'
+package: SiteFarm
+libraries:
+  - sitefarm_wysiwyg.ckeditor
+core_incompatible: false

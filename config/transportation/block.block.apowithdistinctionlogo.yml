@@ -1,0 +1,32 @@
+uuid: 714d6fd9-beb4-4e4f-906b-d300639c300b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:fe805c95-a3d5-427f-9401-ed10e74d469d'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: apowithdistinctionlogo
+theme: siteden_surface
+region: footer_nav
+weight: 0
+provider: null
+plugin: 'block_content:fe805c95-a3d5-427f-9401-ed10e74d469d'
+settings:
+  id: 'block_content:fe805c95-a3d5-427f-9401-ed10e74d469d'
+  label: 'APO with Distinction Logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,220 @@
+@use "../utilities/_mixins/breakpoints";
+@use "../utilities/colors";
+@use "../utilities/variables";
+
+.sf-quotation {
+  display: block;
+  margin-bottom: 0;
+  border-bottom: none;
+
+  @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+    margin: 0 auto;
+    padding-top: 0px;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid colors.$medium-grey3;
+    }
+
+  .sf-quotation__wrapper {
+    width: 100%;
+    max-width:100%;
+    display: block;
+    height: auto;
+    margin: 0;
+
+    @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1174px;
+      margin: 0 auto;
+      padding: 1.5rem 0;
+      padding-top: 0px;
+    }
+
+    .sf-quotation__image {
+      margin-bottom: 0;
+      z-index: 999;
+
+      .media--type-sf-image-media-type {
+        margin-bottom: 0;
+      }
+
+      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+        width: 524px;
+        vertical-align: middle;
+      }
+
+      @media (min-width: breakpoints.breakpoint-min(md)) and (max-width: breakpoints.breakpoint-min(lg)) {
+        margin-left: 1.5rem;
+      }
+
+      img {
+        width: 100%;
+        position: relative;
+        display: block;
+
+        @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+        width: 524px;
+        max-width: 524px;
+        }
+      }
+    }
+
+    .sf-quotation__body {
+      padding: 2rem 1.5rem;
+      margin-top: 0;
+      box-sizing: border-box;
+
+      @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+        padding: 2rem;
+      }
+
+      @media only screen and (min-width: breakpoints.breakpoint-min(lg)) {
+        padding: 2.5rem 3rem;
+        margin-left: -1.375rem;
+        vertical-align: middle;
+        width: calc(99% - 495px);
+      }
+
+      @media only screen and (min-width: breakpoints.breakpoint-min(xl)) {
+        padding: 4.5rem 5.375rem 4.5rem 5.625rem;
+      }
+
+      @media (min-width: breakpoints.breakpoint-min(md)) and (max-width: breakpoints.breakpoint-min(lg)) {
+         margin-left: 1.5rem;
+      }
+
+      .sf-quotation__decoration-line {
+        &:before {
+          display: block;
+          position: relative;
+          content: '';
+          width: 192px;
+          height: 4px;
+          background: colors.$yellow;
+          left: 80px;
+
+          @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+            width: 160px;
+          }
+        }
+      }
+
+      .sf-quotation__decoration-line {
+        &:after {
+          display: block;
+          position: relative;
+          content: '';
+          width: 192px;
+          height: 4px;
+          background: colors.$ucla-gold;
+
+          @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+            width: 160px;
+          }
+        }
+      }
+
+      .sf-quotation__cite {
+        font-style: italic;
+        line-height: 1.5rem;
+        font-size: variables.$ucla-font-size-default;
+        color: colors.$white;
+      }
+
+      .sf-quotation__quote,
+      .sf-quotation__quote > p {
+        margin-top: 1.75rem;
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+        font-size: variables.$ucla-font-size-large;
+        line-height: 1.688rem;
+        font-weight: variables.$ucla-font-weight-bold;
+        text-indent: -1em;
+        box-sizing: border-box;
+        quotes: "\201C" "\201D" "\2018" "\2019";
+
+        &:before {
+          content: open-quote;
+          margin-right: 0;
+          box-sizing: inherit;
+        }
+        &:after {
+          content: close-quote;
+          margin-left: 0;
+          box-sizing: inherit;
+        }
+
+        @media only screen and (min-width: breakpoints.breakpoint-min(md)) {
+          padding-left: 0.875rem;
+          font-size: variables.$ucla-font-size-large;
+          text-indent: -0.55em;
+          line-height: 1.75rem;
+          padding-bottom: 1.5rem;
+          margin-bottom: 0;
+
+          &:before {
+            margin-right: 0;
+          }
+          &:after {
+            margin-left: 0;
+          }
+        }
+
+        @media only screen and (min-width: breakpoints.breakpoint-min(xl)) {
+          font-size: 1.75rem;
+          line-height: 2rem;
+        }
+      }
+
+      .btn {
+        padding: .75rem 1rem .5rem;
+        font-size: variables.$ucla-font-size-default;
+        font-weight: variables.$ucla-font-weight-bold;
+        border-radius: 2px;
+        border: 2px solid transparent;
+        line-height: 1.25;
+        cursor: pointer;
+        display: flex;
+        text-decoration: none;
+      }
+
+      a.btn {
+        text-decoration: none;
+        max-width: -webkit-fit-content;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+      }
+
+      .btn.btn--transparent {
+        margin-top: 1.5rem;
+      }
+
+      a.btn--transparent {
+        border: 2px solid colors.$white;
+        background-color: transparent;
+        color: colors.$white;
+        text-align: left;
+        font-size: variables.$ucla-font-size-x-small;
+        line-height: 1rem;
+        padding: .5rem 1rem;
+      }
+
+      a.btn--transparent:hover {
+        background-color: colors.$hover-state-dark;
+        color: colors.$black;
+        border-color: colors.$hover-state-dark;
+      }
+
+      a.btn--transparent:focus {
+        background-color: colors.$hover-state-dark;
+        color: colors.$black;
+        border-color: colors.$hover-state-dark;
+        outline: 2px dotted colors.$white;
+        outline-offset: 2px;
+      }
+    }
+  }
+}

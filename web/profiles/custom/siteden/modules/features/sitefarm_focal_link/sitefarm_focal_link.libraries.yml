@@ -1,0 +1,4 @@
+material-icons:
+  css:
+    component:
+      https://fonts.googleapis.com/icon?family=Material+Icons: { type: external }

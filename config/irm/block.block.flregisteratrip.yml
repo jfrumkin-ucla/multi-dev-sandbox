@@ -1,0 +1,35 @@
+uuid: d3076059-5cad-459a-8048-b66273365d3d
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_focal_link:c50800cf-c0b2-41a4-934f-8b52d5327640'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: flregisteratrip
+theme: siteden_surface
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:c50800cf-c0b2-41a4-934f-8b52d5327640'
+settings:
+  id: 'block_content:c50800cf-c0b2-41a4-934f-8b52d5327640'
+  label: 'FL: Register a Trip'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /travel-insurance

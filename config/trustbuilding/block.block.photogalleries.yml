@@ -1,0 +1,31 @@
+uuid: 5bcf54f0-8688-4182-8e1a-84af5676a74f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.photo-galleries
+  module:
+    - menu_block
+  theme:
+    - siteden_surface
+id: photogalleries
+theme: siteden_surface
+region: footer_nav
+weight: 0
+provider: null
+plugin: 'menu_block:photo-galleries'
+settings:
+  id: 'menu_block:photo-galleries'
+  label: 'Photo Galleries'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'photo-galleries:'
+  suggestion: photo_galleries
+visibility: {  }

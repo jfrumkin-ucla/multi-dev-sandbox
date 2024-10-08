@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: rxDkVPB_NS9croaOKuPSjN1Gz5OeaJ72p9fZIOtXVBs
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: 'public://UCLA logo placeholder.png'
+  use_default: false
+surface_next: '1'

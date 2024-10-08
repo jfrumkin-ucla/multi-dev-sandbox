@@ -1,0 +1,6 @@
+name: 'Siteden CKEditor Settings'
+type: module
+description: 'Config supplement for CKE5'
+package: 'Siteden'
+version: '1.0.0'
+core_version_requirement: ^9 || ^10

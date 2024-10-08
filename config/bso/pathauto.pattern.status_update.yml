@@ -1,0 +1,22 @@
+uuid: c29acbe6-33f4-43f5-8c5d-a4dafc041c7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: status_update
+label: 'Status Update'
+type: 'canonical_entities:node'
+pattern: 'update/[node:title]'
+selection_criteria:
+  a610a374-61e6-47ca-93cc-5d77ae48a38a:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: a610a374-61e6-47ca-93cc-5d77ae48a38a
+    context_mapping:
+      node: node
+    bundles:
+      bso_update: bso_update
+selection_logic: and
+weight: -5
+relationships: {  }

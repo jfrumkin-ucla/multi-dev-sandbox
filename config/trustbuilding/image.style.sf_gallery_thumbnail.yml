@@ -1,0 +1,19 @@
+uuid: ca6841a7-5191-49af-be58-5c0f43310aa9
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: HRFtjTB0kJssSUpuiNdvTpZSU57IjowFS-wGAP3Vr8E
+name: sf_gallery_thumbnail
+label: 'Gallery Thumbnail'
+effects:
+  sf_gallery_thumbnail_focal_point_scale_and_crop:
+    uuid: sf_gallery_thumbnail_focal_point_scale_and_crop
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: '352'
+      height: '198'
+      crop_type: focal_point

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+_core:
+id: sf_custom_code
+label: 'Custom code'
+icon_uuid: null
+icon_default: null
+description: 'Use when custom code (HTML, JavaScript, CSS) is required. This component should be used sparingly, and with proper justification.'
+behavior_plugins:
+  style_options:
+    enabled: true

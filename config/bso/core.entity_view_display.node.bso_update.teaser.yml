@@ -1,0 +1,40 @@
+uuid: 3a6a8517-85b3-4aee-80e8-ded858dc3afe
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bso_update.body
+    - field.field.node.bso_update.field_bso_update_category
+    - node.type.bso_update
+  module:
+    - sitefarm_taxonomy
+    - text
+    - user
+id: node.bso_update.teaser
+targetEntityType: node
+bundle: bso_update
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_bso_update_category:
+    type: card_label
+    label: hidden
+    settings:
+      card_link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,53 @@
+@use "../../utilities/colors";
+@use "../../utilities/variables";
+
+/* ------------------------------------
+    Secondary navigation
+  ------------------------------------ */
+.nav-secondary {
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: variables.$ucla-font-size-small;
+    line-height: 1.286;
+    font-weight: bold;
+    color: colors.$default-state;
+    display: block;
+    padding: 8px 16px;
+    margin-left: 2px;
+    border-radius: 2px;
+
+    &:hover {
+      color: colors.$white;
+      background-color: colors.$hover-state;
+    }
+
+    &:active {
+      color: colors.$white;
+      background-color: colors.$active-state;
+    }
+
+    &:focus {
+      outline: 1px dotted colors.$hover-state;
+    }
+
+    &--active {
+      color: colors.$white;
+      background-color: colors.$default-state;
+    }
+  }
+}

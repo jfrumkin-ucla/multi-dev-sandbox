@@ -1,0 +1,38 @@
+{% extends "paragraph.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a Slider paragraph.
+ *
+ * Available variables:
+ * - Look in the paragraph.html.twig file for available variables.
+ */
+#}
+
+{% set slideritems = [] %}
+
+{% for key, item in content.field_events_slider_items|filter((value, key) => key|first != '#') %}
+{% if item['#paragraph'].get('field_event_item').getValue.0.target_id is not null %}
+  {% set nodeTeaser = drupal_entity('node', item['#paragraph'].get('field_event_item').getValue.0.target_id) %}
+  {% set nodeObj = nodeTeaser['#node'] %}
+  {% set slideritems = slideritems|merge([{
+    title: nodeObj.label,
+    url: path('entity.node.canonical', {'node': nodeObj.id}),
+    location: nodeObj.field_sf_event_location.0.value,
+    time: nodeObj.field_sf_dates.0.value|date("g:i A") ~ ' to ' ~ nodeObj.field_sf_dates.0.end_value|date("g:i A") | trans,
+    body: nodeObj.field_sf_summary.0.value,
+    image: nodeObj.field_sf_featured_media.0|view,
+    month: nodeObj.field_sf_dates.0.value|date("M"),
+    date: nodeObj.field_sf_dates.0.value|date("j"),
+    nid: nodeObj.id,
+    obj: nodeObj,
+  }]) %}
+{% endif %}
+{% endfor %}
+
+{% block content %}
+  {% include '@siteden-components/events-slider.html.twig' with {
+    slideritems: slideritems,
+    columns: content.field_per_slide.0['#markup']|number_format,
+  } %}
+{% endblock %}

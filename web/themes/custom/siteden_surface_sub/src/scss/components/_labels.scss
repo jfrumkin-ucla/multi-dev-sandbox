@@ -1,0 +1,88 @@
+@use "../utilities/colors";
+@use "../utilities/_mixins/breakpoints";
+
+@mixin label-style--default() {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  padding: 0.25rem 0.75rem;
+  text-transform: uppercase;
+
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    margin: 0 0 0.5rem;
+  }
+
+  a {
+    display: inline-block;
+    margin: -0.25rem -0.75rem;
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+  }
+}
+
+@mixin label-theme($color, $background-color, $hover-color, $outline) {
+  background-color: $background-color;
+  color: $color;
+  @if $outline {
+    border: 0.125rem solid $color;
+  }
+
+  a {
+    color: $color;
+
+    &:hover {
+      background-color: $hover-color;
+      @if $outline {
+        color: colors.$white;
+      }
+    }
+
+    &:visited,
+    &:focus,
+    &:active {
+      color: $color;
+      background-color: $background-color;
+    }
+  }
+}
+
+.label {
+  @include label-style--default();
+
+  &.label--gray {
+    @include label-theme(colors.$white, colors.$grey-40, colors.$lightest-grey, false);
+  }
+
+  &.label--primary {
+    @include label-theme(colors.$white, colors.$ucla-blue, colors.$darker-blue, false);
+  }
+
+  &.label--secondary {
+    @include label-theme(colors.$black, colors.$ucla-gold, colors.$hover-state-dark, false);
+  }
+
+  &.label--outline {
+    @include label-theme(colors.$ucla-blue , transparent, colors.$ucla-blue, colors.$ucla-blue);
+  }
+}
+
+.label.label--secondary .link--external:hover:after {
+    filter: brightness(0) invert(0);
+}
+
+.label.label--secondary .link--external:visited:after {
+    filter: brightness(0) invert(0);
+}
+
+.label.label--secondary .link--external:focus:after {
+    filter: brightness(0) invert(0);
+}
+
+.label.label--secondary .link--external:active:after {
+    filter: brightness(0) invert(0);
+}
+
+.label.label--secondary .link--external:after {
+    filter: brightness(0) invert(0);
+}

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sf_units
+    - node.type.sf_person
+    - taxonomy.vocabulary.sf_units
+id: node.sf_person.field_sf_units
+field_name: field_sf_units
+entity_type: node
+bundle: sf_person
+label: Units
+description: 'Select Unit(s) to which this Person is assigned.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sf_units: sf_units
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: sf_tags
+field_type: entity_reference

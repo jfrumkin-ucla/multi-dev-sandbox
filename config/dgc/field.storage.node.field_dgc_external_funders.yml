@@ -1,0 +1,21 @@
+uuid: a8f7f2e0-146c-4741-b4b5-913c9b1dbdee
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: KVRsXPxx61rWu12N5UIn4bavFaq2WL1ChhVn41aA3I0
+id: node.field_dgc_external_funders
+field_name: field_dgc_external_funders
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: c3a813e9-9bb8-4d3d-912e-758ce8d7b5bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bso_status.field_bso_status
+    - field.field.node.bso_status.field_bso_status_details
+    - node.type.bso_status
+  module:
+    - user
+id: node.bso_status.teaser
+targetEntityType: node
+bundle: bso_status
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_bso_status: true
+  field_bso_status_details: true

@@ -1,0 +1,48 @@
+diff --git a/modules/layout_paragraphs_library/layout_paragraphs_library.module b/modules/layout_paragraphs_library/layout_paragraphs_library.module
+index 2d53d8fb..316209ee 100644
+--- a/modules/layout_paragraphs_library/layout_paragraphs_library.module
++++ b/modules/layout_paragraphs_library/layout_paragraphs_library.module
+@@ -22,7 +22,7 @@
+ function layout_paragraphs_library_form_layout_paragraphs_component_form_alter(array &$form, FormStateInterface $form_state) {
+   /** @var \Drupal\layout_paragraphs\Contracts\ComponentFormInterface $form_object */
+   $form_object = $form_state->getFormObject();
+-  $paragraph = $form_object->getParagraph();
++  $paragraph = $form_object->getEntity();
+   $paragraph_type = $paragraph->getParagraphType();
+ 
+   // Only applies to paragraph types that allow being promoted to library.
+@@ -148,7 +148,7 @@ function layout_paragraphs_library_ajax(&$form, FormStateInterface $form_state)
+   $form_object = $form_state->getFormObject();
+   if (get_class($form_object) == 'Drupal\layout_paragraphs\Form\EditComponentForm') {
+     $response = $form_object->successfulAjaxSubmit($form, $form_state);
+-    $wrong_selector = '[data-uuid=' . $form_object->getParagraph()->uuid() . ']';
++    $wrong_selector = '[data-uuid=' . $form_object->getEntity()->uuid() . ']';
+     $correct_selector = '[data-uuid=' . $original_paragraph->uuid() . ']';
+     foreach ($response->getCommands() as &$command) {
+       if ($command['command'] == 'insert' && $command['selector'] == $wrong_selector) {
+diff --git a/src/Contracts/ComponentFormInterface.php b/src/Contracts/ComponentFormInterface.php
+index 5493a486..82aed94b 100644
+--- a/src/Contracts/ComponentFormInterface.php
++++ b/src/Contracts/ComponentFormInterface.php
+@@ -18,7 +18,7 @@ interface ComponentFormInterface extends FormInterface {
+   /**
+    * Gets the paragraph entity.
+    */
+-  public function getParagraph();
++  public function getEntity();
+ 
+   /**
+    * Sets the paragraph entity.
+diff --git a/src/Form/ComponentFormBase.php b/src/Form/ComponentFormBase.php
+index ff463f2b..bc7d6d32 100644
+--- a/src/Form/ComponentFormBase.php
++++ b/src/Form/ComponentFormBase.php
+@@ -136,7 +136,7 @@ public function getFormId() {
+   /**
+    * {@inheritDoc}
+    */
+-  public function getParagraph() {
++  public function getEntity() {
+     return $this->paragraph;
+   }
+ 

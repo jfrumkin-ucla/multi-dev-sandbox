@@ -1,0 +1,61 @@
+uuid: 8a858f64-cc5f-4b49-90e8-ec0fffb4a334
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sf_photo_gallery.body
+    - field.field.node.sf_photo_gallery.field_sf_gallery_category
+    - field.field.node.sf_photo_gallery.field_sf_m_photos
+    - field.field.node.sf_photo_gallery.field_sf_m_primary_image
+    - field.field.node.sf_photo_gallery.field_sf_tags
+    - node.type.sf_photo_gallery
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: oOaUFTKDyiiy2F46487vufbdEs8hINw2xGk3f8e9ibU
+id: node.sf_photo_gallery.default
+targetEntityType: node
+bundle: sf_photo_gallery
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sf_gallery_category:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_sf_m_photos:
+    type: entity_reference_entity_view
+    weight: 2
+    label: visually_hidden
+    settings:
+      view_mode: photoswipe
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_sf_tags:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_sf_m_primary_image: true
+  links: true

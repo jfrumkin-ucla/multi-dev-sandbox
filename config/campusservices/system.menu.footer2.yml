@@ -1,0 +1,8 @@
+uuid: 62d8ded8-3747-4ccd-ae3a-e7f4deec6111
+langcode: en
+status: true
+dependencies: {  }
+id: footer2
+label: footer2
+description: 'second column of footer navigation'
+locked: false

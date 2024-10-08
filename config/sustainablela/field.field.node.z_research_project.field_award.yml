@@ -1,0 +1,29 @@
+uuid: c2a68343-34f3-41e7-a497-bbf7d872d949
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_award
+    - node.type.z_research_project
+    - taxonomy.vocabulary.research_project_award_year
+id: node.z_research_project.field_award
+field_name: field_award
+entity_type: node
+bundle: z_research_project
+label: 'Award Year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      research_project_award_year: research_project_award_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

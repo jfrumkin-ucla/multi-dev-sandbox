@@ -1,0 +1,22 @@
+uuid: c1f0c0ce-92a7-413e-9df5-88e406927862
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: research_projects
+label: 'Research Projects'
+type: 'canonical_entities:node'
+pattern: '/research-portal/project/[node:title]'
+selection_criteria:
+  980ae749-14d6-4197-a7fc-72c017e9e7cb:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 980ae749-14d6-4197-a7fc-72c017e9e7cb
+    context_mapping:
+      node: node
+    bundles:
+      z_research_project: z_research_project
+selection_logic: and
+weight: -5
+relationships: {  }

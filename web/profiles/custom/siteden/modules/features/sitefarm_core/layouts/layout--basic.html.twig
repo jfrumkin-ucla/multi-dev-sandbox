@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a SiteDen Basic layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{% set show_title = content['#settings'].show_title %}
+
+{% set sidebars = content['#settings'].sidebars %}
+{% set show_first = (sidebars == 'first') ? TRUE %}
+{% set show_second =(sidebars == 'second') ? TRUE %}
+{% set show_both = (sidebars == 'both') ? TRUE %}
+{% set left_split = (sidebars == 'left_split') ? TRUE %}
+{% set right_split = (sidebars == 'right_split') ? TRUE %}
+
+  {%
+    set layout_classes = [
+    show_first or show_second or show_both or left_split or right_split ? 'layout--basic',
+    show_second ? 'layout--basic--reverse',
+    show_both ? 'layout--basic--3col',
+    left_split ? 'layout--basic--left-split',
+    right_split ? 'layout--basic--right-split'
+  ]
+  %}
+
+  {% if content %}
+    <div{{ attributes.addClass('layout').addClass(layout_classes) }}>
+
+{#      {% if content.title and show_title %}#}
+{#        <div {{ region_attributes.title.addClass('layout__title') }}>#}
+{#          {{ content.title }}#}
+{#        </div>#}
+{#      {% endif %}#}
+
+      {% if content.main %}
+        <div {{ region_attributes.main.addClass('layout__content') }}>
+          {{ content.main }}
+        </div>
+      {% endif %}
+
+      {% if content.first and (show_first or show_both or left_split or right_split) %}
+        <div {{ region_attributes.first.addClass('layout__sidebar-first') }}>
+          {{ content.first }}
+        </div>
+      {% endif %}
+
+      {% if content.second and (show_second or show_both or left_split or right_split) %}
+        <div {{ region_attributes.second.addClass('layout__sidebar-second') }}>
+          {{ content.second }}
+        </div>
+      {% endif %}
+
+    </div>
+  {% endif %}

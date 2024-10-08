@@ -1,0 +1,32 @@
+uuid: 9e9b646f-71bd-42e6-92de-589b05996a3b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:1f04c216-9f05-4a29-88d5-8426cbc5378f'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: footerfacultyhousingandhomeloanscontactinfo
+theme: siteden_surface
+region: footer_nav
+weight: -16
+provider: null
+plugin: 'block_content:1f04c216-9f05-4a29-88d5-8426cbc5378f'
+settings:
+  id: 'block_content:1f04c216-9f05-4a29-88d5-8426cbc5378f'
+  label: 'footer faculty housing and home loans contact info'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

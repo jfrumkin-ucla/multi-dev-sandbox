@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+_core:
+id: sf_iframe_embed
+label: 'Iframe embed'
+icon_uuid: null
+icon_default: null
+description: 'An embedded iframe containing external site content.'
+behavior_plugins:
+  style_options:
+    enabled: true

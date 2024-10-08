@@ -1,0 +1,28 @@
+uuid: 31bb5749-0102-45e3-b540-f381cfc10747
+langcode: en
+status: true
+dependencies:
+  module:
+    - sitefarm_photo_gallery
+    - system
+  theme:
+    - siteden_surface
+id: slideshowphotogallery_5
+theme: siteden_surface
+region: content
+weight: -22
+provider: null
+plugin: slideshow_gallery_block
+settings:
+  id: slideshow_gallery_block
+  label: 'UCLA Public Impact Research Awards 2023'
+  label_display: '0'
+  provider: sitefarm_photo_gallery
+  show_title: 0
+  slider_nav: 0
+  gallery: '3875'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news/ucla-public-impact-research-awards-2023

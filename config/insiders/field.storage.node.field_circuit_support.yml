@@ -1,0 +1,21 @@
+uuid: 316f2645-6300-4cac-b165-59de6bbc9eab
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: Z1vrhxd7YJ5a5nAHsiyM3xtbHA1FpvBA7qezR0rVdBE
+id: node.field_circuit_support
+field_name: field_circuit_support
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

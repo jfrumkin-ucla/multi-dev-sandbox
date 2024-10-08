@@ -1,0 +1,41 @@
+uuid: a9e8ccfc-ebdd-4f0d-b8a2-d328a185692c
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_style_plugins
+    - menu_block
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: mainnavigation_2
+theme: siteden_surface
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Side navigation Circuit'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: true
+  label_type: fixed
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'main:menu_link_content:7c8f74b8-2547-48c7-b130-a78c45a5c1a3'
+  suggestion: main
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/the-circuit*'

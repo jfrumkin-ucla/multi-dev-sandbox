@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.sf_audio_media_type
+    - media.type.sf_image_media_type
+    - media.type.sf_svg_media_type
+    - media.type.sf_video_media_type
+    - node.type.sf_article
+    - node.type.sf_event
+    - node.type.sf_landing
+    - node.type.sf_page
+    - node.type.sf_person
+    - node.type.sf_photo_gallery
+    - workflows.workflow.standard_workflow
+  module:
+    - content_moderation
+    - media
+    - node
+    - system
+    - toolbar
+    - tour
+    - webform
+id: contributor
+label: Contributor
+weight: -8
+is_admin: null

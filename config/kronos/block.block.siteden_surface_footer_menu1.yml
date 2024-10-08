@@ -1,0 +1,33 @@
+uuid: 8a45a340-d5cc-42d2-b179-cce2b4e62d61
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - menu_block
+  theme:
+    - siteden_surface
+_core:
+  default_config_hash: QCu0GDMJH4OmyrY-jM0MUdd6o720WoHVuHmVooDg0wo
+id: siteden_surface_footer_menu1
+theme: siteden_surface
+region: footer_nav
+weight: 0
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: 'Footer Menu'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 1
+  expand_all_items: false
+  parent: 'footer:'
+  suggestion: footer
+visibility: {  }

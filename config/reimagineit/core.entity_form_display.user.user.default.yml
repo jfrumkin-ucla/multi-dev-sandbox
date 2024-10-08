@@ -1,0 +1,50 @@
+uuid: 2741e9b4-0e6f-45f4-a61b-3cd31be799d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_sf_full_name
+  module:
+    - user
+_core:
+  default_config_hash: NuSbLHfe69atlHltOQEPptF7VOk_IxZ4IoACAGtg5MM
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_sf_full_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  google_analytics:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simplesamlphp_auth_user_enable:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  path: true

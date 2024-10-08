@@ -1,0 +1,422 @@
+<?php
+
+/**
+ * @file
+ * Contains siteden_permissions_controller.module.
+ */
+
+use Drupal\user\Entity\Role;
+use Drupal\user\RoleInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function siteden_permissions_controller_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  if(isset($form['settings']['iconset'])){
+    $current_user = \Drupal::currentUser();
+    $roles = $current_user->getRoles();
+    if(!in_array('administrator',$roles)){
+      $form['settings']['iconset']['#disabled'] = TRUE;
+    }
+  }
+  if($form_id == 'user_admin_permissions'){
+    if (isset($_GET["lock"]) && $_GET["lock"]=='no') {
+      return;
+    }
+    \Drupal::messenger()->addWarning('This form will not be saved because the configuration active store is read-only.');
+    $form['#validate'][] = 'sf_config_lock_validate_failure';
+    if (isset($form['actions']['submit'])) {
+      $form['actions']['submit']['#disabled'] = TRUE;
+    }
+  }
+  if($form_id == 'views_bulk_operations_configure_action'){
+    if(isset($form['node'])){
+      if(isset($form['node']['sf_photo_gallery'])){
+        $form['node']['sf_photo_gallery']['field_sf_m_photos']['widget']['#required'] = FALSE;
+        unset($form['#validate']);
+        unset($form['node']['sf_photo_gallery']['field_sf_m_photos']['widget']['#element_validate']);
+        unset($form['node']['sf_photo_gallery']['field_sf_m_photos']['widget']['media_library_update_widget']['#validate']);
+        unset($form['node']['sf_photo_gallery']['field_sf_m_primary_image']['widget']['#element_validate']);
+        unset($form['node']['sf_photo_gallery']['field_sf_m_primary_image']['widget']['media_library_update_widget']['#validate']);
+      }
+    }
+  }
+}
+
+/**
+ * Helper validation function that always returns false.
+ *
+ * @param array $form
+ *   A build form array.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state.
+ */
+function sf_config_lock_validate_failure(array $form, FormStateInterface &$form_state) {
+  $form_state->setErrorByName(NULL, t('This configuration form cannot be saved because the configuration active store is read-only.'));
+}
+
+/**
+ * Implements hook_cron().
+ *
+ * Reenforces permission settings that should not change
+ */
+function siteden_permissions_controller_cron() {
+
+  $site_permissions = array_keys(\Drupal::service('user.permissions')->getPermissions());
+
+  $auth_roles = [
+    'site_manager',
+    'site_builder',
+    'editor'
+  ];
+
+  $revoke_roles = [
+    'anonymous',
+    'authenticated',
+    'contributor',
+    'site_manager',
+    'site_builder',
+    'editor'
+  ];
+
+  $grantPermission = [
+    'administer nodes',
+    'create sf_article content',
+    'create sf_page content',
+    'create sf_event content',
+    'create sf_landing content',
+    'create sf_person content',
+    'create sf_photo_gallery content',
+    'edit any sf_article content',
+    'edit any sf_page content',
+    'edit any sf_event content',
+    'edit any sf_landing content',
+    'edit any sf_person content',
+    'edit any sf_photo_gallery content',
+    'view any unpublished content',
+    'use standard_workflow transition archive',
+    'use standard_workflow transition create_new_draft',
+    'use standard_workflow transition publish',
+    'use standard_workflow transition reject',
+    'use standard_workflow transition review',
+    'view latest version',
+    'create paragraph content sf_accordion',
+    'create paragraph content sf_accordion_item',
+    'create paragraph content article_embed_banner',
+    'create paragraph content article_embed_secondary',
+    'create paragraph content article_embed',
+    'create paragraph content sf_block_embed',
+    'create paragraph content sf_box_banner',
+    'create paragraph content sf_card',
+    'create paragraph content sf_card_grid',
+    'create paragraph content sf_focal_link',
+    'create paragraph content sf_people',
+    'create paragraph content sf_person_item',
+    'create paragraph content p_slider_item',
+    'create paragraph content sf_ribbon_text_banner',
+    'create paragraph content sf_section',
+    'create paragraph content sf_slider',
+    'create paragraph content events_slider',
+    'create paragraph content sf_slider_featured_story_card',
+    'create paragraph content photo_slider',
+    'create paragraph content sf_slider_story_card',
+    'create paragraph content sf_slider_fsc_item',
+    'create paragraph content sf_slider_item',
+    'create paragraph content sf_slider_sc_item',
+    'create paragraph content sf_tab',
+    'create paragraph content sf_tabs',
+    'create paragraph content sf_text',
+    'create paragraph content sf_text_banner',
+    'create paragraph content evnt_sl_itm',
+    'create paragraph content sf_view_embed',
+    'update paragraph content sf_accordion',
+    'update paragraph content sf_accordion_item',
+    'update paragraph content article_embed_banner',
+    'update paragraph content article_embed_secondary',
+    'update paragraph content article_embed',
+    'update paragraph content sf_block_embed',
+    'update paragraph content sf_box_banner',
+    'update paragraph content sf_card',
+    'update paragraph content sf_card_grid',
+    'update paragraph content sf_focal_link',
+    'update paragraph content sf_people',
+    'update paragraph content sf_person_item',
+    'update paragraph content p_slider_item',
+    'update paragraph content sf_ribbon_text_banner',
+    'update paragraph content sf_section',
+    'update paragraph content sf_slider',
+    'update paragraph content events_slider',
+    'update paragraph content sf_slider_featured_story_card',
+    'update paragraph content photo_slider',
+    'update paragraph content sf_slider_story_card',
+    'update paragraph content sf_slider_fsc_item',
+    'update paragraph content sf_slider_item',
+    'update paragraph content sf_slider_sc_item',
+    'update paragraph content sf_tab',
+    'update paragraph content sf_tabs',
+    'update paragraph content sf_text',
+    'update paragraph content sf_text_banner',
+    'update paragraph content evnt_sl_itm',
+    'update paragraph content sf_view_embed',
+    'view paragraph content sf_accordion',
+    'view paragraph content sf_accordion_item',
+    'view paragraph content article_embed_banner',
+    'view paragraph content article_embed_secondary',
+    'view paragraph content article_embed',
+    'view paragraph content sf_block_embed',
+    'view paragraph content sf_box_banner',
+    'view paragraph content sf_card',
+    'view paragraph content sf_focal_link',
+    'view paragraph content sf_people',
+    'view paragraph content sf_person_item',
+    'view paragraph content p_slider_item',
+    'view paragraph content sf_ribbon_text_banner',
+    'view paragraph content sf_section',
+    'view paragraph content sf_slider',
+    'view paragraph content events_slider',
+    'view paragraph content sf_slider_featured_story_card',
+    'view paragraph content photo_slider',
+    'view paragraph content sf_slider_story_card',
+    'view paragraph content sf_slider_fsc_item',
+    'view paragraph content sf_slider_item',
+    'view paragraph content sf_slider_sc_item',
+    'view paragraph content sf_tab',
+    'view paragraph content sf_tabs',
+    'view paragraph content sf_text',
+    'view paragraph content sf_text_banner',
+    'view paragraph content evnt_sl_itm',
+    'view paragraph content sf_view_embed',
+    'delete paragraph content sf_accordion',
+    'delete paragraph content sf_accordion_item',
+    'delete paragraph content article_embed_banner',
+    'delete paragraph content article_embed_secondary',
+    'delete paragraph content article_embed',
+    'delete paragraph content sf_block_embed',
+    'delete paragraph content sf_box_banner',
+    'delete paragraph content sf_card',
+    'delete paragraph content sf_card_grid',
+    'delete paragraph content sf_focal_link',
+    'delete paragraph content sf_people',
+    'delete paragraph content sf_person_item',
+    'delete paragraph content p_slider_item',
+    'delete paragraph content sf_ribbon_text_banner',
+    'delete paragraph content sf_section',
+    'delete paragraph content sf_slider',
+    'delete paragraph content events_slider',
+    'delete paragraph content sf_slider_featured_story_card',
+    'delete paragraph content photo_slider',
+    'delete paragraph content sf_slider_story_card',
+    'delete paragraph content sf_slider_fsc_item',
+    'delete paragraph content sf_slider_item',
+    'delete paragraph content sf_slider_sc_item',
+    'delete paragraph content sf_tab',
+    'delete paragraph content sf_tabs',
+    'delete paragraph content sf_text',
+    'delete paragraph content sf_text_banner',
+    'delete paragraph content evnt_sl_itm',
+    'delete paragraph content sf_view_embed',
+    'create sf_basic block content',
+    'create sf_call_to_action block content',
+    'create sf_card block content',
+    'create sf_focal_link block content',
+    'create photo_slider block content',
+    'create sf_slider block content',
+    'create sf_tabs block content',
+    'create sf_view_embed block content',
+    'edit any sf_basic block content',
+    'edit any sf_call_to_action block content',
+    'edit any sf_card block content',
+    'edit any sf_focal_link block content',
+    'edit any photo_slider block content',
+    'edit any sf_slider block content',
+    'edit any sf_tabs block content',
+    'edit any sf_view_embed block content',
+    'schedule publishing of nodes',
+    'schedule publishing of media',
+    'schedule publishing of taxonomy_term',
+    'view scheduled content',
+    'view scheduled media',
+    'view scheduled taxonomy_term',
+    'create terms in sf_article_category',
+    'create terms in sf_article_type',
+    'create terms in sf_event_type',
+    'create terms in sf_media_categories',
+    'create terms in sf_person_type',
+    'create terms in sf_photo_gallery_categories',
+    'create terms in sf_tags',
+    'create terms in sf_units',
+    'view unpublished paragraphs'
+  ];
+
+  $revokePermission = [
+    'bypass paragraphs type content access',
+    'create paragraph content sf_custom_code',
+    'create paragraph content sf_iframe_embed',
+    'create sf_branding_block block content',
+    'create sf_card_grid block content',
+    'create sf_focus_box block content',
+    'create sf_iframe_embed block content',
+    'create sf_marketing_highlight block content',
+    'create sf_marketing_highlight_horizntl block content',
+    'create sf_people block content',
+    'access any webform configuration',
+    'administer account settings',
+    'administer block_content fields',
+    'administer contact forms',
+    'administer contact_message display',
+    'administer contact_message fields',
+    'administer contact_message form display',
+    'administer core configuration',
+    'administer google analytics',
+    'administer media fields',
+    'administer media types',
+    'administer meta tags',
+    'administer node fields',
+    'administer pages',
+    'administer permissions',
+    'administer site configuration',
+    'administer taxonomy_term fields',
+    'administer user fields',
+    'administer views',
+    'administer webform',
+    'administer workflows',
+    'administer workflows' ,
+    'administer zones',
+    'configure any layout',
+    'delete any webform',
+    'edit webform assets',
+    'edit webform source',
+    'edit webform twig',
+    'export configuration',
+    'import configuration',
+    'link to any page',
+    'masquerade as any user',
+    'synchronize configuration',
+    'delete any sf_basic block content',
+    'delete any sf_branding_block block content',
+    'delete any sf_call_to_action block content',
+    'delete any sf_card block content',
+    'delete any sf_card_grid block content',
+    'delete any sf_focal_link block content',
+    'delete any sf_focus_box block content',
+    'delete any sf_hero_banner block content',
+    'delete any sf_iframe_embed block content',
+    'delete any sf_marketing_highlight block content',
+    'delete any sf_marketing_highlight_horizntl block content',
+    'delete any sf_people block content',
+    'delete any photo_slider block content',
+    'delete any sf_slider block content',
+    'delete any sf_tabs block content',
+    'delete any sf_university_header block content',
+    'delete any sf_view_embed block content',
+    'delete any sf_article content',
+    'delete any sf_page content',
+    'delete any sf_event content',
+    'delete any sf_landing content',
+    'delete any sf_person content',
+    'delete any sf_photo_gallery content',
+    'delete terms in sf_article_category',
+    'delete terms in sf_article_type',
+    'delete terms in sf_event_type',
+    'delete terms in sf_media_categories',
+    'delete terms in sf_person_type',
+    'delete terms in sf_photo_gallery_categories',
+    'delete terms in sf_tags',
+    'delete terms in sf_units',
+    'edit terms in sf_article_category',
+    'edit terms in sf_article_type',
+    'edit terms in sf_event_type',
+    'edit terms in sf_media_categories',
+    'edit terms in sf_person_type',
+    'edit terms in sf_photo_gallery_categories',
+    'edit terms in sf_tags',
+    'edit terms in sf_units',
+    'update paragraph content sf_custom_code',
+    'update paragraph content sf_iframe_embed'
+  ];
+
+  $editor_revoke = [
+    'use standard_workflow transition publish',
+    'schedule publishing of nodes',
+    'schedule publishing of media',
+    'schedule publishing of taxonomy_term',
+    'create terms in sf_article_category',
+    'create terms in sf_article_type',
+    'create terms in sf_event_type',
+    'create terms in sf_media_categories',
+    'create terms in sf_person_type',
+    'create terms in sf_photo_gallery_categories',
+    'create terms in sf_tags',
+    'create terms in sf_units'
+  ];
+
+  $user_role = Role::load(RoleInterface::ANONYMOUS_ID);
+  $user_role->revokePermission('access site-wide contact form');
+  $user_role->grantPermission('view paragraph content article_embed_banner');
+  $user_role->grantPermission('view paragraph content article_embed_secondary');
+  $user_role->grantPermission('view paragraph content sf_section');
+  $user_role->grantPermission('view paragraph content sf_text_banner');
+  $user_role->grantPermission('view paragraph content sf_view_embed');
+  $user_role->grantPermission('view paragraph content photo_slider');
+  $user_role->grantPermission('view paragraph content p_slider_item');
+  $user_role->grantPermission('view paragraph content sf_slider_featured_story_card');
+  $user_role->grantPermission('view paragraph content sf_slider_fsc_item');
+  $user_role->grantPermission('view paragraph content sf_slider_story_card');
+  $user_role->grantPermission('view paragraph content sf_slider_sc_item');
+  $user_role->grantPermission('view paragraph content evnt_sl_itm');
+  $user_role->grantPermission('view paragraph content events_slider');
+  $user_role->save();
+
+  $user_role = Role::load(RoleInterface::AUTHENTICATED_ID);
+  $user_role->revokePermission('access site-wide contact form');
+  $user_role->revokePermission('edit behavior plugin settings');
+  $user_role->grantPermission('view paragraph content article_embed_banner');
+  $user_role->grantPermission('view paragraph content article_embed_secondary');
+  $user_role->grantPermission('view paragraph content sf_section');
+  $user_role->grantPermission('view paragraph content sf_text_banner');
+  $user_role->grantPermission('view paragraph content photo_slider');
+  $user_role->grantPermission('view paragraph content p_slider_item');
+  $user_role->grantPermission('view paragraph content sf_slider_featured_story_card');
+  $user_role->grantPermission('view paragraph content sf_slider_fsc_item');
+  $user_role->grantPermission('view paragraph content sf_slider_story_card');
+  $user_role->grantPermission('view paragraph content sf_slider_sc_item');
+  $user_role->grantPermission('view paragraph content evnt_sl_itm');
+  $user_role->grantPermission('view paragraph content events_slider');
+  $user_role->grantPermission('view paragraph content sf_view_embed');
+  $user_role->save();
+
+  $user_role = Role::load('contributor');
+  $user_role->revokePermission('masquerade as any user');
+  $user_role->save();   
+
+  foreach ($auth_roles as $key => $role) {
+    $user_role = Role::load($role);
+    foreach ($grantPermission as $key => $permission) {
+      if(in_array($permission, $site_permissions)){
+        $user_role->grantPermission($permission);
+      }
+    }   
+    $user_role->save();
+  }
+
+  foreach ($revoke_roles as $key => $role) {
+    $user_role = Role::load($role);
+    foreach ($revokePermission as $key => $permission) {
+      if(in_array($permission, $site_permissions)){
+        $user_role->revokePermission($permission);
+      }
+    }      
+    $user_role->save();
+  }
+
+  $user_role = Role::load('editor');
+  foreach ($editor_revoke as $key => $permission) {
+    if(in_array($permission, $site_permissions)){
+      $user_role->revokePermission($permission);
+    }
+  }
+  $user_role->save();  
+
+}

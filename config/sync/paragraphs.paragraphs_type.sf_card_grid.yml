@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+_core:
+id: sf_card_grid
+label: 'Card grid'
+icon_uuid: null
+icon_default: null
+description: 'Use this block type to create a grid of cards with auto-adjusting width and background height.'
+behavior_plugins:
+  style_options:
+    enabled: true

@@ -1,0 +1,30 @@
+uuid: fb29a0af-5e7e-4902-b482-55fbcc5bda0d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_focal_link:8ad54a48-463b-4820-bb93-1f2aee430308'
+  module:
+    - block_content
+    - system
+  theme:
+    - siteden_surface
+id: flaccessdashboard
+theme: siteden_surface
+region: sidebar_first
+weight: -14
+provider: null
+plugin: 'block_content:8ad54a48-463b-4820-bb93-1f2aee430308'
+settings:
+  id: 'block_content:8ad54a48-463b-4820-bb93-1f2aee430308'
+  label: 'FL: Access Dashboard'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /accounts-payable/h-and-i-dashboard

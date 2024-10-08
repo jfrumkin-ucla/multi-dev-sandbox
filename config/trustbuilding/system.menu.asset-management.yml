@@ -1,0 +1,8 @@
+uuid: 4dbfcb59-7ff1-40d7-a811-bf89c3d3f59a
+langcode: en
+status: true
+dependencies: {  }
+id: asset-management
+label: 'Asset Management'
+description: ''
+locked: false

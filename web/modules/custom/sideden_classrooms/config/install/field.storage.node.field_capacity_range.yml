@@ -1,0 +1,45 @@
+uuid: ddc8811a-6c44-4df1-9608-73d794cdbc23
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_capacity_range
+field_name: field_capacity_range
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '10_19'
+      label: 10-19
+    -
+      value: '20_39'
+      label: 20-39
+    -
+      value: '40_59'
+      label: 40-59
+    -
+      value: '60_99'
+      label: 60-99
+    -
+      value: '100_149'
+      label: 100-149
+    -
+      value: '150_199'
+      label: 150-199
+    -
+      value: '200_299'
+      label: 200-299
+    -
+      value: '300'
+      label: 300+
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

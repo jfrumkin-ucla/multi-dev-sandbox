@@ -1,0 +1,109 @@
+uuid: 936ab4d1-db9d-499d-bb79-49c94f4d792f
+langcode: en
+status: false
+dependencies: {  }
+id: senate
+label: senate.ucla.edu
+description: 'Config split for https://senate.ucla.edu/ Academic Senate website'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/senate
+module: {  }
+theme: {  }
+complete_list:
+  - automated_cron.settings
+  - 'block.block.For microsites side nav, see bruin Voice. Change to main for style'
+  - block.block.badges
+  - block.block.bb
+  - block.block.bbsenatefooterlogo
+  - block.block.entityviewcontent
+  - block.block.entityviewcontent_2
+  - block.block.exposedformsf_articles_recentpage_2
+  - block.block.exposedformsf_person_directorypage_1
+  - block.block.exposedformtaxonomy_termpage_1
+  - block.block.maindepartmentalheader
+  - block.block.previousnewslink
+  - block.block.senatecontactfooter
+  - block.block.seven_breadcrumbs
+  - block.block.seven_content
+  - block.block.seven_help
+  - block.block.seven_local_actions
+  - block.block.seven_login
+  - block.block.seven_messages
+  - block.block.seven_page_title
+  - block.block.seven_primary_local_tasks
+  - block.block.seven_secondary_local_tasks
+  - block.block.sf_default__front_articles_recent
+  - block.block.siteden_surface_breadcrumbs
+  - block.block.siteden_surface_content
+  - block.block.siteden_surface_help
+  - block.block.siteden_surface_main_menu
+  - block.block.siteden_surface_messages
+  - block.block.siteden_surface_page_title
+  - block.block.siteden_surface_search
+  - block.block.siteden_surface_side_menu
+  - block.block.siteden_surface_social
+  - block.block.siteden_surface_tabs
+  - block.block.views_block__sf_articles_related_block_1
+  - block.block.views_block__sf_events_upcoming_block_1
+  - block.block.views_block__sf_persons_content_related_back_to_person_block_1
+  - block.block.views_block__sf_persons_related_to_content_block_1
+  - block.block.views_block__sf_photo_galleries_related_by_term_block_1
+  - block.block.views_block__sf_photo_galleries_related_to_content_block_1
+  - captcha.captcha_point.contact_message_feedback_form
+  - captcha.captcha_point.node_sf_article_form
+  - captcha.captcha_point.node_sf_event_form
+  - captcha.captcha_point.node_sf_page_form
+  - captcha.captcha_point.node_sf_person_form
+  - captcha.captcha_point.node_sf_photo_gallery_form
+  - captcha.captcha_point.search_block_form
+  - captcha.captcha_point.search_form
+  - config_suite.settings
+  - core.date_format.long
+  - core.date_format.medium
+  - core.date_format.sf_medium_date_and_time
+  - core.date_format.short
+  - core.entity_view_display.node.sf_landing.default
+  - core.menu.static_menu_link_overrides
+  - dblog.settings
+  - features.bundle.sitefarm
+  - features.settings
+  - filter.settings
+  - google_analytics.settings
+  - honeypot.settings
+  - menu_breadcrumb.settings
+  - node.settings
+  - pantheon_advanced_page_cache.settings
+  - pathauto.settings
+  - recaptcha.settings
+  - robotstxt.settings
+  - roleassign.settings
+  - search.page.google_cse_search
+  - search.settings
+  - shortcut.set.development
+  - siteden_surface.settings
+  - system.action.convert_bundles_on_migration
+  - system.action.convert_bundles_on_migration_group
+  - system.action.convert_bundles_on_sharemessage
+  - system.cron
+  - system.date
+  - system.feature_flags
+  - system.menu.bylaws-menu-
+  - system.performance
+  - system.site
+  - system.theme
+  - user.mail
+  - user.role.administrator
+  - user.settings
+  - views.view.articles_recent_custom
+  - views.view.frontpage
+  - views.view.layout_override
+  - views.view.published_node_filter
+  - views.view.sf_events_upcoming
+  - views.view.taxonomy_term
+  - views.view.watchdog
+  - webform.settings
+  - webform.webform.conference_room_reservations
+partial_list: {  }

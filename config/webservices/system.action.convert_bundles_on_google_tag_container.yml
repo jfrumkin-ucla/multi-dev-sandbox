@@ -1,0 +1,11 @@
+uuid: 91d621d4-93e6-4989-9a0d-c6cd9ac67c5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - convert_bundles
+id: convert_bundles_on_google_tag_container
+label: 'Convert Google Tag Container Entity Bundles'
+type: google_tag_container
+plugin: convert_bundles_action_base
+configuration: {  }

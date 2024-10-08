@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Focus Area'
+vid: dgc_focus_area
+description: 'Focus areas for DGC that link to various pages of the site.'
+weight: 0

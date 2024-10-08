@@ -1,0 +1,164 @@
+@use "../utilities/colors";
+@use "lists";
+
+// Make the active/current styles extensible for compatibility
+%pager--current {
+  color: colors.$disabled-state;
+}
+
+.pager {
+  @include lists.reset-list();
+  //@include clearfix();
+
+  &__item {
+    float: left;
+    line-height: 1;
+
+    //round the corners of first and last child
+    &:first-child {
+      a {
+        border-radius: 0.125rem 0 0 0.125rem;
+      }
+    }
+
+    &:last-child {
+      a {
+        border-radius: 0 0.125rem 0.125rem 0;
+      }
+    }
+
+    &::before {
+      display: none;
+    }
+
+    // Theme links and static text the same
+    a,
+    &--static {
+      box-sizing: border-box;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+      border: 0.125rem solid colors.$default-state;
+      padding-top: 0.625rem;
+      margin-right: 0.0625rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      text-align: center;
+    }
+
+    &.is-active,
+    &--current {
+      border: 0.125rem solid colors.$disabled-state;
+      box-sizing: border-box;
+      color: colors.$disabled-state;
+      font-weight: bold;
+      margin-right: 0.0625rem;
+      min-width: 2.5rem;
+      height: 2.5rem;
+      padding: 0.625rem 1rem;
+      text-align: center;
+
+      a {
+        border: 0;
+        color: colors.$disabled-state;
+        display: inline;
+        margin: 0;
+        outline: 0;
+        padding: 0;
+        width: auto;
+
+        &:hover {
+          background-color: transparent;
+          color: colors.$disabled-state;
+        }
+      }
+    }
+
+    &--ellipsis {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+      padding-top: 0.5rem;
+      margin-right: 0.0625rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      text-align: center;
+    }
+
+    // next and previous buttons
+    &--previous a,
+    &--next a {
+      overflow: hidden;
+      display: block;
+      text-indent: -1000px;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        background: url("../images/surface-images/chevron-blue.svg") no-repeat 0 0;
+        background-size: 0.75rem 0.75rem;
+      }
+
+      &:hover:before {
+        filter: colors.$filter-color-white;
+      }
+    }
+
+    // first and last buttons
+    &--first a,
+    &--last a {
+      overflow: hidden;
+      display: block;
+      text-indent: -1000px;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        background: url("../images/surface-images/chevron-blue.svg") no-repeat 0 0, url("../images/surface-images/chevron-blue.svg") no-repeat 0.375rem 0;
+        background-size: 0.75rem 0.75rem;
+      }
+
+      &:hover:before {
+        filter: colors.$filter-color-white;
+      }
+    }
+
+    &--previous a {
+      &:before {
+        bottom: 0.75rem;
+        right: 0.8125rem;
+        transform: rotate(180deg);
+      }
+    }
+
+    &--next a {
+      &:before {
+        top: 0.75rem;
+        left: 0.8125rem;
+      }
+    }
+
+    &--first a {
+      &:before {
+        bottom: 0.75rem;
+        right: 0.625rem;
+        transform: rotate(180deg);
+      }
+    }
+
+    &--last a {
+      &:before {
+        top: 0.75rem;
+        left: 0.625rem;
+      }
+    }
+  }
+}

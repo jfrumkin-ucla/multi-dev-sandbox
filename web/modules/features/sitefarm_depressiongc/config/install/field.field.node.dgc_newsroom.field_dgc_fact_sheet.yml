@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dgc_fact_sheet
+    - node.type.dgc_fact_sheet
+    - node.type.dgc_newsroom
+id: node.dgc_newsroom.field_dgc_fact_sheet
+field_name: field_dgc_fact_sheet
+entity_type: node
+bundle: dgc_newsroom
+label: 'Project Fact Sheet'
+description: 'Select fact sheets associated with this news story.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dgc_fact_sheet: dgc_fact_sheet
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

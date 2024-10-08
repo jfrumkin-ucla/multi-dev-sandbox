@@ -1,0 +1,11 @@
+uuid: 87de47a6-0058-47ec-8d88-b2c4b2abfdb2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lCRUvVyKZfP1cG_zX0KfKvAX6Quh_X61q1U69zlYT_0
+name: 'Newsroom Categories'
+vid: dgc_newsroom_categories
+description: 'Categories for the newsroom stories.'
+weight: 0
+new_revision: false

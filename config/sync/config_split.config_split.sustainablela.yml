@@ -1,0 +1,100 @@
+uuid: ade7f2f9-3794-4051-949a-9a271edaa10b
+langcode: en
+status: false
+dependencies: {  }
+id: sustainablela
+label: sustainablela.ucla.edu
+description: 'Config split for https://sustainablela.ucla.edu/ Sustainable LA Grand Challenge website'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/sustainablela
+module: {  }
+theme: {  }
+complete_list:
+  - block.block.bbfooterlogo
+  - block.block.exposedformresearch_projectspage_1
+  - block.block.exposedformsf_articles_recentpage_2
+  - block.block.exposedformsf_events_listingpage_1
+  - block.block.footercontactinfo
+  - block.block.mainnavigation
+  - block.block.mainnavigation_2
+  - block.block.researchportalintroductorytext
+  - block.block.siteden_surface_breadcrumbs
+  - block.block.siteden_surface_content
+  - block.block.siteden_surface_main_menu
+  - block.block.siteden_surface_messages
+  - block.block.siteden_surface_page_title
+  - block.block.siteden_surface_search
+  - block.block.siteden_surface_side_menu
+  - block.block.siteden_surface_social
+  - block.block.siteden_surface_tabs
+  - block.block.views_block__research_category_filter_block_1
+  - block.block.views_block__sf_article_filter_block_2
+  - block.block.views_block__sf_events_category_filter_block_1
+  - block.block.views_block__sf_events_upcoming_block_1
+  - block.block.views_block__sf_persons_related_to_content_block_1
+  - block.block.views_block__sf_photo_galleries_related_by_term_block_1
+  - block.block.views_block__sf_photo_galleries_related_to_content_block_1
+  - captcha.captcha_point._views_exposed_form_
+  - captcha.captcha_point.contact_message_feedback_form
+  - captcha.captcha_point.search_block_form
+  - captcha.captcha_point.search_form
+  - config_suite.settings
+  - core.entity_form_display.node.sf_article.default
+  - core.entity_form_display.node.sf_event.default
+  - core.entity_form_display.node.sf_landing.default
+  - core.entity_form_display.node.sf_page.default
+  - core.entity_form_display.node.sf_person.default
+  - core.entity_form_display.node.sf_photo_gallery.default
+  - core.entity_form_display.node.z_research_project.default
+  - core.entity_view_display.node.sf_landing.default
+  - core.entity_view_display.node.z_research_project.default
+  - core.entity_view_display.node.z_research_project.teaser
+  - core.extension
+  - core.menu.static_menu_link_overrides
+  - dblog.settings
+  - field.field.node.z_research_project.body
+  - field.field.node.z_research_project.field_award
+  - field.field.node.z_research_project.field_rp_supplementary
+  - field.field.node.z_research_project.field_rp_topics
+  - field.field.node.z_research_project.field_sf_featured_media
+  - field.field.node.z_research_project.field_sf_related_links
+  - field.storage.node.field_award
+  - field.storage.node.field_rp_supplementary
+  - field.storage.node.field_rp_topics
+  - google_analytics.settings
+  - honeypot.settings
+  - node.type.z_research_project
+  - pantheon_advanced_page_cache.settings
+  - pathauto.pattern.research_projects
+  - recaptcha.settings
+  - search.page.google_cse_search
+  - siteden_menu_item_limit.settings
+  - system.action.convert_bundles_on_sharemessage
+  - system.action.media_edit_action
+  - system.action.node_edit_action
+  - system.action.taxonomy_term_edit_action
+  - system.action.user_edit_action
+  - system.feature_flags
+  - system.site
+  - taxonomy.vocabulary.research_project_award_year
+  - taxonomy.vocabulary.sla_rp_topics
+  - user.role.editor
+  - user.role.site_builder
+  - user.role.site_manager
+  - views.view.articles_recent_custom
+  - views.view.editoria11y_dismissals
+  - views.view.editoria11y_results
+  - views.view.layout_override
+  - views.view.published_node_filter
+  - views.view.research_category_filter
+  - views.view.research_projects
+  - views.view.sf_events_upcoming
+  - views.view.simple_person_list
+  - views.view.taxonomy_term
+  - views.view.watchdog
+  - webform.settings
+  - webform.webform.attendee_directory
+partial_list: {  }

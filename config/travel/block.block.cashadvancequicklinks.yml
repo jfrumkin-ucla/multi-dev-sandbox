@@ -1,0 +1,37 @@
+uuid: 4050756e-297f-4509-b374-b651dae87571
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:d1f40341-61a9-402e-9629-da7529cccfac'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: cashadvancequicklinks
+theme: siteden_surface
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:d1f40341-61a9-402e-9629-da7529cccfac'
+settings:
+  id: 'block_content:d1f40341-61a9-402e-9629-da7529cccfac'
+  label: 'Cash Advance Quick Links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/cash-advance\r\n/cash-advance/expense-type-matrix\r\n/cash-advance/approved-business-expenses\r\n/cash-advance/lifecycle\r\n/cash-advance/check-payments"

@@ -1,0 +1,17 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
+uuid: 3c64c7b4-74ec-4e91-8653-eeb1eb27bc08
+name: 'UCLA Digital Toolkit'
+mail: portaleditor@it.ucla.edu
+slogan: 'Tools for keeping the UCLA campus community connected'
+page:
+  403: ''
+  404: /node/111
+  front: /node/26
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+credit_info:
+  value: ''
+  format: sf_basic_html

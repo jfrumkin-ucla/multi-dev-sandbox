@@ -1,0 +1,36 @@
+uuid: 77329db3-6418-446c-ba2e-2cbee27dfde9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_card:a2ef1a91-a7c0-4423-86a6-2f9d82ac1ebc'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    card_type:
+      card_type: gray
+      card_accent: 0
+id: cwereheretohelp
+theme: siteden_surface
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'block_content:a2ef1a91-a7c0-4423-86a6-2f9d82ac1ebc'
+settings:
+  id: 'block_content:a2ef1a91-a7c0-4423-86a6-2f9d82ac1ebc'
+  label: "C: We're here to help!"
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /meet-your-partner

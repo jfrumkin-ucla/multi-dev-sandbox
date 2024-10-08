@@ -1,0 +1,35 @@
+@use "../utilities/colors";
+@use "../utilities/_mixins/breakpoints";
+@use "lists";
+@use "../utilities/category-colors";
+
+//------------------------------------
+//  Category Filter
+//------------------------------------
+
+.category-filter {
+  @include lists.reset-list();
+
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    font-size: 1rem;
+  }
+
+  &__list-item {
+    margin: 0;
+  }
+
+  &__link {
+    @include lists.link-related();
+    display: block;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+
+    &:visited {
+      color: colors.$default-state;
+    }
+
+    .category-filter__list-item--active & {
+      @include category-colors.category-brand-background(colors.$ucla-gold);
+      color: var(--category-brand-contrast-color, #{colors.$black});
+    }
+  }
+}

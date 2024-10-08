@@ -1,0 +1,40 @@
+uuid: 77c6476d-a152-4962-8b48-d7cbff71991d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:cb71af72-c974-4692-9e58-e2d67923b317'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+    full_width:
+      full_width: 0
+id: paymentsolutionscompliance
+theme: siteden_surface
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:cb71af72-c974-4692-9e58-e2d67923b317'
+settings:
+  id: 'block_content:cb71af72-c974-4692-9e58-e2d67923b317'
+  label: 'Payment Solutions & Compliance'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /business-finance-services/payment-solutions-and-compliance

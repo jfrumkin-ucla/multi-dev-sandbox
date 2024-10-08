@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - convert_bundles
+id: convert_bundles_on_path_alias
+label: 'Convert URL alias Entity Bundles'
+type: path_alias
+plugin: convert_bundles_action_base
+configuration: {  }

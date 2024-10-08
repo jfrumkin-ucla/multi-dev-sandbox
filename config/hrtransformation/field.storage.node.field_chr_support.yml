@@ -1,0 +1,21 @@
+uuid: 23d29c24-6d2d-4543-892c-149db036c221
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: 5vvQ-ZV1nPl--z-752BNUw_0J-qPDEzmMcMmo0RkwRI
+id: node.field_chr_support
+field_name: field_chr_support
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

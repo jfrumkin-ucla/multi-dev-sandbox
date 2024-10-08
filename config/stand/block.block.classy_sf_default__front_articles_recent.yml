@@ -1,0 +1,32 @@
+uuid: ddd831cb-de38-4c20-8c45-c326c64571f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sf_articles_recent
+  module:
+    - system
+    - views
+  theme:
+    - classy
+_core:
+  default_config_hash: 4veDUMgV8t4eEaoH2tCGVYBAg9YrixzWSTJztKmYqEA
+id: classy_sf_default__front_articles_recent
+theme: classy
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_block:sf_articles_recent-block_1'
+settings:
+  id: 'views_block:sf_articles_recent-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

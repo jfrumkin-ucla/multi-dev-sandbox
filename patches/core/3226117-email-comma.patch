@@ -1,0 +1,15 @@
+diff --git a/core/lib/Drupal/Core/Mail/Plugin/Mail/PhpMail.php b/core/lib/Drupal/Core/Mail/Plugin/Mail/PhpMail.php
+index 138257b8da486cff940135178250fc5723c0d5fa..475d5c9b4ba8feba09dbb2fc2ddb82bc6f66dde0 100644
+--- a/core/lib/Drupal/Core/Mail/Plugin/Mail/PhpMail.php
++++ b/core/lib/Drupal/Core/Mail/Plugin/Mail/PhpMail.php
+@@ -87,7 +87,9 @@ public function mail(array $message) {
+     $headers = new Headers();
+     foreach ($message['headers'] as $name => $value) {
+       if (in_array(strtolower($name), self::MAILBOX_LIST_HEADERS, TRUE)) {
+-        $value = explode(',', $value);
++        // Split values by comma, but ignore commas encapsulated in double
++        // quotes.
++        $value = str_getcsv($value, ',');
+       }
+       $headers->addHeader($name, $value);
+     }

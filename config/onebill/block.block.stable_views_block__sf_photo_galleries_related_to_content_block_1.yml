@@ -1,0 +1,46 @@
+uuid: 6e283bdd-e04d-4052-8160-a4d99314d193
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sf_photo_galleries_related_to_content
+  module:
+    - block_style_plugins
+    - node
+    - system
+    - views
+  theme:
+    - stable
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+_core:
+  default_config_hash: uspmsOPoZUPwhM0tyYI65OzvCnLCcHx4-oanxFrMXAs
+id: stable_views_block__sf_photo_galleries_related_to_content_block_1
+theme: stable
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:sf_photo_galleries_related_to_content-block_1'
+settings:
+  id: 'views_block:sf_photo_galleries_related_to_content-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      sf_article: sf_article
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: ''

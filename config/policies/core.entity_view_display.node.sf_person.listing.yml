@@ -1,0 +1,84 @@
+uuid: e94f9414-a9fb-44b1-ac35-f2d07d6d298e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.listing
+    - field.field.node.sf_person.body
+    - field.field.node.sf_person.field_hide_from_lists
+    - field.field.node.sf_person.field_sf_address
+    - field.field.node.sf_person.field_sf_credentials
+    - field.field.node.sf_person.field_sf_emails
+    - field.field.node.sf_person.field_sf_featured_status
+    - field.field.node.sf_person.field_sf_first_name
+    - field.field.node.sf_person.field_sf_last_name
+    - field.field.node.sf_person.field_sf_m_primary_image
+    - field.field.node.sf_person.field_sf_meta_tags
+    - field.field.node.sf_person.field_sf_name_prefix
+    - field.field.node.sf_person.field_sf_office_hours
+    - field.field.node.sf_person.field_sf_office_location
+    - field.field.node.sf_person.field_sf_person_type
+    - field.field.node.sf_person.field_sf_phone_numbers
+    - field.field.node.sf_person.field_sf_position_title
+    - field.field.node.sf_person.field_sf_pronouns
+    - field.field.node.sf_person.field_sf_tags
+    - field.field.node.sf_person.field_sf_units
+    - field.field.node.sf_person.field_sf_websites
+    - image.style.sf_thumbnail
+    - node.type.sf_person
+  module:
+    - media
+    - user
+_core:
+  default_config_hash: Y43EVrXtfXkMI25DozeB2XOpKTOUcNtkJly80CHuobA
+id: node.sf_person.listing
+targetEntityType: node
+bundle: sf_person
+mode: listing
+content:
+  field_sf_m_primary_image:
+    type: media_thumbnail
+    label: visually_hidden
+    settings:
+      image_link: content
+      image_style: sf_thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sf_position_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_sf_pronouns:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  body: true
+  field_hide_from_lists: true
+  field_sf_address: true
+  field_sf_credentials: true
+  field_sf_emails: true
+  field_sf_featured_status: true
+  field_sf_first_name: true
+  field_sf_last_name: true
+  field_sf_meta_tags: true
+  field_sf_name_prefix: true
+  field_sf_office_hours: true
+  field_sf_office_location: true
+  field_sf_person_type: true
+  field_sf_phone_numbers: true
+  field_sf_tags: true
+  field_sf_units: true
+  field_sf_websites: true
+  links: true

@@ -1,0 +1,235 @@
+uuid: a3aca0f4-498b-4f58-b880-4a3e94f7ca5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_basic
+    - field.field.node.z_research_project.body
+    - field.field.node.z_research_project.field_award
+    - field.field.node.z_research_project.field_rp_supplementary
+    - field.field.node.z_research_project.field_rp_topics
+    - field.field.node.z_research_project.field_sf_featured_media
+    - field.field.node.z_research_project.field_sf_related_links
+    - node.type.z_research_project
+  module:
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Main Content'
+          column_widths: 67-33
+          context_mapping: {  }
+        components:
+          dc18c354-498c-46aa-8d32-f881c2d0e814:
+            uuid: dc18c354-498c-46aa-8d32-f881c2d0e814
+            region: first
+            configuration:
+              id: 'field_block:node:z_research_project:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          30f3770b-f277-4d9b-b5a2-9635b6d71a8c:
+            uuid: 30f3770b-f277-4d9b-b5a2-9635b6d71a8c
+            region: second
+            configuration:
+              id: 'field_block:node:z_research_project:field_rp_supplementary'
+              label: 'Supplementary Information'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          39caa974-36fe-408e-b27d-7dfbaaaabc58:
+            uuid: 39caa974-36fe-408e-b27d-7dfbaaaabc58
+            region: first
+            configuration:
+              id: 'field_block:node:z_research_project:field_sf_related_links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          8a3aa6c2-6627-457a-b65b-1f36394e3871:
+            uuid: 8a3aa6c2-6627-457a-b65b-1f36394e3871
+            region: second
+            configuration:
+              id: 'field_block:node:z_research_project:field_rp_topics'
+              label: Topics
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: card_label
+                label: hidden
+                settings:
+                  card_link: 1
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          82fba511-a845-4781-8b2a-450fc9c794cd:
+            uuid: 82fba511-a845-4781-8b2a-450fc9c794cd
+            region: second
+            configuration:
+              id: 'field_block:node:z_research_project:field_award'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          fbe6ccb1-25c6-4c99-9977-03de08e196c3:
+            uuid: fbe6ccb1-25c6-4c99-9977-03de08e196c3
+            region: second
+            configuration:
+              id: 'inline_block:sf_basic'
+              label: 'IFO Spacer/line'
+              label_display: '0'
+              provider: layout_builder
+              view_mode: full
+              block_revision_id: 136
+              block_serialized: null
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          78c6b25d-8c6d-4a5a-a0de-1a8ea2748332:
+            uuid: 78c6b25d-8c6d-4a5a-a0de-1a8ea2748332
+            region: second
+            configuration:
+              id: 'field_block:node:z_research_project:field_sf_featured_media'
+              label: 'Featured Media'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          dfe1f89e-1487-4ee9-8409-d4870a5f5869:
+            uuid: dfe1f89e-1487-4ee9-8409-d4870a5f5869
+            region: second
+            configuration:
+              id: 'inline_block:sf_basic'
+              label: spacer
+              label_display: '0'
+              provider: layout_builder
+              view_mode: full
+              block_revision_id: 171
+              block_serialized: null
+              context_mapping: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components: {  }
+        third_party_settings: {  }
+id: node.z_research_project.default
+targetEntityType: node
+bundle: z_research_project
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_award:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: first
+  field_rp_supplementary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_rp_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_sf_featured_media:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: first
+  field_sf_related_links:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

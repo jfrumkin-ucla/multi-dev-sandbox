@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Theme override to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ */
+#}
+{%
+  set classes = [
+  'taxonomy-term',
+  'vocabulary-' ~ term.bundle|clean_class,
+  'view-mode-' ~ view_mode,
+]
+%}
+{{ attach_library('classy/node') }}
+
+<article class="circuit-team-card">
+  <div class="circuit-team-card__image-wrapper">
+    {% if content.field_sf_m_tax_primary_image|render %}
+      <a href="{{ url }}">{{ content.field_sf_m_tax_primary_image }}</a>
+    {% endif %}
+    {% if content.field_circuit_contact|render %}
+      <a href="mailto:{{ content.field_circuit_contact.0 }}">Contact Team</a>
+    {% endif %}
+  </div>
+  <div class="circuit-team-card__info-wrapper">
+    <h2 class="circuit-team-card__name"><a href="{{ url }}">{{ name.0 }}</a></h2>
+    {{ content.field_sf_unit_leaders }}
+    <h3 class="circuit-team-card__leader"><a href="../04-pages-20-circuit-profile-page/04-pages-20-circuit-profile-page.rendered.html">{{ teamLeader }}</a></h3>
+    {% if content.field_circuit_motto|render %}
+      <p>{{ content.field_circuit_motto }}</p>
+    {% endif %}
+  </div>
+  {% if subterms %}
+    <div class="circuit-team-card__subteams-wrapper">
+      <ul class="list--pipe">
+        {% for subterm in subterms %}
+          <li><a href="{{ subterm.uri }}">{{ subterm.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</article>

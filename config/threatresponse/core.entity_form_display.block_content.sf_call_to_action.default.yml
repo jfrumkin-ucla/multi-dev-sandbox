@@ -1,0 +1,42 @@
+uuid: 0f567006-168c-456d-bca4-51c1a1b3ba2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_call_to_action
+    - field.field.block_content.sf_call_to_action.field_sf_link
+    - field.field.block_content.sf_call_to_action.field_sf_title
+  module:
+    - link
+_core:
+  default_config_hash: 89tKM_LSi3L-aXUmbZGu_b4hzzFpn1hwiD1ORnkp8xg
+id: block_content.sf_call_to_action.default
+targetEntityType: block_content
+bundle: sf_call_to_action
+mode: default
+content:
+  field_sf_link:
+    weight: 28
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_sf_title:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,25 @@
+uuid: 2fd6c6d5-7155-4b10-8c7b-47dc441883fc
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_focal_link:828c84c7-76e8-4f0e-bd51-887dd31cb5d7'
+  module:
+    - block_content
+  theme:
+    - siteden_surface
+id: flanothercalltoaction
+theme: siteden_surface
+region: full_width_bottom
+weight: 0
+provider: null
+plugin: 'block_content:828c84c7-76e8-4f0e-bd51-887dd31cb5d7'
+settings:
+  id: 'block_content:828c84c7-76e8-4f0e-bd51-887dd31cb5d7'
+  label: 'FL: Another Call to Action'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

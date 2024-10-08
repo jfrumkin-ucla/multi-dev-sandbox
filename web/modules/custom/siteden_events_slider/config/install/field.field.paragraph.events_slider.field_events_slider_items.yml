@@ -1,0 +1,109 @@
+uuid: 22bc9323-8167-4ea7-bc7c-cbc350531ee9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_events_slider_items
+    - paragraphs.paragraphs_type.events_slider
+    - paragraphs.paragraphs_type.evnt_sl_itm
+  module:
+    - entity_reference_revisions
+id: paragraph.events_slider.field_events_slider_items
+field_name: field_events_slider_items
+entity_type: paragraph
+bundle: events_slider
+label: 'Events Slider Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      evnt_sl_itm: evnt_sl_itm
+    negate: 0
+    target_bundles_drag_drop:
+      article_embed:
+        weight: 29
+        enabled: false
+      article_embed_banner:
+        weight: 30
+        enabled: false
+      article_embed_secondary:
+        weight: 31
+        enabled: false
+      events_slider:
+        weight: 28
+        enabled: false
+      evnt_sl_itm:
+        weight: 32
+        enabled: true
+      p_slider_item:
+        weight: 33
+        enabled: false
+      photo_slider:
+        weight: 34
+        enabled: false
+      sf_accordion:
+        weight: 35
+        enabled: false
+      sf_accordion_item:
+        weight: 36
+        enabled: false
+      sf_block_embed:
+        weight: 37
+        enabled: false
+      sf_box_banner:
+        weight: 38
+        enabled: false
+      sf_card:
+        weight: 39
+        enabled: false
+      sf_card_grid:
+        weight: 40
+        enabled: false
+      sf_custom_code:
+        weight: 41
+        enabled: false
+      sf_focal_link:
+        weight: 42
+        enabled: false
+      sf_iframe_embed:
+        weight: 43
+        enabled: false
+      sf_people:
+        weight: 44
+        enabled: false
+      sf_person_item:
+        weight: 45
+        enabled: false
+      sf_ribbon_text_banner:
+        weight: 46
+        enabled: false
+      sf_section:
+        weight: 47
+        enabled: false
+      sf_slider:
+        weight: 48
+        enabled: false
+      sf_slider_item:
+        weight: 49
+        enabled: false
+      sf_tab:
+        weight: 50
+        enabled: false
+      sf_tabs:
+        weight: 51
+        enabled: false
+      sf_text:
+        weight: 52
+        enabled: false
+      sf_text_banner:
+        weight: 53
+        enabled: false
+      sf_view_embed:
+        weight: 54
+        enabled: false
+field_type: entity_reference_revisions

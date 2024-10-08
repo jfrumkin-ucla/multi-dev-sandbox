@@ -1,0 +1,22 @@
+uuid: d52d41af-d7b4-4d62-afbf-50dda1f66812
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: internal_funding_opportunity
+label: 'Internal Funding Opportunity'
+type: 'canonical_entities:node'
+pattern: '/reo/internal-funding/opportunity/[node:title]'
+selection_criteria:
+  9af886ce-0376-4c03-82d4-f7d39a198e4b:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 9af886ce-0376-4c03-82d4-f7d39a198e4b
+    context_mapping:
+      node: node
+    bundles:
+      funding_opportunity: funding_opportunity
+selection_logic: and
+weight: -5
+relationships: {  }

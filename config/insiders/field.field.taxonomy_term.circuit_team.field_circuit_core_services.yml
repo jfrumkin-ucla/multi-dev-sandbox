@@ -1,0 +1,31 @@
+uuid: a54190c5-b237-4cb6-b5f5-57d6fcf39dc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_circuit_core_services
+    - taxonomy.vocabulary.circuit_team
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    sf_basic_html: '0'
+    sf_restricted_html: '0'
+    sf_full_html: '0'
+    plain_text: '0'
+    sf_plain_text: '0'
+_core:
+  default_config_hash: 7PSDgfA9-2NWcLux06OnckzS7PSLJmBqHd1DN6fE9UQ
+id: taxonomy_term.circuit_team.field_circuit_core_services
+field_name: field_circuit_core_services
+entity_type: taxonomy_term
+bundle: circuit_team
+label: 'Core Services'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

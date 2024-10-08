@@ -1,0 +1,27 @@
+uuid: f5ec0b9f-7857-4da6-878c-bf4adac6cce3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dgc_team
+    - node.type.dgc_fact_sheet
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+_core:
+  default_config_hash: w4iYIPp7IkSloYXPMZ2a8K9jhLbtLrTuCd0Lz5dTLTE
+id: node.dgc_fact_sheet.field_dgc_team
+field_name: field_dgc_team
+entity_type: node
+bundle: dgc_fact_sheet
+label: 'Team Leaders'
+description: 'Enter project team.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

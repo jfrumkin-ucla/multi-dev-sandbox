@@ -1,0 +1,28 @@
+uuid: bcfec4c9-cc01-43c2-87fa-feeadd82258b
+langcode: en
+status: true
+dependencies:
+  module:
+    - sitefarm_photo_gallery
+    - system
+  theme:
+    - siteden_surface
+id: slideshowphotogallery_6
+theme: siteden_surface
+region: content
+weight: -21
+provider: null
+plugin: slideshow_gallery_block
+settings:
+  id: slideshow_gallery_block
+  label: 'ORCA & IAC Awards Reception 2023'
+  label_display: visible
+  provider: sitefarm_photo_gallery
+  show_title: 0
+  slider_nav: 0
+  gallery: '3896'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news/celebrating-orca-iac-2023-postdoctoral-fellows-and-seed-grant-recipients

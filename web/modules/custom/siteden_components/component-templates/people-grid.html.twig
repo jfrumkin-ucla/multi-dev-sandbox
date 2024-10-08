@@ -1,0 +1,15 @@
+<div class="sf_people-grid">
+  {% for i, personitem in personitems %}
+    {% include '@siteden-components/card--person.html.twig' with
+      {
+        link: personitem.link,
+        image: personitem.image,
+        name: personitem.name,
+        pronouns: personitem.pronouns,
+        position: personitem.position,
+        text: personitem.text,
+        card_class: option__card_bgcolor ? 'person-card--' ~ option__card_bgcolor : ''
+      } %}
+
+  {% endfor %}
+</div>

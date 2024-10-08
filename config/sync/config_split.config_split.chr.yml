@@ -1,0 +1,134 @@
+uuid: 5479a153-8d8e-4c88-9aa4-cc9e1ce49b49
+langcode: en
+status: false
+dependencies: {  }
+id: chr
+label: chr.ucla.edu
+description: 'Config split for https://chr.ucla.edu/ Campus Human Resources website'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/chr
+module: {  }
+theme: {  }
+complete_list:
+  - automated_cron.settings
+  - block.block.bbchr
+  - block.block.chrcontactinfofooter
+  - block.block.contentdisclaimer
+  - block.block.exposedformsf_person_directorypage_1
+  - block.block.hritsofooter
+  - block.block.seven_breadcrumbs
+  - block.block.seven_content
+  - block.block.seven_help
+  - block.block.seven_local_actions
+  - block.block.seven_login
+  - block.block.seven_messages
+  - block.block.seven_page_title
+  - block.block.seven_primary_local_tasks
+  - block.block.seven_secondary_local_tasks
+  - block.block.siteden_surface_breadcrumbs
+  - block.block.siteden_surface_content
+  - block.block.siteden_surface_main_menu
+  - block.block.siteden_surface_messages
+  - block.block.siteden_surface_page_title
+  - block.block.siteden_surface_search
+  - block.block.siteden_surface_side_menu
+  - block.block.siteden_surface_sitecredits
+  - block.block.siteden_surface_social
+  - block.block.siteden_surface_tabs
+  - block.block.views_block__sf_events_upcoming_block_1
+  - block.block.views_block__sf_persons_content_related_back_to_person_block_1
+  - block.block.views_block__sf_persons_related_to_content_block_1
+  - block.block.views_block__sf_photo_galleries_related_by_term_block_1
+  - block.block.views_block__sf_photo_galleries_related_to_content_block_1
+  - block.block.views_block__sf_photo_gallery_category_filter_block_1
+  - captcha.captcha_point.contact_message_feedback_form
+  - captcha.captcha_point.node_sf_article_form
+  - captcha.captcha_point.node_sf_event_form
+  - captcha.captcha_point.node_sf_page_form
+  - captcha.captcha_point.node_sf_person_form
+  - captcha.captcha_point.node_sf_photo_gallery_form
+  - captcha.captcha_point.search_block_form
+  - captcha.captcha_point.search_form
+  - captcha.captcha_point.views_exposed_form
+  - config_suite.settings
+  - core.date_format.long
+  - core.date_format.medium
+  - core.date_format.sf_medium_date_and_time
+  - core.date_format.short
+  - core.entity_form_display.node.chr_project.default
+  - core.entity_form_display.node.sf_page.default
+  - core.entity_view_display.node.chr_project.default
+  - core.entity_view_display.node.chr_project.teaser
+  - core.entity_view_display.node.sf_landing.default
+  - core.extension
+  - core.menu.static_menu_link_overrides
+  - dblog.settings
+  - features.bundle.sitefarm
+  - features.settings
+  - field.field.node.chr_project.body
+  - field.field.node.chr_project.field_chr_end_date
+  - field.field.node.chr_project.field_chr_key_stakeholders
+  - field.field.node.chr_project.field_chr_percent_complete
+  - field.field.node.chr_project.field_chr_project_phase
+  - field.field.node.chr_project.field_chr_start_date
+  - field.field.node.chr_project.field_chr_support
+  - field.field.node.chr_project.field_sf_tabs
+  - field.storage.node.field_chr_end_date
+  - field.storage.node.field_chr_key_stakeholders
+  - field.storage.node.field_chr_percent_complete
+  - field.storage.node.field_chr_project_phase
+  - field.storage.node.field_chr_start_date
+  - field.storage.node.field_chr_support
+  - field.storage.node.field_sf_tabs
+  - filter.settings
+  - google_analytics.settings
+  - honeypot.settings
+  - menu_breadcrumb.settings
+  - node.settings
+  - node.type.chr_project
+  - pantheon_advanced_page_cache.settings
+  - pathauto.pattern.chr_project
+  - pathauto.settings
+  - recaptcha.settings
+  - robotstxt.settings
+  - roleassign.settings
+  - search.page.google_cse_search
+  - search.settings
+  - shortcut.set.development
+  - simple_sitemap.bundle_settings.default.node.chr_project
+  - system.action.convert_bundles_on_google_tag_container
+  - system.action.convert_bundles_on_migration
+  - system.action.convert_bundles_on_migration_group
+  - system.action.convert_bundles_on_sharemessage
+  - system.cron
+  - system.date
+  - system.feature_flags
+  - system.menu.hritso-footer
+  - system.performance
+  - system.site
+  - system.theme
+  - user.mail
+  - user.role.administrator
+  - user.role.editor
+  - user.role.site_builder
+  - user.role.site_manager
+  - user.settings
+  - views.view.articles_recent_custom_
+  - views.view.chr_articles
+  - views.view.editoria11y_dismissals
+  - views.view.editoria11y_results
+  - views.view.frontpage
+  - views.view.layout_override
+  - views.view.published_node_filter
+  - views.view.sf_events_upcoming
+  - views.view.taxonomy_term
+  - views.view.watchdog
+  - webform.settings
+  - workbench_email.workbench_email_template.anything_to_published
+  - workbench_email.workbench_email_template.draft_to_review
+  - workbench_email.workbench_email_template.review_to_draft
+  - workflows.workflow.standard_workflow
+partial_list: {  }

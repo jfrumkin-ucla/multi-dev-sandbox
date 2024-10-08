@@ -1,0 +1,31 @@
+uuid: f11e8a85-ad26-4017-a6af-9a0750da7bec
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - siteden_surface
+id: mainnavigation
+theme: siteden_surface
+region: navigation
+weight: 0
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 3
+  expand_all_items: false
+  parent: 'main:'
+  suggestion: main
+visibility: {  }

@@ -1,0 +1,5 @@
+name: SiteDen Embed JS
+type: module
+description: "Configure and embed external JavaScript files and iframes into application pages."
+core_version_requirement: ^9 || ^10
+package: 'SiteDen'

@@ -1,0 +1,56 @@
+@use "../utilities/colors";
+@use "../utilities/_mixins/breakpoints";
+
+.marketing-highlight-horizontal {
+  overflow: hidden;
+
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+  }
+
+  &__image {
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      width: 60%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__body {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10%;
+    position: relative;
+    width: 100%;
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      // Position to sit on top and overlap the image.
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      width: 55%;
+
+      // Vertically center the content.
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+
+  &__contents {
+    padding: 1rem;
+    background-color: colors.$white;
+  }
+}

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sf_custom_code.field_sf_code
+    - paragraphs.paragraphs_type.sf_custom_code
+_core:
+id: paragraph.sf_custom_code.default
+targetEntityType: paragraph
+bundle: sf_custom_code
+mode: default
+content:
+  field_sf_code:
+    type: string_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 30
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

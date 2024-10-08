@@ -1,0 +1,16 @@
+uuid: 3b9ef4db-f781-40cd-9bb1-4f6cc3ada5d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+_core:
+  default_config_hash: ovF8jWNvGooXZHfO5vgsrav37OAVJ9Tgwow9UF7-mAU
+id: sf_slider_fsc_item
+label: 'Slider Featured Story Card Item'
+icon_uuid: null
+icon_default: null
+description: 'The slider item is a subcomponent of the Slider Featured Story Card component. This is not meant to be used by itself.'
+behavior_plugins:
+  style_options:
+    enabled: true

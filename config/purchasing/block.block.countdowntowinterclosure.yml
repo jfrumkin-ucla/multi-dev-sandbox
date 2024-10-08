@@ -1,0 +1,30 @@
+uuid: 174f6d7a-07cf-45dd-a3b0-e923a9c17e14
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_iframe_embed:56e8fa94-d7c5-41c2-bdab-4d4f94c338a2'
+  module:
+    - block_content
+    - system
+  theme:
+    - siteden_surface
+id: countdowntowinterclosure
+theme: siteden_surface
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:56e8fa94-d7c5-41c2-bdab-4d4f94c338a2'
+settings:
+  id: 'block_content:56e8fa94-d7c5-41c2-bdab-4d4f94c338a2'
+  label: 'Countdown to BruinBuy Shutdown'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /winter-closure

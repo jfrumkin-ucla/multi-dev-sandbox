@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: sf_iframe_embed
+label: 'Iframe embed'
+revision: 0
+description: 'An embedded iframe containing external site content.'

@@ -1,0 +1,16 @@
+uuid: 345b1fcf-68f7-40f5-b54c-76cd772ff335
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+_core:
+  default_config_hash: 6yfuIfIQJqAudwGwp5Vh7uzLNcJdrsuUCUzrGCsd1_A
+id: sf_slider_story_card
+label: 'Slider - Story'
+icon_uuid: null
+icon_default: null
+description: 'The slider component allows users to add a slideshow of articles in the Story Card style.'
+behavior_plugins:
+  style_options:
+    enabled: true

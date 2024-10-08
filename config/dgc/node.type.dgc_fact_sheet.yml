@@ -1,0 +1,19 @@
+uuid: 32e6c352-bd17-4a59-a55c-e4e61a59bf43
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: vRoIQC8cITx88tT6JAuPUFwPJkNoMOi6juLvyMLvIsE
+name: 'DGC Fact Sheet'
+type: dgc_fact_sheet
+description: 'Project fact sheets for Depression Grand Challenge.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

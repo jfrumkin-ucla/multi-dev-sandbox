@@ -1,0 +1,98 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\ViewExecutable;
+
+/**
+ * hook_form_BASE_FORM_ID_alter() for the node_form.
+ */
+function insiders_circuit_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Get the node entity from the form
+  $entity = $form_state->getFormObject()->getEntity();
+
+  // Hide the node title and set default stub
+  if ($entity->bundle() == 'circuit_profile') {
+    $form['title']['#type'] = 'hidden';
+    $form['title']['widget'][0]['value']['#default_value'] = 'default stub';
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function insiders_circuit_entity_presave(EntityInterface $entity) {
+  // Hide and autogenerate the title on Person nodes
+  if ($entity->bundle() == 'circuit_profile') {
+    // Get data that the new title will be built from
+    $title_data = [
+      'prefix' => $entity->field_sf_name_prefix->value,
+      'first' => $entity->field_sf_first_name->value,
+      'last' => $entity->field_sf_last_name->value,
+      'creds' => $entity->field_sf_credentials->value,
+    ];
+
+    // Remove empty values and convert to string
+    $title_data = array_filter($title_data);
+    $title = implode(' ', $title_data);
+
+    // Set the new title
+    $entity->setTitle($title);
+  }
+}
+
+/**
+ * Implements hook_preprocess_taxonomy_term().
+ */
+function insiders_circuit_preprocess_taxonomy_term(&$variables) {
+  $term = $variables['term'];
+  if ($term->bundle() == 'circuit_team') {
+    $aliasManager = \Drupal::service('path_alias.manager');
+    $st = [];
+    $subterms = \Drupal::entityTypeManager()
+      ->getStorage('taxonomy_term')
+      ->loadChildren($term->id());
+    foreach($subterms as $subterm) {
+      $st[] = [
+        'title' => $subterm->label(),
+        'tid' => $subterm->id(),
+        'uri' => $aliasManager->getAliasByPath('/taxonomy/term/'.$subterm->id()),
+      ];
+    }
+    $variables['subterms'] = $st;
+  }
+}
+
+/**
+ * Implements hook_views_post_execute().
+ */
+function insiders_circuit_views_post_execute(ViewExecutable $view) {
+//  Hide the Circuit team attachment view if there are no results.
+  if ($view->id() === 'circuit_team' && $view->current_display === 'attachment_1') {
+    if (empty($view->result)) {
+      $view->build_info['fail'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function insiders_circuit_views_pre_render(ViewExecutable $view) {
+//  On the Circuit Leaders page, hoist Lucy Avetisyan to the top of the list.
+  if ($view->id() === 'circuit_leaders') {
+    $results = $view->result;
+    if ($results) {
+      foreach ($results as $resultKey => $result) {
+        if ($result->node__field_sf_last_name_field_sf_last_name_value === 'Avetisyan' &&
+          $result->node__field_sf_first_name_field_sf_first_name_value === 'Lucy') {
+          $top_result = $results[$resultKey];
+          unset($results[$resultKey]);
+          array_unshift($results, $top_result);
+          break;
+        }
+      }
+      $view->result = $results;
+    }
+  }
+}

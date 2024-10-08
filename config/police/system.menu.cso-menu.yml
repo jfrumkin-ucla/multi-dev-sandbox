@@ -1,0 +1,8 @@
+uuid: b59c9ccf-2fff-4169-b23f-1c31cbd206be
+langcode: en
+status: true
+dependencies: {  }
+id: cso-menu
+label: 'CSO Menu'
+description: 'Community Service Officer microsite menu'
+locked: false

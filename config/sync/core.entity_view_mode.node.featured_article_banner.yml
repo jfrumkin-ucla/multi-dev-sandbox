@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+id: node.featured_article_banner
+label: 'Featured Article Banner'
+description: ''
+targetEntityType: node
+cache: true

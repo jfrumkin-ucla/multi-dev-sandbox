@@ -1,0 +1,135 @@
+@use "../utilities/_mixins/breakpoints";
+
+:root {
+  --spacing-default: 2.5rem;
+  --spacing-default-focal-link: 1.5rem;
+}
+
+.paragraph {
+  --spacing-default: 2.5rem;
+  --spacing-default-focal-link: 1.5rem;
+  margin-bottom: var(--spacing-default);
+  margin-top: 0;
+
+  // Remove margins from section paragraphs and layouts/regions.
+  &.paragraph--type--sf-section {
+    margin-bottom: 0;
+    margin-top: 0;
+
+    .layout {
+      margin-bottom: 0;
+      margin-top: 0;
+
+      .layout__region {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+  }
+
+  //SF Focal Link: Only keep default option
+  &.paragraph--type--sf-focal-link {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  &.paragraph--type--sf-focal-link:not(:has(~ .paragraph--type--sf-focal-link)) {
+    margin-bottom: 2.5rem;
+  }
+
+  // Spacing options.
+  &.option--spacing-bottom--none {
+    margin-bottom: 0;
+  }
+
+  &.option--spacing-top--none {
+    margin-top: 0;
+  }
+
+  &.option--spacing-bottom--x-small {
+    margin-bottom: calc(var(--spacing-default) / 4);
+  }
+
+  &.option--spacing-top--x-small {
+    margin-top: calc(var(--spacing-default) / 4);
+  }
+
+  &.option--spacing-bottom--small {
+    margin-bottom: calc(var(--spacing-default) / 2);
+  }
+
+  &.option--spacing-top--small {
+    margin-top: calc(var(--spacing-default) / 2);
+  }
+
+  &.option--spacing-bottom--medium {
+    margin-bottom: var(--spacing-default);
+  }
+
+  &.option--spacing-top--medium {
+    margin-top: var(--spacing-default);
+  }
+
+  &.option--spacing-bottom--large {
+    margin-bottom: calc(var(--spacing-default) * 2);
+  }
+
+  &.option--spacing-top--large {
+    margin-top: calc(var(--spacing-default) * 2);
+  }
+
+  &.option--spacing-bottom--x-large {
+    margin-bottom: calc(var(--spacing-default) * 3);
+  }
+
+  &.option--spacing-top--x-large {
+    margin-top: calc(var(--spacing-default) * 3);
+  }
+}
+
+.text-formatted {
+  .alert {
+    margin-bottom: 0;
+  }
+}
+
+//Landing Page: If the first region of a one-column layout contains a banner or a slider, let the it bump up against the bottom of the Nav.
+.node--type-sf-landing > .node__content .field__items > .field__item:first-child > .paragraph--type--sf-section:first-of-type > .layout--onecol:first-of-type > .layout__region:first-child {
+  & > .paragraph--type--sf-slider:first-child,
+  & > .paragraph--type--sf-ribbon-text-banner:first-child,
+  & > .paragraph--type--sf-text-banner:first-child {
+    margin-top: -3rem;
+  }
+
+  & > .paragraph--type--sf-box-banner:first-child {
+    margin-top: -3rem;
+    overflow: hidden;
+  }
+}
+
+//If the last layout section is full-width, collapse the bottom margin so it bumps against the footer menu.
+.layout.l-full-width:not(.layout-builder__layout):last-of-type > .layout__region > div:last-child {
+  margin-bottom: -6rem;
+}
+
+//Fix for expanding columns caused by extra long words - works for nested and unested columns
+.layout--twocol-section>.layout__region--first, .layout--twocol-section>.layout__region--second {
+  word-break: break-word;
+ }
+
+.layout--threecol-section>.layout__region--first, .layout--threecol-section>.layout__region--second, .layout--threecol-section>.layout__region--third {
+  word-break: break-word;
+}
+
+.layout--fourcol-section>.layout__region--first, .layout--fourcol-section>.layout__region--second,
+.layout--fourcol-section>.layout__region--third, .layout--fourcol-section>.layout__region--fourth {
+  word-break: break-word;
+}
+
+.layout--fourcol-section>.layout__region--first table, .layout--fourcol-section>.layout__region--fourth table, .layout--fourcol-section>.layout__region--second table, .layout--fourcol-section>.layout__region--third table, .layout--threecol-section>.layout__region--first table, .layout--threecol-section>.layout__region--second table, .layout--threecol-section>.layout__region--third table, .layout--twocol-section>.layout__region--first table, .layout--twocol-section>.layout__region--second table {
+  word-break: normal;
+}
+
+.sf_photo_slider {
+  margin-bottom: 2rem;
+}

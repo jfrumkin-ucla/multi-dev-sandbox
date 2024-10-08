@@ -1,0 +1,23 @@
+uuid: 6476fb2c-2cd7-49f1-9d2f-f70fce062039
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gcr_supplier_link
+    - node.type.gcr_tool
+  module:
+    - link
+id: node.gcr_tool.field_gcr_supplier_link
+field_name: field_gcr_supplier_link
+entity_type: node
+bundle: gcr_tool
+label: 'TPRM Supplier link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

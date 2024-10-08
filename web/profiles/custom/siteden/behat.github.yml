@@ -1,0 +1,27 @@
+imports:
+  - behat.common.yml
+
+github:
+  extensions:
+    Drupal\DrupalExtension:
+      api_driver: 'drupal'
+      drupal:
+        drupal_root: /home/runner/work/web-services-siteden-drupal/web-services-siteden-drupal/web
+      drush:
+        root: /home/runner/work/web-services-siteden-drupal/web-services-siteden-drupal/web
+    Drupal\MinkExtension:
+      base_url: 'http://localhost:8080'
+      browser_name: chrome
+      show_cmd: '/usr/bin/google-chrome %s'
+      selenium2:
+        browser: chrome
+        wd_host: http://127.0.0.1:4444/wd/hub
+        capabilities:
+          "browser": "chrome"
+          "browserName": "chrome"
+          "browserVersion": "ANY"
+          "version": "ANY"
+          'chrome': {'switches':['--no-sandbox','--disable-dev-shm-usage','--disable-gpu','--window-size=1920,1080']}
+          extra_capabilities:
+            "goog:chromeOptions":
+              w3c: false

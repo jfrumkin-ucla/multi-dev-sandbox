@@ -1,0 +1,8 @@
+uuid: 01ba6e5e-13e2-4ae4-b185-b064e5ffb401
+langcode: en
+status: true
+dependencies: {  }
+id: draft-side-menu
+label: 'Draft: Side Nav'
+description: 'Test Side Nav'
+locked: false

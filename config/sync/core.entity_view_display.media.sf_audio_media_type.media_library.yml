@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.sf_audio_media_type.field_media_audio_file
+    - field.field.media.sf_audio_media_type.field_sf_media_category
+    - image.style.medium
+    - media.type.sf_audio_media_type
+  module:
+    - file
+    - image
+_core:
+id: media.sf_audio_media_type.media_library
+targetEntityType: media
+bundle: sf_audio_media_type
+mode: media_library
+content:
+  field_media_audio_file:
+    type: file_audio
+    label: hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_sf_media_category: true
+  uid: true

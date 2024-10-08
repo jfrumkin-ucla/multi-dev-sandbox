@@ -1,0 +1,52 @@
+uuid: d254e75a-2804-46e1-b5e6-7f1e7a1bcd2c
+langcode: en
+status: false
+dependencies: {  }
+id: adminvc
+label: adminvc.ucla.edu
+description: 'Config split for https://adminvc.ucla.edu/ Administrative Vice Chancellor website'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/adminvc
+module: {  }
+theme: {  }
+complete_list:
+  - block.block.bbfooterlogo
+  - block.block.footercontactinfo
+  - block.block.pagetitle
+  - block.block.siteden_surface_breadcrumbs
+  - block.block.siteden_surface_content
+  - block.block.siteden_surface_main_menu
+  - block.block.siteden_surface_search
+  - block.block.siteden_surface_side_menu
+  - block.block.siteden_surface_social
+  - block.block.siteden_surface_tabs
+  - captcha.captcha_point.contact_message_feedback_form
+  - captcha.captcha_point.node_sf_article_form
+  - captcha.captcha_point.node_sf_event_form
+  - captcha.captcha_point.node_sf_page_form
+  - captcha.captcha_point.node_sf_person_form
+  - captcha.captcha_point.node_sf_photo_gallery_form
+  - captcha.captcha_point.search_block_form
+  - captcha.captcha_point.search_form
+  - config_suite.settings
+  - dblog.settings
+  - google_analytics.settings
+  - pantheon_advanced_page_cache.settings
+  - recaptcha.settings
+  - system.action.convert_bundles_on_google_tag_container
+  - system.action.convert_bundles_on_migration
+  - system.action.convert_bundles_on_migration_group
+  - system.action.convert_bundles_on_sharemessage
+  - system.feature_flags
+  - views.view.equity_council_members
+  - views.view.layout_override
+  - views.view.published_node_filter
+  - views.view.watchdog
+  - webform.webform.fall_ramp_up_info_session_questi
+  - webform.webform.feedback
+  - webform.webform.make_a_suggestion
+  - webform.webform.rsvp_for_on_deck_with_michael_be
+partial_list: {  }

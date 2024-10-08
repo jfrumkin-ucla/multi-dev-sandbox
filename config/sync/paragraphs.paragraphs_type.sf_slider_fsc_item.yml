@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+_core:
+id: sf_slider_fsc_item
+label: 'Slider Featured Story Card Item'
+icon_uuid: null
+icon_default: null
+description: 'The slider item is a subcomponent of the Slider Featured Story Card component. This is not meant to be used by itself.'
+behavior_plugins:
+  style_options:
+    enabled: true

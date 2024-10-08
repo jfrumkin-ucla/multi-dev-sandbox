@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sf_m_primary_image
+    - media.type.sf_image_media_type
+    - node.type.sf_photo_gallery
+_core:
+id: node.sf_photo_gallery.field_sf_m_primary_image
+field_name: field_sf_m_primary_image
+entity_type: node
+bundle: sf_photo_gallery
+label: 'Primary Image'
+description: 'This is the image that will represent your gallery when it is presented in lists or when it is highlighted somewhere on the site.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      sf_image_media_type: sf_image_media_type
+    sort:
+      field: created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

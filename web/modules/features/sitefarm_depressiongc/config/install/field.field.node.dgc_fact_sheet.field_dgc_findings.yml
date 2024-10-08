@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dgc_findings
+    - node.type.dgc_fact_sheet
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.dgc_fact_sheet.field_dgc_findings
+field_name: field_dgc_findings
+entity_type: node
+bundle: dgc_fact_sheet
+label: Findings
+description: 'Findings of the project.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

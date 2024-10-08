@@ -1,0 +1,41 @@
+uuid: aada3f24-9f64-41dd-b133-466a44fe99b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_style_plugins
+    - menu_block
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: mainnavigation_2
+theme: siteden_surface
+region: sidebar_first
+weight: -14
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: Impact
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'main:menu_link_content:2f92027d-64bb-405b-affa-e3235c6d2fdc'
+  suggestion: main
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "\r\n/research-portal\r\n"

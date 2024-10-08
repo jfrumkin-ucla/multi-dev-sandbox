@@ -1,0 +1,17 @@
+_core:
+  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+langcode: en
+uuid: 047d70f5-c784-481c-a453-07e54ccf8097
+name: 'STAND ALACRITY Center'
+mail: portaleditor@it.ucla.edu
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/4
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+credit_info:
+  value: ''
+  format: sf_basic_html

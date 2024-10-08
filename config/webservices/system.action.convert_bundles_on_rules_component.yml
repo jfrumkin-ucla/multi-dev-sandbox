@@ -1,0 +1,11 @@
+uuid: 6c0f7698-4dc8-4ed9-9be5-087bf510d416
+langcode: en
+status: true
+dependencies:
+  module:
+    - convert_bundles
+id: convert_bundles_on_rules_component
+label: 'Convert Rules component Entity Bundles'
+type: rules_component
+plugin: convert_bundles_action_base
+configuration: {  }

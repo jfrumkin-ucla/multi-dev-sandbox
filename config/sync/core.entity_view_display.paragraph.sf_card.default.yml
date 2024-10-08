@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sf_card.field_sf_image
+    - field.field.paragraph.sf_card.field_sf_link
+    - field.field.paragraph.sf_card.field_sf_title
+    - field.field.paragraph.sf_card.field_sf_wysiwyg
+    - image.style.sf_card
+    - paragraphs.paragraphs_type.sf_card
+  module:
+    - link
+    - media
+    - text
+_core:
+id: paragraph.sf_card.default
+targetEntityType: paragraph
+bundle: sf_card
+mode: default
+content:
+  field_sf_image:
+    type: media_thumbnail
+    label: above
+    settings:
+      image_link: ''
+      image_style: sf_card
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_sf_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_sf_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_sf_wysiwyg:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

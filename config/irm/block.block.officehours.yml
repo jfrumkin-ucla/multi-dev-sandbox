@@ -1,0 +1,32 @@
+uuid: 83b18903-a0dc-4c88-a037-f9cf189eb93a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:6f73d32d-6a6a-4d8b-989a-efbcabff59cb'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: officehours
+theme: siteden_surface
+region: footer_nav
+weight: -12
+provider: null
+plugin: 'block_content:6f73d32d-6a6a-4d8b-989a-efbcabff59cb'
+settings:
+  id: 'block_content:6f73d32d-6a6a-4d8b-989a-efbcabff59cb'
+  label: 'Office Hours'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

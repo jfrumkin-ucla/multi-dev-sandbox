@@ -1,0 +1,37 @@
+uuid: e23050d6-06bf-44a5-ba80-ac4bc51faba3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:a98ab70b-ad1d-4dd2-aff6-67f562561653'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: mediacontact
+theme: siteden_surface
+region: sidebar_second
+weight: -16
+provider: null
+plugin: 'block_content:a98ab70b-ad1d-4dd2-aff6-67f562561653'
+settings:
+  id: 'block_content:a98ab70b-ad1d-4dd2-aff6-67f562561653'
+  label: 'Media Contact'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /newsroom

@@ -1,0 +1,7 @@
+siteden_node_author.settings:
+  path: '/admin/config/siteden_node_author/settings'
+  defaults:
+    _form: '\Drupal\siteden_node_author\Form\SitedenNodeAuthorSettingsForm'
+    _title: 'Anonymous Node Author Override'
+  requirements:
+    _permission: 'administer site configuration'

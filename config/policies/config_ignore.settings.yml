@@ -1,0 +1,5 @@
+_core:
+mode: intermediate
+ignored_config_entities:
+  import: {  }
+  export: {  }

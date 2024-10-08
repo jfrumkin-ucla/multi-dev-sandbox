@@ -1,0 +1,119 @@
+<?php
+
+/**
+ * @file
+ * Module for SiteDen Menu Item Limit.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\menu_ui\MenuForm;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_form_alter().
+ */
+function siteden_menu_item_limit_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  switch ($form_id) {
+    case 'menu_edit_form':
+      $user = User::load(\Drupal::currentUser()->id());
+      $form['siteden_menu_item_limit'] = siteden_menu_item_limit_config_menu($form, $form_state->getBuildInfo()['callback_object']);
+      $form['#validate'][] = 'siteden_menu_item_limit_config_menu_validate';
+      array_unshift($form['actions']['submit']['#submit'], 'siteden_menu_item_limit_config_menu_submit');
+      break;
+
+    default:
+      break;
+  }
+}
+
+/**
+ * Menu item link form alter.
+ */
+function siteden_menu_item_limit_form_menu_link_content_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  $menu_link_content = $form_state->getFormObject()->getEntity();
+
+  $menu_link_options = $menu_link_content->link ? $menu_link_content->link->first()->options : [];
+
+  $form['menu_cta'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Call to Action Menu Item'),
+    '#description' => t('Enable this menu item to be a call to action'),
+    '#default_value' => $menu_link_options['menu_cta'] ?? '',
+    '#weight' => 30,
+  ];
+
+  $form['actions']['submit']['#submit'][] = '_siteden_menu_item_limit_form_menu_link_content_form_submit';
+}
+
+/**
+ * Hook preprocess menu.
+ */
+function siteden_menu_item_limit_preprocess_menu(&$variables) {
+  foreach ($variables['items'] as $item) {
+    $options = $item['original_link']->getOptions();
+    if ($options && isset($options['menu_cta'])) {
+      if ($options['menu_cta'] == 1) {
+        $item['attributes']->addClass(Html::cleanCssIdentifier('cta-menu-item', []));
+      }
+    }
+  }
+}
+
+/**
+ * Submit function for cta menu item.
+ */
+function _siteden_menu_item_limit_form_menu_link_content_form_submit(array &$form, FormStateInterface $form_state) {
+  $classes = $form_state->getValue('menu_cta');
+  $menuLinkEntity = $form_state->getBuildInfo()['callback_object']->getEntity();
+  $menu_link_options = $menuLinkEntity->link->first()->options;
+  $options = array_merge($menu_link_options, ['menu_cta' => $classes]);
+  $menuLinkEntity->link->first()->options = $options;
+  $menuLinkEntity->save();
+}
+
+/**
+ * Adds menu limit field for admins only.
+ */
+function siteden_menu_item_limit_config_menu($form, MenuForm $menu_form) {
+  $menu_name = empty($menu_form->getEntity()->id()) ? 'new' : $menu_form->getEntity()->id();
+  $config = \Drupal::service('config.factory')->getEditable('siteden_menu_item_limit.settings');
+  $limit = empty($config->get($menu_name)) ? 0 : $config->get($menu_name);
+  $config_item = [
+    '#type' => 'textfield',
+    '#description' => t('Set the amount of items allowed in this menu. Set 0 to allow unlimited items.'),
+    '#title' => t('Item Limitation'),
+    '#default_value' => $limit,
+  ];
+  return $config_item;
+}
+
+/**
+ * Adds form validator.
+ */
+function siteden_menu_item_limit_config_menu_validate($form, FormStateInterface &$form_state) {
+  $limit = $form_state->getValue('siteden_menu_item_limit');
+  if ((!is_numeric($limit)) || ($limit < 0)) {
+    $form_state->setValue('siteden_menu_item_limit', 0);
+  }
+}
+
+/**
+ * Adds function to form submit.
+ */
+function siteden_menu_item_limit_config_menu_submit($form, FormStateInterface &$form_state) {
+  $limit = $form_state->getValue('siteden_menu_item_limit');
+  $menu_name = $form_state->getValue('id');
+  $config = \Drupal::service('config.factory')->getEditable('siteden_menu_item_limit.settings');
+  $config->set($menu_name, $limit);
+  $config->save();
+}
+
+/**
+ * Adds constraint to menu_link_content.
+ */
+function siteden_menu_item_limit_entity_type_alter(array &$entity_types) {
+  if (isset($entity_types['menu_link_content'])) {
+    $entity_types['menu_link_content']->addConstraint('MenuItemOverLimit');
+  }
+}

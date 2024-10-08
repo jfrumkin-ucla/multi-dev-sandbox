@@ -1,0 +1,27 @@
+uuid: 48988df4-a2c4-463c-8e45-fd02fb6466e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - siteden_surface
+_core:
+  default_config_hash: o_IclCJgDyZ6G2R2gA7t6hFrWQSVCKe5ov9imdLAnMs
+id: siteden_surface_breadcrumbs
+theme: siteden_surface
+region: title
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "<front>\r\n/articles/news"

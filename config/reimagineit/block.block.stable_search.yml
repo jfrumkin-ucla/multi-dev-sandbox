@@ -1,0 +1,23 @@
+uuid: 323b8230-810f-454d-83dc-ab2f91857f69
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - stable
+_core:
+  default_config_hash: u9NvC-Zc1JriLrZFtswk8exu4GjrYJJE5cyHhQNK7JE
+id: stable_search
+theme: stable
+region: sidebar_first
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: google_cse_search
+visibility: {  }

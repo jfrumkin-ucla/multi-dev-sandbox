@@ -1,0 +1,101 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.circuit_profile.body
+    - field.field.node.circuit_profile.field_circuit_goals
+    - field.field.node.circuit_profile.field_circuit_grateful
+    - field.field.node.circuit_profile.field_circuit_hometown
+    - field.field.node.circuit_profile.field_circuit_joined
+    - field.field.node.circuit_profile.field_circuit_leader
+    - field.field.node.circuit_profile.field_circuit_location
+    - field.field.node.circuit_profile.field_circuit_major
+    - field.field.node.circuit_profile.field_circuit_pack_up
+    - field.field.node.circuit_profile.field_circuit_pronouns
+    - field.field.node.circuit_profile.field_circuit_quarantine
+    - field.field.node.circuit_profile.field_circuit_shows
+    - field.field.node.circuit_profile.field_circuit_staff
+    - field.field.node.circuit_profile.field_circuit_student_dream_job
+    - field.field.node.circuit_profile.field_circuit_student_year
+    - field.field.node.circuit_profile.field_circuit_super_power
+    - field.field.node.circuit_profile.field_circuit_support
+    - field.field.node.circuit_profile.field_circuit_team
+    - field.field.node.circuit_profile.field_sf_credentials
+    - field.field.node.circuit_profile.field_sf_emails
+    - field.field.node.circuit_profile.field_sf_first_name
+    - field.field.node.circuit_profile.field_sf_last_name
+    - field.field.node.circuit_profile.field_sf_m_primary_image
+    - field.field.node.circuit_profile.field_sf_name_prefix
+    - field.field.node.circuit_profile.field_sf_office_hours
+    - field.field.node.circuit_profile.field_sf_phone_numbers
+    - field.field.node.circuit_profile.field_sf_position_title
+    - field.field.node.circuit_profile.field_sf_websites
+    - node.type.circuit_profile
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.circuit_profile.card
+targetEntityType: node
+bundle: circuit_profile
+mode: card
+content:
+  field_sf_emails:
+    type: email_mailto
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_sf_m_primary_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: profile
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sf_position_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_circuit_goals: true
+  field_circuit_grateful: true
+  field_circuit_hometown: true
+  field_circuit_joined: true
+  field_circuit_leader: true
+  field_circuit_location: true
+  field_circuit_major: true
+  field_circuit_pack_up: true
+  field_circuit_pronouns: true
+  field_circuit_quarantine: true
+  field_circuit_shows: true
+  field_circuit_staff: true
+  field_circuit_student_dream_job: true
+  field_circuit_student_year: true
+  field_circuit_super_power: true
+  field_circuit_support: true
+  field_circuit_team: true
+  field_sf_credentials: true
+  field_sf_first_name: true
+  field_sf_last_name: true
+  field_sf_name_prefix: true
+  field_sf_office_hours: true
+  field_sf_phone_numbers: true
+  field_sf_websites: true

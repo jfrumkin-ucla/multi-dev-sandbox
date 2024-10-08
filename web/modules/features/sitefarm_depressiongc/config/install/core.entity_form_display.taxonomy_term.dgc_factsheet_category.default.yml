@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.dgc_factsheet_category
+id: taxonomy_term.dgc_factsheet_category.default
+targetEntityType: taxonomy_term
+bundle: dgc_factsheet_category
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  simple_sitemap: true

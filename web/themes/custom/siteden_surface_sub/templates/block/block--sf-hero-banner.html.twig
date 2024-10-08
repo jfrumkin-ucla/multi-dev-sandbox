@@ -1,0 +1,29 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a Hero Banner block.
+ *
+ * Available variables:
+ * - Look in the block.html.twig file for available variables.
+ */
+#}
+
+{% set label = FALSE %}
+{% set class_panel = TRUE %}
+{% set attributes = (banner_style == 'reverse') ? attributes.addClass('option--image-align--left') : attributes %}
+{% set attributes = (banner_style == 'default' or banner_style == 'reverse') ? attributes.addClass('option--bg-color--white') : attributes %}
+
+{% block content %}
+    {% set banner_template = (banner_style == 'full_bg_molecule' or banner_style == 'full_bg_ribbon' or banner_style == 'image_only') ? 'banner--ribbon-text.html.twig' : 'banner--box.html.twig' %}
+
+    {% include "@siteden-components/" ~ banner_template with {
+      image: content.field_sf_m_block_primary_img,
+      title: content.field_sf_title.0['#context'].value,
+      text: content.field_sf_hb_sub_title.0['#context'].value,
+      link: {
+        title: content.field_sf_link.0['#title'],
+        url: content.field_sf_link.0['#url']
+      }
+    } %}
+{% endblock %}

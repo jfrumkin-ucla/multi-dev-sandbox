@@ -1,0 +1,33 @@
+uuid: 58d337c5-7200-47af-a75c-0228ef69d8f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_university_header
+    - field.field.block_content.sf_university_header.field_dept_brdcrum
+    - field.field.block_content.sf_university_header.field_sf_departmental_breadcrumb
+  module:
+    - link
+id: block_content.sf_university_header.default
+targetEntityType: block_content
+bundle: sf_university_header
+mode: default
+content:
+  field_sf_departmental_breadcrumb:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_dept_brdcrum: true

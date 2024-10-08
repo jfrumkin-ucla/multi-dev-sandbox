@@ -1,0 +1,27 @@
+uuid: 8c29fbbf-6a1d-40b4-b8d0-6930f7aae905
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_university_header:ae7745c4-07f4-4a33-adbe-48cf5766df86'
+  module:
+    - block_content
+  theme:
+    - siteden_surface
+_core:
+  default_config_hash: qKzhlYCkQRVWb_h6LQKGeT4u7e83vBzSfJKS5Mkfh4g
+id: sf_default__uh_main_dept_header
+theme: siteden_surface
+region: university_header
+weight: 0
+provider: null
+plugin: 'block_content:ae7745c4-07f4-4a33-adbe-48cf5766df86'
+settings:
+  id: 'block_content:ae7745c4-07f4-4a33-adbe-48cf5766df86'
+  label: 'Main Departmental Header'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

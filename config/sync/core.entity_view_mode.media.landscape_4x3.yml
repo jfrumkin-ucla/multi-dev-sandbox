@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+id: media.landscape_4x3
+label: 'Landscape 4x3'
+description: ''
+targetEntityType: media
+cache: true

@@ -1,0 +1,28 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a Slider block.
+ *
+ * Available variables:
+ * - Look in the block.html.twig file for available variables.
+ */
+#}
+
+{% set slideritems = [] %}
+
+{% for key, item in content.field_sf_slideshow_item|filter((value, key) => key|first != '#') %}
+  {% set slideritems = slideritems|merge([{
+    title: item['#paragraph'].field_sf_title.0.value,
+    subtitle: item['#paragraph'].field_sf_subtitle.0|view,
+    text: item['#paragraph'].field_sf_wysiwyg.0|view,
+    image: item['#paragraph'].field_sf_image.0|view,
+    button: item['#paragraph'].field_sf_link.0,
+  }]) %}
+{% endfor %}
+
+{% block content %}
+  {% include '@siteden-components/slider.html.twig' with {
+    slideritems: slideritems,
+  } %}
+{% endblock %}

@@ -1,0 +1,20 @@
+uuid: 95ab91ee-8540-4e9d-a75e-1a08b1fd33b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: drm9S4v0xplfKyB9OcU9TJrwZKnWY6CSXWxfeVN4FnA
+name: 'Basic Page'
+type: sf_page
+description: 'A standard page to display content throughout a site. <em>Basic pages</em> automatically receive breadcrumbs and menus, and can be formatted to show their title as a banner. Use instead of <em>landing pages</em> wherever possible.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

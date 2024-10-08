@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_video
+    - media.type.internal_video
+    - paragraphs.paragraphs_type.hero_video_banner
+id: paragraph.hero_video_banner.field_hero_video
+field_name: field_hero_video
+entity_type: paragraph
+bundle: hero_video_banner
+label: 'Hero Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      internal_video: internal_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: internal_video
+field_type: entity_reference

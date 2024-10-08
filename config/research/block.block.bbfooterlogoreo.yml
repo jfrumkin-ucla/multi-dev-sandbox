@@ -1,0 +1,36 @@
+uuid: 0b8ca2ac-ff74-480e-8d7a-ae96180df53a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:f41d9a8c-e5df-40d4-a187-f40e3585efdd'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: bbfooterlogoreo
+theme: siteden_surface
+region: footer
+weight: -19
+provider: null
+plugin: 'block_content:f41d9a8c-e5df-40d4-a187-f40e3585efdd'
+settings:
+  id: 'block_content:f41d9a8c-e5df-40d4-a187-f40e3585efdd'
+  label: 'BB: footer logo-reo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/reo*'

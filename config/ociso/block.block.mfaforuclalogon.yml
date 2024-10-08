@@ -1,0 +1,39 @@
+uuid: 55b42e82-1759-46a5-8a00-6d014c6e9a83
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:b95a3a47-e8a2-471e-8f12-16a4b353de89'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+    full_width:
+      full_width: 0
+id: mfaforuclalogon
+theme: siteden_surface
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:b95a3a47-e8a2-471e-8f12-16a4b353de89'
+settings:
+  id: 'block_content:b95a3a47-e8a2-471e-8f12-16a4b353de89'
+  label: 'MFA for UCLA Logon '
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /iamucla/mfa-at-ucla/activate-ucla-logon-mfa

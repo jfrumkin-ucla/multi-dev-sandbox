@@ -1,0 +1,38 @@
+uuid: b1b90abc-61b7-464e-a107-b1244f5f76d7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:21763a23-9f17-42f4-b465-33219dd9b539'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: accountspayable
+theme: siteden_surface
+region: sidebar_second
+weight: -12
+provider: null
+plugin: 'block_content:21763a23-9f17-42f4-b465-33219dd9b539'
+settings:
+  id: 'block_content:21763a23-9f17-42f4-b465-33219dd9b539'
+  label: 'Accounts Payable'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /accounts-payable

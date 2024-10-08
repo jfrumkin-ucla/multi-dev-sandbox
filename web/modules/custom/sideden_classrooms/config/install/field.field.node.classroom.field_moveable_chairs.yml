@@ -1,0 +1,21 @@
+uuid: d81d7fd2-6398-421b-b1ed-ed0aa6cf1919
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_moveable_chairs
+    - node.type.classroom
+id: node.classroom.field_moveable_chairs
+field_name: field_moveable_chairs
+entity_type: node
+bundle: classroom
+label: 'Moveable Chairs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

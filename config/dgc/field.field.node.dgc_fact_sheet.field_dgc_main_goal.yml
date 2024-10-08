@@ -1,0 +1,27 @@
+uuid: 36f25499-f7aa-45f6-a6a2-0ced66b60f3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dgc_main_goal
+    - node.type.dgc_fact_sheet
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+_core:
+  default_config_hash: UBcqt2ITxBNZvjALmzhhOhpDskoL4BRnqyptxIkzrXo
+id: node.dgc_fact_sheet.field_dgc_main_goal
+field_name: field_dgc_main_goal
+entity_type: node
+bundle: dgc_fact_sheet
+label: 'Primary Goal'
+description: 'Enter the main goal of the project.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

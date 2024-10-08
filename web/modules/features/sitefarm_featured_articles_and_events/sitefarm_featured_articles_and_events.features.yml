@@ -1,0 +1,6 @@
+bundle: sitefarm
+excluded:
+  - block.block.classy_sf_default__uh_main_dept_header
+  - block.block.sf_default__uh_main_dept_header
+  - block.block.stable_sf_default__uh_main_dept_header
+required: true

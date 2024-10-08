@@ -1,0 +1,74 @@
+uuid: 12132001-4f35-42b1-8698-3543667772b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.commitment.body
+    - field.field.node.commitment.field_activities
+    - field.field.node.commitment.field_benefits
+    - field.field.node.commitment.field_description
+    - field.field.node.commitment.field_link
+    - field.field.node.commitment.field_name
+    - node.type.commitment
+  module:
+    - link
+    - text
+    - user
+id: node.commitment.default
+targetEntityType: node
+bundle: commitment
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_activities:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_benefits:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_name:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

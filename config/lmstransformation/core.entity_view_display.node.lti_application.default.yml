@@ -1,0 +1,325 @@
+uuid: 5ce245b8-698b-4383-9782-42166599722e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_basic
+    - field.field.node.lti_application.body
+    - field.field.node.lti_application.field_lti_approval_status
+    - field.field.node.lti_application.field_lti_est_availability
+    - field.field.node.lti_application.field_lti_functionality
+    - field.field.node.lti_application.field_lti_supplier_url
+    - field.field.node.lti_application.field_scope
+    - field.field.node.lti_application.field_status
+    - node.type.lti_application
+  content:
+    - 'block_content:sf_basic:31f81547-0c23-491e-a83e-115b2d624393'
+    - 'block_content:sf_basic:44dd4bdb-3163-49b8-b054-6c85d964ac15'
+  module:
+    - block_content
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          ba9e47a7-c148-4daf-a34c-4bbc4b640bc8:
+            uuid: ba9e47a7-c148-4daf-a34c-4bbc4b640bc8
+            region: content
+            configuration:
+              id: 'field_block:node:lti_application:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          9c03677a-1f9d-45d6-bb98-1f280de03b4a:
+            uuid: 9c03677a-1f9d-45d6-bb98-1f280de03b4a
+            region: content
+            configuration:
+              id: 'field_block:node:lti_application:field_lti_approval_status'
+              label: 'LTI Approval Status'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          1b2a77e6-f0b2-4d78-949b-1ed664aae993:
+            uuid: 1b2a77e6-f0b2-4d78-949b-1ed664aae993
+            region: content
+            configuration:
+              id: 'inline_block:sf_basic'
+              label: 'Spacer block (no content)'
+              label_display: '0'
+              provider: layout_builder
+              view_mode: full
+              block_revision_id: 3256
+              block_serialized: null
+              context_mapping: {  }
+            weight: 5
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          e5b210d8-cafd-476f-b5dd-0011fabbda86:
+            uuid: e5b210d8-cafd-476f-b5dd-0011fabbda86
+            region: content
+            configuration:
+              id: 'field_block:node:lti_application:field_lti_est_availability'
+              label: 'LTI Estimated Availability'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Configure LTI Functionality'
+          context_mapping: {  }
+        components:
+          a6d3860c-6a08-4561-9715-bf9e601e9392:
+            uuid: a6d3860c-6a08-4561-9715-bf9e601e9392
+            region: content
+            configuration:
+              id: 'field_block:node:lti_application:field_lti_functionality'
+              label: 'LTI Functionality'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'LTI Scope'
+          column_widths: 50-50
+          context_mapping: {  }
+        components:
+          a4002340-a683-4dcb-a344-fc14853cce83:
+            uuid: a4002340-a683-4dcb-a344-fc14853cce83
+            region: first
+            configuration:
+              id: 'field_block:node:lti_application:field_scope'
+              label: 'LTI Scope'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          ad23a63a-1feb-4ae9-99e5-5aa92e9d728b:
+            uuid: ad23a63a-1feb-4ae9-99e5-5aa92e9d728b
+            region: second
+            configuration:
+              id: 'block_content:31f81547-0c23-491e-a83e-115b2d624393'
+              label: 'LTI Scope Definitions'
+              label_display: visible
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'LTI Status'
+          column_widths: 50-50
+          context_mapping: {  }
+        components:
+          f6bd5759-6a5c-46c3-b02e-8b2fd027d622:
+            uuid: f6bd5759-6a5c-46c3-b02e-8b2fd027d622
+            region: first
+            configuration:
+              id: 'field_block:node:lti_application:field_status'
+              label: 'LTI Status'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          61030166-625a-480c-b06d-3bec95090734:
+            uuid: 61030166-625a-480c-b06d-3bec95090734
+            region: second
+            configuration:
+              id: 'block_content:44dd4bdb-3163-49b8-b054-6c85d964ac15'
+              label: 'LTI Status Definitions'
+              label_display: visible
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'LTI Links'
+          column_widths: 50-50
+          context_mapping: {  }
+        components:
+          0739e677-95ad-446d-ad19-748ab80c6431:
+            uuid: 0739e677-95ad-446d-ad19-748ab80c6431
+            region: first
+            configuration:
+              id: 'field_block:node:lti_application:field_lti_supplier_url'
+              label: 'LTI Supplier Links'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: _blank
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.lti_application.default
+targetEntityType: node
+bundle: lti_application
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_lti_approval_status:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_lti_est_availability:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_lti_functionality:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_lti_supplier_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_scope:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  layout_builder__layout: true
+  links: true

@@ -1,0 +1,23 @@
+uuid: a7ace41d-1cb8-4bb4-9bf8-1c798846d84d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.bso_update_categories.field_sf_brand_color
+    - taxonomy.vocabulary.bso_update_categories
+  module:
+    - text
+id: taxonomy_term.bso_update_categories.default
+targetEntityType: taxonomy_term
+bundle: bso_update_categories
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_sf_brand_color: true

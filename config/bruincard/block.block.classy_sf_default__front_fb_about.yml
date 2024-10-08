@@ -1,0 +1,30 @@
+uuid: 037f45de-d1e4-48b8-82bf-304966b2c60d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - classy
+_core:
+  default_config_hash: JHXE5bwUcCHCiwvkByzwBEFMSV5Je94SRTyIH9_vs8A
+id: classy_sf_default__front_fb_about
+theme: classy
+region: content
+weight: -11
+provider: null
+plugin: 'block_content:68839c59-3f2e-4bf5-927f-a4856c305009'
+settings:
+  id: 'block_content:68839c59-3f2e-4bf5-927f-a4856c305009'
+  label: 'FB: About Us'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

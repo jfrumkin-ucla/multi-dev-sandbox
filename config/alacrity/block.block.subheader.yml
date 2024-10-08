@@ -1,0 +1,32 @@
+uuid: 75eba538-117e-4701-b3dc-58183cc94d02
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:967bf7ac-0d99-4b65-bc28-ce1991b63708'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: subheader
+theme: siteden_surface
+region: header
+weight: -16
+provider: null
+plugin: 'block_content:967bf7ac-0d99-4b65-bc28-ce1991b63708'
+settings:
+  id: 'block_content:967bf7ac-0d99-4b65-bc28-ce1991b63708'
+  label: Subheader
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

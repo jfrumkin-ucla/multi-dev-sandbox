@@ -1,0 +1,109 @@
+@use "../utilities/_mixins/breakpoints";
+
+// Override the layout styles for two-column layout section.
+.layout--twocol-section {
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    display: grid;
+    grid-column-gap: 2.5rem;
+    grid-template-areas: "first first first first first first second second second second second second";
+    grid-template-rows: auto max-content 1fr;
+    grid-template-columns: repeat(12, 1fr);
+
+    &--33-67 {
+      grid-template-areas: "first first first first second second second second second second second second";
+    }
+
+    &--67-33 {
+      grid-template-areas: "first first first first first first first first second second second second";
+    }
+
+    &--25-75 {
+      grid-template-areas: "first first first second second second second second second second second second";
+    }
+
+    &--75-25 {
+      grid-template-areas: "first first first first first first first first first second second second";
+    }
+  }
+
+  & > .layout__region--first {
+    grid-area: first;
+  }
+
+  & > .layout__region--second {
+    grid-area: second;
+  }
+}
+
+//Fix for double nested 2 column section
+@media (min-width: breakpoints.breakpoint-min(md)) {
+  .layout--twocol-section--33-67 > .layout__region--first .layout--twocol-section,
+  .layout--twocol-section--33-67 > .layout__region--second .layout--twocol-section,
+  .layout--twocol-section--67-33 > .layout__region--first .layout--twocol-section,
+  .layout--twocol-section--67-33 > .layout__region--second .layout--twocol-section,
+  .layout--twocol-section--75-25 > .layout__region--first .layout--twocol-section,
+  .layout--twocol-section--25-75 > .layout__region--second .layout--twocol-section {
+
+    grid-template-areas: "first second";
+    grid-column-gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    &--33-67 {
+      grid-template-areas: "first second second";
+      grid-column-gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--67-33 {
+      grid-template-areas: "first first second";
+      grid-column-gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--25-75 {
+      grid-template-areas: "first second second second";
+      grid-column-gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &--75-25 {
+      grid-template-areas: "first first first second";
+      grid-column-gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media (min-width: breakpoints.breakpoint-min(md)) {
+  .layout--twocol-section > .layout__region--first .layout--twocol-section,
+  .layout--twocol-section > .layout__region--second .layout--twocol-section {
+
+    grid-template-areas: "first second";
+    grid-column-gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    &--33-67 {
+      grid-template-areas: "first second second";
+      grid-column-gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--67-33 {
+      grid-template-areas: "first first second";
+      grid-column-gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--25-75 {
+      grid-template-areas: "first second second second";
+      grid-column-gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &--75-25 {
+      grid-template-areas: "first first first second";
+      grid-column-gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

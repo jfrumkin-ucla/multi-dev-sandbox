@@ -1,0 +1,89 @@
+@use "colors";
+
+// Category Brands
+// [class-name, color, color-lighter, contrast-color]
+$category-brands: (
+    ("ucla-blue",         colors.$ucla-blue,        lighten(colors.$ucla-blue, 15%),          colors.$white),
+    ("lighter-blue",      colors.$lighter-blue,     lighten(colors.$lighter-blue, 15%),       colors.$darkest-blue),
+    ("lightest-blue",     colors.$lightest-blue,    lighten(colors.$lightest-blue, 15%),      colors.$darkest-blue),
+    ("darkest-blue",      colors.$darkest-blue,     lighten(colors.$darkest-blue, 15%),       colors.$white),
+    ("darker-blue",       colors.$darker-blue,      lighten(colors.$darker-blue, 15%),        colors.$white),
+    ("ucla-gold",         colors.$ucla-gold,        lighten(colors.$ucla-gold, 15%),          colors.$black),
+    ("darker-gold",       colors.$darker-gold,      lighten(colors.$darker-gold, 15%),        colors.$black),
+    ("darkest-gold",      colors.$darkest-gold,     lighten(colors.$darkest-gold, 15%),       colors.$black),
+    ("gray",              colors.$grey-40,          lighten(colors.$grey-40, 15%),            colors.$black),
+);
+
+@mixin category-brand-background($default-bg: colors.$darker-blue) {
+  background-color: var(--category-brand, #{$default-bg});
+}
+
+@mixin category-brand-knockout($default-bg: colors.$darker-blue) {
+  @include category-brand-background($default-bg);
+  color: var(--category-brand-contrast-color, #{colors.$white});
+}
+
+
+.category-brand {
+
+  &__term {
+    @include category-brand-knockout(colors.$ucla-blue);
+
+    padding: 0.5rem;
+
+    &:hover {
+      background-color: var(--category-brand-lighter);
+      color: var(--category-brand-contrast-color, #{colors.$white});
+    }
+  }
+
+  &__title {
+    @include category-brand-knockout(colors.$ucla-blue);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__filter-link {
+
+    &:after {
+      @include category-brand-background(inherit);
+
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+
+      .category-filter__list-item--active & {
+        background-color: colors.$white;
+      }
+    }
+  }
+}
+
+
+// Loop through each category brand color.
+@for $i from 1 through length($category-brands) {
+  // Get the first item
+  $item: nth($category-brands, $i);
+  // Now fetch the name and color from this first item
+  $brand-name: nth($item, 1);
+  $brand-color: nth($item, 2);
+  $brand-color-lighter: nth($item, 3);
+  $brand-contrast: nth($item, 4);
+
+  // Brand wrapper
+  .category-brand--#{$brand-name} {
+    --category-brand: #{$brand-color};
+    --category-brand-lighter: #{$brand-color-lighter};
+    --category-brand-contrast-color: #{$brand-contrast};
+  }
+}

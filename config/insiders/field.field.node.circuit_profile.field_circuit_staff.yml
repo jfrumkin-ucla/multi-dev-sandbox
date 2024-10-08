@@ -1,0 +1,25 @@
+uuid: ae22bd84-07ca-484c-a989-50bde3576604
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_circuit_staff
+    - node.type.circuit_profile
+  module:
+    - options
+_core:
+  default_config_hash: dhnqd9nVLo8HJKzwEklNvcsk0O4Ffp5-DWxpjRhTSvE
+id: node.circuit_profile.field_circuit_staff
+field_name: field_circuit_staff
+entity_type: node
+bundle: circuit_profile
+label: 'Staff Type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: staff
+default_value_callback: ''
+settings: {  }
+field_type: list_string

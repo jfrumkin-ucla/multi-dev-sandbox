@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_branding_block
+    - field.storage.block_content.field_sf_title
+_core:
+id: block_content.sf_branding_block.field_sf_title
+field_name: field_sf_title
+entity_type: block_content
+bundle: sf_branding_block
+label: 'Site Title '
+description: 'Enter the site title to be displayed where this block appears.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

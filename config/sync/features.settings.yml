@@ -1,0 +1,4 @@
+_core:
+langcode: en
+export:
+  folder: features

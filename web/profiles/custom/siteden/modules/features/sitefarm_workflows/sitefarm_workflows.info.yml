@@ -1,0 +1,20 @@
+name: Workflows
+description: 'Provides workflows for content publishing that go beyond simple publish/unpublish.'
+type: module
+core_version_requirement: '^9 || ^10'
+package: SiteFarm
+core_incompatible: false
+dependencies:
+  - 'diff:diff'
+  - 'drupal:content_moderation'
+  - 'drupal:node'
+  - 'drupal:user'
+  - 'drupal:views'
+  - 'drupal:workflows'
+  - 'sitefarm_core:sitefarm_core'
+  - 'sitefarm_article:sitefarm_article'
+  - 'sitefarm_event:sitefarm_event'
+  - 'sitefarm_page:sitefarm_page'
+  - 'sitefarm_person:sitefarm_person'
+  - 'sitefarm_photo_gallery:sitefarm_photo_gallery'
+  - 'workbench_email:workbench_email'

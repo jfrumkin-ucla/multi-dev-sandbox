@@ -1,0 +1,8 @@
+uuid: f7161bc7-18fd-4441-a3d6-ad2482171b11
+langcode: en
+status: true
+dependencies: {  }
+name: 'Funding Opportunity Eligibility'
+vid: funding_opportunity_eligibility
+description: "Used to categorize Funding Opportunities by who's eligible"
+weight: 0

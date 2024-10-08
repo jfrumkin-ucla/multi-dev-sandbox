@@ -1,0 +1,95 @@
+uuid: 124c74b8-2d79-4a7c-9599-7a46a31c40ca
+langcode: en
+status: false
+dependencies: {  }
+id: cru
+label: cru.ucla.edu
+description: 'Config split for https://cru.ucla.edu/ UCLA Central Resource Unit website'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/cru
+module: {  }
+theme: {  }
+complete_list:
+  - block.block.bbfooterlogo
+  - block.block.ccoacommunications
+  - block.block.ccruorucpc
+  - block.block.ccruorucpc1
+  - block.block.cdidsomeonesaytraining
+  - block.block.clearnbydoing
+  - block.block.cneedfullscreenmode
+  - block.block.cpumquestions
+  - block.block.cstayintheknow
+  - block.block.ctaneedtoreachus
+  - block.block.cwereheretohelp
+  - block.block.cwhichshouldyouchoose
+  - block.block.employeecaseassistpumupgradecommunications
+  - block.block.enhanceaskucpathcommunications
+  - block.block.exposedformsf_articles_recentpage_2
+  - block.block.exposedformsf_person_directorypage_1
+  - block.block.exposedformtaxonomy_termpage_1
+  - block.block.glacierresources
+  - block.block.improvednavigationcommunications
+  - block.block.improvefinalpaycommunications
+  - block.block.livednamecommunications
+  - block.block.mainnavigation
+  - block.block.mainnavigation_2
+  - block.block.pumcommunications
+  - block.block.salarycosttransfercommunications
+  - block.block.sf_default__front_articles_recent
+  - block.block.sf_default__front_fl_cta_1
+  - block.block.sf_default__front_fl_cta_2
+  - block.block.siteden_surface_breadcrumbs
+  - block.block.siteden_surface_content
+  - block.block.siteden_surface_footer_menu1
+  - block.block.siteden_surface_messages
+  - block.block.siteden_surface_page_title
+  - block.block.siteden_surface_search
+  - block.block.siteden_surface_side_menu
+  - block.block.siteden_surface_social
+  - block.block.siteden_surface_tabs
+  - block.block.views_block__sf_articles_related_block_1
+  - block.block.views_block__sf_events_upcoming_block_1
+  - block.block.views_block__sf_persons_content_related_back_to_person_block_1
+  - block.block.views_block__sf_persons_related_to_content_block_1
+  - block.block.views_block__sf_photo_galleries_related_by_term_block_1
+  - block.block.views_block__sf_photo_galleries_related_to_content_block_1
+  - captcha.captcha_point._views_exposed_form_
+  - captcha.captcha_point.contact_message_feedback_form
+  - captcha.captcha_point.node_sf_article_form
+  - captcha.captcha_point.node_sf_event_form
+  - captcha.captcha_point.node_sf_page_form
+  - captcha.captcha_point.node_sf_person_form
+  - captcha.captcha_point.node_sf_photo_gallery_form
+  - captcha.captcha_point.search_block_form
+  - captcha.captcha_point.search_form
+  - config_suite.settings
+  - core.entity_view_display.node.sf_landing.default
+  - core.extension
+  - core.menu.static_menu_link_overrides
+  - dblog.settings
+  - google_analytics.settings
+  - honeypot.settings
+  - pantheon_advanced_page_cache.settings
+  - recaptcha.settings
+  - search.page.google_cse_search
+  - system.action.convert_bundles_on_sharemessage
+  - system.feature_flags
+  - system.site
+  - views.view.blocks
+  - views.view.file_path
+  - views.view.file_path_block
+  - views.view.layout_override
+  - views.view.published_node_filter
+  - views.view.sf_events_upcoming
+  - views.view.taxonomy_term
+  - views.view.watchdog
+  - webform.settings
+  - webform.webform.feedback_form
+  - webform.webform.lms_request_form
+  - webform.webform.sla_feedback_form
+  - webform.webform.test_feedback_form_dropdown
+  - webform.webform.test_web_form
+partial_list: {  }

@@ -1,0 +1,7 @@
+uuid: eab6796d-e39c-40a8-b361-f8f40705feec
+langcode: en
+status: false
+dependencies: {  }
+formId: node_sf_photo_gallery_form
+captchaType: default
+label: node_sf_photo_gallery_form

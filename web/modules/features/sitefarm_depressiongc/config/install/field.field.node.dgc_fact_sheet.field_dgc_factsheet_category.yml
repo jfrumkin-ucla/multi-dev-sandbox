@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dgc_factsheet_category
+    - node.type.dgc_fact_sheet
+    - taxonomy.vocabulary.dgc_factsheet_category
+id: node.dgc_fact_sheet.field_dgc_factsheet_category
+field_name: field_dgc_factsheet_category
+entity_type: node
+bundle: dgc_fact_sheet
+label: 'Fact Sheet Category'
+description: 'Add categories for this project.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      dgc_factsheet_category: dgc_factsheet_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: dgc_focus_area
+field_type: entity_reference

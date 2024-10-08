@@ -1,0 +1,10 @@
+uuid: 9cc7264e-bf17-4e10-9aa0-1d2fe90d3adf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OIL2vHy6ADKbnMSrDO9FrFXyFcyjBAmGn4vrM7K5WOM
+id: photo_slider
+label: 'Photo Slider'
+revision: false
+description: ''

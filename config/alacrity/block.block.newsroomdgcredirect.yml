@@ -1,0 +1,37 @@
+uuid: 74539462-ab0a-4e7d-b1c6-937f95538776
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_basic:ed9e6190-a562-406a-9abd-863d3879da33'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: newsroomdgcredirect
+theme: siteden_surface
+region: title
+weight: 0
+provider: null
+plugin: 'block_content:ed9e6190-a562-406a-9abd-863d3879da33'
+settings:
+  id: 'block_content:ed9e6190-a562-406a-9abd-863d3879da33'
+  label: 'Newsroom DGC redirect'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /articles/news

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - site_credits
+  theme:
+    - siteden_surface
+id: siteden_surface_sitecredits
+theme: siteden_surface
+region: footer
+weight: 0
+provider: null
+plugin: site_credits_block
+settings:
+  id: site_credits_block
+  label: 'Site Credits'
+  provider: site_credits
+  label_display: '0'
+  use_site_logo: 1
+  use_site_name: 0
+  use_site_slogan: 0
+  use_site_credit_info: 1
+visibility: {  }

@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+id: user.register
+label: Register
+description: ''
+targetEntityType: user
+cache: true
