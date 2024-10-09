@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - siteden_surface
+_core:
+id: siteden_surface_help
+theme: siteden_surface
+region: pre_content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: af212232-4c32-4a15-82bf-677cf03b3619
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:98865f39-9e6c-4b8d-b0ad-94389e123a48'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: bbpurchasingfooterlogo
+theme: siteden_surface
+region: footer
+weight: -14
+provider: null
+plugin: 'block_content:98865f39-9e6c-4b8d-b0ad-94389e123a48'
+settings:
+  id: 'block_content:98865f39-9e6c-4b8d-b0ad-94389e123a48'
+  label: 'BB: Purchasing footer logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

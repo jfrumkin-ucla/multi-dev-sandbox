@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Install ck_columns.
+ */
+function sitefarm_wysiwyg_update_8817(&$sandbox) {
+  $module_list = [
+    'ck_columns',
+  ];
+  \Drupal::service('module_installer')->install($module_list, TRUE);
+  return t('ck_columns module has been installed.');
+}
+
+/**
+ * Add layout column.
+ */
+function sitefarm_wysiwyg_update_8818(&$sandbox) {
+  /** @var \Drupal\config_update\ConfigRevertInterface $config_revert */
+  $config_revert = \Drupal::service('config_update.config_update');
+  $config_revert->revert('editor', 'sf_basic_html');
+  $config_revert->revert('filter_format', 'sf_basic_html');
+  return t('Basic text filter updated for layout column.');
+}
+
+/**
+ * Configure responsive tables.
+ */
+function sitefarm_wysiwyg_update_8819(&$sandbox) {
+  /** @var \Drupal\config_update\ConfigRevertInterface $config_revert */
+  $config_revert = \Drupal::service('config_update.config_update');
+  $config_revert->revert('filter_format', 'sf_basic_html');
+  return t('Basic text filter updated for responsive tables.');
+}
+
+/**
+ * Basic text filter updated for URL Embed.
+ */
+function sitefarm_wysiwyg_update_8820(&$sandbox) {
+  /** @var \Drupal\config_update\ConfigRevertInterface $config_revert */
+  $config_revert = \Drupal::service('config_update.config_update');
+  $config_revert->revert('editor', 'sf_basic_html');
+  return t('Basic text filter updated for URL Embed.');
+}

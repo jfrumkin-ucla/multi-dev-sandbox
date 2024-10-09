@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sf_description
+    - paragraphs.paragraphs_type.sf_iframe_embed
+id: paragraph.sf_iframe_embed.field_sf_description
+field_name: field_sf_description
+entity_type: paragraph
+bundle: sf_iframe_embed
+label: Description
+description: 'A meaningful description of the content of this iframe. Required for accessibility.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

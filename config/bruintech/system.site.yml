@@ -1,0 +1,17 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
+uuid: 7cae1cfc-b0c5-4806-90ae-c343b5b76ccb
+name: BruinTech
+mail: portaleditor@it.ucla.edu
+slogan: ''
+page:
+  403: ''
+  404: /node/226
+  front: /node/231
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+credit_info:
+  value: ''
+  format: sf_basic_html

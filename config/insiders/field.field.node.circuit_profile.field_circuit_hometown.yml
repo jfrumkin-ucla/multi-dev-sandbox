@@ -1,0 +1,21 @@
+uuid: f37fe3a1-038a-462e-a4b9-e09e8d7641ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_circuit_hometown
+    - node.type.circuit_profile
+_core:
+  default_config_hash: ot9bPTySancINfSlr0Mm5JM-WK7qdmWRbyJXfDZ-v6I
+id: node.circuit_profile.field_circuit_hometown
+field_name: field_circuit_hometown
+entity_type: node
+bundle: circuit_profile
+label: Hometown
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

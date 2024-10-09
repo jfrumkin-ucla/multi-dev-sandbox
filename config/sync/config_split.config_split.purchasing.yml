@@ -1,0 +1,110 @@
+uuid: 880b1948-2cd9-48c7-8d18-ba60cf8b993a
+langcode: en
+status: false
+dependencies: {  }
+id: purchasing
+label: purchasing.ucla.edu
+description: 'Config split for https://purchasing.ucla.edu/ Purchasing & Accounts Payable website'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/purchasing
+module: {  }
+theme: {  }
+complete_list:
+  - block.block.accountspayable
+  - block.block.bbpurchasingfooterlogo
+  - block.block.bruinbuyascend
+  - block.block.cnotsurewhatyouneed
+  - block.block.cnotsurewhatyouneed1
+  - block.block.countdowntobruinbuyplus
+  - block.block.countdowntobruinbuyshutdown
+  - block.block.countdowntowinterclosure
+  - block.block.coveredserviceshelpfullinks
+  - block.block.ctahaveachecklistfeedback
+  - block.block.ctathelifecycleofapcardtransactionwebpagecanhelp
+  - block.block.equipmentmanagement
+  - block.block.exposedformsf_articles_recentpage_2
+  - block.block.exposedformsf_person_directorypage_1
+  - block.block.exposedformtaxonomy_termpage_1
+  - block.block.flaccessdashboard
+  - block.block.flcoveredserviceshelp
+  - block.block.fldashboardrequestform
+  - block.block.footercontactinfo
+  - block.block.footercontactuspagelink
+  - block.block.hicheatsheet_bestpractices
+  - block.block.hiresolnusefullinks
+  - block.block.inventorialequipment_helpfullinks
+  - block.block.nontereimb_quickaccess
+  - block.block.paymentmethodsusefullinks
+  - block.block.pcard_quickaccess
+  - block.block.purchasing
+  - block.block.qlfiscalclose
+  - block.block.refunds_quickaccess
+  - block.block.sf_default__front_articles_recent
+  - block.block.siteden_surface_breadcrumbs
+  - block.block.siteden_surface_content
+  - block.block.siteden_surface_main_menu
+  - block.block.siteden_surface_messages
+  - block.block.siteden_surface_page_title
+  - block.block.siteden_surface_qlirregularinvoices
+  - block.block.siteden_surface_search
+  - block.block.siteden_surface_side_menu
+  - block.block.siteden_surface_social
+  - block.block.siteden_surface_tabs
+  - block.block.supportfiscalclose
+  - block.block.vendoronboardingusefullinks
+  - block.block.views_block__sf_articles_related_block_1
+  - block.block.views_block__sf_events_upcoming_block_1
+  - block.block.views_block__sf_persons_content_related_back_to_person_block_1
+  - block.block.views_block__sf_persons_related_to_content_block_1
+  - block.block.views_block__sf_photo_galleries_related_by_term_block_1
+  - block.block.views_block__sf_photo_galleries_related_to_content_block_1
+  - block.block.views_block__sf_photo_gallery_category_filter_block_1
+  - block.block.winterclosure_helpfullinks
+  - captcha.captcha_point.contact_message_feedback_form
+  - captcha.captcha_point.node_sf_article_form
+  - captcha.captcha_point.node_sf_event_form
+  - captcha.captcha_point.node_sf_page_form
+  - captcha.captcha_point.node_sf_person_form
+  - captcha.captcha_point.node_sf_photo_gallery_form
+  - captcha.captcha_point.search_block_form
+  - captcha.captcha_point.search_form
+  - config_suite.settings
+  - core.entity_form_display.node.sf_page.default
+  - core.entity_view_display.node.sf_landing.default
+  - core.menu.static_menu_link_overrides
+  - dblog.settings
+  - filter.format.sf_basic_html
+  - filter.format.sf_full_html
+  - google_analytics.settings
+  - honeypot.settings
+  - pantheon_advanced_page_cache.settings
+  - recaptcha.settings
+  - search.page.google_cse_search
+  - search.page.help_search
+  - siteden_menu_item_limit.settings
+  - smtp.settings
+  - system.action.convert_bundles_on_google_tag_container
+  - system.action.convert_bundles_on_migration
+  - system.action.convert_bundles_on_migration_group
+  - system.action.convert_bundles_on_sharemessage
+  - system.feature_flags
+  - system.performance
+  - system.site
+  - views.view.articles_recent_custom
+  - views.view.editoria11y_dismissals
+  - views.view.editoria11y_results
+  - views.view.layout_override
+  - views.view.published_node_filter
+  - views.view.sf_events_upcoming
+  - views.view.taxonomy_term
+  - views.view.watchdog
+  - webform.settings
+  - webform.webform.cao_cfo_h_i_dashboard_access_req
+  - webform.webform.cao_cfo_h_i_dashboard_request_fo
+  - webform.webform.h_i_dashboard_request_form
+  - webform.webform.payment_plus_form
+  - webform.webform.paymentplusform
+partial_list: {  }

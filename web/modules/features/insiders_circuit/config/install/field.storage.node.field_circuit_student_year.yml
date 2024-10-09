@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_circuit_student_year
+field_name: field_circuit_student_year
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: first
+      label: '1st Year'
+    -
+      value: second
+      label: '2nd Year'
+    -
+      value: third
+      label: '3rd Year'
+    -
+      value: fourth
+      label: '4th Year'
+    -
+      value: fifth
+      label: '5th Year'
+    -
+      value: graduate
+      label: 'Graduate Student'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

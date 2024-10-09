@@ -1,0 +1,16 @@
+{% extends "paragraph.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a Custom code paragraph.
+ *
+ * Available variables:
+ * - Look in the paragraph.html.twig file for available variables.
+ */
+#}
+
+{% block content %}
+  <div class="sf_custom_code">
+    {{ content.field_sf_code.0['#context'].value|raw }}
+  </div>
+{% endblock %}

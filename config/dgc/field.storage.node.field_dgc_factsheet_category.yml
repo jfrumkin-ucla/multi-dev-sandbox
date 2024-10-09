@@ -1,0 +1,22 @@
+uuid: 580eb795-5fdd-4835-b8f5-3c10ebdc1377
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: 5epA3psxpiuTRKfGPOTDm2JYt23nU4_pMxAUPnZiQho
+id: node.field_dgc_factsheet_category
+field_name: field_dgc_factsheet_category
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

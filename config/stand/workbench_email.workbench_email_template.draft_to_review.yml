@@ -1,0 +1,70 @@
+uuid: 472f8f4c-b1ff-4cd8-ba89-61178c919c85
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sf_article
+    - node.type.sf_event
+    - node.type.sf_landing
+    - node.type.sf_page
+    - node.type.sf_person
+    - node.type.sf_photo_gallery
+_core:
+  default_config_hash: f_vI1p637cmHXbZr75JWzedytNEXgWFaNZ0IeM3oUTc
+id: draft_to_review
+label: 'Draft to Review'
+format: null
+subject: 'Content on [site:name] is ready for your review'
+body:
+  value: "Hello,\r\n\r\nThere is content waiting for your review on the [site:name] website. The content's title is [node:title]. It can be accessed here: [node:edit-url].\r\n\r\nThank you,\r\n[site:name]"
+  format: plain_text
+bundles:
+  'node:sf_article': 'node:sf_article'
+  'node:sf_event': 'node:sf_event'
+  'node:sf_landing': 'node:sf_landing'
+  'node:sf_page': 'node:sf_page'
+  'node:sf_person': 'node:sf_person'
+  'node:sf_photo_gallery': 'node:sf_photo_gallery'
+recipient_types:
+  role:
+    id: role
+    provider: workbench_email
+    status: true
+    settings:
+      roles:
+        site_manager: site_manager
+  last_revision_author:
+    id: last_revision_author
+    provider: workbench_email
+    status: false
+    settings: {  }
+  author:
+    id: author
+    provider: workbench_email
+    status: false
+    settings: {  }
+  entity_reference_user:
+    id: entity_reference_user
+    provider: workbench_email
+    status: false
+    settings:
+      fields: {  }
+  roles_with_access:
+    id: roles_with_access
+    provider: workbench_email
+    status: false
+    settings:
+      roles: {  }
+  fixed_email:
+    id: fixed_email
+    provider: workbench_email
+    status: false
+    settings:
+      recipients: ''
+  email:
+    id: email
+    provider: workbench_email
+    status: false
+    settings:
+      fields: {  }
+replyTo: ''

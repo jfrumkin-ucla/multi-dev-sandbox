@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+id: node__sf_page
+label: 'Content: Basic Page'
+tags:
+  keywords: '[node:field_sf_tags]'
+  title: '[site:name] - [current-page:title]'
+  description: '[node:summary]'
+  article_modified_time: '[node:changed:custom:c]'
+  article_published_time: '[node:created:custom:c]'
+  og_type: website
+  og_image: '[sitefarm-custom:media_ref_field_url:field_sf_featured_media:sf_landscape_16x9]'
+  og_image_url: '[sitefarm-custom:media_ref_field_url:field_sf_featured_media:sf_landscape_16x9]'
+  og_url: '[current-page:url]'
+  og_description: '[node:summary]'
+  og_site_name: '[site:name]'
+  og_title: '[current-page:title]'

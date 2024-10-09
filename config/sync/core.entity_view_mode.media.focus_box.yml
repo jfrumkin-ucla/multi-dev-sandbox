@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+id: media.focus_box
+label: 'Focus Box'
+description: ''
+targetEntityType: media
+cache: true

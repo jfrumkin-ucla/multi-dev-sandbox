@@ -1,0 +1,21 @@
+uuid: 9bb0478d-1af0-41bc-a18b-874ed4a4ddd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chr_start_date
+    - node.type.chr_project
+_core:
+  default_config_hash: qguCMUcb6lcRYYYlSLONAwjh_kSbeH_OOIY3I9eV-hk
+id: node.chr_project.field_chr_start_date
+field_name: field_chr_start_date
+entity_type: node
+bundle: chr_project
+label: 'Start Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

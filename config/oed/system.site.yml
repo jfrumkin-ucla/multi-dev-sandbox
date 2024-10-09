@@ -1,0 +1,17 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
+uuid: 58fa74f0-40bc-4305-910a-f460a01d5fc0
+name: 'Organizational Effectiveness & Development'
+mail: portaleditor@it.ucla.edu
+slogan: ''
+page:
+  403: ''
+  404: /node/131
+  front: /node/6
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+credit_info:
+  value: ''
+  format: sf_basic_html

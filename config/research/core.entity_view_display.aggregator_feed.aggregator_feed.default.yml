@@ -1,0 +1,25 @@
+uuid: 8d0f7856-5b13-46fa-a0a1-d5f2a0838f6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - aggregator
+_core:
+  default_config_hash: ORtH44CMbYMb3_0zumUPwVhPmaLBiImWpZa_hO3qmhU
+id: aggregator_feed.aggregator_feed.default
+targetEntityType: aggregator_feed
+bundle: aggregator_feed
+mode: default
+content:
+  description:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  checked: true
+  feed_icon: true
+  image: true
+  items: true
+  link: true
+  more_link: true

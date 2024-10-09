@@ -1,0 +1,41 @@
+page_title_block:
+  label: 'Page Title'
+  category: 'SiteDen'
+  path: layouts
+  template: layout--page-title-block
+  default_region: title
+  icon_map:
+    - [title, title, title, title]
+  regions:
+    title:
+      label: Page title
+
+#basic_title:
+#  label: 'Basic Title'
+#  category: 'SiteDen'
+#  path: layouts
+#  template: layout--basic-title
+#  class: '\Drupal\sitefarm_core\Plugin\Layout\BasicTitle'
+#  default_region: title
+#  icon_map:
+#    - [title, title, title, title]
+#  regions:
+#    title:
+#      label: Page title
+
+basic:
+  label: 'Basic'
+  category: 'SiteDen'
+  path: layouts
+  template: layout--basic
+  class: '\Drupal\sitefarm_core\Plugin\Layout\Basic'
+  default_region: main
+  icon_map:
+    - [first, main, main, second]
+  regions:
+    main:
+      label: Main content
+    first:
+      label: First sidebar
+    second:
+      label: Second sidebar

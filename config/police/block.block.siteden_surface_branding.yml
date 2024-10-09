@@ -1,0 +1,35 @@
+uuid: c6008e5e-97b9-472f-b557-4efd2f121c0e
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+_core:
+  default_config_hash: _y0PJThP0E4EB839eea5J07xrPRfIzyZPUn2e3ck6w0
+id: siteden_surface_branding
+theme: siteden_surface
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "/cso*\r\n/ems*"

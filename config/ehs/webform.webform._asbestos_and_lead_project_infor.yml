@@ -1,0 +1,363 @@
+uuid: 1b62ccc8-35f5-4086-8710-ab082dc866ea
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 246
+template: false
+archive: false
+id: _asbestos_and_lead_project_infor
+title: ' Asbestos and Lead Project Information Form'
+description: ''
+categories: {  }
+elements: |-
+  titleandintro:
+    '#type': webform_markup
+    '#markup': |-
+      <h2>UCLA Asbestos and Lead Project Information Form</h2>
+
+      <p>Complete and submit this form at least 3 weeks (or as soon as possible for unplanned emergencies) before commencement of projects that will involve renovation or demolition of building material. Submission of this form is required before work begins to ensure EH&amp;S notification, tracking and approvals. For any questions or concerns please e-mail <a href="mailto:asbestosandlead@ehs.ucla.edu">asbestosandlead@ehs.ucla.edu</a> . Project information and hazardous material survey must still be submitted using this form if no asbestos or lead was identified.<br />
+      <br />
+      <strong>EH&amp;S will confirm receipt of this form via email within two business days and schedule a survey or request additional information if needed.&nbsp;&nbsp;</strong></p>
+  department:
+    '#type': textfield
+    '#title': 'UCLA Department'
+    '#required': true
+    '#required_error': 'Required Field'
+  project_wo_number_if_applicable_:
+    '#type': textfield
+    '#title': 'Project/WO Number (If Applicable) '
+  building_area:
+    '#type': textarea
+    '#title': Building/Area
+    '#required': true
+  floor_room_area:
+    '#type': textarea
+    '#title': Floor/Room/Area
+    '#required': true
+  department_project_manager_supervisor:
+    '#type': textfield
+    '#title': 'UCLA Department Project Manager/Supervisor'
+    '#required': true
+  project_manager_email_:
+    '#type': email
+    '#title': 'UCLA Project Manager Email '
+    '#required': true
+  project_manager_phone_number:
+    '#type': number
+    '#title': 'UCLA Project Manager Phone Number'
+    '#required': true
+  project_start_date_estimated_:
+    '#type': date
+    '#title': 'Project Start Date (Estimated)'
+  project_completion_date_estimated_:
+    '#type': date
+    '#title': 'Project Completion Date (Estimated) '
+  brief_description_of_work:
+    '#type': textarea
+    '#title': 'Brief Description of Work'
+    '#required': true
+  horizontal_rule:
+    '#type': webform_horizontal_rule
+  environmental_consultant_company_information_:
+    '#type': webform_contact
+    '#title': 'Environmental Consultant Company Information (If applicable)'
+    '#required': true
+    '#name__title': 'Environmental Consultant Contact Person (If applicable)'
+    '#company__title': 'Environmental Consultant Company Name (If applicable)'
+    '#email__title': 'Environmental Consultant Email (If applicable)'
+    '#phone__title': 'Environmental Consultant Phone (If applicable)'
+    '#address__access': false
+    '#address_2__access': false
+    '#city__access': false
+    '#state_province__access': false
+    '#postal_code__access': false
+    '#country__access': false
+  abatement_estimated_start_date_if_applicable_:
+    '#type': date
+    '#title': 'Abatement Estimated Start Date: (If Applicable) '
+  abatement_estimated_end_date_if_applicable_:
+    '#type': date
+    '#title': 'Abatement Estimated End Date: (If Applicable) '
+  abatement_contractor_name_if_applicable_:
+    '#type': webform_contact
+    '#title': 'Abatement Contractor Information'
+    '#name__title': 'Abatement Contractor Company Name (If Applicable)'
+    '#company__title': 'Abatement Contractor Company Name (If Applicable)'
+    '#email__title': 'Abatement Contractor E-mail (If Applicable)'
+    '#phone__title': 'Abatement Contractor Phone (If Applicable)'
+    '#address__access': false
+    '#address_2__access': false
+    '#city__access': false
+    '#state_province__access': false
+    '#postal_code__access': false
+    '#country__access': false
+  documents:
+    '#type': webform_markup
+    '#markup': |-
+      <a href="https://ucla.app.box.com/f/26b664e94d32401a89567e59cf17f6db">Upload Project Documents</a> (Drawings, Hazardous Material Survey, Specifications, etc.)&nbsp;<br />
+      <br />
+      <a href="https://ucla.app.box.com/f/920fdd9b14bf4e12b290ac66a83bf107">Upload Abatement Documents</a> (SCAQMD Notification, Cal/OSHA Notification, etc.)
+  additional_comments_:
+    '#type': textarea
+    '#title': 'Additional Comments: '
+  markup:
+    '#type': webform_markup
+    '#markup': '<h2>Type of Hazardous Material Found (Select All That Apply)</h2>'
+  type_of_hazardous_material_found_select_all_that_apply_:
+    '#type': radios
+    '#title': Asbestos
+    '#options': yes_no
+    '#options_display': two_columns
+    '#options__properties': ''
+  test:
+    '#type': radios
+    '#title': Lead
+    '#options': yes_no
+    '#options_display': two_columns
+    '#options__properties': ''
+  mold:
+    '#type': radios
+    '#title': Mold
+    '#options': yes_no
+    '#options_display': two_columns
+    '#options__properties': ''
+  mercury:
+    '#type': radios
+    '#title': Mercury
+    '#options': yes_no
+    '#options_display': two_columns
+    '#options__properties': ''
+  pcbs:
+    '#type': radios
+    '#title': PCBs
+    '#options': yes_no
+    '#options_display': two_columns
+    '#options__properties': ''
+  other_describe_below_:
+    '#type': textarea
+    '#title': 'Other '
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: asbestosandlead@ehs.ucla.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: ehs.ucla.edu
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

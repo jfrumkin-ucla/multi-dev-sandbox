@@ -1,0 +1,17 @@
+uuid: 28b010bc-a240-4af8-8b52-40e4f711788b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Research Project'
+type: z_research_project
+description: 'Add a research project to the project portal.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

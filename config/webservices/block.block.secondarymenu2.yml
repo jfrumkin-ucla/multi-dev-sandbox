@@ -1,0 +1,33 @@
+uuid: a4ae00f3-7763-46b1-809c-a73424040a1f
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.secondary-menu2
+  module:
+    - menu_block
+  theme:
+    - siteden_surface
+id: secondarymenu2
+theme: siteden_surface
+region: secondary_navigation
+weight: -16
+provider: null
+plugin: 'menu_block:secondary-menu2'
+settings:
+  id: 'menu_block:secondary-menu2'
+  label: 'Quick Links'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'secondary-menu2:'
+  render_parent: false
+  suggestion: secondary_menu2
+  hide_on_nonactive: false
+visibility: {  }

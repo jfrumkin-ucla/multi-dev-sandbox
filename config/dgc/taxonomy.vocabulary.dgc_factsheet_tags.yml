@@ -1,0 +1,11 @@
+uuid: 42e7de93-2067-4b7e-adb1-b5d440b21b84
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wr6CklooWBPCKYr8ZyLhchF0oQGIW1yubSxdVeUvKVU
+name: 'Fact Sheet Tags'
+vid: dgc_factsheet_tags
+description: 'Tags for fact sheets'
+weight: 0
+new_revision: false

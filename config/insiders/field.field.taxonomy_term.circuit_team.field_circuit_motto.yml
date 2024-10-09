@@ -1,0 +1,31 @@
+uuid: 91ae0ca8-91fd-48ee-85a4-54e4a5c818da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_circuit_motto
+    - taxonomy.vocabulary.circuit_team
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    sf_basic_html: '0'
+    sf_restricted_html: '0'
+    sf_full_html: '0'
+    plain_text: '0'
+    sf_plain_text: '0'
+_core:
+  default_config_hash: 25aEAX3NPstM0ZMLK74zrqRve91HDd76Dmq0_cc2ITg
+id: taxonomy_term.circuit_team.field_circuit_motto
+field_name: field_circuit_motto
+entity_type: taxonomy_term
+bundle: circuit_team
+label: Motto
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

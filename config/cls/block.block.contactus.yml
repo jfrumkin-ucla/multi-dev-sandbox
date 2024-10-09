@@ -1,0 +1,34 @@
+uuid: 839b4467-7d5a-47e6-b4b4-8289a1202337
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:07637ee1-bf51-4035-be07-3ab9bbf89c58'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+    full_width:
+      full_width: 0
+id: contactus
+theme: siteden_surface
+region: footer_undernav
+weight: 0
+provider: null
+plugin: 'block_content:07637ee1-bf51-4035-be07-3ab9bbf89c58'
+settings:
+  id: 'block_content:07637ee1-bf51-4035-be07-3ab9bbf89c58'
+  label: 'Contact Us'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

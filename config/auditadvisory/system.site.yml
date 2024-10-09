@@ -1,0 +1,17 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
+uuid: 63f4c251-012e-4909-abff-37fdf005d036
+name: 'Audit & Advisory Services'
+mail: portaleditor@it.ucla.edu
+slogan: ''
+page:
+  403: ''
+  404: /node/61
+  front: /node/62
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+credit_info:
+  value: ''
+  format: sf_basic_html

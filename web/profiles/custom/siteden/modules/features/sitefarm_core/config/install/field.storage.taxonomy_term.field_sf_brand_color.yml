@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_sf_brand_color
+field_name: field_sf_brand_color
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: category-brand--ucla-blue
+      label: 'UCLA Blue'
+    -
+      value: category-brand--lighter-blue
+      label: 'Lighter Blue'
+    -
+      value: category-brand--lightest-blue
+      label: 'Lightest Blue'
+    -
+      value: category-brand--darkest-blue
+      label: 'Darkest Blue'
+    -
+      value: category-brand--darker-blue
+      label: 'Darker Blue'
+    -
+      value: category-brand--ucla-gold
+      label: 'UCLA Gold'
+    -
+      value: category-brand--darker-gold
+      label: 'Darker Gold'
+    -
+      value: category-brand--darkest-gold
+      label: 'Darkest Gold'
+    -
+      value: category-brand--gray
+      label: 'Basic Gray'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

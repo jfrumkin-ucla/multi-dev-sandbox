@@ -1,0 +1,32 @@
+uuid: 4b749e69-d8e9-4448-a025-316809bb4cf0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:289adadb-cc78-4566-80f6-c3c2520db9f3'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: footercontactinfo
+theme: siteden_surface
+region: footer
+weight: -11
+provider: null
+plugin: 'block_content:289adadb-cc78-4566-80f6-c3c2520db9f3'
+settings:
+  id: 'block_content:289adadb-cc78-4566-80f6-c3c2520db9f3'
+  label: 'footer contact info'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

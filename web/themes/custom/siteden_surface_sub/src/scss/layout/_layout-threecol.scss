@@ -1,0 +1,45 @@
+@use "../utilities/_mixins/breakpoints";
+
+// Provides the layout styles for three-column layout section.
+.layout--threecol-section {
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    display: grid;
+    grid-column-gap: 2.5rem;
+    grid-template-areas: "first first first first second second second second third third third third";
+    grid-template-rows: auto max-content 1fr;
+    grid-template-columns: repeat(12, 1fr);
+
+    &--25-50-25 {
+      grid-template-areas: "first first first second second second second second second third third third";
+    }
+
+    &--25-25-50 {
+      grid-template-areas: "first first first second second second third third third third third third";
+    }
+
+    &--50-25-25 {
+      grid-template-areas: "first first first first first first second second second third third third";
+    }
+  }
+
+  & > .layout__region--first {
+    grid-area: first;
+  }
+
+  & > .layout__region--second {
+    grid-area: second;
+  }
+
+  & > .layout__region--third {
+    grid-area: third;
+  }
+}
+
+//Fix for double nested 3 column section inside standard 2 col
+@media (min-width: breakpoints.breakpoint-min(md)) {
+  .layout--twocol-section > .layout__region--first .layout--threecol-section,
+  .layout--twocol-section > .layout__region--second .layout--threecol-section {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "first second third";
+  }
+}

@@ -1,0 +1,30 @@
+uuid: 626528bd-6efe-4468-9995-ffba344df339
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:d416468f-e1e4-4daa-b20a-ef5c2d64400d'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: bbonebilllogofooter
+theme: siteden_surface
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:d416468f-e1e4-4daa-b20a-ef5c2d64400d'
+settings:
+  id: 'block_content:d416468f-e1e4-4daa-b20a-ef5c2d64400d'
+  label: 'BB: OneBill Logo Footer'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

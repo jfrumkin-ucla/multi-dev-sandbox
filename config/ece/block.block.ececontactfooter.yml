@@ -1,0 +1,38 @@
+uuid: c6625cfc-1616-4b2e-943b-bde61671971b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:b6c8cfb9-0a70-47ab-ad6c-a894bdbc28af'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: ececontactfooter
+theme: siteden_surface
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:b6c8cfb9-0a70-47ab-ad6c-a894bdbc28af'
+settings:
+  id: 'block_content:b6c8cfb9-0a70-47ab-ad6c-a894bdbc28af'
+  label: 'ECE Contact Footer'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: /resources/ccampis-program

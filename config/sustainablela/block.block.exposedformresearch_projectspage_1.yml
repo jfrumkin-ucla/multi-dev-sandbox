@@ -1,0 +1,34 @@
+uuid: 08a99105-dbdb-4f25-9e98-5ab9bf785e06
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.research_projects
+  module:
+    - block_style_plugins
+    - system
+    - views
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: exposedformresearch_projectspage_1
+theme: siteden_surface
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'views_exposed_filter_block:research_projects-page_1'
+settings:
+  id: 'views_exposed_filter_block:research_projects-page_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: Filter
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /research-portal

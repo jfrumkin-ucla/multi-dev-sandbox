@@ -1,0 +1,37 @@
+uuid: d893038c-5e09-4c78-9656-44fd5fd09124
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:a75e27ae-00ed-4c6a-b4a9-281c26c84b39'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: improvednavigationcommunications
+theme: siteden_surface
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:a75e27ae-00ed-4c6a-b4a9-281c26c84b39'
+settings:
+  id: 'block_content:a75e27ae-00ed-4c6a-b4a9-281c26c84b39'
+  label: 'Improved Navigation Communications'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /ucpath-updates/improved-navigation

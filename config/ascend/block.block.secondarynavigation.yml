@@ -1,0 +1,31 @@
+uuid: 22e855f4-3880-4487-8a29-aaa431c6866d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.secondary-navigation
+  module:
+    - menu_block
+  theme:
+    - siteden_surface
+id: secondarynavigation
+theme: siteden_surface
+region: secondary_navigation
+weight: 0
+provider: null
+plugin: 'menu_block:secondary-navigation'
+settings:
+  id: 'menu_block:secondary-navigation'
+  label: 'Secondary Navigation'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'secondary-navigation:'
+  suggestion: secondary_navigation
+visibility: {  }

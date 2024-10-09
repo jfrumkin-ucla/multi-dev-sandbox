@@ -1,0 +1,9 @@
+siteden_embed_js.embed_js_form:
+  path: '/admin/config/siteden_embed_js'
+  defaults:
+    _form: '\Drupal\siteden_embed_js\Form\EmbedJsForm'
+    _title: 'Embed Js Form'
+  requirements:
+    _permission: 'access embed js operations'
+  options:
+    _admin_route: TRUE

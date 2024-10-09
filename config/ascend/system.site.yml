@@ -1,0 +1,17 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
+uuid: de8de9b4-2223-4f1d-8def-31ccab348ea2
+name: 'Ascend 2.0'
+mail: portaleditor@it.ucla.edu
+slogan: ''
+page:
+  403: ''
+  404: /node/631
+  front: /node/286
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+credit_info:
+  value: ''
+  format: sf_basic_html

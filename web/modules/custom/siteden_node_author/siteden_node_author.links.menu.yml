@@ -1,0 +1,6 @@
+siteden_node_author.admin:
+  title: 'Anonymous Author Override Settings'
+  description: 'Select a user account to assign anonymous nodes to'
+  parent: system.admin_config_development
+  route_name: siteden_node_author.settings
+  weight: 100

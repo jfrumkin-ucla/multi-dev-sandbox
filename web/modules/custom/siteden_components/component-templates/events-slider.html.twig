@@ -1,0 +1,390 @@
+{{ attach_library('siteden_components/sf_slider') }}
+
+<section class="sf_events_slider events-slider-lg splide events-slider" aria-label="Sliding banner">
+  <div class="splide__track">
+    <ul class="splide__list">
+     {% if columns == 1 %}
+        {% for row in slideritems|batch(columns, 'No item') %}
+          <li class="splide__slide">
+            <div class="layout--onecol-section">
+            {% for pos,slideritem in row %}
+                {% if pos == 0 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 1 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 2 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 3 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 4 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 5 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 6 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 7 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 8 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 9 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 10 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 11 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                <div class="layout__region {{ regionClass }} slider-item slider-item--image-background-slider-heading col-sm-3">
+
+                  <article>
+                    {% if slideritem.image %}
+                      <div class="event__media">
+                        {{ slideritem.image }}
+                      </div>
+                    {% endif %}
+                    {% if slideritem.date or slideritem.time or slideritem.location %}
+                      <div class="featured-event-content-container">
+                        <div class="featured-event-date">
+                          <div class="fleft full-width event-month">{{ slideritem.month }}</div>
+                          <div class="fleft full-width event-day">{{ slideritem.date }}</div>
+                        </div>
+                        <div class="featured-event-content">
+                          <div class="event-title"><a href="{{ slideritem.url }}">{{ slideritem.title }}</a></div>
+                          <ul>
+                            {% if slideritem.time %}
+                              <li class="icon icon--time">{{ slideritem.time }}</li>
+                            {% endif %}
+                          </ul>
+                          {% if slideritem.location %}
+                            <div class="icon icon--location">{{ slideritem.location }}</div>
+                          {% endif %}
+                          <div class="article-event-summary">
+                            {% autoescape false %}
+                              {{ slideritem.body }}
+                            {% endautoescape %}
+                          </div>
+                        </div>
+                      </div>
+                    {% endif %}
+                  </article>
+
+                </div>
+            {% endfor %}
+            </div>
+          </li>
+        {% endfor %}
+      {% endif %}
+     {% if columns == 2 %}
+        {% for row in slideritems|batch(columns, 'No item') %}
+          <li class="splide__slide">
+            <div class="layout--twocol-section">
+            {% for pos,slideritem in row %}
+                {% if pos == 0 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 1 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 2 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 3 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 4 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 5 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 6 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 7 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 8 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 9 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 10 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 11 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                <div class="layout__region {{ regionClass }} slider-item slider-item--image-background-slider-heading col-sm-3">
+
+                  <article>
+                    {% if slideritem.image %}
+                      <div class="event__media">
+                        {{ slideritem.image }}
+                      </div>
+                    {% endif %}
+                    {% if slideritem.date or slideritem.time or slideritem.location %}
+                      <div class="featured-event-content-container">
+                        <div class="featured-event-date">
+                          <div class="fleft full-width event-month">{{ slideritem.month }}</div>
+                          <div class="fleft full-width event-day">{{ slideritem.date }}</div>
+                        </div>
+                        <div class="featured-event-content">
+                          <div class="event-title"><a href="{{ slideritem.url }}">{{ slideritem.title }}</a></div>
+                          <ul>
+                            {% if slideritem.time %}
+                              <li class="icon icon--time">{{ slideritem.time }}</li>
+                            {% endif %}
+                          </ul>
+                          {% if slideritem.location %}
+                            <div class="icon icon--location">{{ slideritem.location }}</div>
+                          {% endif %}
+                          <div class="article-event-summary">
+                            {% autoescape false %}
+                              {{ slideritem.body }}
+                            {% endautoescape %}
+                          </div>
+                        </div>
+                      </div>
+                    {% endif %}
+                  </article>
+
+                </div>
+            {% endfor %}
+            </div>
+          </li>
+        {% endfor %}
+      {% endif %}
+     {% if columns == 3 %}
+        {% for row in slideritems|batch(columns, 'No item') %}
+          <li class="splide__slide">
+            <div class="layout--threecol-section">
+            {% for pos,slideritem in row %}
+                {% if pos == 0 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 1 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 2 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if pos == 3 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 4 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 5 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if pos == 6 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 7 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 8 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if pos == 9 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 10 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 11 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                <div class="layout__region {{ regionClass }} slider-item slider-item--image-background-slider-heading col-sm-3">
+
+                  <article>
+                    {% if slideritem.image %}
+                      <div class="event__media">
+                        {{ slideritem.image }}
+                      </div>
+                    {% endif %}
+                    {% if slideritem.date or slideritem.time or slideritem.location %}
+                      <div class="featured-event-content-container">
+                        <div class="featured-event-date">
+                          <div class="fleft full-width event-month">{{ slideritem.month }}</div>
+                          <div class="fleft full-width event-day">{{ slideritem.date }}</div>
+                        </div>
+                        <div class="featured-event-content">
+                          <div class="event-title"><a href="{{ slideritem.url }}">{{ slideritem.title }}</a></div>
+                          <ul>
+                            {% if slideritem.time %}
+                              <li class="icon icon--time">{{ slideritem.time }}</li>
+                            {% endif %}
+                          </ul>
+                          {% if slideritem.location %}
+                            <div class="icon icon--location">{{ slideritem.location }}</div>
+                          {% endif %}
+                          <div class="article-event-summary">
+                            {% autoescape false %}
+                              {{ slideritem.body }}
+                            {% endautoescape %}
+                          </div>
+                        </div>
+                      </div>
+                    {% endif %}
+                  </article>
+
+                </div>
+            {% endfor %}
+            </div>
+          </li>
+        {% endfor %}
+      {% endif %}      
+     {% if columns == 4 %}
+        {% for row in slideritems|batch(columns, 'No item') %}
+          <li class="splide__slide">
+            <div class="layout--fourcol-section">
+            {% for pos,slideritem in row %}
+                {% if pos == 0 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 1 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 2 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if pos == 3 %}
+                  {% set regionClass = 'layout__region--fourth' %}
+                {% endif %}
+                {% if pos == 4 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 5 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 6 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if pos == 7 %}
+                  {% set regionClass = 'layout__region--fourth' %}
+                {% endif %}
+                {% if pos == 8 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 9 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 10 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if pos == 11 %}
+                  {% set regionClass = 'layout__region--fourth' %}
+                {% endif %}
+                <div class="layout__region {{ regionClass }} slider-item slider-item--image-background-slider-heading col-sm-3">
+
+                  <article>
+                    {% if slideritem.image %}
+                      <div class="event__media">
+                        {{ slideritem.image }}
+                      </div>
+                    {% endif %}
+                    {% if slideritem.date or slideritem.time or slideritem.location %}
+                      <div class="featured-event-content-container">
+                        <div class="featured-event-date">
+                          <div class="fleft full-width event-month">{{ slideritem.month }}</div>
+                          <div class="fleft full-width event-day">{{ slideritem.date }}</div>
+                        </div>
+                        <div class="featured-event-content">
+                          <div class="event-title"><a href="{{ slideritem.url }}">{{ slideritem.title }}</a></div>
+                          <ul>
+                            {% if slideritem.time %}
+                              <li class="icon icon--time">{{ slideritem.time }}</li>
+                            {% endif %}
+                          </ul>
+                          {% if slideritem.location %}
+                            <div class="icon icon--location">{{ slideritem.location }}</div>
+                          {% endif %}
+                          <div class="article-event-summary">
+                            {% autoescape false %}
+                              {{ slideritem.body }}
+                            {% endautoescape %}
+                          </div>
+                        </div>
+                      </div>
+                    {% endif %}
+                  </article>
+
+                </div>
+            {% endfor %}
+            </div>
+          </li>
+        {% endfor %}
+      {% endif %}  
+    </ul>
+  </div>
+  <button class="splide__toggle" type="button">
+    <span class="splide__toggle__play"><img src="/themes/custom/siteden_surface/assets/images/icons/denotive/play-white.svg"></span>
+    <span class="splide__toggle__pause"><img src="/themes/custom/siteden_surface/assets/images/icons/denotive/pause-white.svg"></span>
+  </button>
+</section>
+
+<section class="sf_events_slider events-slider-mobile splide events-slider" aria-label="Sliding banner">
+  {% set regionClass = 'layout__region--first' %}
+  <div class="splide__track">
+    <ul class="splide__list">
+        {% for row in slideritems|batch(1, 'No item') %}
+          <li class="splide__slide">
+            <div class="layout--onecol-section">
+            {% for pos,slideritem in row %}
+                <div class="layout__region {{ regionClass }} slider-item slider-item--image-background-slider-heading col-sm-3">
+                  <article>
+                    {% if slideritem.image %}
+                      <div class="event__media">
+                        {{ slideritem.image }}
+                      </div>
+                    {% endif %}
+                    {% if slideritem.date or slideritem.time or slideritem.location %}
+                      <div class="featured-event-content-container">
+                        <div class="featured-event-date">
+                          <div class="fleft full-width event-month">{{ slideritem.month }}</div>
+                          <div class="fleft full-width event-day">{{ slideritem.date }}</div>
+                        </div>
+                        <div class="featured-event-content">
+                          <div class="event-title"><a href="{{ slideritem.url }}">{{ slideritem.title }}</a></div>
+                          <ul>
+                            {% if slideritem.time %}
+                              <li class="icon icon--time">{{ slideritem.time }}</li>
+                            {% endif %}
+                          </ul>
+                          {% if slideritem.location %}
+                            <div class="icon icon--location">{{ slideritem.location }}</div>
+                          {% endif %}
+                          <div class="article-event-summary">
+                            {% autoescape false %}
+                              {{ slideritem.body }}
+                            {% endautoescape %}
+                          </div>
+                        </div>
+                      </div>
+                    {% endif %}
+                  </article>
+
+                </div>
+            {% endfor %}
+            </div>
+          </li>
+        {% endfor %}
+    </ul>
+  </div>
+  <button class="splide__toggle" type="button">
+    <span class="splide__toggle__play"><img src="/themes/custom/siteden_surface/assets/images/icons/denotive/play-white.svg"></span>
+    <span class="splide__toggle__pause"><img src="/themes/custom/siteden_surface/assets/images/icons/denotive/pause-white.svg"></span>
+  </button>
+</section>

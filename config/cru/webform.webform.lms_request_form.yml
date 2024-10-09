@@ -1,0 +1,680 @@
+uuid: c9eca926-ab8b-43ec-8dbf-c3cc3f006cf3
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 36
+template: false
+archive: false
+id: lms_request_form
+title: 'LMS Request Form'
+description: ''
+categories: {  }
+elements: |-
+  request_type:
+    '#type': webform_wizard_page
+    '#title': 'Request Type'
+    '#open': true
+    '#next_button_label': Next
+    request_type_intro:
+      '#type': processed_text
+      '#text': |
+        <p>Please select your request type:</p>
+      '#format': sf_basic_html
+    initial_or_date_request:
+      '#type': radios
+      '#title': 'What type of LMS request is this? '
+      '#title_display': none
+      '#options':
+        'Initial Request': 'Initial Request -- This is the first time I am requesting this course be added to the LMS.'
+        'Date Update Request': |
+          Additional Date Request -- I am requesting additional offering dates be added to an existing LMS course.
+      '#options_display': buttons
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#options__properties': ''
+    actions:
+      '#type': webform_actions
+      '#title': 'Submit button(s)'
+      '#submit__label': Next
+  initial_request_form:
+    '#type': webform_wizard_page
+    '#title': 'Initial Request Form Page 1 Details'
+    '#states':
+      visible:
+        ':input[name="initial_or_date_request"]':
+          value: 'Initial Request'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    initial_request:
+      '#type': processed_text
+      '#text': |
+        <h2 class="heading--ribbon-highlight">Initial LMS Request</h2>
+
+        <div class="label label--outline">Requests should be submitted&nbsp;at least one week prior to when you would like the course &nbsp;available in LMS.</div>
+      '#format': sf_basic_html
+    requestor_name:
+      '#type': select
+      '#title': 'Requestor Name'
+      '#options':
+        'Dyanna DeAlba ': 'Dyanna DeAlba '
+        'David Jenkins': 'David Jenkins'
+        'Audrey Lazaro': 'Audrey Lazaro'
+        'Yadira Marquez': 'Yadira Marquez'
+        'Lizeth Sanchez': 'Lizeth Sanchez'
+        'Kennedy Thomas': 'Kennedy Thomas'
+        'Stacey Sheehan': 'Stacey Sheehan'
+        Other: Other
+      '#required': true
+      '#required_error': 'This field is required.'
+    name:
+      '#type': textfield
+      '#title': Name
+      '#states':
+        visible:
+          ':input[name="requestor_name"]':
+            value: Other
+      '#required': true
+    email:
+      '#type': email
+      '#title': Email
+      '#required': true
+      '#required_error': 'This field is required.'
+  initial_request_form_1:
+    '#type': webform_wizard_page
+    '#title': 'Initial Request Form Page 2 Details'
+    '#states':
+      visible:
+        ':input[name="initial_or_date_request"]':
+          value: 'Initial Request'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    initial_request_1:
+      '#type': processed_text
+      '#text': |
+        <h2 class="heading--ribbon-highlight">Initial LMS Request</h2>
+
+        <div class="label label--outline">Requests should be submitted&nbsp;at least one week prior to when you would like the course &nbsp;available in LMS.</div>
+      '#format': sf_basic_html
+    course_title:
+      '#type': textfield
+      '#title': 'Course Title'
+      '#description': '<h5 style="font-family: sans-serif;"><em>What would you like this new course to be called?</em></h5>'
+      '#description_display': invisible
+      '#required': true
+      '#required_error': 'This field is required.'
+    course_description:
+      '#type': textarea
+      '#title': 'Course Description'
+      '#title_display': before
+      '#required': true
+      '#required_error': 'This field is required.'
+    primary_instructor_name:
+      '#type': select
+      '#title': 'Primary Instructor'
+      '#description_display': before
+      '#options':
+        'Victor Cisneros': 'Victor Cisneros'
+        'Dyanna DeAlba ': 'Dyanna DeAlba '
+        'Erik Gilbertson': 'Erik Gilbertson'
+        'David Jenkins': 'David Jenkins'
+        'Audrey Lazaro': 'Audrey Lazaro'
+        'Yadira Marquez': 'Yadira Marquez'
+        'Lizeth Sanchez': 'Lizeth Sanchez'
+        'Kennedy Thomas': 'Kennedy Thomas'
+        N/A: N/A
+      '#required': true
+      '#required_error': 'This field is required.'
+    course_contact_email:
+      '#type': email
+      '#title': 'Course Contact Email'
+      '#description': '<p style="font-family:sans-serif;">If individuals have course-specific questions, they will be directed to this email.</p>'
+      '#description_display': after
+      '#required': true
+      '#required_error': 'This field is required.'
+  initial_request_form_2:
+    '#type': webform_wizard_page
+    '#title': 'Initial Request Form Page 3 Details'
+    '#states':
+      visible:
+        ':input[name="initial_or_date_request"]':
+          value: 'Initial Request'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    initial_request_2:
+      '#type': processed_text
+      '#text': |
+        <h2 class="heading--ribbon-highlight">Initial LMS Request</h2>
+
+        <div class="label label--outline">Requests should be submitted&nbsp;at least one week prior to when you would like the course &nbsp;available in LMS.</div>
+      '#format': sf_basic_html
+    start_date:
+      '#type': datetime
+      '#title': 'Start Date'
+      '#description': '<h5 style="font-family: sans-serif;"><em>When&nbsp;would you like the course to begin?</em></h5>'
+      '#description_display': invisible
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#date_days':
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+      '#date_date_format': ''
+      '#date_time_format': ''
+      '#date_time_step': '60'
+    end_date:
+      '#type': datetime
+      '#title': 'End Date'
+      '#description': '<h5 style="font-family: sans-serif;"><em>When would you like the course to end?</em></h5>'
+      '#description_display': invisible
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#date_days':
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+      '#date_date_format': ''
+      '#date_time_format': ''
+      '#date_time_step': '60'
+    min_capacity:
+      '#type': processed_text
+      '#text': |
+        <p>Is there a minimum course capacity?<span style="color:red"><b> *<b></span></p>
+      '#format': sf_full_html
+    yes_no_min:
+      '#type': radios
+      '#title': 'Yes/No Course Minimum'
+      '#title_display': invisible
+      '#options': yes_no
+      '#options_display': side_by_side
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#options__properties': ''
+    minimum_number_of_students:
+      '#type': number
+      '#title': 'Minimum Number of Students'
+      '#description_display': invisible
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#states':
+        visible:
+          ':input[name="yes_no_min"]':
+            value: 'Yes'
+    max_capacity:
+      '#type': processed_text
+      '#text': |
+        <p>Is there a maximum course capacity?<span style="color:red"><b> *<b></span></p>
+      '#format': sf_full_html
+    yes_no_max:
+      '#type': radios
+      '#title': 'Yes/No Course Maximum'
+      '#title_display': invisible
+      '#options': yes_no
+      '#options_display': side_by_side
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#options__properties': ''
+    maximum_number_of_students:
+      '#type': number
+      '#title': 'Maximum Number of Students'
+      '#description': '<h5 style="font-family:sans-serif;"><em>Is there a maximum course capacity? If not, enter </em><strong>N/A</strong><em>.</em></h5>'
+      '#description_display': invisible
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#states':
+        visible:
+          ':input[name="yes_no_max"]':
+            value: 'Yes'
+    are_there_any_special_concerns_questions_instructions_:
+      '#type': textarea
+      '#title': 'Are there any special concerns/questions/instructions?'
+  date_update_request:
+    '#type': webform_wizard_page
+    '#title': 'Additional Date Request Details'
+    '#states':
+      visible:
+        ':input[name="initial_or_date_request"]':
+          value: 'Date Update Request'
+    '#prev_button_label': Previous
+    '#next_button_label': Next
+    update_request:
+      '#type': processed_text
+      '#text': |
+        <h2 class="heading--ribbon-highlight">Additional Date&nbsp;Request</h2>
+
+        <div class="label label--outline">Requests should be submitted&nbsp;at least one week prior to when you would like the course &nbsp;available in LMS.</div>
+      '#format': sf_basic_html
+    requestor_name_1:
+      '#type': select
+      '#title': 'Requestor Name'
+      '#options':
+        'Dyanna DeAlba ': 'Dyanna DeAlba '
+        'David Jenkins': 'David Jenkins'
+        'Audrey Lazaro': 'Audrey Lazaro'
+        'Yadira Marquez': 'Yadira Marquez'
+        'Lizeth Sanchez': 'Lizeth Sanchez'
+        'Kennedy Thomas': 'Kennedy Thomas'
+        'Stacey Sheehan': 'Stacey Sheehan'
+        Other: Other
+      '#required': true
+      '#required_error': 'This field is required.'
+    name_1:
+      '#type': textfield
+      '#title': Name
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#states':
+        visible:
+          ':input[name="requestor_name_1"]':
+            value: Other
+    email_update_request:
+      '#type': email
+      '#title': Email
+      '#required': true
+      '#required_error': 'This field is required.'
+    course_title_update:
+      '#type': textfield
+      '#title': 'Course Name:'
+      '#description': '<h5 style="font-family: sans-serif;"><em>What would you like this new course to be called?</em></h5>'
+      '#description_display': invisible
+      '#required': true
+      '#required_error': 'This field is required.'
+    update_instructor:
+      '#type': processed_text
+      '#text': |
+        <p>Does the course instructor need to be updated?<span style="color:red"><b> *<b></span></p>
+      '#format': sf_full_html
+    does_the_primary_instructor_need_to_be_updated_:
+      '#type': radios
+      '#title': 'Does the primary instructor need to be updated?'
+      '#title_display': invisible
+      '#options': yes_no
+      '#options_display': side_by_side
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#options__properties': ''
+    new_primary_instructor_1:
+      '#type': select
+      '#title': 'New Primary Instructor'
+      '#options':
+        'Victor Cisneros': 'Victor Cisneros'
+        'Dyanna DeAlba ': 'Dyanna DeAlba '
+        'Erik Gilbertson': 'Erik Gilbertson'
+        'David Jenkins': 'David Jenkins'
+        'Audrey Lazaro': 'Audrey Lazaro'
+        'Yadira Marquez': 'Yadira Marquez'
+        'Lizeth Sanchez': 'Lizeth Sanchez'
+        'Kennedy Thomas': 'Kennedy Thomas'
+        N/A: N/A
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#states':
+        visible:
+          ':input[name="does_the_primary_instructor_need_to_be_updated_"]':
+            value: 'Yes'
+    update_course_contact:
+      '#type': processed_text
+      '#text': |
+        <p>Does the course contact email need to be updated?<span style="color:red"><b> *<b></span></p>
+      '#format': sf_full_html
+    does_the_course_contact_email_need_to_be_updated_:
+      '#type': radios
+      '#title': 'Does the course contact email need to be updated?'
+      '#title_display': invisible
+      '#options': yes_no
+      '#options_display': side_by_side
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#options__properties': ''
+    new_course_contact_email:
+      '#type': email
+      '#title': 'New Course Contact Email'
+      '#description': '<p style="font-family:sans-serif;">If individuals have course-specific questions, they will be directed to this email.</p>'
+      '#description_display': after
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#states':
+        visible:
+          ':input[name="does_the_course_contact_email_need_to_be_updated_"]':
+            value: 'Yes'
+    start_date_update:
+      '#type': datetime
+      '#title': 'Additional Start Date'
+      '#description_display': invisible
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#date_days':
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+      '#date_date_format': ''
+      '#date_time_format': ''
+      '#date_time_step': '60'
+    new_end_date:
+      '#type': datetime
+      '#title': 'Additional End Date'
+      '#description_display': invisible
+      '#required': true
+      '#required_error': 'This field is required.'
+      '#date_days':
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+      '#date_date_format': ''
+      '#date_time_format': ''
+      '#date_time_step': '60'
+    are_there_any_special_comments_requests_:
+      '#type': textarea
+      '#title': 'Special Comments/Requests'
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: false
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: true
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: '<h3 style="font-family: sans-serif;">Thank you for your request! An email confirmation will be sent to you shortly.</h3>'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: 'Update Request Confirmation Email'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="initial_or_date_request"]':
+          value: 'Date Update Request'
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email_update_request:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: 'UCLA Central Resource Unit'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'LMS Request Form: Confirmation of Submission'
+      body: "Thank you for submitting your LMS request to CRU! A copy of your submission can be found below:&nbsp;<br />\r\n<br />\r\n[webform_submission:values]<br />\r\n&nbsp;"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  update_request_confirmation_email:
+    id: email
+    handler_id: update_request_confirmation_email
+    label: 'Initial Request Confirmation Email'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="initial_or_date_request"]':
+          value: 'Initial Request'
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: 'UCLA Central Resource Unit'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'LMS Request Form: Confirmation of Submission'
+      body: "Thank you for submitting your LMS request to CRU! A copy of your submission can be found below:&nbsp;<br />\r\n[webform_submission:values]<br />\r\n&nbsp;"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'SF Case Creation for LMS Request'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: 'CMMI_Cases@finance.ucla.edu,tmosier@finance.ucla.edu'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'LMS PCO Request Form Submission'
+      body: "<p>Submitted on [webform_submission:created]</p>\r\n[webform_submission:values]"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

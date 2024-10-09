@@ -1,0 +1,508 @@
+@use "../utilities/colors";
+@use "../utilities/_mixins/breakpoints";
+
+.circuit-team-list {
+  display: grid;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em; // sass-lint:disable-line no-misspelled-properties
+  margin-top: 2.5em;
+
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .list--pipe li {
+    display: inline;
+  }
+}
+
+.circuit-team-card {
+  background: colors.$lightest-blue;
+  height: auto;
+  padding: 2em;
+  position: relative;
+  vertical-align: top;
+
+  &__image-wrapper {
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      float: left;
+      width: 7em;
+    }
+
+    img {
+      max-width: 7em;
+    }
+
+    a {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  &__info-wrapper {
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      margin-left: 8.5em;
+    }
+  }
+
+  &__subteams-wrapper {
+    clear: both;
+  }
+}
+
+.circuit-profile-card {
+  background: colors.$lightest-blue;
+  height: auto;
+  padding: 2em;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+
+  .circuit-profile-card__name {
+    font-size: 1.625rem;
+  }
+
+  .circuit-profile-card__department {
+    font-size: 1.125rem;
+  }
+
+  .circuit-profile-card__name, .circuit-profile-card__department {
+    font-weight: 700;
+    line-height: 1.125;
+    margin-bottom: 1rem;
+  }
+
+  .circuit-profile-card__image {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12em;
+  }
+
+}
+
+// ----------------
+// Do a swap-a-roo with page title and name field in template
+// ----------------
+
+.circuit-profile-content__name,
+.circuit-term-content .l-content .circuit-term-content__name {
+  display: none;
+}
+
+@media only screen and (min-width: 576px) {
+  .page-node-type-circuit-profile .block-page-title-block,
+  .view-circuit-team .block-page-title-block,
+  .circuit-term-content .l-sidebar-first .circuit-term-content__name {
+    display: none;
+  }
+
+  .circuit-profile-content__name,
+  .circuit-term-content .l-content .circuit-term-content__name {
+    display: block;
+  }
+}
+
+// ----------------
+// Theme the content area
+// ----------------
+
+// Custom content background color
+.circuit-profile-content,
+.circuit-term-content {
+  background-color: #daebfe;
+  padding: 2rem;
+}
+
+.circuit-term-content .field__label {
+  margin-top: 1rem;
+}
+
+// Custom field tweaks
+.circuit-profile-content .circuit-profile-content__name {
+  margin-top: 3rem;
+}
+
+.circuit-profile-content .field--name-field-sf-m-primary-image,
+.circuit-term-content .field--name-field-sf-m-tax-primary-image {
+  position: relative;
+}
+
+.circuit-profile-content .field--name-field-sf-m-primary-image img,
+.circuit-term-content .field--name-field-sf-m-tax-primary-image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.circuit-profile-content .field--name-field-media-image::after,
+.view-mode-full .circuit-term-content .field--name-field-sf-m-tax-primary-image::after {
+  content: "";
+  display: block;
+  width: .75em;
+  height: auto;
+  position: absolute;
+  top: 35%;
+  left: -.75em;
+  bottom: 15%;
+  background-color: #2774ae;
+  z-index: 0;
+}
+
+.circuit-profile-content .field--name-field-media-image::after {
+  top: 15%;
+  bottom: 65%;
+}
+
+// Fix an issue wioth the email field not getting a box height
+.circuit-profile-content .field--label-inline {
+  clear: left;
+  min-height: 1.5rem;
+}
+
+// Make sure all fields get some space below them
+.circuit-profile-content .field {
+  margin-bottom: 1.5rem;
+}
+
+// Customize HR for graphic element
+.circuit-profile-content__hr {
+  border-top: .75em solid #2774ae;
+  width: 60%;
+  margin: 2rem auto;
+}
+
+.circuit-team-members {
+  background-color: colors.$lightest-blue;
+  padding: 2em;
+
+  h3 {
+    color: colors.$ucla-blue;
+  }
+
+  &__list {
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em; // sass-lint:disable-line no-misspelled-properties
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// ----------------
+// Theme taxonomy term page
+// ----------------
+
+.vocabulary-circuit-team.view-mode-full {
+  margin-bottom: 3em;
+}
+
+.circuit-term-content .field__label {
+  color: #2774ae;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+// Customize HR for graphic element
+.circuit-term-content__hr {
+  border-top: .75em solid #2774ae;
+  width: 50%;
+  margin: 2rem auto;
+}
+
+.circuit-term-content .field--name-field-sf-m-tax-primary-image {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.view-display-id-page_1 .feed-icon { // sass-lint:disable-line class-name-format
+  display: none;
+}
+
+// ----------------
+// Theme taxonomy term page
+// ----------------
+
+.vocabulary-circuit-team {
+  position: relative;
+}
+
+.view-circuit > .view-content > h3 {
+  font-size: 1em;
+  font-weight: normal;
+  margin-top: 2em;
+}
+
+.view-circuit > .view-content > h3:first-child {
+  margin-top: 0;
+}
+
+.view-circuit .field--name-field-sf-m-tax-primary-image {
+  margin-bottom: 0;
+}
+
+.view-circuit .views-row {
+  font-weight: bold;
+}
+
+.view-circuit-team .views-field-title {
+  font-weight: bold;
+}
+
+
+.field--label-inline {
+  > .field__label,
+  > .field__item {
+    display: inline;
+  }
+
+  > .field__label::after {
+    content: ":";
+  }
+}
+
+.field__label {
+  font-weight: bold;
+}
+
+
+.circuit-unit-leaders {
+  display: grid;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em; // sass-lint:disable-line no-misspelled-properties
+
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// -----------------------------------
+// Styles from the compatibility sheet
+// -----------------------------------
+
+.circuit-team-list > div,
+.circuit-team-list > div > div {
+  display: contents;
+}
+
+.circuit-team-list > .contextual {
+  display: none;
+}
+
+.circuit-team-members {
+  .view-content {
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em; // sass-lint:disable-line no-misspelled-properties
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.node--type-circuit-profile {
+  .vm-teaser__meta.list--pipe li {
+    margin-right: 0.25em;
+  }
+}
+
+.circuit-unit-leaders > div,
+.circuit-unit-leaders > div > div {
+  display: contents;
+}
+
+.circuit-unit-leaders > .contextual {
+  display: none;
+}
+
+
+// ----
+// View mode styles
+// ----
+.node--type-circuit-profile.vm-teaser {
+  //------------------------------------
+  //  Teaser (view mode)
+  //------------------------------------
+
+  margin-bottom: 2rem;
+
+  .vm-teaser__figure {
+    max-width: 20%;
+  }
+
+  .vm-teaser__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.125;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .vm-teaser__meta {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .vm-teaser__title,
+  .vm-teaser__summary {
+    margin-bottom: 1rem * .4;
+  }
+
+  .vm-teaser__summary {
+    margin-top: 0.25rem;
+  }
+
+  .vm-teaser__meta,
+  .vm-teaser__meta--above {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: colors.$grey-80;
+
+    &--date {
+      margin-bottom: 0.5rem;
+
+      @media (min-width: breakpoints.breakpoint-min(sm)) {
+        display: flex;
+      }
+    }
+
+    li {
+      margin: 0 0 1rem * .4 0;
+    }
+  }
+
+  .vm-teaser__meta--above li {
+    margin-top: 0;
+  }
+
+  .vm-teaser__flag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.25rem 1rem;
+    background-color: colors.$ucla-gold;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      top: 0.5rem;
+      left: -(0.5rem);
+    }
+  }
+
+  .vm-teaser--featured {
+    position: relative;
+    padding: 4rem 1rem 1rem;
+    background-color: colors.$grey-10;
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      padding: 1rem;
+    }
+
+    &:first-of-type {
+      padding: 4rem 1rem 1rem;
+
+      @media (min-width: breakpoints.breakpoint-min(md)) {
+        padding: 1rem;
+      }
+    }
+  }
+
+
+  // Remove the bottom margin from paragraphs which cause the meta info to be too
+  // far down the page.
+  .vm-teaser__summary {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .vm-teaser__meta--date {
+    > span {
+      display: block;
+    }
+  }
+
+}
+
+// -----
+// Layout styles
+// -----
+
+//------------------------------------
+//  Basic sidebar layout
+//------------------------------------
+
+.l-basic.circuit-term-content {
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-rows: auto max-content 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+    ". title"
+    "first content";
+  }
+
+  .l-title {
+    grid-area: title;
+  }
+
+  .l-content {
+    grid-area: content;
+  }
+
+  .l-sidebar-first {
+    grid-area: first;
+  }
+
+  .l-sidebar-second {
+    grid-area: second;
+  }
+}
+
+// -----
+// Half layout
+// -----
+
+.circuit-profile-content {
+  // Create a layout for halves
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    .l-half {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      & > * {
+        width: 48%;
+      }
+    }
+  }
+
+  .tags a {
+    border: 0;
+    border-radius: 0;
+    font-size: 1rem;
+    padding: 0;
+    text-decoration: underline;
+  }
+}

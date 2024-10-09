@@ -1,0 +1,92 @@
+uuid: de0dd636-8cdc-483e-b286-5dde7aec2f55
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.lti_application.body
+    - field.field.node.lti_application.field_lti_approval_status
+    - field.field.node.lti_application.field_lti_est_availability
+    - field.field.node.lti_application.field_lti_functionality
+    - field.field.node.lti_application.field_lti_supplier_url
+    - field.field.node.lti_application.field_scope
+    - field.field.node.lti_application.field_status
+    - node.type.lti_application
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.lti_application.full
+targetEntityType: node
+bundle: lti_application
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_lti_approval_status:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_lti_functionality:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_lti_supplier_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_scope:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_lti_est_availability: true
+  layout_builder__layout: true
+  links: true

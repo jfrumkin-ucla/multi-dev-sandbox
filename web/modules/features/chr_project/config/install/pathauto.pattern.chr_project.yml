@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: chr_project
+label: 'CHR Project'
+type: 'canonical_entities:node'
+pattern: '/projects/hritso/[node:title]'
+selection_criteria:
+  98290527-978a-4956-9a5e-d73fef9fa45e:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 98290527-978a-4956-9a5e-d73fef9fa45e
+    context_mapping:
+      node: node
+    bundles:
+      chr_project: chr_project
+selection_logic: and
+weight: -5
+relationships: {  }

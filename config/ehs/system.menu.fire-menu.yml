@@ -1,0 +1,8 @@
+uuid: 65f72ede-dce6-4880-83be-993fa512586d
+langcode: en
+status: true
+dependencies: {  }
+id: fire-menu
+label: 'Fire menu'
+description: 'Navigation for Fire microsite'
+locked: false

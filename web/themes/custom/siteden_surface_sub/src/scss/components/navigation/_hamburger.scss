@@ -1,0 +1,127 @@
+@use "../../utilities/colors";
+@use "../../utilities/_mixins/breakpoints";
+
+/* ------------------------------------
+   Hamburger navigation
+   ------------------------------------ */
+
+.hamburger__container {
+  display: block;
+  position: absolute;
+  right: 24px;
+  top: 8px;
+
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
+    display: none;
+  }
+}
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  border-radius: 2px;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  height: 40px;
+  margin: 0;
+  overflow: visible;
+  padding: 14px 12px;
+  text-transform: none;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  transition-timing-function: linear;
+  width: 40px;
+
+  &:focus {
+    outline: 1px dotted colors.$hover-state;
+    outline-offset: -0.25rem;
+  }
+
+  &:hover {
+    background: colors.$ucla-blue;
+    opacity: 1;
+
+    .hamburger__inner {
+      background-color: colors.$white;
+
+      &::before {
+        background-color: colors.$white;
+      }
+
+      &::after {
+        background-color: colors.$white;
+      }
+    }
+  }
+
+  &:active {
+    background-color: colors.$active-state;
+  }
+
+  &__box {
+    height: 12px;
+    left: 12px;
+    position: absolute;
+    top: 15px;
+    width: 16px;
+
+    // display: inline-block;
+  }
+
+  &__inner {
+    background: colors.$ucla-blue;
+    border-radius: 0;
+    display: block;
+    height: 2px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    transition-duration: 0.075s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition-property: transform;
+    width: 16px;
+
+    &::before,
+    &::after {
+      background: colors.$ucla-blue;
+      border-radius: 0;
+      content: "";
+      display: block;
+      position: relative;
+      height: 2px;
+      width: 16px;
+    }
+
+    &::before {
+      top: -5px;
+      transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    }
+
+    &::after {
+      bottom: -3px;
+      transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  }
+
+  &.is-active {
+    .hamburger__inner {
+      transform: rotate(45deg);
+      transition-delay: 0.12s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+      &::before {
+        opacity: 0;
+        top: 0;
+        transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+      }
+
+      &::after {
+        bottom: 2px;
+        transform: rotate(-90deg);
+        transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+    }
+  }
+}

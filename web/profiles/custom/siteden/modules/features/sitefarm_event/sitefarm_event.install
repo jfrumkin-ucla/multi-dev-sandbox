@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Enable the Date Popup module.
+ */
+function sitefarm_event_update_9201(&$sandbox) {
+  // Use the module installer service to install the date popup module on
+  // existing sites.
+  \Drupal::service('module_installer')
+    ->install([
+      'date_popup',
+    ]);
+
+  /** @var \Drupal\config_update\ConfigRevertInterface $config_revert */
+  $config_revert = \Drupal::service('config_update.config_update');
+  $config_revert->revert('view', 'sf_events_listing');
+}
+
+/**
+ * Modify views to show in-progress events.
+ */
+function sitefarm_event_update_9202() {
+  /** @var \Drupal\config_update\ConfigRevertInterface $config_revert */
+  $config_revert = \Drupal::service('config_update.config_update');
+  $config_revert->revert('view', 'sf_events_listing');
+  $config_revert->revert('view', 'sf_events_upcoming');
+}

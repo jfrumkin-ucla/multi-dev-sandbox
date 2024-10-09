@@ -1,0 +1,8 @@
+name: 'Siteden Page Last Updated'
+type: module
+description: Provides a block for displaying the last updated date/time of a specific node, and any attached block views
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:block
+  - drupal:node
+  - drupal:system

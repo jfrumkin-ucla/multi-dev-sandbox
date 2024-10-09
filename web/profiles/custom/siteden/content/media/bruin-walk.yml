@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c8d4e3c3-762e-4070-b18a-cef5bc4cdfe5
+  bundle: sf_image_media_type
+  default_langcode: en
+  depends:
+    b7113793-8d8d-4ffb-afdb-4bc44cbd268b: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: bruin-walk
+  created:
+    -
+      value: 1579061047
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: b7113793-8d8d-4ffb-afdb-4bc44cbd268b
+      alt: ''
+      title: ''
+      width: 1600
+      height: 1066

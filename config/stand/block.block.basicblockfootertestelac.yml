@@ -1,0 +1,37 @@
+uuid: 64f69690-1ac5-4b95-9019-3cb65e48620e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:fbeecec0-040f-4e6b-bfba-7e04d1d9c91d'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: basicblockfootertestelac
+theme: siteden_surface
+region: full_width_bottom
+weight: -17
+provider: null
+plugin: 'block_content:fbeecec0-040f-4e6b-bfba-7e04d1d9c91d'
+settings:
+  id: 'block_content:fbeecec0-040f-4e6b-bfba-7e04d1d9c91d'
+  label: 'Basic block footer test (ELAC)'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /elac

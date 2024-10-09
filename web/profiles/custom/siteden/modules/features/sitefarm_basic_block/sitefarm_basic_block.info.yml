@@ -1,0 +1,11 @@
+name: 'Basic Block'
+description: 'A Basic Block custom block content type'
+type: module
+core_version_requirement: '^9 || ^10'
+dependencies:
+  - 'drupal:block_content'
+  - 'drupal:field'
+  - 'drupal:text'
+  - 'sitefarm_card:sitefarm_card'
+  - 'sitefarm_core:sitefarm_core'
+package: SiteFarm

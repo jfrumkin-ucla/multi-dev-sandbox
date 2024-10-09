@@ -1,0 +1,21 @@
+uuid: 719e297a-6df7-40e7-b312-77216f649ee7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: fLWfwJ1pQ_ycfImVgL1eYpRBWgF5iWJ8GTg5JhrHiLk
+id: node.field_chr_key_stakeholders
+field_name: field_chr_key_stakeholders
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

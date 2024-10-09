@@ -1,0 +1,36 @@
+uuid: 511322b9-5f90-4b8b-a293-46da0be1b5a6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_university_header:4a4e1ef6-609e-49ca-a6cf-b74ecd61037d'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: firedepartmentalheader
+theme: siteden_surface
+region: university_header
+weight: 0
+provider: null
+plugin: 'block_content:4a4e1ef6-609e-49ca-a6cf-b74ecd61037d'
+settings:
+  id: 'block_content:4a4e1ef6-609e-49ca-a6cf-b74ecd61037d'
+  label: 'Fire Departmental Header'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/fire*'

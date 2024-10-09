@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sf_landing
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+_core:
+id: node.sf_landing.body
+field_name: body
+entity_type: node
+bundle: sf_landing
+label: '(DEPRECATED, USE LAYOUT) - Body'
+description: 'This field is left in for legacy purposes. Please add a custom block to the Layout tab, rather than using the Body field.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

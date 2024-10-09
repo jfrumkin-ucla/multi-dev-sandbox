@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Theme override for a sf_m_photos field on a node display.
+ * Makes sure the gorrect photo swipe gallery classes and structure are applied.
+ *
+ * Available variables:
+ * - Look in the field.html.twig file for available variables.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
+{% if not label_hidden %}
+  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+{% endif %}
+<div{{ attributes.addClass('photoswipe-gallery gallery') }}>
+  {% for item in items %}
+    <div{{ item.attributes.addClass('gallery__item') }}>{{ item.content }}</div>
+  {% endfor %}
+</div>

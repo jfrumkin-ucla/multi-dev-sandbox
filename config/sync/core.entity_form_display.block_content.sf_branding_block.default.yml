@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_branding_block
+    - field.field.block_content.sf_branding_block.field_sf_svg_image
+    - field.field.block_content.sf_branding_block.field_sf_svg_logo_link
+    - field.field.block_content.sf_branding_block.field_sf_title
+  module:
+    - link
+    - media_library
+_core:
+id: block_content.sf_branding_block.default
+targetEntityType: block_content
+bundle: sf_branding_block
+mode: default
+content:
+  field_sf_svg_image:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_sf_svg_logo_link:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_sf_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

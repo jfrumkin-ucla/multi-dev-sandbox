@@ -1,0 +1,38 @@
+uuid: 09bf9349-e7f4-4831-aec1-2acfec222fa7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:fe824463-dc28-4d16-92ec-cd78a0dd9788'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: payrollservices
+theme: siteden_surface
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:fe824463-dc28-4d16-92ec-cd78a0dd9788'
+settings:
+  id: 'block_content:fe824463-dc28-4d16-92ec-cd78a0dd9788'
+  label: 'Payroll Services'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /payroll

@@ -1,0 +1,21 @@
+uuid: 2698ce79-18a5-4caa-8b6f-a7fb6c661dc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sf_last_name
+    - node.type.circuit_profile
+_core:
+  default_config_hash: g7QI3nYwh91zR1YO7oU9mCi7T-O9DeKpDzGmhtLIcns
+id: node.circuit_profile.field_sf_last_name
+field_name: field_sf_last_name
+entity_type: node
+bundle: circuit_profile
+label: 'Last Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

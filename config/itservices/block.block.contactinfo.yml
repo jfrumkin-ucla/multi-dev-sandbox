@@ -1,0 +1,39 @@
+uuid: 2f9ea91a-522d-41cc-9655-fb279585d188
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:794be703-40c7-4c69-aea2-4d8a1ad1247f'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+    full_width:
+      full_width: 0
+id: contactinfo
+theme: siteden_surface
+region: footer
+weight: -13
+provider: null
+plugin: 'block_content:794be703-40c7-4c69-aea2-4d8a1ad1247f'
+settings:
+  id: 'block_content:794be703-40c7-4c69-aea2-4d8a1ad1247f'
+  label: 'contact info'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/it-ucla/key-initiatives/bruin-voice*'

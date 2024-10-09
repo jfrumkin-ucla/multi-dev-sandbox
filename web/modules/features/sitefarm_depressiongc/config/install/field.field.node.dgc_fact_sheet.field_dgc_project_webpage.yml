@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dgc_project_webpage
+    - node.type.dgc_fact_sheet
+  module:
+    - link
+id: node.dgc_fact_sheet.field_dgc_project_webpage
+field_name: field_dgc_project_webpage
+entity_type: node
+bundle: dgc_fact_sheet
+label: 'Project Webpage'
+description: 'Enter link to the Webpage for this project.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

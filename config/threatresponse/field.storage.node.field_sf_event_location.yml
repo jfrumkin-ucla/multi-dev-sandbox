@@ -1,0 +1,23 @@
+uuid: 43ef5e88-0399-4907-bcf9-10b5b1723368
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: UolII7PKnjxUB2C-4A-G7iexBN0fgHUy8Kk7sum-__g
+id: node.field_sf_event_location
+field_name: field_sf_event_location
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: sf_accordion_item
+label: 'Accordion item'
+icon_uuid: null
+icon_default: null
+description: "The accordion item is a subcomponent of the accordion component. This is not meant to be used by itself.\t\r\n"
+behavior_plugins: {  }

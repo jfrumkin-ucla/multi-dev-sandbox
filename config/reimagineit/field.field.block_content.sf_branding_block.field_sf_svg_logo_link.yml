@@ -1,0 +1,25 @@
+uuid: f805cf68-8d66-47e7-a42e-cfd453f64d73
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_branding_block
+    - field.storage.block_content.field_sf_svg_logo_link
+  module:
+    - link
+_core:
+  default_config_hash: '-WTeqajllwNImO7gFKzmhrzuTtGBCwp3RbOyePi_8lg'
+id: block_content.sf_branding_block.field_sf_svg_logo_link
+field_name: field_sf_svg_logo_link
+entity_type: block_content
+bundle: sf_branding_block
+label: 'SVG Logo Link'
+description: 'Specify the URL for the SVG logo to link to when clicked on.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

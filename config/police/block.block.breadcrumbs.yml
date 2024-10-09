@@ -1,0 +1,29 @@
+uuid: 0bf17e86-8d5e-422a-bd31-c44c4e08d847
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: breadcrumbs
+theme: siteden_surface
+region: title
+weight: -19
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

@@ -1,0 +1,19 @@
+{
+  "patches": {
+    "drupal/ckeditor": {
+      "3065095: CKEditor native dialogs not clickable inside of jQuery UI dialogs": "https://www.drupal.org/files/issues/2022-11-22/3065095-71-1.0.x.patch"
+    },
+    "drupal/entity_reference_revisions": {
+      "3190915: New revision is not created via Layout Builder": "https://git.drupalcode.org/project/entity_reference_revisions/-/merge_requests/1.diff"
+    },
+    "drupal/paragraphs": {
+      "3084934: Paragraphs do not render: access check for \"view\" fail when using layout builder + custom blocks & content revisions ": "https://www.drupal.org/files/issues/2022-10-26/3084934-13_combine_3090200-22.patch"
+    },
+    "drupal/block_style_plugins": {
+      "3177572: Blocks placed via Context can cause Call to a member function getThirdPartySetting() on null ": "https://raw.githubusercontent.com/jfrumkin-ucla/patches/main/bsp.patch"
+    },
+    "drupal/layout_paragraphs": {
+      "100644: Update getParagraph to getEntity function": "patches/layout_paragraphs/layout_paragraphs-100644.patch"
+    }
+  }
+}

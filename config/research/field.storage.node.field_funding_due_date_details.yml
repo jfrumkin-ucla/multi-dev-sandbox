@@ -1,0 +1,19 @@
+uuid: e5a20835-9d25-4749-a9aa-382f470b3b4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_funding_due_date_details
+field_name: field_funding_due_date_details
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

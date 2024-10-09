@@ -1,0 +1,26 @@
+uuid: d1750a5f-a5ea-409d-82c1-4311a3ea6b6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sf_slider_featured_story_card.field_sf_slider_fsc_item
+    - paragraphs.paragraphs_type.sf_slider_featured_story_card
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: c3TzI-ti3ZFgqTR42SW7-QxSRYrF-Xbo9jZxN9TS6E8
+id: paragraph.sf_slider_featured_story_card.default
+targetEntityType: paragraph
+bundle: sf_slider_featured_story_card
+mode: default
+content:
+  field_sf_slider_fsc_item:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

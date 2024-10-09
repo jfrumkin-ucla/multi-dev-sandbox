@@ -1,0 +1,33 @@
+uuid: cd99a36e-97d6-438c-ad5e-39d32d71dcb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sf_article_filter
+  module:
+    - system
+    - views
+  theme:
+    - classy
+_core:
+  default_config_hash: HRPTgZyXtXU7i29vbnxI9D-CXo90IOco2iWx75Ut4vw
+id: classy_views_block__sf_article_filter_block_2
+theme: classy
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_block:sf_article_filter-block_2'
+settings:
+  id: 'views_block:sf_article_filter-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/articles/*\r\n/articles/*/*"

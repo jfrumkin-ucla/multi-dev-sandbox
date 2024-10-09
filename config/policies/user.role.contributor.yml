@@ -1,0 +1,69 @@
+uuid: c0a3e587-efdc-4f21-9b96-102d6be90daf
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.sf_audio_media_type
+    - media.type.sf_image_media_type
+    - media.type.sf_svg_media_type
+    - media.type.sf_video_media_type
+    - node.type.sf_article
+    - node.type.sf_event
+    - node.type.sf_landing
+    - node.type.sf_page
+    - node.type.sf_person
+    - node.type.sf_photo_gallery
+    - workflows.workflow.standard_workflow
+  module:
+    - content_moderation
+    - media
+    - node
+    - system
+    - toolbar
+    - tour
+    - webform
+_core:
+  default_config_hash: okiSqxKzSl6bwdJska9CvIWUKNcwwXoPYb88AHuAIqc
+id: contributor
+label: Contributor
+weight: -8
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'create media'
+  - 'create sf_article content'
+  - 'create sf_audio_media_type media'
+  - 'create sf_event content'
+  - 'create sf_image_media_type media'
+  - 'create sf_page content'
+  - 'create sf_person content'
+  - 'create sf_photo_gallery content'
+  - 'create sf_svg_media_type media'
+  - 'create sf_video_media_type media'
+  - 'edit any sf_audio_media_type media'
+  - 'edit any sf_image_media_type media'
+  - 'edit any sf_svg_media_type media'
+  - 'edit any sf_video_media_type media'
+  - 'edit own sf_article content'
+  - 'edit own sf_audio_media_type media'
+  - 'edit own sf_event content'
+  - 'edit own sf_image_media_type media'
+  - 'edit own sf_landing content'
+  - 'edit own sf_page content'
+  - 'edit own sf_person content'
+  - 'edit own sf_photo_gallery content'
+  - 'edit own sf_svg_media_type media'
+  - 'edit own sf_video_media_type media'
+  - 'edit own webform'
+  - 'update any media'
+  - 'update media'
+  - 'use standard_workflow transition create_new_draft'
+  - 'use standard_workflow transition reject'
+  - 'use standard_workflow transition review'
+  - 'view any unpublished content'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'

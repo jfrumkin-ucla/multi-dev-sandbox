@@ -1,0 +1,25 @@
+uuid: 97e04b6b-6db6-4f95-bf08-59eefe309546
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:24f0541e-f9f6-4ec3-a2d2-f84e16a77f7b'
+  module:
+    - block_content
+  theme:
+    - siteden_surface
+id: bb
+theme: siteden_surface
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:24f0541e-f9f6-4ec3-a2d2-f84e16a77f7b'
+settings:
+  id: 'block_content:24f0541e-f9f6-4ec3-a2d2-f84e16a77f7b'
+  label: 'BB: Site Logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

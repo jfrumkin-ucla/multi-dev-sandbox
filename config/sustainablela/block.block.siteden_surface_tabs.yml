@@ -1,0 +1,29 @@
+uuid: 0fbcb458-d659-49da-b76d-03b98961c430
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - siteden_surface
+_core:
+  default_config_hash: 1NlE-YR1tvgbH1CBE12uxhRVwYKyGRnqj5Gq0OJ2cEY
+id: siteden_surface_tabs
+theme: siteden_surface
+region: pre_content
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '/search*'

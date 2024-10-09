@@ -1,0 +1,30 @@
+uuid: 98010a54-d47b-4a53-a2d3-5fc7242647cc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:71894e87-d234-4203-842c-fd7c68a14ce8'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: bbchr
+theme: siteden_surface
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:71894e87-d234-4203-842c-fd7c68a14ce8'
+settings:
+  id: 'block_content:71894e87-d234-4203-842c-fd7c68a14ce8'
+  label: 'BB: CHR'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

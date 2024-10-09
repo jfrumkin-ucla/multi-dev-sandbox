@@ -1,0 +1,36 @@
+uuid: 099d56cb-11ed-4b5f-89e0-8e85a2551e62
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.hritso-footer
+  module:
+    - menu_block
+    - system
+  theme:
+    - siteden_surface
+id: hritsofooter
+theme: siteden_surface
+region: footer_nav
+weight: 0
+provider: null
+plugin: 'menu_block:hritso-footer'
+settings:
+  id: 'menu_block:hritso-footer'
+  label: 'Contact Us'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'hritso-footer:'
+  suggestion: hritso_footer
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/projects/hritso/*'

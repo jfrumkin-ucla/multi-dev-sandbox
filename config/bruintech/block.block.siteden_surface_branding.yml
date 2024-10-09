@@ -1,0 +1,30 @@
+uuid: bf486907-4c06-4a7c-8b56-0df321d99171
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+_core:
+  default_config_hash: _y0PJThP0E4EB839eea5J07xrPRfIzyZPUn2e3ck6w0
+id: siteden_surface_branding
+theme: siteden_surface
+region: header
+weight: -15
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: BruinTech
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

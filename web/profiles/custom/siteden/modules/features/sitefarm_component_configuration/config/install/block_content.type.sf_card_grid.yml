@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: sf_card_grid
+label: 'Card grid'
+revision: 0
+description: 'Use this block type to create a grid of cards with auto-adjusting width and background height.'

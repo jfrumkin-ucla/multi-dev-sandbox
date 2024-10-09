@@ -1,0 +1,8 @@
+name: 'SiteFarm Captcha'
+description: 'Captcha settings for SiteFarm'
+type: module
+core_version_requirement: '^9 || ^10'
+dependencies:
+  - 'captcha:captcha'
+  - 'recaptcha:recaptcha'
+package: SiteFarm

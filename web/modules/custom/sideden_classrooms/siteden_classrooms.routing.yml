@@ -1,0 +1,14 @@
+siteden_classrooms.import_classrooms:
+  path: '/admin/classroom-import'
+  defaults:
+    _controller: '\Drupal\siteden_classrooms\Controller\SitedenClassroomsController::import' 
+    _title: 'SiteDen Classrooms Import'
+  requirements:
+    _permission: 'administer content'
+siteden_classrooms.import_classrooms_two:
+  path: '/admin/classroom-import-two'
+  defaults:
+    _controller: '\Drupal\siteden_classrooms\Controller\SitedenClassroomsControllerTwo::import' 
+    _title: 'SiteDen Classrooms Import'
+  requirements:
+    _permission: 'administer content'    

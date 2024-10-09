@@ -1,0 +1,451 @@
+{{ attach_library('siteden_components/sf_slider') }}
+
+<section class="sf_story_slider story-slider-lg splide story-slider" aria-label="Sliding banner">
+  <div class="splide__track">
+    <ul class="splide__list">
+
+     {% if columns == 1 %}
+        {% for row in slideritems|batch(columns, 'No item') %}
+          <li class="splide__slide">
+            <div class="layout--onecol-section">
+            {% for pos,slideritem in row %}
+                {% if pos == 0 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 1 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 2 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 3 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 4 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 5 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 6 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 7 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 8 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 9 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 10 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 11 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                <div class="layout__region {{ regionClass }} slider-item slider-item--image-background-slider-heading col-sm-3">
+
+                  <div class="story-card">
+                    {% if slideritem.image %}
+                      <div class="story-card__image">
+                       <a href="{{ slideritem.url }}" rel="bookmark">{{ slideritem.image }}</a>
+                      </div>
+                    {% endif %}
+                    <div class="story-card__info-wrapper">
+                      <div class="story-card__info">
+                        <div class="story-card__date">
+                          <p>{{ slideritem.date }}</p>
+                        </div>
+
+                       {% if slideritem.title %}
+                          <h2 class="story-card__title">
+                            <a href="{{ slideritem.url }}" rel="bookmark">{{ slideritem.title }}</a>
+                          </h2>
+                        {% endif %}
+
+                        <div class="story-card__author">
+                          {% if slideritem.author1 %}
+                            <p>
+                              {{ slideritem.author1|nl2br }}
+                            </p>
+                          {% endif %}
+
+                          {% if slideritem.byline and slideritem.author1 is empty %}
+                            <p>{{ slideritem.byline }}</p>
+                          {% endif %}
+
+                          {% if slideritem.byline is empty and slideritem.author1 is empty %}
+                            {% if slideritem.fullname %}
+                              <p>By {{ slideritem.fullname }}</p>
+                            {% endif %}
+                          {% endif %}
+                        </div>
+                        <div class="story-card__text text-formatted">
+                          {% autoescape false %}
+                            {{ slideritem.text }}
+                          {% endautoescape %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            {% endfor %}
+            </div>
+          </li>
+        {% endfor %}
+      {% endif %}
+     {% if columns == 2 %}
+        {% for row in slideritems|batch(columns, 'No item') %}
+          <li class="splide__slide">
+            <div class="layout--twocol-section">
+            {% for pos,slideritem in row %}
+                {% if pos == 0 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 1 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 2 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 3 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 4 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 5 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 6 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 7 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 8 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 9 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 10 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 11 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if slideritem != "No item" %}
+                <div class="layout__region {{ regionClass }} slider-item slider-item--image-background-slider-heading col-sm-3">
+                  <div class="story-card">
+                    {% if slideritem.image %}
+                      <div class="story-card__image">
+                       <a href="{{ slideritem.url }}" rel="bookmark">{{ slideritem.image }}</a>
+                      </div>
+                    {% endif %}
+                    <div class="story-card__info-wrapper">
+                      <div class="story-card__info">
+                        <div class="story-card__date">
+                          <p>{{ slideritem.date }}</p>
+                        </div>
+
+                        {% if slideritem.title %}
+                          <h2 class="story-card__title">
+                            <a href="{{ slideritem.url }}" rel="bookmark">{{ slideritem.title }}</a>
+                          </h2>
+                        {% endif %}
+
+                        <div class="story-card__author">
+                          {% if slideritem.author1 %}
+                            <p>
+                              {{ slideritem.author1|nl2br }}
+                            </p>
+                          {% endif %}
+
+                          {% if slideritem.byline and slideritem.author1 is empty %}
+                            <p>{{ slideritem.byline }}</p>
+                          {% endif %}
+
+                          {% if slideritem.byline is empty and slideritem.author1 is empty %}
+                            {% if slideritem.fullname %}
+                              <p>By {{ slideritem.fullname }}</p>
+                            {% endif %}
+                          {% endif %}
+                        </div>
+                        <div class="story-card__text text-formatted">
+                          {% autoescape false %}
+                            {{ slideritem.text }}
+                          {% endautoescape %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+          </li>
+        {% endfor %}
+      {% endif %}
+     {% if columns == 3 %}
+        {% for row in slideritems|batch(columns, 'No item') %}
+          <li class="splide__slide">
+            <div class="layout--threecol-section">
+            {% for pos,slideritem in row %}
+                {% if pos == 0 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 1 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 2 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if pos == 3 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 4 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 5 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if pos == 6 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 7 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 8 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if pos == 9 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 10 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 11 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if slideritem != "No item" %}
+                  <div class="layout__region {{ regionClass }} slider-item slider-item--image-background-slider-heading col-sm-3">
+
+                    <div class="story-card">
+                      {% if slideritem.image %}
+                        <div class="story-card__image">
+                         <a href="{{ slideritem.url }}" rel="bookmark">{{ slideritem.image }}</a>
+                        </div>
+                      {% endif %}
+                      <div class="story-card__info-wrapper">
+                        <div class="story-card__info">
+                          <div class="story-card__date">
+                            <p>{{ slideritem.date }}</p>
+                          </div>
+
+                          {% if slideritem.title %}
+                            <h2 class="story-card__title">
+                              <a href="{{ slideritem.url }}" rel="bookmark">{{ slideritem.title }}</a>
+                            </h2>
+                          {% endif %}
+
+                          <div class="story-card__author">
+                            {% if slideritem.author1 %}
+                              <p>
+                                {{ slideritem.author1|nl2br }}
+                              </p>
+                            {% endif %}
+
+                            {% if slideritem.byline and slideritem.author1 is empty %}
+                              <p>{{ slideritem.byline }}</p>
+                            {% endif %}
+
+                            {% if slideritem.byline is empty and slideritem.author1 is empty %}
+                              {% if slideritem.fullname %}
+                                <p>By {{ slideritem.fullname }}</p>
+                              {% endif %}
+                            {% endif %}
+                          </div>
+                          <div class="story-card__text text-formatted">
+                            {% autoescape false %}
+                              {{ slideritem.text }}
+                            {% endautoescape %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+          </li>
+        {% endfor %}
+      {% endif %}
+     {% if columns == 4 %}
+        {% for row in slideritems|batch(columns, 'No item') %}
+          <li class="splide__slide">
+            <div class="layout--fourcol-section">
+            {% for pos,slideritem in row %}
+                {% if pos == 0 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 1 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 2 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if pos == 3 %}
+                  {% set regionClass = 'layout__region--fourth' %}
+                {% endif %}
+                {% if pos == 4 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 5 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 6 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if pos == 7 %}
+                  {% set regionClass = 'layout__region--fourth' %}
+                {% endif %}
+                {% if pos == 8 %}
+                  {% set regionClass = 'layout__region--first' %}
+                {% endif %}
+                {% if pos == 9 %}
+                  {% set regionClass = 'layout__region--second' %}
+                {% endif %}
+                {% if pos == 10 %}
+                  {% set regionClass = 'layout__region--third' %}
+                {% endif %}
+                {% if pos == 11 %}
+                  {% set regionClass = 'layout__region--fourth' %}
+                {% endif %}
+                {% if slideritem != "No item" %}
+                  <div class="layout__region {{ regionClass }} slider-item slider-item--image-background-slider-heading col-sm-3">
+                    <div class="story-card">
+                      {% if slideritem.image %}
+                        <div class="story-card__image">
+                         <a href="{{ slideritem.url }}" rel="bookmark">{{ slideritem.image }}</a>
+                        </div>
+                      {% endif %}
+                      <div class="story-card__info-wrapper">
+                        <div class="story-card__info">
+                          <div class="story-card__date">
+                            <p>{{ slideritem.date }}</p>
+                          </div>
+
+                          {% if slideritem.title %}
+                            <h2 class="story-card__title">
+                              <a href="{{ slideritem.url }}" rel="bookmark">{{ slideritem.title }}</a>
+                            </h2>
+                          {% endif %}
+
+                          <div class="story-card__author">
+                            {% if slideritem.author1 %}
+                              <p>
+                                {{ slideritem.author1|nl2br }}
+                              </p>
+                            {% endif %}
+
+                            {% if slideritem.byline and slideritem.author1 is empty %}
+                              <p>{{ slideritem.byline }}</p>
+                            {% endif %}
+
+                            {% if slideritem.byline is empty and slideritem.author1 is empty %}
+                              {% if slideritem.fullname %}
+                                <p>By {{ slideritem.fullname }}</p>
+                              {% endif %}
+                            {% endif %}
+                          </div>
+                          <div class="story-card__text text-formatted">
+                            {% autoescape false %}
+                              {{ slideritem.text }}
+                            {% endautoescape %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+          </li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+  <button class="splide__toggle" type="button">
+    <span class="splide__toggle__play"><img src="/themes/custom/siteden_surface/assets/images/icons/denotive/play-white.svg"></span>
+    <span class="splide__toggle__pause"><img src="/themes/custom/siteden_surface/assets/images/icons/denotive/pause-white.svg"></span>
+  </button>
+</section>
+
+
+<section class="sf_story_slider story-slider-mobile splide story-slider" aria-label="Sliding banner">
+  {% set regionClass = 'layout__region--first' %}
+  <div class="splide__track">
+    <ul class="splide__list">
+        {% for row in slideritems|batch(1, 'No item') %}
+          <li class="splide__slide">
+            <div class="layout--onecol-section">
+            {% for pos,slideritem in row %}
+                <div class="layout__region {{ regionClass }} slider-item slider-item--image-background-slider-heading col-sm-3">
+                  <div class="story-card">
+                    {% if slideritem.image %}
+                      <div class="story-card__image">
+                      <a href="{{ slideritem.url }}" rel="bookmark">{{ slideritem.image }}</a>
+                      </div>
+                    {% endif %}
+                    <div class="story-card__info-wrapper">
+                      <div class="story-card__info">
+                        <div class="story-card__date">
+                          <p>{{ slideritem.date }}</p>
+                        </div>
+
+                        {% if slideritem.title %}
+                          <h2 class="story-card__title">
+                            <a href="{{ slideritem.url }}" rel="bookmark">{{ slideritem.title }}</a>
+                          </h2>
+                        {% endif %}
+
+                        <div class="story-card__author">
+                          {% if slideritem.author1 %}
+                            <p>
+                              {{ slideritem.author1|nl2br }}
+                            </p>
+                          {% endif %}
+
+                          {% if slideritem.byline and slideritem.author1 is empty %}
+                            <p>{{ slideritem.byline }}</p>
+                          {% endif %}
+
+                          {% if slideritem.byline is empty and slideritem.author1 is empty %}
+                            {% if slideritem.fullname %}
+                              <p>By {{ slideritem.fullname }}</p>
+                            {% endif %}
+                          {% endif %}
+                        </div>
+                        <div class="story-card__text text-formatted">
+                          {% autoescape false %}
+                            {{ slideritem.text }}
+                          {% endautoescape %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            {% endfor %}
+            </div>
+          </li>
+        {% endfor %}
+    </ul>
+  </div>
+  <button class="splide__toggle" type="button">
+    <span class="splide__toggle__play"><img src="/themes/custom/siteden_surface/assets/images/icons/denotive/play-white.svg"></span>
+    <span class="splide__toggle__pause"><img src="/themes/custom/siteden_surface/assets/images/icons/denotive/pause-white.svg"></span>
+  </button>
+</section>

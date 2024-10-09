@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: OCKKKE15GLuflG8_Q3e1QAsc4pIG-tQeqsQefkJ0p2M
+enable_override: true
+view: circuit_team
+view_display: page_1
+inherit_settings: true
+pass_arguments: true

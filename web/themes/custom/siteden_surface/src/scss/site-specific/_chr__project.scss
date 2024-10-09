@@ -1,0 +1,103 @@
+@use "../utilities/colors";
+@use "../utilities/_mixins/breakpoints";
+
+
+.chr_project {
+  display: grid;
+  grid-template-areas: "about" "status" "support";
+
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    grid-template-areas: "about status" "support support";
+    grid-template-columns: 3fr 1fr;   // No sidebar, see adjustment for sidebar later.
+    column-gap: 4.5rem;
+  }
+
+  .chr_project__about {
+    grid-area: about;
+
+    & > .field {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .chr_project__status {
+    grid-area: status;
+
+    & > .field {
+      margin-bottom: 1rem;
+    }
+
+    .field--name-field-chr-key-stakeholders {
+      li {
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    .field--name-field-chr-percent-complete {
+      .field__item {
+        position: relative;
+      }
+
+      .progress__track {
+        background-color: colors.$grey-5;
+        background-image: none;
+        border-radius: 0;
+        height: 1.75rem;
+        margin-top: 0;
+      }
+
+      .progress__bar {
+        background-color: colors.$ucla-blue;
+        background-image: none;
+        border-radius: 0;
+        height: 1.75rem;
+      }
+
+      .progress__value {
+        font-size: 1rem;
+        font-weight: normal;
+        padding: 0 0.75rem;
+        position: absolute;
+        top: 0.125rem;
+
+        &.value--left {
+        }
+
+        &.value--right {
+          color: colors.$white;
+          transform: translateX(-100%);
+        }
+      }
+    }
+
+    .field--name-field-chr-project-phase {
+      .field__item {
+        background-color: colors.$ucla-blue;
+        border-radius: 0.25rem;
+        color: colors.$white;
+        padding: 0.25rem 0.75rem;
+
+        &.phase--executing {
+          background-color: colors.$cmyk-green;
+          color: colors.$white;
+        }
+
+        &.phase--closing {
+          background-color: colors.$medium-grey4;
+          color: colors.$white;
+        }
+      }
+    }
+  }
+
+  .chr_project__support {
+    grid-area: support;
+    margin-top: 4.5rem;
+  }
+}
+
+.layout--basic .chr_project {
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    grid-template-columns: 2fr 1fr;
+  }
+}

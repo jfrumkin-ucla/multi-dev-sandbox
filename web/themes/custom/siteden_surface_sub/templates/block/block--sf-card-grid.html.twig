@@ -1,0 +1,33 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a Card grid block.
+ *
+ * Available variables:
+ * - Look in the block.html.twig file for available variables.
+ */
+#}
+
+{% set carditems = [] %}
+
+{% for key, item in content.field_sf_card|filter((value, key) => key|first != '#') %}
+  {% set carditems = carditems|merge([{
+    title: item['#paragraph'].field_sf_title.0.value,
+    text: item['#paragraph'].field_sf_wysiwyg.0|view,
+    image: item['#paragraph'].field_sf_image.0|view,
+    link: item['#paragraph'].field_sf_link.0,
+  }]) %}
+{% endfor %}
+
+{% set block_title_classes = [
+  class_panel ? 'panel__title',
+  remove_vertical_heading_bar ? 'panel__title--plain'
+] %}
+{% set title_attributes = title_attributes.addClass(block_title_classes) %}
+
+{% block content %}
+  {% include '@siteden-components/card-grid.html.twig' with {
+    carditems: carditems
+  } %}
+{% endblock %}

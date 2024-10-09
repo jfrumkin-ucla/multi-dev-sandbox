@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sf_accordion.field_sf_accordion_item
+    - paragraphs.paragraphs_type.sf_accordion
+  module:
+    - entity_reference_revisions
+id: paragraph.sf_accordion.default
+targetEntityType: paragraph
+bundle: sf_accordion
+mode: default
+content:
+  field_sf_accordion_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,25 @@
+uuid: 56768984-a98a-42cb-ba3a-d6cd2abc8726
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_activities
+    - node.type.commitment
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.commitment.field_activities
+field_name: field_activities
+entity_type: node
+bundle: commitment
+label: Activities
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

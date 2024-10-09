@@ -1,0 +1,23 @@
+uuid: 31107eb6-b27e-4463-8363-a1823cd34cd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: MSHjDzjboonicGcUFZ1_yC7bUV0_BWErXeSrNEWl9JM
+id: node.field_sf_article_byline
+field_name: field_sf_article_byline
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: c0b5dbb3-ec0f-4444-8eb7-468c7ff949cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lti_est_availability
+    - node.type.lti_application
+    - taxonomy.vocabulary.lti_projected_availability
+id: node.lti_application.field_lti_est_availability
+field_name: field_lti_est_availability
+entity_type: node
+bundle: lti_application
+label: 'LTI Estimated Availability'
+description: 'Estimated term for LTI integration'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lti_projected_availability: lti_projected_availability
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

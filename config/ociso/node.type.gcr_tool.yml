@@ -1,0 +1,19 @@
+uuid: 1c4be5d0-51d6-4a36-9804-8c014c340e9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+      - page-menu
+    parent: 'main:'
+name: 'TPRM tool'
+type: gcr_tool
+description: "Information about integrations, tools, and software that's been reviewed by IT Security. "
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

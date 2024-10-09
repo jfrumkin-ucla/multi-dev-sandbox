@@ -1,0 +1,10 @@
+name: 'Siteden Articles Slider'
+type: module
+description: 'Provides an article slider & featured article slider paragraph type.'
+package: 'Siteden'
+version: '1.0.0'
+core_version_requirement: ^9 || ^10
+# Required modules
+dependencies:
+  # SiteFarm
+  - siteden_events_slider

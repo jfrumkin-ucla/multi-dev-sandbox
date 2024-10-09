@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_focal_link
+    - field.storage.block_content.field_sf_icons
+  module:
+    - options
+_core:
+id: block_content.sf_focal_link.field_sf_icons
+field_name: field_sf_icons
+entity_type: block_content
+bundle: sf_focal_link
+label: Icons
+description: 'Choose an icon from the list. To see what these icons look like view the list of <a href="https://material.io/resources/icons/?style=baseline" target="_blank">Material Icons</a>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,22 @@
+uuid: 82016e44-509c-4280-9ea9-0811ea1cbc28
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - siteden_surface
+_core:
+  default_config_hash: CeM7x9cve0hAgwQMrkQhXPiIdvBubZ85EYLKWoh8WQI
+id: siteden_surface_content
+theme: siteden_surface
+region: content
+weight: -14
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

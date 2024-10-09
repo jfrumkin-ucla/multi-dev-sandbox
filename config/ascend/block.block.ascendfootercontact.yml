@@ -1,0 +1,32 @@
+uuid: 530f8aa0-35cd-4c83-9dfd-ce1c34e3524b
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_basic:a7ee376b-1404-42b0-99a7-671cbb8d9f61'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: ascendfootercontact
+theme: siteden_surface
+region: footer
+weight: -12
+provider: null
+plugin: 'block_content:a7ee376b-1404-42b0-99a7-671cbb8d9f61'
+settings:
+  id: 'block_content:a7ee376b-1404-42b0-99a7-671cbb8d9f61'
+  label: 'ascend footer contact'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

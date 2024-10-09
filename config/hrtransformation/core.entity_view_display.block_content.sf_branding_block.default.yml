@@ -1,0 +1,48 @@
+uuid: 60cadab0-c8ba-4091-a100-eff30c406061
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_branding_block
+    - field.field.block_content.sf_branding_block.field_sf_svg_image
+    - field.field.block_content.sf_branding_block.field_sf_svg_logo_link
+    - field.field.block_content.sf_branding_block.field_sf_title
+  module:
+    - link
+_core:
+  default_config_hash: cDPCowC5q9OPOwuAYRIaMbfM5prrHA7J6MOuyj1dxL4
+id: block_content.sf_branding_block.default
+targetEntityType: block_content
+bundle: sf_branding_block
+mode: default
+content:
+  field_sf_svg_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_sf_svg_logo_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_sf_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

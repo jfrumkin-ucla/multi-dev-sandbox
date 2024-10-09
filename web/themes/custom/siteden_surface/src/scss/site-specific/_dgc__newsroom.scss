@@ -1,0 +1,393 @@
+@use "../utilities/colors";
+@use "../utilities/_mixins/breakpoints";
+@use "../utilities/variables";
+@use "../components/button";
+@use "../components/links";
+
+.node--type-dgc-newsroom {
+  .dgc_newsroom__meta {
+    font-weight: bold;
+
+    .field__label {
+      display: none;
+    }
+
+    ul {
+      font-weight: bold;
+
+      li {
+        border-right: 1px solid #999;
+        display: inline-block;
+        line-height: 1;
+        margin-right: 0.25rem;
+        padding-right: 0.5rem;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  .dgc_newsroom__title {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.125;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .dgc_newsroom__summary {
+    margin-bottom: 0.5rem;
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .field--name-field-dgc-featured-media-caption {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    text-align: right;
+
+    p {
+      font-size: inherit;
+    }
+  }
+
+  .field--name-field-dgc-key-takeaways {
+    background: colors.$lightest-blue;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    .field__label {
+      font-weight: bold;
+      font-size: 1rem;
+      margin: 0 0 0.5rem;
+    }
+  }
+
+  .field--name-body {
+    margin-bottom: 2.5rem;
+  }
+
+  // Override tags display on this content type
+  .tags {
+    a {
+      border: 0;
+      border-radius: 0;
+      color: colors.$default-state;
+      font-size: inherit;
+      font-weight: bold;
+      padding: 0;
+      text-decoration: none;
+
+      &:hover {
+        background: colors.$hover-state;
+        color: colors.$white;
+      }
+
+      &:focus {
+        outline: inherit;
+        outline-offset: inherit;
+      }
+    }
+  }
+}
+
+.node--type-dgc-newsroom.node--view-mode-full {
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    display: grid;
+    grid-column-gap: 5rem;
+    grid-template-areas:
+    "hero hero"
+    "content info";
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .dgc_newsroom__hero {
+    grid-area: hero;
+    margin-bottom: 1.5rem; //not sure here. This is in addition to .dgc_newsroom__media
+  }
+
+  .dgc_newsroom__info {
+    grid-area: info;
+
+    & > .field {
+      margin-bottom: 2.5rem;
+
+      .field__label {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      &.field--name-field-dgc-newsroom-category,
+      &.field--name-field-dgc-fact-sheet {
+        .field__label {
+          border-left: 0.375rem solid #ffd100;
+          color: #333;
+          font-size: 1.625rem;
+          font-style: normal;
+          font-weight: bold;
+          line-height: 1.125;
+          margin-bottom: 1.5rem;
+          padding: 0;
+          padding-left: 0.75rem;
+        }
+      }
+    }
+  }
+
+  .dgc_newsroom__content {
+    grid-area: content;
+  }
+
+  .dgc_newsroom__media {
+    margin-bottom: 1.5rem;
+  }
+
+  .dgc_newsroom__content {
+    margin-bottom: 3rem;
+  }
+
+  .dgc_newsroom__meta {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .field--name-field-dgc-newsroom-tags {
+    > div {
+      float:left;
+      &.field__label {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        margin-right: 0.5rem;
+        &::after {
+          content: ":";
+        }
+      }
+
+      &.tags {
+        .field__item {
+          border-right: 1px solid #999;
+          display: inline-block;
+          line-height: 1;
+          margin-right: 0.25rem;
+          padding-right: 0.5rem;
+
+          &:last-child {
+            border-right: none;
+          }
+
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+
+  .field--name-field-dgc-newsroom-category {
+    .field__item {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .field--name-field-dgc-fact-sheet {
+    font-weight: bold;
+
+    .field__item {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.layout--basic .node--type-dgc-newsroom.node--view-mode-full {
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.node--type-dgc-newsroom.node--view-mode-teaser {
+  position: relative;
+
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    column-gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .dgc_newsroom__media {
+    margin-bottom: 1rem;
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      flex-basis: 100%;
+      margin-bottom: 0;
+      max-width: 33.333%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .dgc_newsroom__info {
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      flex-basis: 100%;
+    }
+  }
+
+  .dgc_newsroom__meta {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .field--name-field-dgc-newsroom-category {
+    font-weight: bold;
+    margin-top: 1rem;
+
+    > div {
+      float:left;
+      &.field__label {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        margin-right: 0.5rem;
+        &::after {
+          content: ":";
+        }
+      }
+
+      &.field__items {
+        .field__item {
+          border-right: 1px solid #999;
+          display: inline-block;
+          line-height: 1;
+          margin-right: 0.25rem;
+          padding-right: 0.5rem;
+
+          &:last-child {
+            border-right: none;
+          }
+
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+}
+
+
+.view-display-id-block_6 .view-content {
+  grid-template-columns: 1fr;
+  display: grid;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+  margin-bottom: 3.5rem;
+
+  & > .views-row {
+    margin-bottom: .5rem;
+  }
+
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    grid-template-columns: repeat(auto-fill,minmax(min(250px,100%),1fr));
+    //grid-template-columns: repeat(4, 1fr);
+    flex-wrap: nowrap;
+  }
+}
+
+.node--type-dgc-newsroom.node--view-mode-card {
+  .card {
+    display: flex;
+    flex-direction: column;
+
+    .card__image {
+      position: relative;
+      z-index: 1;
+
+      img {
+        max-height: 20rem;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        min-height: auto;
+
+        @media (min-width: breakpoints.breakpoint-min(md)) {
+          min-height: auto;
+          max-height: 12rem;
+        }
+      }
+    }
+
+    .card__info-wrapper {
+      background: colors.$grey-10;
+      flex-basis: 100%;
+      padding: 2rem 2rem 2.5rem 2rem;
+      position: relative;
+      z-index: 0;
+      width: auto;
+    }
+
+    .card__info {
+      background: inherit;
+      display: block;
+      padding: 0;
+      margin: 0;
+      min-height: auto;
+      max-height: auto;
+
+      @media (min-width: breakpoints.breakpoint-min(md)) {
+        min-height: 10.875rem;
+        max-height: 10.875rem;
+      }
+    }
+
+    .card__text {
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .card__footer {
+      margin-bottom: -0.5rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .card__button {
+      @extend .btn;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

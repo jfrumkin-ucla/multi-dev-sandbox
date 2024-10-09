@@ -1,0 +1,11 @@
+name: Config Suite
+type: module
+description: Config Suite is a set of improvements to the configuration management sto make it easier to work with.
+core_version_requirement: ^9 || ^10
+package: Custom
+configure: config_suite.config_suite_form
+
+# Information added by Drupal.org packaging script on 2023-02-06
+version: '2.0.4'
+project: 'config_suite'
+datestamp: 1675705718

@@ -1,0 +1,168 @@
+@use "../utilities/_mixins/breakpoints";
+@use "../utilities/colors";
+@use "../utilities/variables";
+
+.lp-builder {
+  color: colors.$grey-80;
+  font-family: variables.$font;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+
+  .paragraph {
+    border: 1px solid lightskyblue;
+  }
+
+  h1, h2, h3 {
+    letter-spacing: 0;
+  }
+
+  img,
+  .card,
+  .card__image,
+  .card__image img {
+    border-radius: initial !important;
+  }
+
+  .material-icons {
+    font-family: 'Material Icons', sans-serif;
+  }
+
+  .lpb-enable {
+    z-index: 1;
+  }
+
+  .sf_custom_code {
+    border: 2px dashed #ff1493;
+
+    &:before {
+      background-color: #ffe8f4;
+      color: #ff1493;
+      content: "Custom code";
+      display: block;
+      font-weight: bold;
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  .field--name-field-sf-block:empty {
+    background-color: colors.$lightest-blue;
+    border: 2px dashed colors.$ucla-blue;
+
+    &:before {
+      color: colors.$ucla-blue;
+      content: "Block embed";
+      display: block;
+      font-weight: bold;
+      padding: 0.75rem 1rem 0.5rem;
+    }
+
+    &:after {
+      content: "Save changes and refresh to view.";
+      display: block;
+      height: 4rem;
+      padding: 0 1rem 1rem;
+    }
+  }
+
+  .sf_block-embed__preview {
+    background-color: colors.$lightest-blue;
+    border: 2px dashed colors.$ucla-blue;
+    padding: 0.75rem 1rem 0.5rem;
+
+    &:before {
+      color: colors.$ucla-blue;
+      content: "Block embed";
+      display: block;
+      font-weight: bold;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .layout .l-full-width,
+  .layout.l-full-width,
+  .paragraph--type--sf-section.option--width--full {
+    margin-left: -24px;
+    margin-right: -24px;
+
+    // Adjust full-width blocks to account for Gin toolbar and sidebar.
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      margin-left: calc(-50vw + 50% + ((var(--gin-toolbar-x-offset) + var(--gin-sidebar-offset)) / 2));
+      margin-right: calc(-50vw + 50% + ((var(--gin-toolbar-x-offset) + var(--gin-sidebar-offset)) / 2));
+    }
+
+    .l-full-width,
+    .paragraph--type--sf-section.option--width--full { // Don't put negative margins on a nested full-width element.
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  //Fix for expanding columns in Layout Paragraphs Editor - works for regular and nested columns
+  .layout--twocol-section>.layout__region--first, .layout--twocol-section>.layout__region--second {
+    word-break: break-word;
+  }
+
+  .layout--threecol-section>.layout__region--first, .layout--threecol-section>.layout__region--second {
+    word-break: break-word;
+  }
+
+  .layout--fourcol-section>.layout__region--first, .layout--fourcol-section>.layout__region--second,
+  .layout--fourcol-section>.layout__region--third, .layout--fourcol-section>.layout__region--fourth {
+    word-break: break-word;
+  }
+
+  .banner--box__body-inner, .option--bg-color--white>.banner--box .banner--box__body-inner {
+    max-height: 100%;
+    overflow: scroll;
+  }
+
+  .paragraph--type--article-embed-banner .field--name-field-sf-article-banner .story-card-banner__body-inner {
+    max-height: 100%;
+    overflow: scroll;
+  }
+}
+
+.section--ucla-white-bk {
+  background-color: #ffffff;  
+}
+.section--ucla-blue-bk {
+  background-color: colors.$ucla-blue;  
+}
+.section--lightest-blue-bk {
+  background-color: colors.$lightest-blue;
+}
+.section--gray-fifteen-bk {
+  background-color: colors.$grey-15;  
+}
+.section--gray-five-bk {
+  background-color: colors.$grey-5;
+}
+.option--width--full .paragraph--type--sf-section {
+    display: block;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 24px;
+    position: relative;
+}
+.cke.cke_combopanel {
+    min-width: 500px;
+    max-width: 800px;
+}
+.js .cke.cke_combopanel {
+    width: 200px;
+}
+.cke_panel_block {
+    border-color: var(--gin-border-color-form-element);
+    border-radius: var(--gin-border-m);
+    min-width: 400px;
+}
+body.cke_ltr {
+    width: 500px;
+    display: block;
+}
+.alert--warning-yellow {
+  border-color: #FFB81C !important;
+  background:url(../images/icons/denotive/form-warning-yellow.svg) 16px 16px no-repeat;
+  background-size:24px 24px;
+  padding-left:48px
+}

@@ -1,0 +1,24 @@
+uuid: fde69f4a-5176-487e-b4d1-95a3911f7107
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 5CKRMjQcygcD5K-RhBZNhU3zmoZDtTfQ2BhNHanAtdw
+id: dgc_newsroom
+label: 'DGC Newsroom'
+type: 'canonical_entities:node'
+pattern: 'news/[node:title]'
+selection_criteria:
+  014fd2cd-f626-47ba-a7b7-0e85493b42aa:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 014fd2cd-f626-47ba-a7b7-0e85493b42aa
+    context_mapping:
+      node: node
+    bundles:
+      dgc_newsroom: dgc_newsroom
+selection_logic: and
+weight: -5
+relationships: {  }

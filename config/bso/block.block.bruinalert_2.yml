@@ -1,0 +1,38 @@
+uuid: 41c7b792-5c57-4824-9368-004d3a27d4f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.bruinalert
+  module:
+    - block_style_plugins
+    - menu_block
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: bruinalert_2
+theme: siteden_surface
+region: footer_nav
+weight: -14
+provider: null
+plugin: 'menu_block:bruinalert'
+settings:
+  id: 'menu_block:bruinalert'
+  label: BruinAlert
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'bruinalert:'
+  render_parent: false
+  suggestion: bruinalert
+  hide_on_nonactive: false
+visibility: {  }

@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sf_event_type.field_sf_brand_color
+    - taxonomy.vocabulary.sf_event_type
+  module:
+    - path
+    - text
+_core:
+id: taxonomy_term.sf_event_type.default
+targetEntityType: taxonomy_term
+bundle: sf_event_type
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_sf_brand_color:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  publish_state: true
+  unpublish_on: true
+  unpublish_state: true

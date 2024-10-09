@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: b7113793-8d8d-4ffb-afdb-4bc44cbd268b
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: bruin-walk-8310.jpeg
+  uri:
+    -
+      value: 'public://media/images/bruin-walk-8310_36.jpeg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 2735460
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1579061047

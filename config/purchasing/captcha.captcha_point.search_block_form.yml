@@ -1,0 +1,9 @@
+uuid: fda6456f-2f71-4f21-affc-4639783c2c5c
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: vPfDZs9rReE-KP0-lFxyNnObjcLtemXTO5SInfDhZxQ
+formId: search_block_form
+captchaType: recaptcha/reCAPTCHA
+label: search-block-form

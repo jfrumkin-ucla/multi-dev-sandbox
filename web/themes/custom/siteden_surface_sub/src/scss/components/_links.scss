@@ -1,0 +1,96 @@
+@use "../utilities/colors";
+@use "../utilities/variables";
+@use "../utilities/_mixins/breakpoints";
+
+@mixin link-style--default() {
+  color: colors.$default-state;
+
+  &:hover {
+    color: white;
+    background-color: colors.$hover-state;
+  }
+
+  &:active {
+    color: white;
+    background-color: colors.$active-state;
+  }
+
+  &:focus {
+    color: white;
+    background-color: colors.$focus-state;
+    outline: 0;
+    &:focus:after {
+      filter: colors.$filter-color-white;
+    }
+  }
+
+  &.link--external {
+    &:hover:after {
+      filter: colors.$filter-color-white;
+    }
+  }
+}
+
+@mixin link-style--invert() {
+  color: colors.$white;
+
+  &:visited {
+    color: colors.$white;
+  }
+
+  &:hover {
+    background-color: colors.$default-state-dark;
+    color: colors.$black;
+  }
+
+  &:focus {
+    outline-color: colors.$focus-state-dark;
+  }
+
+  &:active {
+    background-color: colors.$active-state-dark;
+    color: colors.$black;
+  }
+
+  &.link--external {
+    &:after {
+      filter: colors.$filter-color-white;
+    }
+
+    &:hover {
+      &:after {
+        filter: colors.$filter-color-white;
+      }
+    }
+
+    &:focus {
+      &:after {
+        filter: colors.$filter-color-white;
+      }
+    }
+  }
+}
+
+a {
+  @include link-style--default();
+
+  &.link--external {
+    &:after {
+      content: "";
+      background-image: url("../images/surface-icons/external-link.svg");
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 14px;
+      margin-left: 6px;
+      min-width: 14px;
+      vertical-align: baseline;
+      width: 14px;
+    }
+  }
+}
+
+h1, h2, h3 {
+  a {
+    text-decoration: none;
+  }
+}

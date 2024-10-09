@@ -1,0 +1,11 @@
+uuid: a1a02cb8-391d-42bf-9722-a13119e51b3d
+langcode: en
+status: true
+dependencies:
+  module:
+    - convert_bundles
+id: convert_bundles_on_aggregator_item
+label: 'Convert Aggregator feed item Entity Bundles'
+type: aggregator_item
+plugin: convert_bundles_action_base
+configuration: {  }

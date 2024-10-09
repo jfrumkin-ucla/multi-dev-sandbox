@@ -1,0 +1,26 @@
+@use "../utilities/colors";
+
+.wysiwyg-feature-block {
+  background-color: colors.$ucla-blue;
+  margin-left: 1rem;
+
+  &__title {
+    background-color: colors.$white;
+    display: inline-block;
+    margin: 1rem 0 0 (-1rem);
+    padding: 2rem;
+  }
+
+  h3:first-child {
+    margin-top: 1rem;
+  }
+
+  &__body {
+    color: colors.$white;
+    padding: 2rem;
+
+    a {
+      color: colors.$white;
+    }
+  }
+}

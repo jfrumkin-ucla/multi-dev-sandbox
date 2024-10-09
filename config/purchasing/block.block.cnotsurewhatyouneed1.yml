@@ -1,0 +1,36 @@
+uuid: c7179502-f9fd-4173-af26-32aa0dab9d30
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_card:ddd61517-f38e-4114-80f7-8ce11b109522'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    card_type:
+      card_type: gray
+      card_accent: 0
+id: cnotsurewhatyouneed1
+theme: siteden_surface
+region: sidebar_first
+weight: -4
+provider: null
+plugin: 'block_content:ddd61517-f38e-4114-80f7-8ce11b109522'
+settings:
+  id: 'block_content:ddd61517-f38e-4114-80f7-8ce11b109522'
+  label: 'C: Not sure what you need? non-T&E'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /accounts-payable/non-te-reimbursements

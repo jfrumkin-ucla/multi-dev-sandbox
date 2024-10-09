@@ -1,0 +1,32 @@
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  {% if media %}
+  <div class="event__media">
+    {{ media }}
+  </div>
+  {% endif %}
+  {% if date or time or location %}
+    <div class="featured-event-content-container">
+      <div class="featured-event-date">
+        <div class="fleft full-width event-month">{{ month }}</div>
+        <div class="fleft full-width event-day">{{ date }}</div>
+      </div>
+      <div class="featured-event-content">
+        <div class="event-title"><a href="{{ url }}">{{ title }}</a></div>
+        <ul>
+          {% if time %}
+            <li class="icon icon--time">{{ time }}</li>
+          {% endif %}
+        </ul>
+        {% if location %}
+          <div class="icon icon--location">{{ location }}</div>
+        {% endif %}
+        <div class="article-event-summary">
+        {% autoescape false %}
+          {{ body }}
+        {% endautoescape %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

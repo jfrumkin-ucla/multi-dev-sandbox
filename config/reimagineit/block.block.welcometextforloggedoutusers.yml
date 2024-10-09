@@ -1,0 +1,42 @@
+uuid: 303bdc54-2c23-4854-af5f-a2c936502295
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:a866eb01-8df8-4629-bcc6-feef442f2da5'
+  module:
+    - block_content
+    - block_style_plugins
+    - user
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+    full_width:
+      full_width: 0
+id: welcometextforloggedoutusers
+theme: siteden_surface
+region: content
+weight: -14
+provider: null
+plugin: 'block_content:a866eb01-8df8-4629-bcc6-feef442f2da5'
+settings:
+  id: 'block_content:a866eb01-8df8-4629-bcc6-feef442f2da5'
+  label: 'Welcome text for logged out users'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

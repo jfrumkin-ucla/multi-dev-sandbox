@@ -1,0 +1,29 @@
+uuid: 9e1a01e8-de4c-43ed-acfa-5b3a85292a55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sf_summary
+    - node.type.sf_article
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - sf_restricted_html
+_core:
+  default_config_hash: LLcRUiCK6DiRZ7Ih-qbTUXIXYbUMLqWkLxxYC0BkXB0
+id: node.sf_article.field_sf_summary
+field_name: field_sf_summary
+entity_type: node
+bundle: sf_article
+label: Summary
+description: 'A short summary of the article. This is displayed on listing pages.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

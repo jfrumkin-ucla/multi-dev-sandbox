@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+id: sf_tabs
+label: Tabs
+revision: 0
+description: "The tabs component allows users to add one or more tab items to create a tabbed interface.\t"

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.hero_banner_decorative
+label: 'Hero Banner Decorative'
+targetEntityType: media
+cache: true

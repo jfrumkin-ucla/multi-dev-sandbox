@@ -1,0 +1,27 @@
+uuid: 10e2be5c-d4f7-44ad-8116-ce9b17dff02e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.gcr_tool
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.gcr_tool.body
+field_name: body
+entity_type: node
+bundle: gcr_tool
+label: 'TPRM Description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

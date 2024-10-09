@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a SiteDen Basic layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set layout_classes = [ 'layout', 'layout__title-block' ]
+%}
+
+<div{{ attributes.addClass(layout_classes) }}>
+  {{ drupal_block('system_breadcrumb_block') }}
+  {{ drupal_block('page_title_block', { label_display: false }) }}
+</div>

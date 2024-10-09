@@ -1,0 +1,5 @@
+name: 'Siteden Quotation Component'
+type: module
+description: 'Provides an quotation component paragraph type.'
+package: 'Siteden'
+core_version_requirement: ^10

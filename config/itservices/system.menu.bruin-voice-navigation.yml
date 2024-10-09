@@ -1,0 +1,8 @@
+uuid: 13495e09-2196-4e67-b87f-edaf2ddeb325
+langcode: en
+status: true
+dependencies: {  }
+id: bruin-voice-navigation
+label: 'Bruin Voice navigation'
+description: ''
+locked: false

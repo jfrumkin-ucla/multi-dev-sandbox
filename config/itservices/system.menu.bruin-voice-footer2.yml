@@ -1,0 +1,8 @@
+uuid: 5e2a6144-4b2b-4515-a6a4-c7de0aac3bcd
+langcode: en
+status: true
+dependencies: {  }
+id: bruin-voice-footer2
+label: 'Bruin Voice Footer2'
+description: ''
+locked: false

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sf_image
+    - media.type.sf_image_media_type
+    - paragraphs.paragraphs_type.sf_box_banner
+id: paragraph.sf_box_banner.field_sf_image
+field_name: field_sf_image
+entity_type: paragraph
+bundle: sf_box_banner
+label: Image
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      sf_image_media_type: sf_image_media_type
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

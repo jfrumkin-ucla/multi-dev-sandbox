@@ -1,0 +1,29 @@
+uuid: 10f476d2-88b3-4191-89c8-99a83957fb12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_funding_admin_unit
+    - node.type.funding_opportunity
+    - taxonomy.vocabulary.funding_units
+id: node.funding_opportunity.field_funding_admin_unit
+field_name: field_funding_admin_unit
+entity_type: node
+bundle: funding_opportunity
+label: 'Administering Unit'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      funding_units: funding_units
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

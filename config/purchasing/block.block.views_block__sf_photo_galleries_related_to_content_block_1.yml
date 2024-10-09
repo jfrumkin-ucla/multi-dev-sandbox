@@ -1,0 +1,46 @@
+uuid: 76d96cfb-bf12-47ce-aa74-9156acf2fc78
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sf_photo_galleries_related_to_content
+  module:
+    - block_style_plugins
+    - node
+    - system
+    - views
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+_core:
+  default_config_hash: uspmsOPoZUPwhM0tyYI65OzvCnLCcHx4-oanxFrMXAs
+id: views_block__sf_photo_galleries_related_to_content_block_1
+theme: siteden_surface
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_block:sf_photo_galleries_related_to_content-block_1'
+settings:
+  id: 'views_block:sf_photo_galleries_related_to_content-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      sf_article: sf_article
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: ''

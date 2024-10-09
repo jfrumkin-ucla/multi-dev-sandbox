@@ -1,0 +1,32 @@
+uuid: a6cf4d89-d458-4ce6-8014-34f61bd322bf
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_basic:7303dca0-6aa5-499b-af5f-46d13af400ed'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: alertbannersvg
+theme: siteden_surface
+region: university_header
+weight: 0
+provider: null
+plugin: 'block_content:7303dca0-6aa5-499b-af5f-46d13af400ed'
+settings:
+  id: 'block_content:7303dca0-6aa5-499b-af5f-46d13af400ed'
+  label: 'Alert Banner: SVG'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

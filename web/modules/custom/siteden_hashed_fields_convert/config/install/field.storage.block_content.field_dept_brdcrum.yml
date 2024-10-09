@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: deiM-nDzl7Q_VggxLjkT1vlnqhFeq7Rd5ESpFM0b92M
+id: block_content.field_dept_brdcrum
+field_name: field_dept_brdcrum
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

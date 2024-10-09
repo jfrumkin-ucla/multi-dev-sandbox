@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_marketing_highlight
+    - field.field.block_content.sf_marketing_highlight.field_sf_link
+    - field.field.block_content.sf_marketing_highlight.field_sf_block_pimg
+    - field.field.block_content.sf_marketing_highlight.field_sf_cta
+    - field.field.block_content.sf_marketing_highlight.field_sf_mh_description
+    - field.field.block_content.sf_marketing_highlight.field_sf_title
+  module:
+    - link
+_core:
+  default_config_hash: d_SLemTrMrtudcKgjmxfrsvak6KPL5ghvlefAmDb0A8
+id: block_content.sf_marketing_highlight.default
+targetEntityType: block_content
+bundle: sf_marketing_highlight
+mode: default
+content:
+  field_sf_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_sf_block_pimg:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: landscape_4x3
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_sf_cta:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sf_mh_description:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sf_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

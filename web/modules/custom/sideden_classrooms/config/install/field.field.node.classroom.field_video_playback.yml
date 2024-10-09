@@ -1,0 +1,19 @@
+uuid: cda1caf7-aa4b-45ae-b8e4-4a3a0c3d1fdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_playback
+    - node.type.classroom
+id: node.classroom.field_video_playback
+field_name: field_video_playback
+entity_type: node
+bundle: classroom
+label: 'Video Playback'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,28 @@
+uuid: d6fe0d6b-6c6c-44f7-98f8-56c66e0446b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.photo_slider
+    - field.storage.block_content.field_wysiwyg
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - sf_basic_html
+_core:
+  default_config_hash: 6HWNZZb6qF3t6N5pjE5dPBRm1dRJkOqa9FYPedlpayo
+id: block_content.photo_slider.field_wysiwyg
+field_name: field_wysiwyg
+entity_type: block_content
+bundle: photo_slider
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

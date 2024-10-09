@@ -1,0 +1,7 @@
+name: SSO
+description: 'SimpleSAMLPHP configuration for SSO'
+type: module
+core_version_requirement: '^9 || ^10'
+dependencies:
+  - 'simplesamlphp_auth:simplesamlphp_auth'
+package: SiteFarm

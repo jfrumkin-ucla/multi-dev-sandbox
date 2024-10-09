@@ -1,0 +1,23 @@
+uuid: 8d91cb7c-5fb8-4e2c-98a0-33f92aa0fc91
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: live_chat_jan_2022
+label: 'Live chat Jan 2022'
+code: |
+  (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)){ return; }js = d.createElement(s); js.id = id;js.async = true;js.src="//alive5.com/js/a5app.js";js.setAttribute("data-widget_code_id", "cb4c981a-bf7e-42df-8e7c-f144f5e5f923");fjs.parentNode.insertBefore(js, fjs);}(document, "script", "a5widget"));
+noscript: ''
+noscriptRegion: {  }
+jquery: false
+header: true
+preprocess: false
+conditions:
+  current_theme:
+    id: current_theme
+    theme:
+      siteden_surface: siteden_surface
+    negate: false
+contexts: {  }
+conditions_require_all: true

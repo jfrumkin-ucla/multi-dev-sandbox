@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sf_focal_icon
+    - paragraphs.paragraphs_type.sf_focal_link
+  module:
+    - options
+_core:
+id: paragraph.sf_focal_link.field_sf_focal_icon
+field_name: field_sf_focal_icon
+entity_type: paragraph
+bundle: sf_focal_link
+label: Icon
+description: 'Choose an icon from the list. To see what these icons look like view the list of <a href="https://material.io/resources/icons/?style=baseline" target="_blank">Material Icons</a>.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

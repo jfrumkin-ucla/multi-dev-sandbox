@@ -1,0 +1,63 @@
+uuid: 772d5509-0cdf-4d55-828d-47432fb5a4fb
+langcode: en
+status: false
+dependencies: {  }
+id: marks
+label: marks.ucla.edu
+description: 'Config split for https://marks.ucla.edu/ Use of the UCLA Marks website'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/marks
+module: {  }
+theme: {  }
+complete_list:
+  - block.block.bbfooterlogo
+  - block.block.exposedformsf_person_directorypage_1
+  - block.block.footercontactinfo
+  - block.block.mainnavigation
+  - block.block.pagetitle
+  - block.block.siteden_surface_breadcrumbs
+  - block.block.siteden_surface_content
+  - block.block.siteden_surface_messages
+  - block.block.siteden_surface_search
+  - block.block.siteden_surface_side_menu
+  - block.block.siteden_surface_social
+  - block.block.siteden_surface_tabs
+  - block.block.views_block__sf_events_upcoming_block_1
+  - block.block.views_block__sf_persons_content_related_back_to_person_block_1
+  - block.block.views_block__sf_persons_related_to_content_block_1
+  - block.block.views_block__sf_photo_galleries_related_by_term_block_1
+  - block.block.views_block__sf_photo_galleries_related_to_content_block_1
+  - captcha.captcha_point.contact_message_feedback_form
+  - captcha.captcha_point.node_sf_article_form
+  - captcha.captcha_point.node_sf_event_form
+  - captcha.captcha_point.node_sf_page_form
+  - captcha.captcha_point.node_sf_person_form
+  - captcha.captcha_point.node_sf_photo_gallery_form
+  - captcha.captcha_point.search_block_form
+  - captcha.captcha_point.search_form
+  - config_suite.settings
+  - core.entity_form_display.node.sf_page.default
+  - core.entity_view_display.node.sf_landing.default
+  - core.extension
+  - core.menu.static_menu_link_overrides
+  - dblog.settings
+  - google_analytics.settings
+  - pantheon_advanced_page_cache.settings
+  - recaptcha.settings
+  - search.page.google_cse_search
+  - system.action.convert_bundles_on_sharemessage
+  - system.feature_flags
+  - system.site
+  - views.view.editoria11y_dismissals
+  - views.view.editoria11y_results
+  - views.view.layout_override
+  - views.view.published_node_filter
+  - views.view.sf_events_upcoming
+  - views.view.taxonomy_term
+  - views.view.watchdog
+  - webform.webform.contact
+  - webform.webform.report_a_violation
+partial_list: {  }

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+name: 'Media Categories'
+vid: sf_media_categories
+description: 'Categories for media items to make them easier to find in the Media Library.'
+weight: 0

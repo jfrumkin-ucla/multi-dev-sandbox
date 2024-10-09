@@ -1,0 +1,30 @@
+uuid: 254f5a15-86aa-455c-92b5-43216645de00
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_focal_link:014710f7-1415-4f96-a77b-73fc240d0e06'
+  module:
+    - block_content
+    - system
+  theme:
+    - siteden_surface
+id: fluclastudentsincrisisseecapsemergencyresources.
+theme: siteden_surface
+region: full_width_bottom
+weight: -18
+provider: null
+plugin: 'block_content:014710f7-1415-4f96-a77b-73fc240d0e06'
+settings:
+  id: 'block_content:014710f7-1415-4f96-a77b-73fc240d0e06'
+  label: 'FL: UCLA Students in crisis: See CAPS emergency resources.'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /star

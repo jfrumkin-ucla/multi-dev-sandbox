@@ -1,0 +1,19 @@
+uuid: 657435cc-f43e-473e-9ea2-3e7210503d9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: DIwrCIMT5P1_2MGDESJgJ04NyXlmuDwknoo5m-tHpx8
+name: Article
+type: sf_article
+description: 'Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sf_name
+    - paragraphs.paragraphs_type.sf_person_item
+id: paragraph.sf_person_item.field_sf_name
+field_name: field_sf_name
+entity_type: paragraph
+bundle: sf_person_item
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

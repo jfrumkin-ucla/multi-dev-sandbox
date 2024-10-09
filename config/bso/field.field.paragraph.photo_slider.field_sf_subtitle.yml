@@ -1,0 +1,21 @@
+uuid: 8169cc0c-fcc3-4dca-8d02-919eb28ce9ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sf_subtitle
+    - paragraphs.paragraphs_type.photo_slider
+_core:
+  default_config_hash: D7fZRteTC_Y-kjyX-wFD5SmRZO4hA4snZbAHOHo32lo
+id: paragraph.photo_slider.field_sf_subtitle
+field_name: field_sf_subtitle
+entity_type: paragraph
+bundle: photo_slider
+label: Subtitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

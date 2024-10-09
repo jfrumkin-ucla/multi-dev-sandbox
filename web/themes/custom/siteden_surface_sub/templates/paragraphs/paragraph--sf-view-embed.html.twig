@@ -1,0 +1,18 @@
+{% extends "paragraph.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a View embed paragraph.
+ *
+ * Available variables:
+ * - Look in the paragraph.html.twig file for available variables.
+ */
+#}
+
+{% block content %}
+  {% include '@siteden-components/view-embed.html.twig' with {
+    title: content.field_sf_title.0,
+    content: content.field_sf_view.0,
+  } %}
+{% endblock %}
+

@@ -1,0 +1,20 @@
+uuid: bbe63dcc-2d41-4ca4-8dc0-7c5b2f397bd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_lti_est_availability
+field_name: field_lti_est_availability
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,17 @@
+uuid: d26338b1-a367-42a1-b4c6-d066ce3aa844
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Current Status'
+type: bso_status
+description: 'Creates the current status on the homepage. Edit existing status rather than create new status.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

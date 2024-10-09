@@ -1,0 +1,472 @@
+@use "../utilities/colors";
+@use "../utilities/variables";
+
+@mixin button() {
+  align-items: center;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: variables.$ucla-font-size-default;
+  font-weight: bold;
+  line-height: variables.$ucla-font-size-default;
+  padding: 10px 16px;
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.icon--play {
+    padding-left: 14px;
+
+    &::before {
+      background-image: url("../images/icons/denotive/play--white.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+      flex-shrink: 0;
+      height: 20px;
+      margin-right: 10px;
+      width: 20px;
+    }
+  }
+
+  &.icon--link {
+    padding-right: 14px;
+
+    &::after {
+      background-image: url("../images/icons/denotive/external-link--white.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+      flex-shrink: 0;
+      height: 12px;
+      margin-left: 14px;
+      width: 12px;
+    }
+  }
+}
+
+@mixin button--primary() {
+  @include button();
+
+  background: colors.$default-state;
+  color: colors.$white;
+
+  &:visited {
+    background: colors.$default-state;
+    color: colors.$white;
+  }
+
+  &:hover {
+    background: colors.$hover-state;
+  }
+
+  &:focus {
+    background: colors.$focus-state;
+    outline: 1px solid colors.$hover-state;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    background: colors.$active-state;
+    outline: none;
+  }
+
+  &:disabled {
+    background: colors.$disabled-state;
+    color: colors.$white;
+  }
+
+  &.link--external::after {
+    filter: colors.$filter-color-white;
+  }
+}
+
+@mixin button--primary--invert() {
+  @include button--primary();
+
+  color: black;
+  background: colors.$ucla-gold;
+
+  &:visited {
+    color: black;
+    background: colors.$ucla-gold;
+  }
+
+  &:hover {
+    background: colors.$hover-state-dark;
+    color: black;
+  }
+
+  &:focus {
+    background: colors.$focus-state-dark;
+    outline: 1px solid colors.$white;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    background: colors.$active-state-dark;
+    outline: none;
+  }
+
+  &:disabled {
+    background: colors.$disabled-state-dark;
+  }
+
+  &.icon--play::before {
+    background-image: url("../images/icons/denotive/play--black.svg");
+    background-size: contain;
+  }
+
+  &.icon--link::after {
+    background-image: url("../images/icons/denotive/external-link--black.svg");
+    background-size: contain;
+  }
+
+  &.link--external::after {
+    filter: colors.$filter-color-black;
+  }
+}
+
+@mixin button--secondary() {
+  @include button();
+
+  background-color: transparent;
+  border: 2px solid colors.$default-state;
+  color: colors.$default-state;
+
+  &.icon--play::before {
+    background-image: url("../images/icons/denotive/play--blue.svg");
+    background-size: contain;
+    background-position: 0 -1px;
+  }
+
+  &.icon--link::after {
+    background-image: url("../images/icons/denotive/external-link--defaultblue.svg");
+    background-size: contain;
+    background-position: 0 -1px;
+  }
+
+  &.icon--play:hover::before,
+  &.icon--play:focus::before {
+    background-image: url("../images/icons/denotive/play--white.svg");
+    background-size: contain;
+    background-position: 0 -1px;
+  }
+
+  &.icon--link:hover::after,
+  &.icon--link:focus::after {
+    background-image: url("../images/icons/denotive/external-link--white.svg");
+    background-size: contain;
+    background-position: 0 -1px;
+  }
+
+  &:visited {
+    background: transparent;
+    border: 2px solid colors.$default-state;
+    color: colors.$default-state;
+  }
+
+  &:hover {
+    background: colors.$hover-state;
+    border-color: colors.$hover-state;
+    color: colors.$white;
+  }
+
+  &:focus {
+    background: colors.$focus-state;
+    border-color: transparent;
+    outline: 1px solid colors.$focus-state;
+    outline-offset: 2px;
+    color: colors.$white;
+  }
+
+  &:active {
+    background: colors.$active-state;
+    color: colors.$white;
+  }
+
+  &:disabled {
+    border-color: colors.$disabled-state;
+    color: colors.$disabled-state;
+    background: colors.$white;
+  }
+
+  &.link--external::after {
+    filter: none;
+  }
+}
+
+@mixin button--secondary--invert() {
+  @include button--secondary();
+
+  background: transparent;
+  border: 2px solid colors.$white;
+  color: colors.$white;
+
+  &.icon--play:hover::before,
+  &.icon--play:focus::before {
+    background-image: url("../images/icons/denotive/play--black.svg");
+    background-size: contain;
+    background-position: 0 -1px;
+  }
+
+  &.icon--play::before {
+    background-image: url("../images/icons/denotive/play--white.svg");
+    background-size: contain;
+    background-position: 0 -1px;
+  }
+
+  &.icon--link:hover::after,
+  &.icon--link:focus::after {
+    background-image: url("../images/icons/denotive/external-link--black.svg");
+    background-size: contain;
+    background-position: 0 -1px;
+  }
+
+  &.icon--link::after {
+    background-image: url("../images/icons/denotive/external-link--white.svg");
+    background-size: contain;
+    background-position: 0 -1px;
+  }
+
+  &:visited {
+    background: transparent;
+    border: 2px solid colors.$white;
+    color: colors.$white;
+  }
+
+  &:hover {
+    background: colors.$hover-state-dark;
+    border-color: colors.$hover-state-dark;
+    color: colors.$black;
+  }
+
+  &:focus {
+    background: colors.$focus-state-dark;
+    border-color: transparent;
+    color: colors.$black;
+    outline: 1px solid colors.$white;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    background: colors.$active-state-dark;
+    border: 2px solid colors.$active-state-dark;
+    color: colors.$black;
+  }
+
+  &:disabled {
+    background: transparent;
+    border-color: colors.$disabled-state-dark;
+    color: colors.$disabled-state-dark;
+  }
+}
+
+@mixin button--tertiary() {
+  @include button();
+
+  background: transparent;
+  color: colors.$default-state;
+
+  &.icon--play:hover::before,
+  &.icon--play:focus::before {
+    background-image: url("../images/icons/denotive/play--white.svg");
+    background-size: contain;
+  }
+
+  &.icon--play::before {
+    background-image: url("../images/icons/denotive/play--blue.svg");
+    background-size: contain;
+  }
+
+  &:visited {
+    background: transparent;
+    color: colors.$default-state;
+  }
+
+  &:hover {
+    background: colors.$hover-state;
+    color: colors.$white;
+  }
+
+  &:focus {
+    background: colors.$focus-state;
+    outline: 1px solid colors.$hover-state;
+    outline-offset: 2px;
+    color: colors.$white;
+  }
+
+  &:active {
+    background: colors.$active-state;
+    color: colors.$white;
+    outline: none;
+  }
+
+  &:disabled {
+    color: colors.$disabled-state;
+    background: transparent;
+  }
+
+  &.icon--play:hover::before,
+  &.icon--play:focus::before {
+    background-image: url("../images/icons/denotive/play--white.svg");
+    background-size: contain;
+  }
+
+  &.icon--play::before {
+    background-image: url("../images/icons/denotive/play--blue.svg");
+    background-size: contain;
+  }
+
+  &.icon--link:hover::after,
+  &.icon--link:focus::after {
+    background-image: url("../images/icons/denotive/external-link--white.svg");
+    background-size: contain;
+  }
+
+  &.icon--link::after {
+    background-image: url("../images/icons/denotive/external-link--defaultblue.svg");
+    background-size: contain;
+  }
+}
+
+// primary-light button styling
+.btn,
+.btn--primary,
+.btn--lightbg {
+  @include button--primary();
+}
+
+// primary-dark button styling
+.btn--darkbg,
+.btn--invert {
+  @include button--primary--invert();
+}
+
+// secondary-light button styling
+.btn--secondary,
+.btn--secondary--lightbg {
+  @include button--secondary();
+}
+
+// secondary-dark button styling
+.btn--secondary--darkbg {
+  @include button--secondary--invert();
+}
+
+// tertiary button styling
+.btn--tertiary {
+  @include button--tertiary();
+}
+
+.btn--tertiary--darkbg {
+  @include button--tertiary();
+
+  &.icon--play::before {
+    background-image: url("../images/icons/denotive/play--black.svg");
+  }
+  &.icon--link::after {
+    background-image: url("../images/icons/denotive/external-link--black.svg");
+  }
+}
+
+
+/*
+.btn {
+  &--group {
+    background: transparent;
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    margin-bottom: 2px;
+
+    &-left,
+    &-center,
+    &-right {
+      background: colors.$white;
+      border: 2px solid colors.$default-state;
+      border-radius: 0;
+      color: colors.$default-state;
+
+      &:visited {
+        background: colors.$white;
+        border: 2px solid colors.$default-state;
+        color: colors.$default-state;
+      }
+
+      &:hover {
+        background: colors.$hover-state;
+        border-color: colors.$hover-state;
+        color: colors.$white;
+      }
+
+      &:focus {
+        background: colors.$focus-state;
+        border-color: colors.$focus-state;
+        color: colors.$white;
+        outline: 1px solid colors.$hover-state;
+        outline-offset: 2px;
+      }
+
+      &:active {
+        background: colors.$active-state;
+        border-color: colors.$active-state;
+        color: colors.$white;
+        outline: none;
+      }
+
+      &:disabled {
+        background: colors.$disabled-state;
+        border-color: colors.$disabled-state;
+        color: colors.$white;
+      }
+    }
+
+    // Outer corners should be rounded
+    &-left {
+      border-bottom-left-radius: 2px;
+      border-top-left-radius: 2px;
+    }
+
+    &-right {
+      border-bottom-right-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+  }
+
+  &--sm {
+    font-size: variables.$ucla-font-size-small;
+    line-height: variables.$ucla-font-size-small;
+    padding: 8px 12px;
+
+    &.icon--play {
+      padding-left: 10px;
+    }
+
+    &.icon--link {
+      padding-right: 10px;
+    }
+  }
+
+  &--xs {
+    padding: 4px 8px;
+    font-size: variables.$ucla-font-size-small;
+    line-height: variables.$ucla-font-size-small;
+
+    &.icon--play {
+      padding-left: 6px;
+    }
+
+    &.icon--link {
+      padding-right: 6px;
+    }
+  }
+}
+*/

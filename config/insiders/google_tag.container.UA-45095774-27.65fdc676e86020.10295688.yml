@@ -1,0 +1,30 @@
+uuid: a6a41ef3-dc8c-4be2-ae48-6666740717b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: UA-45095774-27.65fdc676e86020.10295688
+label: UA-45095774-27
+weight: 0
+tag_container_ids:
+  - UA-45095774-27
+  - G-NQQ4N6K1H9
+advanced_settings: {  }
+dimensions_metrics: {  }
+conditions:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
+events:
+  generate_lead:
+    value: ''
+    currency: ''
+  search: {  }
+  sign_up:
+    method: CMS
+  webform_purchase: {  }
+  login:
+    method: CMS
+  custom: {  }

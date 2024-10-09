@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_card_grid
+    - field.storage.block_content.field_sf_card
+    - paragraphs.paragraphs_type.sf_card
+  module:
+    - entity_reference_revisions
+id: block_content.sf_card_grid.field_sf_card
+field_name: field_sf_card
+entity_type: block_content
+bundle: sf_card_grid
+label: Card
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      sf_card: sf_card
+    negate: 0
+    target_bundles_drag_drop:
+      sf_card:
+        weight: 9
+        enabled: true
+      sf_iframe_embed:
+        weight: 10
+        enabled: false
+      sf_people:
+        weight: 11
+        enabled: false
+      sf_person_item:
+        weight: 12
+        enabled: false
+      sf_slider:
+        weight: 13
+        enabled: false
+      sf_slider_item:
+        weight: 14
+        enabled: false
+      sf_tab:
+        weight: 15
+        enabled: false
+      sf_tabs:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

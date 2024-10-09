@@ -1,0 +1,30 @@
+uuid: c1030be7-b378-4f21-a42c-2ca74f5d3f56
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:daadf21f-2e2b-460d-b39c-3e14fac501fe'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: bbfooterlogo
+theme: siteden_surface
+region: footer
+weight: -16
+provider: null
+plugin: 'block_content:daadf21f-2e2b-460d-b39c-3e14fac501fe'
+settings:
+  id: 'block_content:daadf21f-2e2b-460d-b39c-3e14fac501fe'
+  label: 'Academic Affairs and Personnel Office'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

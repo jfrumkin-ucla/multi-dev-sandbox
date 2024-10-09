@@ -1,0 +1,38 @@
+uuid: 935d39da-fb95-4585-9371-39dada15f68e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_university_header:ae7745c4-07f4-4a33-adbe-48cf5766df86'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+_core:
+  default_config_hash: qKzhlYCkQRVWb_h6LQKGeT4u7e83vBzSfJKS5Mkfh4g
+id: sf_default__uh_main_dept_header
+theme: siteden_surface
+region: university_header
+weight: 0
+provider: null
+plugin: 'block_content:ae7745c4-07f4-4a33-adbe-48cf5766df86'
+settings:
+  id: 'block_content:ae7745c4-07f4-4a33-adbe-48cf5766df86'
+  label: 'Main Departmental Header'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "/cso*\r\n/ems*"

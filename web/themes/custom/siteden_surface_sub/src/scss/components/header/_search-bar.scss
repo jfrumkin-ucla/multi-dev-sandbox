@@ -1,0 +1,155 @@
+@use "../../utilities/colors";
+@use "../../utilities/_mixins/breakpoints";
+
+.search-bar__button {
+  display: none;
+
+  &:hover {
+    background: #0079bf;
+    cursor: pointer;
+
+    svg {
+      filter: colors.$filter-color-white;
+    }
+  }
+
+  &:focus {
+    outline-offset: -0.25rem;
+    outline: 1px dotted #0079bf;
+  }
+
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    display: block;
+    height: 44px;
+    padding-bottom: 15px;
+    padding-top: 11px;
+    width: 52px;
+
+    &.is-active {
+      background: #0079bf;
+
+      svg {
+        filter: colors.$filter-color-white;
+        height: 18px;
+        width: 18px;
+      }
+
+      &:focus {
+        outline: 1px dotted colors.$white;
+      }
+    }
+  }
+}
+
+.search-bar {
+  display: block;
+  grid-area: search;
+
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
+    background: colors.$white;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: none;
+    left: 24px;
+    padding: 17px 32px 15px;
+    position: absolute;
+    top: 100%;
+    width: calc(100% - 48px);
+    z-index: 480;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.search-bar__form {
+  display: block;
+  position: relative;
+
+  &::before {
+    background-image: url("../images/icons/denotive/search--grey60.svg");
+    background-position: center;
+    background-size: contain;
+    background-size: cover;
+    display: block;
+    content: " ";
+    height: 18px;
+    margin: 12px;
+    position: absolute;
+    width: 18px;
+    z-index: 2;
+  }
+
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
+    display: flex;
+  }
+
+  > .form-type-search {
+    border-top: 1px solid colors.$medium-grey3;
+    display: block;
+    position: inherit;
+    width: 100%;
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      border: 1px solid colors.$grey-80;
+      box-sizing: border-box;
+      display: block;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .form-item {
+    margin: 0;
+  }
+
+  input[type="search"] {
+    appearance: none;
+    background: #ebebeb;
+    border: 0;
+    line-height: 1.15;
+    padding: 11px 12px 11px 38px;
+    width: 100%;
+
+    &::-webkit-search-cancel-button {
+      appearance: none;
+      background-image: url("../images/icons/denotive/clear--grey60.svg");
+      background-size: 23px;
+      height: 23px;
+      width: 23px;
+    }
+
+    &:focus {
+      // outline-offset: -0.25rem;
+      // outline: 1px dotted #0079bf;
+      box-shadow: inset 0px 0px 0px 3px #0079BF, inset 0px -1px 0px #CCCCCC;
+      outline: 0;
+    }
+  }
+
+  > .form-actions {
+    display: none;
+    margin: 0;
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      display: block;
+
+      input[type="submit"] {
+        appearance: none;
+        background: #00598c;
+        border: 0;
+        border-radius: 0 2px 2px 0;
+        box-sizing: border-box;
+        color: colors.$white;
+        display: inline-block;
+        font-weight: normal;
+        padding: 13px 18px;
+        width: 100%;
+      }
+    }
+  }
+}

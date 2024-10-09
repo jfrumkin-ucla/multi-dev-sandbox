@@ -1,0 +1,25 @@
+uuid: 7c8435bc-0b30-420e-94b4-38f9b58ac859
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_marketing_highlight
+    - field.storage.block_content.field_sf_link
+  module:
+    - link
+_core:
+  default_config_hash: ZNITshjQJ3DeGam5ISjNf4DyI79bQYaq8jjDIBGqVN0
+id: block_content.sf_marketing_highlight.field_sf_link
+field_name: field_sf_link
+entity_type: block_content
+bundle: sf_marketing_highlight
+label: Link
+description: 'Add the Website URL Address for where you want visitors to go when clicking this.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

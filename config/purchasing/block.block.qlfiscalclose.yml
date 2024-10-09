@@ -1,0 +1,37 @@
+uuid: 279a6ab7-c7b8-45e7-aa24-472ae07cbfaa
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:52c516d5-680a-4f55-8c1b-7e70b1259820'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: qlfiscalclose
+theme: siteden_surface
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:52c516d5-680a-4f55-8c1b-7e70b1259820'
+settings:
+  id: 'block_content:52c516d5-680a-4f55-8c1b-7e70b1259820'
+  label: 'QL: Fiscal Close'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /fiscal-close

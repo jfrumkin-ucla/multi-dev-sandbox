@@ -1,0 +1,11 @@
+uuid: ca4fdf5c-9143-4ec9-8b97-70dced2428c8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Dhnn3ZSnI_AjjhAJNssW0qhuqeYxM-fjZzhU9Tes5Ds
+name: 'Newsroom Tags'
+vid: newsroom_tags
+description: 'Tags for newsroom stories'
+weight: 0
+new_revision: false

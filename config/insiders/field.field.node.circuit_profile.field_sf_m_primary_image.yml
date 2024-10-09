@@ -1,0 +1,31 @@
+uuid: 95707d5d-f793-40ef-9616-a8f2edb3ed67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sf_m_primary_image
+    - media.type.sf_image_media_type
+    - node.type.circuit_profile
+_core:
+  default_config_hash: iDRjuI3L8gX7gtrQpoH5ztKPLkSr7aSIFAB9mDNQYRQ
+id: node.circuit_profile.field_sf_m_primary_image
+field_name: field_sf_m_primary_image
+entity_type: node
+bundle: circuit_profile
+label: 'Portrait Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      sf_image_media_type: sf_image_media_type
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

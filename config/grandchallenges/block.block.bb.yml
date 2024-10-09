@@ -1,0 +1,25 @@
+uuid: 57704482-3fa2-4d2e-8194-b0145d509aee
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:4accb160-073e-4bc9-8f85-efe9f0acacf6'
+  module:
+    - block_content
+  theme:
+    - siteden_surface
+id: bb
+theme: siteden_surface
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:4accb160-073e-4bc9-8f85-efe9f0acacf6'
+settings:
+  id: 'block_content:4accb160-073e-4bc9-8f85-efe9f0acacf6'
+  label: 'BB: depression grand challenge logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

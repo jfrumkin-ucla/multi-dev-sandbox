@@ -1,0 +1,41 @@
+uuid: 1b62a47f-4931-43fa-a6c7-ce5ad809f247
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_style_plugins
+    - menu_block
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: mainnavigation
+theme: siteden_surface
+region: sidebar_first
+weight: -12
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Side navigation EDI'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: true
+  label_type: fixed
+  level: 1
+  depth: 2
+  expand_all_items: true
+  parent: 'main:menu_link_content:9ae34143-89e9-4805-96e1-af7fa642cf78'
+  suggestion: main
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/edi-working-group*'

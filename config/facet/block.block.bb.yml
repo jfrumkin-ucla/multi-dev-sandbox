@@ -1,0 +1,25 @@
+uuid: 13a22820-2e3f-420f-8803-a17ee19164a0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:85cd9c40-e299-4731-a0c3-a53f1119d456'
+  module:
+    - block_content
+  theme:
+    - siteden_surface
+id: bb
+theme: siteden_surface
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:85cd9c40-e299-4731-a0c3-a53f1119d456'
+settings:
+  id: 'block_content:85cd9c40-e299-4731-a0c3-a53f1119d456'
+  label: 'BB: FACET Logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

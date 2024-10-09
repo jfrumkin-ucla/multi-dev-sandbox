@@ -1,0 +1,80 @@
+{#
+/**
+ * @file
+ * Theme override to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ */
+#}
+{%
+  set classes = [
+    'taxonomy-term',
+    'vocabulary-' ~ term.bundle|clean_class,
+    'view-mode-' ~ view_mode,
+  ]
+%}
+{{ attach_library('classy/node') }}
+
+<div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
+
+  <div class="content">
+    <div class="l-basic circuit-term-content" >
+      <div class="l-sidebar-first">
+          <h1 class="circuit-term-content__name heading--highlight">{{ name.0 }}</h1>
+         {% if content.field_sf_m_tax_primary_image|render %}
+          <div>{{ content.field_sf_m_tax_primary_image }}</div>
+         {% endif %}
+        {% if content.field_sf_unit_leaders|render %}
+          <div>{{ content.field_sf_unit_leaders }}</div>
+        {% endif %}
+        {% if subterms %}
+          <div>
+            <div class="field__label">Teams</div>
+            <ul>
+            {% for subterm in subterms %}
+              <li><a href="{{ subterm.uri }}">{{ subterm.title }}</a></li>
+            {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+        {% if content.field_circuit_contact|render %}
+          <div>{{ content.field_circuit_contact }}</div>
+        {% endif %}
+      </div>
+      <div class="l-content">
+          <h1 class="circuit-term-content__name heading--highlight">{{ name.0 }}</h1>
+        {% if content.description|render %}
+          <div>{{ content.description }}</div>
+        {% endif %}
+        {% if content.field_circuit_core_services|render %}
+          <div>{{ content.field_circuit_core_services }}</div>
+        {% endif %}
+        {% if content.field_circuit_mascot|render %}
+          <div>{{ content.field_circuit_mascot }}</div>
+        {% endif %}
+        {% if content.field_circuit_motto|render %}
+          <div>{{ content.field_circuit_motto }}</div>
+        {% endif %}
+        {{ content|without("field_sf_m_tax_primary_image", "field_sf_unit_leaders", "field_circuit_contact", "description", "field_circuit_core_services", "field_circuit_mascot", "field_circuit_motto") }}
+        <hr class="circuit-term-content__hr">
+      </div>
+    </div>
+  </div>
+</div>

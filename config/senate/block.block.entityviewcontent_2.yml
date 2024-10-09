@@ -1,0 +1,28 @@
+uuid: 146c6491-714b-4733-b784-9a52655b90a9
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_style_plugins
+    - ctools
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: entityviewcontent_2
+theme: siteden_surface
+region: title
+weight: 0
+provider: null
+plugin: 'entity_view:node'
+settings:
+  id: 'entity_view:node'
+  label: 'Entity view (Content)'
+  label_display: '0'
+  provider: ctools
+  view_mode: default
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

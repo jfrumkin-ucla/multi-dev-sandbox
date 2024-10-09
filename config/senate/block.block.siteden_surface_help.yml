@@ -1,0 +1,27 @@
+uuid: e909264f-28aa-4fba-9965-3afb7fc4bcc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_style_plugins
+    - help
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+_core:
+  default_config_hash: LTxEhGEjat7KgRJHeN30z97ZQ0RaUWY2LOmBg1Q3DmI
+id: siteden_surface_help
+theme: siteden_surface
+region: pre_content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

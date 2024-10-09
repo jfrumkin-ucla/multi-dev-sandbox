@@ -1,0 +1,25 @@
+uuid: b73d34c8-2543-4041-b749-3edf917dce1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.circuit_profile
+  module:
+    - text
+_core:
+  default_config_hash: fLR0ns0fKyJpOXtjASvPJxkUoQZfUY9U1iHGhTlGQdA
+id: node.circuit_profile.body
+field_name: body
+entity_type: node
+bundle: circuit_profile
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

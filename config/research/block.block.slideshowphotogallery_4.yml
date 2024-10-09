@@ -1,0 +1,28 @@
+uuid: 55559e6a-c3b5-46d8-aa24-5d03d5a8cd9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - sitefarm_photo_gallery
+    - system
+  theme:
+    - siteden_surface
+id: slideshowphotogallery_4
+theme: siteden_surface
+region: content
+weight: -26
+provider: null
+plugin: slideshow_gallery_block
+settings:
+  id: slideshow_gallery_block
+  label: 'Faculty Research Lecture Gallery'
+  label_display: '0'
+  provider: sitefarm_photo_gallery
+  show_title: 0
+  slider_nav: 0
+  gallery: '3864'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news/faculty-research-lecture-2023

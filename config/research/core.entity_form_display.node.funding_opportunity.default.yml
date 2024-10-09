@@ -1,0 +1,295 @@
+uuid: 7606f2ad-ae01-4998-a487-d10e078d604a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.funding_opportunity.body
+    - field.field.node.funding_opportunity.field_funding_admin_unit
+    - field.field.node.funding_opportunity.field_funding_award_amount
+    - field.field.node.funding_opportunity.field_funding_award_details
+    - field.field.node.funding_opportunity.field_funding_due_date
+    - field.field.node.funding_opportunity.field_funding_due_date_details
+    - field.field.node.funding_opportunity.field_funding_eligible
+    - field.field.node.funding_opportunity.field_funding_eligible_details
+    - field.field.node.funding_opportunity.field_funding_info_source
+    - field.field.node.funding_opportunity.field_funding_internal_notes
+    - field.field.node.funding_opportunity.field_funding_type
+    - field.field.node.funding_opportunity.field_sf_related_links
+    - node.type.funding_opportunity
+    - workflows.workflow.standard_workflow
+  module:
+    - content_moderation
+    - datetime
+    - field_group
+    - link
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_due_date:
+      children:
+        - field_funding_due_date
+        - field_funding_due_date_details
+      label: 'Deadline and Date Information'
+      region: content
+      parent_name: ''
+      weight: 12
+      format_type: details
+      format_settings:
+        classes: ''
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+    group_award_information:
+      children:
+        - field_funding_award_amount
+        - field_funding_award_details
+      label: 'Award Amount Information'
+      region: content
+      parent_name: ''
+      weight: 11
+      format_type: details
+      format_settings:
+        classes: ''
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+    group_eligibility_information:
+      children:
+        - field_funding_eligible
+        - field_funding_eligible_details
+      label: 'Eligibility Information'
+      region: content
+      parent_name: ''
+      weight: 13
+      format_type: details
+      format_settings:
+        classes: ''
+        id: ''
+        open: true
+        description: 'Who is eligible for this award? To update the options here, edit the terms in the <a href="/admin/structure/taxonomy/manage/funding_opportunity_eligibility/overview">Funding Opportunity Eligibility</a> taxonomy.'
+        required_fields: true
+    group_links:
+      children:
+        - field_sf_related_links
+      label: Links
+      region: content
+      parent_name: ''
+      weight: 15
+      format_type: details
+      format_settings:
+        classes: ''
+        id: ''
+        open: true
+        description: 'Use this area to include external links for more information, how to apply, or links to previously funded proposals.'
+        required_fields: true
+    group_inte:
+      children:
+        - field_funding_internal_notes
+      label: 'Internal Notes'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+        weight: 0
+    group_funding_type:
+      children:
+        - field_funding_type
+      label: 'Funding Type'
+      region: content
+      parent_name: ''
+      weight: 10
+      format_type: details
+      format_settings:
+        classes: ''
+        id: ''
+        open: true
+        description: 'Select a funding type. To update the options here, edit the terms of the <a href="/admin/structure/taxonomy/manage/funding_opportunity_type/overview">Funding Type</a> taxonomy.'
+        required_fields: true
+    group_funding_source_information:
+      children:
+        - field_funding_info_source
+        - field_funding_admin_unit
+      label: 'Funding Source Information'
+      region: content
+      parent_name: ''
+      weight: 14
+      format_type: details
+      format_settings:
+        classes: ''
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+id: node.funding_opportunity.default
+targetEntityType: node
+bundle: funding_opportunity
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 16
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_funding_admin_unit:
+    type: options_buttons
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_funding_award_amount:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_funding_award_details:
+    type: text_textarea
+    weight: 14
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_funding_due_date:
+    type: datetime_default
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_funding_due_date_details:
+    type: text_textarea
+    weight: 12
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_funding_eligible:
+    type: options_buttons
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_funding_eligible_details:
+    type: text_textarea
+    weight: 20
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_funding_info_source:
+    type: options_select
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_funding_internal_notes:
+    type: text_textarea
+    weight: 16
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_funding_type:
+    type: options_buttons
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_sf_related_links:
+    type: link_default
+    weight: 16
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  publish_state: true
+  unpublish_on: true
+  unpublish_state: true

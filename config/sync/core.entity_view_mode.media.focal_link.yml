@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+id: media.focal_link
+label: 'Focal Link'
+description: ''
+targetEntityType: media
+cache: true

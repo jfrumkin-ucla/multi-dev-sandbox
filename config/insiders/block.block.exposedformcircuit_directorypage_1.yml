@@ -1,0 +1,32 @@
+uuid: c167f35d-437e-4017-bc3f-474cbf8c58a3
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+_core:
+  default_config_hash: GQ448_iG9IuJt__W-Hq3ckYzhfFzASoDql1j3BHsrHU
+id: exposedformcircuit_directorypage_1
+theme: siteden_surface
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'views_exposed_filter_block:circuit_directory-page_1'
+settings:
+  id: 'views_exposed_filter_block:circuit_directory-page_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: Filter
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /the-circuit/directory

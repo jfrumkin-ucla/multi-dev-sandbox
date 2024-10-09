@@ -1,0 +1,22 @@
+uuid: f0f370e4-613a-4028-9558-c554427193c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - siteden_surface
+_core:
+  default_config_hash: m1gDEU-UBYjs06xYz8rECNoIODL5GA2e6Q1yR95tSr8
+id: siteden_surface_messages
+theme: siteden_surface
+region: message
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

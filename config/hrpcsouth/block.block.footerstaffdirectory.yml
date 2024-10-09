@@ -1,0 +1,32 @@
+uuid: 327e7eb3-6edf-4988-9673-312b7f768891
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:8bb41a88-e64c-44ec-a5ea-4e61eff4d6e3'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: footerstaffdirectory
+theme: siteden_surface
+region: footer_nav
+weight: -12
+provider: null
+plugin: 'block_content:8bb41a88-e64c-44ec-a5ea-4e61eff4d6e3'
+settings:
+  id: 'block_content:8bb41a88-e64c-44ec-a5ea-4e61eff4d6e3'
+  label: 'footer staff directory'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

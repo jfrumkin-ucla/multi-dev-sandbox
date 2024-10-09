@@ -1,0 +1,69 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sf_accordion_item
+    - paragraphs.paragraphs_type.sf_accordion
+    - paragraphs.paragraphs_type.sf_accordion_item
+  module:
+    - entity_reference_revisions
+id: paragraph.sf_accordion.field_sf_accordion_item
+field_name: field_sf_accordion_item
+entity_type: paragraph
+bundle: sf_accordion
+label: 'Accordion item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      sf_accordion_item: sf_accordion_item
+    negate: 0
+    target_bundles_drag_drop:
+      sf_accordion:
+        weight: 15
+        enabled: false
+      sf_accordion_item:
+        weight: 16
+        enabled: true
+      sf_card:
+        weight: 17
+        enabled: false
+      sf_card_grid:
+        weight: 18
+        enabled: false
+      sf_iframe_embed:
+        weight: 19
+        enabled: false
+      sf_people:
+        weight: 20
+        enabled: false
+      sf_person_item:
+        weight: 21
+        enabled: false
+      sf_section:
+        weight: 22
+        enabled: false
+      sf_slider:
+        weight: 23
+        enabled: false
+      sf_slider_item:
+        weight: 24
+        enabled: false
+      sf_tab:
+        weight: 25
+        enabled: false
+      sf_tabs:
+        weight: 26
+        enabled: false
+      sf_text:
+        weight: 27
+        enabled: false
+      sf_view_embed:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

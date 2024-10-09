@@ -1,0 +1,30 @@
+uuid: 3ad1d351-2e29-428a-9867-9205807bc5a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - stable
+_core:
+  default_config_hash: JHXE5bwUcCHCiwvkByzwBEFMSV5Je94SRTyIH9_vs8A
+id: stable_sf_default__front_fb_about
+theme: stable
+region: content
+weight: -11
+provider: null
+plugin: 'block_content:68839c59-3f2e-4bf5-927f-a4856c305009'
+settings:
+  id: 'block_content:68839c59-3f2e-4bf5-927f-a4856c305009'
+  label: 'FB: About Us'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

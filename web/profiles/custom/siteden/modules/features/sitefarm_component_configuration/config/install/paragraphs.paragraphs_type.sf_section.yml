@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+    - style_options
+id: sf_section
+label: Section
+icon_uuid: null
+icon_default: null
+description: "The section component allows users to choose various layouts for other components to be placed within.\t\r\n"
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      layout_onecol: 'One column'
+      layout_twocol_section: 'Two column'
+      layout_threecol_section: 'Three column'
+      layout_fourcol_section: 'Four column'
+      basic: Basic
+  style_options:
+    enabled: true

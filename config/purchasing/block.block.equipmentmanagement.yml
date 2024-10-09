@@ -1,0 +1,38 @@
+uuid: 59d71066-65f6-4f46-949c-f243c994c29c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:917f4123-85cd-43be-890a-2b2de658d3e9'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: equipmentmanagement
+theme: siteden_surface
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:917f4123-85cd-43be-890a-2b2de658d3e9'
+settings:
+  id: 'block_content:917f4123-85cd-43be-890a-2b2de658d3e9'
+  label: 'Equipment Management'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /purchasing/equipment-management

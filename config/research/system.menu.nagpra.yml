@@ -1,0 +1,8 @@
+uuid: 8458967e-f479-4045-a5fc-21e999f9681c
+langcode: en
+status: true
+dependencies: {  }
+id: nagpra
+label: 'NAGPRA Menu'
+description: 'Main menu for NAGPRA microsite'
+locked: false

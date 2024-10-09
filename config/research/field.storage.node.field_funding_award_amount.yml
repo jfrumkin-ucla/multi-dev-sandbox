@@ -1,0 +1,20 @@
+uuid: 3b20885c-2647-4334-a3dc-b444c1061c92
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_funding_award_amount
+field_name: field_funding_award_amount
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,17 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
+uuid: ca2209c0-47fa-4c00-83af-7c5baf2c2fa4
+name: 'IT Governance'
+mail: portaleditor@it.ucla.edu
+slogan: ''
+page:
+  403: ''
+  404: /node/146
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+credit_info:
+  value: ''
+  format: sf_basic_html

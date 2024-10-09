@@ -1,0 +1,60 @@
+uuid: 617eecd0-b28d-4939-82a0-2648c0b3f330
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.bso_update_categories.field_sf_brand_color
+    - taxonomy.vocabulary.bso_update_categories
+  module:
+    - path
+    - text
+id: taxonomy_term.bso_update_categories.default
+targetEntityType: taxonomy_term
+bundle: bso_update_categories
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sf_brand_color:
+    type: options_select
+    weight: 101
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  publish_state: true
+  unpublish_on: true
+  unpublish_state: true

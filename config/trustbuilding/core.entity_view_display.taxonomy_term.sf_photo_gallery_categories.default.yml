@@ -1,0 +1,25 @@
+uuid: 69a4a827-d542-4ed1-944e-fed860f351e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sf_photo_gallery_categories.field_sf_brand_color
+    - taxonomy.vocabulary.sf_photo_gallery_categories
+  module:
+    - text
+_core:
+  default_config_hash: fqN8ZwdlIM9yl_wyCrAo3uQ95OYEbIDVfcfqv_hrylg
+id: taxonomy_term.sf_photo_gallery_categories.default
+targetEntityType: taxonomy_term
+bundle: sf_photo_gallery_categories
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_sf_brand_color: true

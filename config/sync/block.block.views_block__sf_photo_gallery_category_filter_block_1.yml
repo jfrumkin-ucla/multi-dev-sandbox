@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sf_photo_gallery_category_filter
+  module:
+    - block_style_plugins
+    - system
+    - views
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+_core:
+id: views_block__sf_photo_gallery_category_filter_block_1
+theme: siteden_surface
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:sf_photo_gallery_category_filter-block_1'
+settings:
+  id: 'views_block:sf_photo_gallery_category_filter-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/photo-galleries\r\n/photo-galleries/*"

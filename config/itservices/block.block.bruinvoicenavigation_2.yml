@@ -1,0 +1,36 @@
+uuid: d590b791-5866-4e2e-bfea-17d5090d3ff0
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.bruin-voice-navigation
+  module:
+    - menu_block
+    - system
+  theme:
+    - siteden_surface
+id: bruinvoicenavigation_2
+theme: siteden_surface
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'menu_block:bruin-voice-navigation'
+settings:
+  id: 'menu_block:bruin-voice-navigation'
+  label: 'Bruin Voice navigation'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: true
+  label_type: parent
+  level: 2
+  depth: 0
+  expand_all_items: false
+  parent: 'bruin-voice-navigation:'
+  suggestion: main
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/it-ucla/key-initiatives/bruin-voice/*'

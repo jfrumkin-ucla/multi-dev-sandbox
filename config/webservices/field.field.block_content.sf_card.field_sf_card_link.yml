@@ -1,0 +1,25 @@
+uuid: acbeaf59-f3a2-490e-a376-5c56c7b7a48f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_card
+    - field.storage.block_content.field_sf_card_link
+  module:
+    - link
+_core:
+  default_config_hash: iWwSGGOFWNcjSlHXhzdKwrZMHHmfXYgklO0ylswVMTc
+id: block_content.sf_card.field_sf_card_link
+field_name: field_sf_card_link
+entity_type: block_content
+bundle: sf_card
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

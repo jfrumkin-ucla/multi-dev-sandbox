@@ -1,0 +1,363 @@
+@use "../utilities/_mixins/breakpoints";
+@use "../utilities/colors";
+@use "button";
+
+/* ------------------------------------
+   Hero banner
+   ------------------------------------ */
+
+@mixin style--ribbon-title() {
+  background-color: colors.$ucla-blue;
+  box-shadow: 10px 0 0 colors.$ucla-blue;
+  color: colors.$white;
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  margin-left: 24px;
+  padding: 0.25rem 0 0.25rem 0.5rem;
+  text-transform: uppercase;
+
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    font-size: 2.75rem;
+    line-height: 1.4;
+    margin-left: 12px;
+  }
+
+  // For modern browsers.
+  @supports (box-decoration-break: clone) {
+    box-decoration-break: clone;
+    display: inline;
+    margin-left: 0;
+    word-break: break-word;
+  }
+}
+
+
+.hero-banner {
+  position: relative;
+
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__image {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      width: 55%;
+    }
+
+    img {
+      max-height: 540px;
+      min-height: 300px;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+  }
+
+  /*  &__video-popup {
+      position: relative;
+      height: 0;
+      margin: 0;
+      padding-bottom: 56.25%; // 16:9
+      width: 100%;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }*/
+
+  &__body {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20%;
+    position: relative;
+    width: 93.75%;
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      // Position to sit on top and overlap the image.
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      max-width: 1200px * 0.525;
+      max-width: calc(52.5% - ((100% - 1200px) / 2));
+      position: absolute;
+      right: 47.5%; // We want it to overlap by 7.5%
+      top: 0;
+      width: 52.5%;
+    }
+  }
+
+  &__body-inner {
+    background-color: colors.$white;
+    padding: 1rem 1.5rem;
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      padding: 2rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.25rem;
+  }
+
+  &__summary {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      margin-right: 20%;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    @include button.button--primary();
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 1.5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+// ==========================================================================
+// Content Visibility Option
+// ==========================================================================
+.hero-banner--image-only {
+  .hero-banner__body {
+    display: none;
+  }
+
+  .hero-banner__image {
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      width: 100%;
+    }
+  }
+}
+
+
+// ==========================================================================
+// Alignment Option
+// ==========================================================================
+
+// Reverse the flow of content.
+.hero-banner--rev {
+  flex-direction: row;
+
+  .hero-banner__body {
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      left: 47.5%;
+      right: initial;
+    }
+  }
+
+  .hero-banner__summary {
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      padding-right: 0;
+    }
+  }
+}
+
+// ==========================================================================
+// Full Width BG Image with Ribbon Heading
+// ==========================================================================
+.hero-banner--image-background-ribbon-heading {
+  .hero-banner__title {
+    @include style--ribbon-title();
+  }
+
+  .hero-banner__body-inner {
+    background: transparent;
+  }
+
+  .hero-banner__body {
+    bottom: 1.5em;
+    margin: auto;
+    position: absolute;
+  }
+
+  .hero-banner__summary {
+    display: none;
+  }
+
+  .hero-banner__button {
+    @include button.button--primary--invert();
+  }
+
+  .hero-banner__image {
+    img {
+      max-height: 540px;
+      min-height: 300px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      width: 100%;
+    }
+  }
+}
+
+// ==========================================================================
+// Full Width BG Image with Molecule Heading
+// ==========================================================================
+.hero-banner--image-background-molecule-heading {
+  flex-direction: column;
+  overflow: hidden;
+
+  .hero-banner__body {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 0;
+    margin-top: -2rem;
+    z-index: 2;
+
+    //@media (min-width: breakpoints.breakpoint-min(md)) {
+    //  bottom: auto;
+    //  left: 24px;
+    //  position: absolute;
+    //  top: 5.5rem;
+    //}
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      bottom: auto;
+      left: 0;
+      position: absolute;
+      top: 5.5rem;
+    }
+
+    @media (min-width: breakpoints.breakpoint-min(xl)) {
+      // Non-full-width block. Full-width styles overridden later.
+      left: 48px;
+      padding-left: 0;
+    }
+
+    &::before {
+      background-image: url(../images/surface-icons/molecule.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+      display: block;
+      height: 80px;
+      margin: -27px 0 0 -56px;
+      opacity: 2.5;
+      position: absolute;
+      width: 80px;
+      z-index: -1;
+
+      @media (min-width: breakpoints.breakpoint-min(md)) {
+        margin-left: -70px;
+        height: 135px;
+        top: -8px;
+        width: 135px;
+      }
+    }
+  }
+
+  .hero-banner__body-inner {
+    background: transparent;
+    margin-left: -0.5rem;
+    padding: 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-banner__title {
+    @include style--ribbon-title();
+  }
+
+  .hero-banner__content {
+    background-color: colors.$ucla-blue;
+    color: colors.$white;
+    margin-top: -1rem;
+    padding: 1rem;
+    position: relative;
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      margin-top: -3rem;
+      padding: 3rem;
+    }
+  }
+
+  .hero-banner__summary {
+    background-color: colors.$ucla-blue;
+    color: colors.$white;
+    margin: 0 1.5rem;
+    padding: 1rem 1.5rem;
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      box-sizing: border-box;
+      font-size: 1.5rem;
+      line-height: 1.333;
+      padding: 2rem 4rem;
+      position: relative;
+      z-index: 5;
+    }
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      box-sizing: border-box;
+      margin: -4rem auto 0;
+      max-width: min(calc(100vw - 48px), 1280px);
+      padding: 3rem 12rem;
+    }
+  }
+
+  .hero-banner__button {
+    @include button.button--primary--invert();
+    margin-top: 1.5rem;
+  }
+
+  .hero-banner__image {
+    img {
+      min-height: 300px;
+      max-height: 540px;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      width: 100%;
+    }
+  }
+}
+
+.region-full-width-top .hero-banner--image-background-molecule-heading,
+.l-full-width.hero-banner--image-background-molecule-heading {
+  .hero-banner__body {
+    @media (min-width: breakpoints.breakpoint-min(xl)) {
+      left: max(24px, calc((100vw - 1280px) / 2));
+      padding-left: 0;
+    }
+  }
+}
+
+.layout--twocol-section .hero-banner--image-background-ribbon-heading,
+.layout--twocol-section .hero-banner--image-background-molecule-heading,
+.layout--threecol-section .hero-banner--image-background-ribbon-heading,
+.layout--threecol-section .hero-banner--image-background-molecule-heading {
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
+    .hero-banner__body {
+      right: 25%;
+      width: 75%;
+    }
+
+    .hero-banner__title {
+      font-size: 2.125rem;
+      line-height: 1.45;
+    }
+  }
+}

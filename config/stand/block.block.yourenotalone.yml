@@ -1,0 +1,37 @@
+uuid: a9306878-0e94-4ebb-9cab-59a53b9b33be
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_basic:654d460b-ff2e-466c-b821-4430c7e9133f'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: yourenotalone
+theme: siteden_surface
+region: content
+weight: -15
+provider: null
+plugin: 'block_content:654d460b-ff2e-466c-b821-4430c7e9133f'
+settings:
+  id: 'block_content:654d460b-ff2e-466c-b821-4430c7e9133f'
+  label: "You're not alone"
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /tips

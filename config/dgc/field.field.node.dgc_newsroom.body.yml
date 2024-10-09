@@ -1,0 +1,25 @@
+uuid: c2823f9c-0bb5-481b-923e-6e60fa318b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.dgc_newsroom
+  module:
+    - text
+_core:
+  default_config_hash: cKoOm-xD1brk6Wt9rHToE7ceE-KAjHQeKeWp4DdfJAs
+id: node.dgc_newsroom.body
+field_name: body
+entity_type: node
+bundle: dgc_newsroom
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

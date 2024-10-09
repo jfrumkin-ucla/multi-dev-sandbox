@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Module for SiteDen Components.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function siteden_components_page_attachments(array &$attachments) {
+  if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+    $attachments['#attached']['library'][] = 'siteden_components/admin_js';
+  }
+}

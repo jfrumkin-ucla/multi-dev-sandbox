@@ -1,0 +1,68 @@
+uuid: 5060d13d-c541-45ba-bfeb-42b5f925a4a8
+langcode: en
+status: false
+dependencies: {  }
+id: housing
+label: housing.ucla.edu
+description: 'Config split for https://housing.ucla.edu/ Housing website'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/housing
+module: {  }
+theme: {  }
+complete_list:
+  - block.block.bbfooterlogo
+  - block.block.footercontactinfo
+  - block.block.footerlinks
+  - block.block.siteden_surface_breadcrumbs
+  - block.block.siteden_surface_content
+  - block.block.siteden_surface_main_menu
+  - block.block.siteden_surface_messages
+  - block.block.siteden_surface_page_title
+  - block.block.siteden_surface_search
+  - block.block.siteden_surface_side_menu
+  - block.block.siteden_surface_social
+  - block.block.siteden_surface_tabs
+  - block.block.views_block__sf_events_upcoming_block_1
+  - block.block.views_block__sf_persons_related_to_content_block_1
+  - block.block.views_block__sf_photo_galleries_related_by_term_block_1
+  - block.block.views_block__sf_photo_galleries_related_to_content_block_1
+  - captcha.captcha_point.contact_message_feedback_form
+  - captcha.captcha_point.node_sf_article_form
+  - captcha.captcha_point.node_sf_event_form
+  - captcha.captcha_point.node_sf_page_form
+  - captcha.captcha_point.node_sf_person_form
+  - captcha.captcha_point.node_sf_photo_gallery_form
+  - captcha.captcha_point.search_block_form
+  - captcha.captcha_point.search_form
+  - config_suite.settings
+  - core.entity_form_display.node.sf_page.default
+  - core.entity_view_display.node.sf_landing.default
+  - core.menu.static_menu_link_overrides
+  - dblog.settings
+  - google_analytics.settings
+  - honeypot.settings
+  - pantheon_advanced_page_cache.settings
+  - recaptcha.settings
+  - search.page.google_cse_search
+  - simple_sitemap.settings
+  - siteden_menu_item_limit.settings
+  - system.action.convert_bundles_on_migration
+  - system.action.convert_bundles_on_migration_group
+  - system.action.convert_bundles_on_sharemessage
+  - system.feature_flags
+  - system.site
+  - user.role.contributor
+  - views.view.editoria11y_dismissals
+  - views.view.editoria11y_results
+  - views.view.file_path
+  - views.view.file_path_block
+  - views.view.layout_override
+  - views.view.published_node_filter
+  - views.view.sf_events_upcoming
+  - views.view.taxonomy_term
+  - views.view.watchdog
+  - webform.settings
+partial_list: {  }

@@ -1,0 +1,37 @@
+uuid: 6db4b292-f678-44b0-b765-56c69fcaa176
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:14b7dfb6-21aa-487a-a529-85971e4288b2'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: resourcesforstaff
+theme: siteden_surface
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:14b7dfb6-21aa-487a-a529-85971e4288b2'
+settings:
+  id: 'block_content:14b7dfb6-21aa-487a-a529-85971e4288b2'
+  label: 'resources for staff'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /responsible-and-ethical-use/staff

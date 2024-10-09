@@ -1,0 +1,17 @@
+uuid: 62a12919-4a95-40b9-96f5-d591374543e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Status Update'
+type: bso_update
+description: 'Create a status update for the update feed.'
+help: 'The title field is not shown anywhere.'
+new_revision: true
+preview_mode: 1
+display_submitted: false

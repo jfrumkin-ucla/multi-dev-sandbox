@@ -1,0 +1,58 @@
+uuid: e2fcf13f-d3d5-4689-b487-f47dca0f5e32
+langcode: en
+status: false
+dependencies: {  }
+id: hrpcsouth
+label: hrpcsouth.ucla.edu
+description: 'Config split for https://hrpcsouth.ucla.edu/ HR & Payroll Operations Center - South website'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/hrpcsouth
+module: {  }
+theme: {  }
+complete_list:
+  - block.block.bbfooterlogo
+  - block.block.footercontactinfo
+  - block.block.footerofficehours
+  - block.block.footerstaffdirectory
+  - block.block.siteden_surface_breadcrumbs
+  - block.block.siteden_surface_content
+  - block.block.siteden_surface_main_menu
+  - block.block.siteden_surface_messages
+  - block.block.siteden_surface_page_title
+  - block.block.siteden_surface_search
+  - block.block.siteden_surface_side_menu
+  - block.block.siteden_surface_social
+  - block.block.siteden_surface_tabs
+  - captcha.captcha_point.contact_message_feedback_form
+  - captcha.captcha_point.node_sf_article_form
+  - captcha.captcha_point.node_sf_event_form
+  - captcha.captcha_point.node_sf_page_form
+  - captcha.captcha_point.node_sf_person_form
+  - captcha.captcha_point.node_sf_photo_gallery_form
+  - captcha.captcha_point.search_block_form
+  - captcha.captcha_point.search_form
+  - config_suite.settings
+  - core.entity_form_display.node.sf_page.default
+  - core.entity_view_display.node.sf_landing.default
+  - core.menu.static_menu_link_overrides
+  - dblog.settings
+  - google_analytics.settings
+  - honeypot.settings
+  - pantheon_advanced_page_cache.settings
+  - recaptcha.settings
+  - search.page.google_cse_search
+  - system.action.convert_bundles_on_migration
+  - system.action.convert_bundles_on_migration_group
+  - system.action.convert_bundles_on_sharemessage
+  - system.feature_flags
+  - system.site
+  - views.view.layout_override
+  - views.view.published_node_filter
+  - views.view.sf_events_upcoming
+  - views.view.taxonomy_term
+  - views.view.watchdog
+  - webform.settings
+partial_list: {  }

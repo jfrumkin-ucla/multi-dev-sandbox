@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_sf_brand_color
+    - taxonomy.vocabulary.dgc_newsroom_categories
+  module:
+    - options
+id: taxonomy_term.dgc_newsroom_categories.field_sf_brand_color
+field_name: field_sf_brand_color
+entity_type: taxonomy_term
+bundle: dgc_newsroom_categories
+label: 'Brand Color'
+description: 'Choose the label color for this category.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

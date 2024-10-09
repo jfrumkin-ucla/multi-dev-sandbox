@@ -1,0 +1,6 @@
+services:
+  siteden_paragraphs_convert.commands:
+    class: Drupal\siteden_paragraphs_convert\Commands\SitedenParagraphsConvertCommands
+    tags:
+      - { name: drush.command }
+    arguments: ['@entity_type.manager', '@logger.factory']

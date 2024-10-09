@@ -1,0 +1,11 @@
+@use "../utilities/colors";
+
+.give-now {
+  padding: 2.5rem;
+  background-color: colors.$grey-10;
+  text-align: center;
+
+  &__text {
+    margin-right: 2rem;
+  }
+}

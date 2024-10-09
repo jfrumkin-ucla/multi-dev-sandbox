@@ -1,0 +1,7 @@
+{
+    "name": "mypackage/siteden_surface",
+    "description": "Theme for the UCLS SiteDen profile built on the SiteFarm Seed distribution",
+    "type": "drupal-theme",
+    "minimum-stability": "dev",
+    "require": {}
+}

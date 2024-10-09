@@ -1,0 +1,83 @@
+{% extends "paragraph.html.twig" %}
+
+{#
+/**
+ * @file
+ * Theme override for a Photo Slider paragraph.
+ *
+ * Available variables:
+ * - Look in the paragraph.html.twig file for available variables.
+ */
+#}
+
+
+{% block content %}
+{{ attach_library('siteden_components/sf_slider') }}
+<section class="sf_photo_slider splide photo-slider" aria-label="Sliding banner">
+  <div class="photo-slider-body photo-slider-paragraph">
+    <div class="slider-item__body-outer">
+      <div class="slider-item__body">
+        <div class="slider-item__body-inner photo-slider-inner">
+          {% if content.field_sf_title.0 %}
+            <h2 class="slider-item__title photo-silder-title">
+              <span>{{ content.field_sf_title }}</span>
+            </h2>
+          {% endif %}
+          {% if content.field_sf_subtitle.0 %}
+            <div class="slider-item__subtitle">
+              <h3><span>{{ content.field_sf_subtitle }}</span></h3>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="splide__track">
+    <ul class="splide__list">
+
+      {% for key, item in content.field_p_slider_item|filter((value, key) => key|first != '#') %}
+        <li class="splide__slide">
+
+          <div class="slider-item slider-item--image-background-slider-heading">
+
+            <div class="slider-item__image">
+              {{ item['#paragraph'].field_sf_image.0|view }}
+            </div>
+
+          </div>
+
+        </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+  <button class="splide__toggle" type="button">
+    <span class="splide__toggle__play"><img src="/themes/custom/siteden_surface/assets/images/icons/denotive/play-white.svg"></span>
+    <span class="splide__toggle__pause"><img src="/themes/custom/siteden_surface/assets/images/icons/denotive/pause-white.svg"></span>
+  </button>
+</section>
+
+  {% if content.field_sf_wysiwyg[0] or content.field_sf_link[0] %}
+    <div class="photo-slider-summary">
+      <div class="slider-item__summary">
+        <div class="slider-item__summary-inner">
+
+          {% if content.field_sf_wysiwyg[0] %}
+          {{ content.field_sf_wysiwyg[0] }}
+          {% endif %}
+
+          {% if content.field_sf_link[0] %}
+            <div class="slider-item__button-group">
+              <a href="{{ content.field_sf_link[0]['#url']|render }}"
+                class="slider-item__button">{{ content.field_sf_link[0]['#title'] }}</a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+{% endblock %}
+

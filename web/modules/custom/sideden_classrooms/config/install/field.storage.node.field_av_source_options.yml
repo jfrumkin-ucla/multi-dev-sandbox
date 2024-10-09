@@ -1,0 +1,45 @@
+uuid: c1eca94b-d74b-4718-95fe-29001ce6f69b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_av_source_options
+field_name: field_av_source_options
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: blu_ray
+      label: Blu-ray
+    -
+      value: dvd
+      label: DVD
+    -
+      value: vhs
+      label: VHS
+    -
+      value: document_camera
+      label: 'Document Camera'
+    -
+      value: hdmi_input
+      label: 'HDMI Input'
+    -
+      value: vga_input
+      label: 'VGA Input'
+    -
+      value: wireless_projection
+      label: 'Wireless Projection'
+    -
+      value: transparency_projector
+      label: 'Transparency Projector'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

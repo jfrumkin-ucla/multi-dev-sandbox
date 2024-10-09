@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+    - google_cse
+  theme:
+    - siteden_surface
+id: siteden_surface_search
+theme: siteden_surface
+region: navigation
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+  page_id: google_cse_search
+visibility: {  }

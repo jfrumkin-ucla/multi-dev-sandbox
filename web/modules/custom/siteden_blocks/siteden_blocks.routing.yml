@@ -1,0 +1,7 @@
+siteden_blocks.settings:
+  path: '/admin/config/status_alert/settings'
+  defaults:
+    _form: '\Drupal\siteden_blocks\Form\StatusAlertMessageSettingsForm'
+    _title: 'Status Alert Message Settings'
+  requirements:
+    _permission: 'administer site configuration'

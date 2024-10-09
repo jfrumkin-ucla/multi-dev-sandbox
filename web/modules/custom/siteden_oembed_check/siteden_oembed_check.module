@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Contains siteden_oembed_check.module.
+ */
+
+use Drupal\media\Entity\Media;
+
+function siteden_oembed_check_cron() {
+  $ids = \Drupal::entityQuery('media')
+    ->condition('bundle', 'sf_video_media_type')
+    ->accessCheck(false)
+    ->execute();
+  $medias = Media::loadMultiple($ids);
+  foreach($medias as $sf_vid){
+    if($sf_vid->validate()->count()>0){
+      $sf_vid->delete();
+    }
+  }
+}

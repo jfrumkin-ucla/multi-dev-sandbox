@@ -1,0 +1,56 @@
+<?php
+
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function sitefarm_depressiongc_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $type = $variables['node']->getType();
+
+  // Get the author name of the user who created the node.
+  if ($type == 'dgc_newsroom') {
+    $variables['author_full_name'] = $node->getOwner()->field_sf_full_name->value;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function sitefarm_depressiongc_form_alter(&$form, &$form_state, $form_id) {
+  // Move Node Edit fields into the advanced tabs group.
+  $advanced_tabs = \Drupal::service('sf.advanced_tabs')->loadForm($form);
+
+  // Move the Newsroom Category field to the Categorization group.
+  $advanced_tabs->moveField('field_dgc_newsroom_category', 'categorizing');
+
+  // Move the Newsroom Tags field to the Categorization group.
+  $advanced_tabs->moveField('field_dgc_newsroom_tags', 'categorizing');
+
+  // Move the Fact Sheet Category field to the Categorization group.
+  $advanced_tabs->moveField('field_dgc_factsheet_category', 'categorizing');
+
+  // Move the Fact Sheet Focus Area field to the Categorization group.
+  $advanced_tabs->moveField('field_dgc_focus_area', 'categorizing');
+
+  // Move the Byline field to the Authoring Information group.
+  $advanced_tabs->moveField('field_dgc_byline', 'author');
+
+  $form = $advanced_tabs->save();
+}
+
+/**
+ * Implements hook_preprocess_page_title().
+ */
+//function sitefarm_depressiongc_preprocess_page_title(&$variables) {
+  //$node = \Drupal::request()->attributes->get('node');
+
+  // Add Project: before page titles on DGC Fact Sheet nodes.
+  //if ($node && $node->bundle() == 'dgc_fact_sheet') {
+    //$variables['title'] = t('Project: @title', ['@title' => $node->getTitle()]);
+  //}
+//}

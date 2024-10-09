@@ -1,0 +1,38 @@
+uuid: ad225479-874e-4eac-a56e-4c53499eb431
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:07175f23-19a6-44b3-85f2-98ca1ea69d53'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: emscontactinfo
+theme: siteden_surface
+region: footer
+weight: -16
+provider: null
+plugin: 'block_content:07175f23-19a6-44b3-85f2-98ca1ea69d53'
+settings:
+  id: 'block_content:07175f23-19a6-44b3-85f2-98ca1ea69d53'
+  label: 'ems contact info'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/ems*'

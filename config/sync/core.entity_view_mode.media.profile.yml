@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+id: media.profile
+label: Profile
+description: ''
+targetEntityType: media
+cache: true

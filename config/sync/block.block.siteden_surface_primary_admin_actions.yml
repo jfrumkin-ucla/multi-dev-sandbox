@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - siteden_surface
+_core:
+id: siteden_surface_primary_admin_actions
+theme: siteden_surface
+region: pre_content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

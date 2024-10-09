@@ -1,0 +1,23 @@
+Index: src/Plugin/Sitemap/Menu.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Plugin/Sitemap/Menu.php b/src/Plugin/Sitemap/Menu.php
+--- a/src/Plugin/Sitemap/Menu.php	
++++ b/src/Plugin/Sitemap/Menu.php	(date 1646934750000)
+@@ -76,12 +76,12 @@
+ 
+     $menu_display = $menuLinkTree->build($tree);
+ 
+-    return [
++    return ($tree) ? [
+       '#theme' => 'sitemap_item',
+       '#title' => $this->settings['title'],
+       '#content' => $menu_display,
+       '#sitemap' => $this,
+-    ];
++    ] : [];
+   }
+ 
+ }

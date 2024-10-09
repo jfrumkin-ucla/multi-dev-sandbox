@@ -1,0 +1,761 @@
+uuid: 476145cb-e2c5-4315-82fe-3c92901d1449
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 205
+template: false
+archive: false
+id: abusive_conduct_intake_form
+title: 'Abusive Conduct Intake Form'
+description: ''
+categories: {  }
+elements: |-
+  processed_text_01:
+    '#type': processed_text
+    '#text': |
+      <p><span><span>The new <a href="https://policy.ucop.edu/doc/4000701/AbusiveConduct">Abusive Conduct in the Workplace policy</a>&nbsp;became effective on January 1, 2023.</span></span></p>
+
+      <p><strong><span><span>Policy Summary:</span></span></strong></p>
+
+      <p><span><span>The University of California (“University”) is committed to promoting and maintaining a healthy working environment in which every individual is treated with respect. This policy addresses the University’s responsibilities and procedures related to Abusive Conduct and Retaliation for reporting, or participating in, an investigation or other process provided for in this policy. This policy will be implemented in a manner that recognizes rights to freedom of speech and expression. However, freedom of speech and academic freedom are not limitless and, for example, do not protect speech or expressive conduct that violates federal and state anti-discrimination laws.</span></span></p>
+
+      <p><span><span>Abusive Conduct in violation of this policy is prohibited and will not be tolerated. The University encourages anyone who is subjected to or becomes aware of Abusive Conduct to promptly report it. Managers and supervisors who observe or become aware of Abusive Conduct have response and reporting obligations. Chairs and Deans, among others, are considered managers and supervisors. The University will respond to reports of Abusive Conduct in accordance with timelines set forth in this policy, and will take appropriate action to stop, prevent, correct, and discipline behavior that violates this policy.</span></span></p>
+    '#format': sf_basic_html
+  processed_text:
+    '#type': processed_text
+    '#text': |
+      <p><span><span><strong><span><span>DEFINITIONS:</span></span></strong></span></span></p>
+
+      <p><span><span><strong><span><span>Complainant:</span></span></strong><span><span> Any individual, including a student, who alleges and/or has been reported to have been subjected to Abusive Conduct.</span></span></span></span></p>
+
+      <p><span><span><strong><span><span>Reporter:</span></span></strong><span><span> Any individual, including a student, who makes a report of alleged Abusive Conduct.</span></span></span></span></p>
+
+      <p><span><span><strong><span><span>Respondent:</span></span></strong><span><span> An individual alleged to have engaged in Abusive Conduct.</span></span></span></span></p>
+
+      <p><span><span><strong><span><span>Workplace:</span></span></strong><span><span> Any space where University business is conducted or occurs, in connection with University employment and/or in the context of a University program or activity.</span></span></span></span></p>
+    '#format': sf_basic_html
+  complaint_details:
+    '#type': webform_markup
+    '#display_on': both
+    '#markup': '<h2>Complaint Details</h2>'
+  date_reported:
+    '#type': date
+    '#title': 'Date Reported'
+    '#required': true
+  date_of_incident:
+    '#type': date
+    '#title': 'Date of Incident'
+    '#description': '<p><em>If conduct has taken place on more than one date, please indicate the initial date here and include additional dates below in the Description of Conduct section.</em></p>'
+    '#description_display': before
+    '#required': true
+  are_you_reporting_for_yourself_or_someone_else_:
+    '#type': select
+    '#title': 'Are you reporting for yourself or someone else?'
+    '#description': |-
+      <span style="font-size:11pt"><span style="line-height:normal"><span style="font-family:Calibri,sans-serif"><em><span style="font-size:12.0pt">If you are reporting alleged Abusive Conduct on behalf of someone else, you may do so anonymously. However, UC employees reporting on behalf of a student or subordinate employee are required to provide their name and other information in order to fulfill their reporting responsibilities.</span></em></span></span></span><br />
+      &nbsp;
+    '#description_display': before
+    '#options':
+      Myself: Myself
+      'Someone else': 'Someone else'
+    '#required': true
+  markup_01:
+    '#type': webform_markup
+    '#display_on': both
+    '#markup': '<h2>Complainant Information</h2>'
+  complainant_information:
+    '#type': fieldset
+    '#title': 'Complainant Information'
+    '#description': |-
+      <span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><em><span style="font-size:10.5pt"><span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Each question below requires a response; if any of the requested information about the Complainant is unknown, please enter/select &quot;<strong>Unknown</strong>.&quot;</span></span></span></span></em></span></span><br />
+      &nbsp;
+    '#title_display': invisible
+    '#description_display': before
+    email_phone:
+      '#type': webform_flexbox
+      name:
+        '#type': textfield
+        '#title': 'Complainant Name'
+        '#title_display': before
+        '#description_display': invisible
+        '#size': 25
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Complainant'
+      complainant_email:
+        '#type': email
+        '#title': 'Complainant Email'
+        '#size': 10
+        '#required': true
+      complainant_phone:
+        '#type': tel
+        '#title': 'Complainant Phone'
+        '#size': 15
+    jobtitle_dept:
+      '#type': webform_flexbox
+      complainant_job_title:
+        '#type': textfield
+        '#title': 'Complainant Job Title'
+        '#title_display': before
+        '#description_display': before
+        '#size': 25
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Job Title'
+      complainant_department:
+        '#type': textfield
+        '#title': 'Complainant Department'
+        '#title_display': before
+        '#description_display': before
+        '#size': 35
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Department'
+      classification:
+        '#type': textfield
+        '#title': Classification
+        '#title_display': before
+        '#description_display': invisible
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Complainant'
+    affil_class_represent:
+      '#type': webform_flexbox
+      affiliation:
+        '#type': select
+        '#title': Affiliation
+        '#description': |-
+          <br />
+          &nbsp;
+        '#description_display': invisible
+        '#options':
+          'Faculty/Academic Personnel': 'Faculty/Academic Personnel'
+          Staff: Staff
+          Student: Student
+          Other: Other
+          Unknown: Unknown
+        '#required': true
+      represented_or_non_represented_:
+        '#type': select
+        '#title': 'Represented or Non-Represented?'
+        '#description': |-
+          <br />
+          &nbsp;
+        '#description_display': invisible
+        '#options':
+          Represented: Represented
+          Non-Represented: Non-Represented
+          Unknown: Unknown
+        '#required': true
+      is_complainant_amenable_to_early_resolution_e_g_mediation_:
+        '#type': radios
+        '#title': 'Is complainant amenable to early resolution (e.g. mediation)?'
+        '#description': |-
+          <br />
+          &nbsp;
+        '#description_display': invisible
+        '#options':
+          'Yes': 'Yes'
+          'No': 'No'
+        '#options_display': side_by_side
+        '#required': true
+        '#options__properties': ''
+    add_another_complainant:
+      '#type': radios
+      '#title': 'Add Another Complainant'
+      '#options':
+        'Yes': 'Yes'
+        'No': 'No'
+      '#options_display': side_by_side
+      '#options__properties': ''
+  complainant_2_information:
+    '#type': fieldset
+    '#title': 'Complainant 2 Information'
+    '#description': |-
+      <span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><em><span style="font-size:10.5pt"><span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Each question below requires a response; if any of the requested information about the Complainant is unknown, please enter/select &quot;<strong>Unknown</strong>.&quot;</span></span></span></span></em></span></span><br />
+      &nbsp;
+    '#title_display': invisible
+    '#description_display': before
+    '#states':
+      visible:
+        ':input[name="add_another_complainant"]':
+          value: 'Yes'
+    email_phone2:
+      '#type': webform_flexbox
+      complainant_name:
+        '#type': textfield
+        '#title': 'Complainant 2 Name'
+        '#title_display': before
+        '#description_display': invisible
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Complainant'
+      complainant_2_email:
+        '#type': email
+        '#title': 'Complainant 2 Email'
+        '#required': true
+      complainant_2_phone:
+        '#type': tel
+        '#title': 'Complainant 2 Phone'
+    jobtitle_dept2:
+      '#type': webform_flexbox
+      complainant2_job_title:
+        '#type': textfield
+        '#title': 'Complainant 2 Job Title'
+        '#title_display': before
+        '#description_display': before
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Job Title'
+      complainant2_department:
+        '#type': textfield
+        '#title': 'Complainant 2 Department'
+        '#title_display': before
+        '#description_display': before
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Department'
+      classification_complainant_2_:
+        '#type': textfield
+        '#title': 'Classification (Complainant 2)'
+        '#title_display': before
+        '#description_display': invisible
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Complainant'
+    affil_class_represent2:
+      '#type': webform_flexbox
+      affiliation3:
+        '#type': select
+        '#title': 'Affiliation (Complainant 2)'
+        '#description': |-
+          <br />
+          &nbsp;
+        '#description_display': invisible
+        '#options':
+          'Faculty/Academic Personnel': 'Faculty/Academic Personnel'
+          Staff: Staff
+          Student: Student
+          Other: Other
+          Unknown: Unknown
+        '#required': true
+      represented_or_non_represented_complainant_2:
+        '#type': select
+        '#title': 'Represented or Non-Represented? (Complainant 2)'
+        '#description': |-
+          <br />
+          &nbsp;
+        '#description_display': invisible
+        '#options':
+          Represented: Represented
+          Non-Represented: Non-Represented
+          Unknown: Unknown
+        '#required': true
+      is_complainant_2_amenable_to_early_resolution_e_g_mediation_:
+        '#type': radios
+        '#title': 'Is complainant 2 amenable to early resolution (e.g. mediation)?'
+        '#description': |-
+          <br />
+          &nbsp;
+        '#description_display': invisible
+        '#options':
+          'Yes': 'Yes'
+          'No': 'No'
+        '#options_display': side_by_side
+        '#required': true
+        '#options__properties': ''
+  markup_02:
+    '#type': webform_markup
+    '#display_on': both
+    '#markup': '<h2>Respondent Information</h2>'
+  respondent_information:
+    '#type': fieldset
+    '#title': 'Respondent Information'
+    '#description': |-
+      <span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><em><span style="font-size:10.5pt"><span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Each question below requires a response; if any of the requested information about the Respondent is unknown, please enter/select &quot;<strong>Unknown</strong>.&quot;</span></span></span></span></em></span></span><br />
+      &nbsp;
+    '#title_display': invisible
+    '#description_display': before
+    email_phone_resp:
+      '#type': webform_flexbox
+      respondent_name:
+        '#type': textfield
+        '#title': 'Respondent Name'
+        '#title_display': before
+        '#description_display': before
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Respondent'
+      respondent_email:
+        '#type': email
+        '#title': 'Respondent Email'
+        '#required': true
+      respondent_phone:
+        '#type': tel
+        '#title': 'Respondent Phone'
+    jobtitle_dept_resp:
+      '#type': webform_flexbox
+      respondent_job_title:
+        '#type': textfield
+        '#title': 'Respondent Job Title'
+        '#title_display': before
+        '#description_display': before
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Job Title'
+      respondent_department:
+        '#type': textfield
+        '#title': 'Respondent Department'
+        '#title_display': before
+        '#description_display': before
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Department'
+      classification_resp:
+        '#type': textfield
+        '#title': Classification
+        '#title_display': before
+        '#description_display': before
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Department'
+    affl_class_represent:
+      '#type': webform_flexbox
+      affiliation2:
+        '#type': select
+        '#title': Affiliation
+        '#description': |-
+          <br />
+          &nbsp;
+        '#description_display': invisible
+        '#options':
+          'Faculty/Academic Personnel': 'Faculty/Academic Personnel'
+          Staff: Staff
+          Student: Student
+          Other: Other
+          Unknown: Unknown
+        '#required': true
+      represented_or_non_represented_2:
+        '#type': select
+        '#title': 'Represented or Non-Represented?'
+        '#description': |-
+          <br />
+          &nbsp;
+        '#description_display': invisible
+        '#options':
+          Represented: Represented
+          Non-Represented: Non-Represented
+          Unknown: Unknown
+        '#required': true
+      add_another_respondent:
+        '#type': radios
+        '#title': 'Add Another Respondent'
+        '#options':
+          'Yes': 'Yes'
+          'No': 'No'
+        '#options_display': side_by_side
+        '#options__properties': ''
+  respondent_2:
+    '#type': fieldset
+    '#title': 'Respondent 2 Information'
+    '#description': |-
+      <span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><em><span style="font-size:10.5pt"><span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Each question below requires a response; if any of the requested information about the Respondent is unknown, please enter/select &quot;<strong>Unknown</strong>.&quot;</span></span></span></span></em></span></span><br />
+      &nbsp;
+    '#title_display': invisible
+    '#description_display': before
+    '#states':
+      visible:
+        ':input[name="add_another_respondent"]':
+          value: 'Yes'
+    email_phone_resp2:
+      '#type': webform_flexbox
+      respondent_2_name:
+        '#type': textfield
+        '#title': 'Respondent 2 Name'
+        '#title_display': before
+        '#description_display': before
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Respondent'
+      respondent_2_email:
+        '#type': email
+        '#title': 'Respondent 2 Email'
+        '#required': true
+      respondent_2_phone:
+        '#type': tel
+        '#title': 'Respondent 2 Phone'
+    jobtitle_dept_resp2:
+      '#type': webform_flexbox
+      respondent_2_job_title:
+        '#type': textfield
+        '#title': 'Respondent 2 Job Title'
+        '#title_display': before
+        '#description_display': before
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Job Title'
+      respondent_2_department:
+        '#type': textfield
+        '#title': 'Respondent 2 Department'
+        '#title_display': before
+        '#description_display': before
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Department'
+      classification_respondent_2_text:
+        '#type': textfield
+        '#title': 'Classification (Respondent 2)'
+        '#title_display': before
+        '#description_display': before
+        '#required': true
+        '#multiple__sorting': false
+        '#multiple__add_more_input': false
+        '#multiple__add_more_button_label': 'Add Department'
+    affl_class_represent2:
+      '#type': webform_flexbox
+      affiliation_respondent_2_:
+        '#type': select
+        '#title': 'Affiliation (Respondent 2)'
+        '#description': |-
+          <br />
+          &nbsp;
+        '#description_display': invisible
+        '#options':
+          'Faculty/Academic Personnel': 'Faculty/Academic Personnel'
+          Staff: Staff
+          Student: Student
+          Other: Other
+          Unknown: Unknown
+        '#required': true
+      represented_or_non_represented_respondent_2_:
+        '#type': select
+        '#title': 'Represented or Non-Represented? (Respondent 2)'
+        '#description': |-
+          <br />
+          &nbsp;
+        '#description_display': invisible
+        '#options':
+          Represented: Represented
+          Non-Represented: Non-Represented
+          Unknown: Unknown
+        '#required': true
+  markup_03:
+    '#type': webform_markup
+    '#display_on': both
+    '#markup': '<span style="font-size:11pt"><span style="line-height:normal"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:15.0pt">Description of Conduct</span></strong></span></span></span>'
+  please_provide_a_description_of_the_behavior_being_reported:
+    '#type': textarea
+    '#title': 'Please provide a description of the behavior being reported.'
+    '#description': '<em><span style="font-size:12.0pt"><span style="line-height:107%"><span style="font-family:&quot;Calibri&quot;,sans-serif">Your response may include but is not limited to the following: what occurred; date(s), time(s) and location(s) of the incident; witnesses or individuals present at time of the incident(s); etc.</span></span></span></em>'
+    '#description_display': before
+  please_upload_any_supportive_documentation_here_:
+    '#type': managed_file
+    '#title': 'Please upload any supportive documentation here.'
+    '#multiple': true
+    '#description_display': invisible
+    '#file_preview': name
+  markup_04:
+    '#type': webform_markup
+    '#display_on': both
+    '#markup': |-
+      <p><span style="font-size:11pt"><span style="line-height:normal"><span style="font-family:Calibri,sans-serif"><em><span style="font-size:12.0pt">Once you submit this form, the submission will be reviewed by the Academic Personnel Office (APO) and we will be in contact with you.</span></em></span></span></span><br />
+      &nbsp;</p>
+  please_send_me_a_copy_of_my_responses:
+    '#type': checkbox
+    '#title': 'Please send me a copy of my responses'
+    '#title_display': inline
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="please_send_me_a_copy_of_my_responses"]':
+          checked: true
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:complainant_email:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements:
+        processed_text_01: processed_text_01
+        processed_text: processed_text
+        are_you_reporting_for_yourself_or_someone_else_: are_you_reporting_for_yourself_or_someone_else_
+        markup_01: markup_01
+        markup_02: markup_02
+        markup_03: markup_03
+        markup_04: markup_04
+        please_send_me_a_copy_of_my_responses: please_send_me_a_copy_of_my_responses
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_1:
+    id: email
+    handler_id: email_1
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: msimidjian@conet.ucla.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: "Submitted on [webform_submission:created]\r\nSubmitted by: [webform_submission:user]\r\n\r\nSubmitted values are:\r\n[webform_submission:values]\r\n"
+      excluded_elements:
+        processed_text_01: processed_text_01
+        processed_text: processed_text
+        markup_01: markup_01
+        markup_02: markup_02
+        markup_03: markup_03
+        markup_04: markup_04
+        please_send_me_a_copy_of_my_responses: please_send_me_a_copy_of_my_responses
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

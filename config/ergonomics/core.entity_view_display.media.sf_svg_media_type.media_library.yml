@@ -1,0 +1,59 @@
+uuid: 3ef99e80-b1d6-428d-8fa8-7f18e24a4370
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.sf_svg_media_type.field_media_svg
+    - media.type.sf_svg_media_type
+  module:
+    - svg_image_field
+_core:
+  default_config_hash: pmmUOOzKcxMGULjOPSYDbYA89iYSlmQg4lrWNZCYNlw
+id: media.sf_svg_media_type.media_library
+targetEntityType: media
+bundle: sf_svg_media_type
+mode: media_library
+content:
+  created:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_media_svg:
+    type: svg_image_field_formatter
+    label: hidden
+    settings:
+      inline: false
+      apply_dimensions: true
+      width: 200
+      height: 200
+      enable_alt: true
+      enable_title: true
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  uid:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  thumbnail: true

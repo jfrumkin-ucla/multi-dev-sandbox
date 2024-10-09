@@ -1,0 +1,630 @@
+@use "../../utilities/colors";
+@use "../../utilities/variables";
+@use "../../utilities/_mixins/breakpoints";
+
+.nav-primary {
+  border-top: 1px solid colors.$medium-grey3;
+  grid-area: nav;
+  position: relative;
+  transition: right 0.5s ease;
+
+  &.menu--account {
+    grid-area: account;
+  }
+
+  @media (min-width: breakpoints.breakpoint-min(lg)) {
+    border-top: none;
+    float: left;
+    left: 0;
+  }
+
+  // All primary nav links.
+  a {
+    color: colors.$default-state;
+    cursor: pointer;
+    display: block;
+    font-size: variables.$ucla-font-size-default;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 14px 24px;
+    text-decoration: none;
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      //font-size: variables.$ucla-font-size-medium-small; // Leave the font default size to avoid breaking layouts.
+      line-height: 24px;
+      padding: 8px 16px 12px;
+    }
+  }
+
+  // Top-level menu list.
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      display: flex;
+    }
+
+    li {
+      background: colors.$white;
+      border-bottom: 1px solid colors.$medium-grey3;
+      list-style: none;
+      margin: 0;
+      min-width: 100%;
+
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        align-self: flex-end;
+        border-bottom: 0;
+        flex-basis: auto;
+        margin-right: 4px;
+        min-width: inherit;
+      }
+
+      &.has-children {
+        display: flex;
+        flex-wrap: wrap;
+
+        & > *:nth-child(1) {
+          flex: 1;
+        }
+
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
+          display: inline-block;
+          position: relative;
+          padding-right: 0;
+
+          > a {
+            padding-right: 40px;
+          }
+
+          //.nav-primary__link {
+          //  &:hover {
+          //    border-bottom: 1px;
+          //  }
+          //}
+          //
+          //& > a {
+          //  //display: box;
+          //  //display: flexbox;
+          //  display: flex;
+          //  align-items: center;
+          //
+          //  &.nav-primary__link {
+          //    padding-right: 40px;
+          //  }
+          //}
+        }
+      }
+
+      > a {
+        display: block;
+
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
+          border-bottom: 1px solid colors.$grey-10;
+
+          &.expanded-parent {
+            background: colors.$hover-state;
+            color: colors.$white;
+          }
+        }
+
+        &:hover {
+          background-color: colors.$white;
+          outline: 4px solid colors.$hover-state;
+          outline-offset: -0.25rem;
+
+          @media (min-width: breakpoints.breakpoint-min(lg)) {
+            outline: 0;
+          }
+        }
+
+        &:focus {
+          background: colors.$white;
+          color: colors.$hover-state;
+          outline-offset: -4px;
+          outline: 4px solid colors.$hover-state;
+
+          @media (min-width: breakpoints.breakpoint-min(lg)) {
+            background: colors.$white;
+            color: colors.$hover-state;
+            outline: 1px dotted colors.$hover-state;
+            outline-offset: -0.25rem;
+
+            &.expanded-parent {
+              background: colors.$hover-state;
+              color: colors.$white;
+              outline: 1px dotted colors.$white;
+            }
+          }
+        }
+
+        &:active {
+          background: colors.$hover-state;
+          color: colors.$white;
+
+          @media (min-width: breakpoints.breakpoint-min(lg)) {
+            background: colors.$white;
+            color: colors.$hover-state;
+            outline: 1px dotted colors.$hover-state;
+            outline-offset: -0.25rem;
+          }
+        }
+
+        &.in-active-trail,
+        &.is-active {
+          border-left: 4px solid colors.$ucla-gold;
+          //padding-left: 20px;
+
+          @media (min-width: breakpoints.breakpoint-min(lg)) {
+            border-left: 0;
+            position: relative;
+
+            &::before {
+              background: colors.$ucla-gold;
+              bottom: 8px;
+              content: "";
+              display: block;
+              height: 4px;
+              left: 16px;
+              position: absolute;
+              width: calc(100% - 30px);
+            }
+          }
+        }
+      }
+
+      // Hover on the main list.
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        &:hover {
+          > a {
+            background-color: colors.$hover-state;
+            color: colors.$white;
+          }
+
+          > .nav-primary__toggle {
+            &::after {
+              filter: colors.$filter-color-white;
+            }
+          }
+
+          > ul {
+            display: block;
+            z-index: 820;
+
+            &.is-hidden {
+            display: none;
+            }
+          }
+        }
+      }
+    }
+
+    // Reverse the alignment of items later in the menu.
+    > li.open-left {
+
+      & > .nav-primary__sublist {
+        right: -4px;
+
+        .nav-primary__sublist {
+          right: 20rem !important;
+          margin-right: -10px !important;
+        }
+
+        .nav-primary__toggle {
+          @media (min-width: breakpoints.breakpoint-min(lg)) {
+            /*
+            &.is-open {
+              &::after {
+                transform: rotate(360deg);
+              }
+            }
+             */
+
+            &::after {
+              transform: rotate(-180deg);
+            }
+          }
+        }
+      }
+    }
+
+    .nav-primary__toggle {
+      background-color: colors.$white;
+      border: 0;
+      border-left: 1px solid colors.$medium-grey3;
+      height: auto;
+      margin-left: auto;
+      width: 48px;
+
+      //&:hover {
+      // background-color: colors.$hover-state;
+
+      //  &::after {
+      //   filter: colors.$filter-color-white;
+      // }
+      //}
+
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        background: none;
+        border: none;
+        bottom: 16px;
+        cursor: pointer;
+        height: auto;
+        position: absolute;
+        right: 10px;
+        width: 1.8em;
+
+        &:hover {
+          background: none;
+        }
+      }
+
+      &::after {
+        background: url("../images/icons/denotive/right-arrow--blue.svg") no-repeat center;
+        background-size: 24px;
+        content: "";
+        display: block;
+        height: 1em;
+        transform: rotate(90deg);
+        width: 100%;
+      }
+
+      &.is-open {
+        background-color: colors.$hover-state;
+
+        &::after {
+          transform: rotate(-90deg);
+          filter: colors.$filter-color-white;
+
+          @media (min-width: breakpoints.breakpoint-min(lg)) {
+            filter: colors.$filter-color-white;
+          }
+        }
+
+        &:focus {
+          outline: 1px dotted colors.$white;
+          outline-offset: -0.25rem;
+        }
+      }
+
+      //&:hover {
+      //  background-color: colors.$hover-state;
+      //  cursor: pointer;
+      //
+      //  &::after {
+      //    filter: colors.$filter-color-white;
+      //  }
+      //}
+      //
+      &:focus {
+        outline: 4px solid colors.$hover-state;
+        outline-offset: -4px;
+
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
+          outline: 1px dotted colors.$hover-state;
+          outline-offset: -0.25rem;
+        }
+      }
+    }
+  }
+
+  // Second-level and deeper menu lists.
+  &__sublist {
+    width: 100%;
+
+    &.is-hidden {
+      display: none;
+    }
+
+    &.is-open {
+      display: block;
+    }
+
+    @media (min-width: breakpoints.breakpoint-min(lg)) {
+      display: block;
+      position: absolute;
+      width: 20rem;
+      &.is-hidden {
+        display: none;
+      }
+    }
+
+    > ul {
+      &.is-hidden {
+        display: none;
+      }
+
+      &.is-open {
+        display: block;
+      }
+    }
+
+    > li {
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        border: 1px solid colors.$grey-10;
+        border-top: 0;
+        position: relative;
+        width: 100%;
+      }
+
+      &:first-child {
+        border-top: 1px solid colors.$medium-grey3;
+
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
+          border-top: 1px solid colors.$grey-10;
+        }
+      }
+
+      &:last-child {
+        border-bottom: 0;
+
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
+          border-bottom: 1px solid colors.$grey-10;
+        }
+      }
+
+      a {
+        background-color: colors.$grey-5;
+        padding: 12px 24px 12px 48px;
+        color: colors.$darker-blue;
+
+        &:focus {
+          background-color: colors.$lightest-grey-2;
+          color: colors.$hover-state;
+          outline: 4px solid colors.$hover-state;
+          outline-offset: -4px;
+        }
+
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
+          background-color: colors.$white;
+          padding: 12px 16px;
+          color: colors.$default-state;
+
+          &:focus {
+            background: colors.$white;
+            color: colors.$hover-state;
+            outline: 1px dotted colors.$hover-state;
+            outline-offset: -0.25rem;
+          }
+        }
+
+        &.in-active-trail,
+        &.is-active {
+          border-left: 4px solid colors.$ucla-gold;
+          //padding-left: 8px;
+
+          @media (min-width: breakpoints.breakpoint-min(lg)) {
+            //border-left: 4px solid colors.$ucla-gold;
+            //padding-left: 16px;
+
+            &::before {
+              content: none;
+              display: none;
+            }
+          }
+        }
+
+        &:hover {
+          background-color: colors.$lightest-grey-2;
+        }
+
+        &:active,
+        &:active:hover {
+          background: colors.$hover-state;
+          color: colors.$white;
+        }
+      }
+
+      // Hover on the secondary list.
+      @media (min-width: breakpoints.breakpoint-min(lg)) {
+        &:hover {
+          > a {
+            background-color: colors.$hover-state;
+            color: colors.$white;
+          }
+
+          .nav-primary__toggle {
+            background: colors.$hover-state;
+
+            &:after {
+              filter: colors.$filter-color-white;
+            }
+          }
+
+          > ul,
+         // > ul.is-hidden,
+          > ul.is-open {
+            display: block;
+            z-index: 820;
+          }
+        }
+      }
+
+      .nav-primary__toggle {
+        background-color: colors.$lightest-grey-2;
+        border: 0;
+        border-left: 1px solid colors.$medium-grey3;
+        height: auto;
+        margin-left: auto;
+        width: 48px;
+
+        &.is-open {
+          background-color: colors.$hover-state;
+          &::after {
+            transform: rotate(-90deg);
+            filter: colors.$filter-color-white;
+
+            @media (min-width: breakpoints.breakpoint-min(lg)) {
+              filter: colors.$filter-color-white;
+              transform: none;
+            }
+          }
+
+          &:focus {
+            outline: 1px dotted colors.$white;
+            outline-offset: -0.25rem;
+          }
+        }
+
+        &::after {
+          transform: rotate(90deg);
+          filter: colors.$darker-blue;
+
+          @media (min-width: breakpoints.breakpoint-min(lg)) {
+            transform: none;
+            filter: colors.$darker-blue;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          //&::after {
+           //filter: colors.$filter-color-white;
+          //}
+        }
+
+        &:focus {
+          outline: 4px solid colors.$hover-state;
+          outline-offset: -4px;
+
+          @media (min-width: breakpoints.breakpoint-min(lg)) {
+            outline: 1px dotted colors.$hover-state;
+            outline-offset: -0.25rem;
+          }
+        }
+
+        &::after {
+          background: url("../images/icons/denotive/right-arrow--blue.svg") no-repeat center;
+          background-size: 24px;
+          content: "";
+          display: block;
+          height: 1em;
+          width: 100%;
+        }
+
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
+          background: none;
+          border: none;
+          cursor: pointer;
+          height: auto;
+          position: absolute;
+          right: 10px;
+          top: 15px;
+          width: 1.8em;
+
+          &:hover {
+            background: none;
+          }
+        }
+      }
+
+
+      ul {
+        width: 100%;
+
+        @media (min-width: breakpoints.breakpoint-min(lg)) {
+          list-style-position: outside !important;
+          position: absolute;
+          right: -20rem;
+          top: -1px;
+          width: 20rem;
+        }
+
+        > li {
+          @media (min-width: breakpoints.breakpoint-min(lg)) {
+            border: 1px solid colors.$grey-10;
+            border-top: 0;
+
+            a {
+              padding: 12px 16px;
+              color: colors.$default-state;
+
+              &:focus {
+                background-color: colors.$white;
+                color: colors.$hover-state;
+                outline: 1px dotted colors.$hover-state;
+                outline-offset: -0.25rem;
+              }
+
+              &:active {
+                background-color: colors.$white;
+                color: colors.$hover-state;
+                outline: 1px dotted colors.$hover-state;
+                outline-offset: -0.25rem;
+              }
+            }
+          }
+
+          &:first-child {
+            border-top: 1px solid colors.$medium-grey3;
+
+            @media (min-width: breakpoints.breakpoint-min(lg)) {
+              border-top: 1px solid colors.$grey-10;
+            }
+          }
+
+          &:last-child {
+            border-bottom: 0;
+
+            @media (min-width: breakpoints.breakpoint-min(lg)) {
+              border-bottom: 1px solid colors.$grey-10;
+            }
+          }
+
+          > a {
+            padding: 12px 24px 12px 72px;
+            background-color: colors.$grey-8;
+            color: colors.$default-state;
+
+            &:hover {
+              background-color: colors.$grey-8;
+            }
+
+            &:focus {
+              background-color: colors.$grey-8;
+            }
+
+            @media (min-width: breakpoints.breakpoint-min(lg)) {
+              background-color: colors.$white;
+              padding-left: 24px;
+
+              &:hover {
+                background-color: colors.$hover-state;
+              }
+
+              &:focus {
+                background-color: colors.$white;
+                color: colors.$hover-state;
+                outline: 1px dotted colors.$hover-state;
+                outline-offset: -0.25rem;
+              }
+
+              &:active {
+                background-color: colors.$white;
+                color: colors.$hover-state;
+                outline: 1px dotted colors.$hover-state;
+                outline-offset: -0.25rem;
+              }
+            }
+
+            &:active {
+              background: colors.$hover-state;
+              color: colors.$white;
+            }
+          }
+        }
+
+        &.is-hidden {
+          display: none;
+        }
+
+        &.is-open {
+          display: block;
+        }
+      }
+    }
+  }
+}

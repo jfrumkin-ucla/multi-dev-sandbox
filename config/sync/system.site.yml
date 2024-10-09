@@ -1,0 +1,15 @@
+_core:
+langcode: en
+name: 'Administrative Vice Chancellor'
+mail: portaleditor@it.ucla.edu
+slogan: ''
+page:
+  403: ''
+  404: /node/1746
+  front: /node/1436
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+credit_info:
+  value: ''
+  format: sf_basic_html

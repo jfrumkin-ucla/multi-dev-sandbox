@@ -1,0 +1,83 @@
+@use "../utilities/colors";
+@use "../utilities/_mixins/breakpoints";
+
+.node-general__media {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.node-general__title {
+  a {
+    text-decoration: none;
+  }
+}
+
+.view-mode--listing {
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    display: flex;
+
+    .node-general__media {
+      flex-basis: 100%;
+      margin-bottom: 0;
+      max-width: min(25%, 160px);
+    }
+
+    .node-general__info {
+      flex-basis: 100%;
+    }
+  }
+
+  .node-general__title {
+    h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.view-mode--teaser {
+  @media (min-width: breakpoints.breakpoint-min(md)) {
+    display: flex;
+
+    .node-general__media {
+      flex-basis: 100%;
+      margin-bottom: 0;
+      max-width: 25%;
+    }
+
+    .node-general__info {
+      flex-basis: 100%;
+    }
+  }
+
+  .node-general__info {
+    > .field {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .node-general__title {
+    h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .featured-flag {
+    background-color: colors.$ucla-gold;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 0.25rem 1rem;
+    text-transform: uppercase;
+
+    @media (min-width: breakpoints.breakpoint-min(md)) {
+      left: -0.5rem;
+      position: absolute;
+      top: 0.5rem;
+    }
+  }
+}

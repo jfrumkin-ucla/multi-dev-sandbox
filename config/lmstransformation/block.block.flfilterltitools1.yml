@@ -1,0 +1,30 @@
+uuid: 7b883f1c-c284-4930-a9b3-d73c1005bce9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_focal_link:9b3a5383-f362-4c58-bdb2-222ed2d3ed4c'
+  module:
+    - block_content
+    - system
+  theme:
+    - siteden_surface
+id: flfilterltitools1
+theme: siteden_surface
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:9b3a5383-f362-4c58-bdb2-222ed2d3ed4c'
+settings:
+  id: 'block_content:9b3a5383-f362-4c58-bdb2-222ed2d3ed4c'
+  label: 'Filter Tools'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/lti-functionality/productivity\r\n/lti-functionality/content-design\r\n/lti-functionality/media\r\n/lti-functionality/annotation-and-collaboration\r\n/lti-functionality/polling\r\n/lti-scope/campuswide\r\n/lti-scope/sub-account\r\n/lti-functionality/accessibility\r\n/lti-functionality/annotation\r\n/lti-functionality/publisher-and-course-management\r\n/lti-functionality/assessment-and-evaluation\r\n/lti-functionality/assessment\r\n/lti-functionality/collaboration\r\n/lti-functionality/content-design-and-editing-0\r\n/lti-functionality/course-management\r\n/lti-functionality/e-reserves\r\n/lti-functionality/publisher\r\n\r\n"

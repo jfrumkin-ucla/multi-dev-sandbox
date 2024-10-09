@@ -1,0 +1,467 @@
+Subject: [PATCH] Site theme in admin:
+Modifications to MR131, see https://git.drupalcode.org/project/layout_paragraphs/-/merge_requests/131
+Fixing the theme registry alter to account for paragraph types with underscores in their file names.
+---
+Index: layout_paragraphs.module
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/layout_paragraphs.module b/layout_paragraphs.module
+--- a/layout_paragraphs.module	(revision e33ca877666c6e15365a962867653d3f87984a27)
++++ b/layout_paragraphs.module	(date 1694190086561)
+@@ -451,3 +451,69 @@
+     layout_paragraphs_alter_library_recursive($value, $cdn);
+   }
+ }
++
++function layout_paragraphs_theme_registry_alter(&$theme_registry) {
++
++  $enabled = \Drupal::config('layout_paragraphs.default_theme_settings')->get('display_default_theme');
++
++  // Check if it's enabled.
++  if($enabled == 1) {
++
++    $route_name = \Drupal::routeMatch()->getRouteName();
++    $route_is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
++
++    // Just do that if the theme is 'admin' and the page is the add or edit node form.
++    if($route_is_admin && ($route_name == 'entity.node.edit_form' || $route_name == 'node.add')) {
++
++      /** @var \Drupal\Core\File\FileSystemInterface $file_system */
++      $file_system = \Drupal::service('file_system');
++
++      $defaultThemeName = \Drupal::config('system.theme')->get('default');
++      $theme_path = \Drupal::service('extension.list.theme')->getPath($defaultThemeName);
++      $templates_path = $theme_path . '/templates';
++
++      $paragraph_types = _layout_paragraphs_get_paragraph_types();
++      // Adding 'default' paragraph type to search paragraphs.html.twig template file inside default theme.
++      array_unshift($paragraph_types, 'default');
++
++      foreach ($paragraph_types as $type) {
++
++        if($type == 'default') {
++          $file_name = 'paragraph.html.twig';
++          $template_name = 'paragraph';
++          $template_file = 'paragraph';
++        } else {
++            $file_name = 'paragraph--' . str_replace('_', '-', $type) . '.html.twig';
++            $template_name = 'paragraph__' . $type;
++            $template_file = 'paragraph--' . str_replace('_', '-', $type);
++        }
++
++        // Scan for the template file inside template folder and subfolders.
++        $file_exists = $file_system->scanDirectory($templates_path, '/^' . $file_name . '/');
++
++        // If file exists, modify the paths for the theme template file.
++        if(count($file_exists) > 0) {
++          // Get the template file directory name (path).
++          $templates_path = $file_system->dirname(array_key_first($file_exists));
++
++          $theme_registry[$template_name]['render element'] = 'elements';
++          $theme_registry[$template_name]['type'] = 'theme_engine';
++          $theme_registry[$template_name]['theme path'] = $theme_path;
++          $theme_registry[$template_name]['template'] = $template_file;
++          $theme_registry[$template_name]['path'] = $templates_path;
++          $theme_registry[$template_name]['preprocess functions'] = $theme_registry['paragraph']['preprocess functions'];
++        }
++      }
++    }
++  }
++}
++
++/**
++ * Helper function to get a list of paragraph types by machine name
++ *
++ * @return array
++ */
++function _layout_paragraphs_get_paragraph_types(){
++  $paragraph_bundles = \Drupal::service('entity_type.bundle.info')->getBundleInfo('paragraph');
++  return array_keys($paragraph_bundles);
++}
+Index: src/Form/LayoutParagraphsBuilderForm.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Form/LayoutParagraphsBuilderForm.php b/src/Form/LayoutParagraphsBuilderForm.php
+--- a/src/Form/LayoutParagraphsBuilderForm.php	(revision e33ca877666c6e15365a962867653d3f87984a27)
++++ b/src/Form/LayoutParagraphsBuilderForm.php	(date 1691012022100)
+@@ -5,6 +5,7 @@
+ use Drupal\Core\Form\FormBase;
+ use Drupal\Component\Utility\Html;
+ use Drupal\Core\Ajax\AjaxResponse;
++use Drupal\Component\Datetime\Time;
+ use Drupal\Core\Ajax\MessageCommand;
+ use Drupal\Core\Ajax\ReplaceCommand;
+ use Drupal\Core\Form\FormStateInterface;
+@@ -16,7 +17,15 @@
+ use Drupal\Core\Entity\Entity\EntityViewDisplay;
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
+ use Drupal\layout_paragraphs\Ajax\LayoutParagraphsEventCommand;
++use Drupal\Core\Entity\EntityFieldManager;
++use Drupal\Component\Datetime\TimeInterface;
++use Drupal\Core\Entity\RevisionLogInterface;
++use Drupal\Core\Entity\ContentEntityInterface;
++use Drupal\Core\Entity\ContentEntityTypeInterface;
++use Drupal\Core\Entity\EntityTypeManagerInterface;
++use Drupal\Core\Entity\EntityFieldManagerInterface;
+ use Drupal\layout_paragraphs\LayoutParagraphsLayout;
++use Drupal\Core\Entity\RevisionableEntityBundleInterface;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ use Drupal\layout_paragraphs\LayoutParagraphsLayoutTempstoreRepository;
+ 
+@@ -49,6 +58,20 @@
+    */
+   protected $entityTypeManager;
+ 
++    /**
++   * The entity field manager service.
++   *
++   * @var \Drupal\Core\Entity\EntityFieldManagerInterface
++   */
++  protected $entityFieldManager;
++
++  /**
++   * The time service.
++   *
++   * @var \Drupal\Component\Datetime\TimeInterface
++   */
++  protected $time;
++
+   /**
+    * {@inheritDoc}
+    */
+@@ -59,9 +82,11 @@
+   /**
+    * {@inheritDoc}
+    */
+-  public function __construct(LayoutParagraphsLayoutTempstoreRepository $tempstore, EntityTypeManagerInterface $entity_type_manager) {
++  public function __construct(LayoutParagraphsLayoutTempstoreRepository $tempstore, EntityTypeManagerInterface $entity_type_manager, EntityFieldManagerInterface $entity_field_manager, TimeInterface $time) {
+     $this->tempstore = $tempstore;
+     $this->entityTypeManager = $entity_type_manager;
++    $this->entityFieldManager = $entity_field_manager;
++    $this->time = $time;
+   }
+ 
+   /**
+@@ -70,7 +95,9 @@
+   public static function create(ContainerInterface $container) {
+     return new static(
+       $container->get('layout_paragraphs.tempstore_repository'),
+-      $container->get('entity_type.manager')
++      $container->get('entity_type.manager'),
++      $container->get('entity_field.manager'),
++      $container->get('datetime.time')
+     );
+   }
+ 
+@@ -114,6 +141,15 @@
+     else {
+       $this->layoutParagraphsLayout = $this->tempstore->getWithStorageKey($layout_paragraphs_storage_key);
+     }
++    /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
++    $entity = $this->layoutParagraphsLayout->getEntity();
++    /** @var \Drupal\Core\Entity\ContentEntityTypeInterface $entity_type */
++    $entity_type = $entity->getEntityType();
++    $field_definitions = $this->entityFieldManager->getFieldDefinitions($entity->getEntityTypeId(), $entity->bundle());
++    // Get log message field's key from definition.
++    $log_message_field = $entity_type->getRevisionMetadataKey('revision_log_message');
++    $log_message_label = $field_definitions[$log_message_field]->getLabel();
++    $log_message_desc = $field_definitions[$log_message_field]->getDescription();
+ 
+     $form['layout_paragraphs_builder_ui'] = [
+       '#type' => 'layout_paragraphs_builder',
+@@ -148,10 +184,62 @@
+       ],
+     ];
+     $form['actions']['#attributes']['class'][] = 'lpb-form__actions';
+-
++    $new_revision_default = $this->getNewRevisionDefault();
++    if ($entity_type->showRevisionUi()) {
++      $form['actions']['revision'] = [
++        '#type' => 'checkbox',
++        '#title' => $this->t('Create new revision'),
++        '#default_value' => $new_revision_default,
++        '#access' => !$entity->isNew() && $entity->get($entity_type->getKey('revision'))->access('update'),
++        '#group' => 'revision_information',
++      ];
++      if ($log_message_field) {
++        $form['actions'][$log_message_field] = [
++          '#group' => 'revision_information',
++          '#type' => 'textfield',
++          '#title' => $log_message_label,
++          '#description' => $log_message_desc,
++          '#states' => [
++            'visible' => [
++              ':input[name="revision"]' => ['checked' => TRUE],
++            ],
++          ],
++        ];
++      }
++    }
+     return $form;
+   }
+ 
++  /**
++   * Should new revisions created on default.
++   *
++   * @return bool
++   *   New revision on default.
++   */
++  protected function getNewRevisionDefault() {
++    $new_revision_default = FALSE;
++    $bundle_entity = $this->getBundleEntity();
++    if ($bundle_entity instanceof RevisionableEntityBundleInterface) {
++      // Always use the default revision setting.
++      $new_revision_default = $bundle_entity->shouldCreateNewRevision();
++    }
++    return $new_revision_default;
++  }
++
++  /**
++   * Returns the bundle entity of the entity, or NULL if there is none.
++   *
++   * @return \Drupal\Core\Entity\EntityInterface|null
++   *   The bundle entity.
++   */
++  protected function getBundleEntity() {
++    $entity = $this->layoutParagraphsLayout->getEntity();
++    if ($bundle_entity_type = $entity->getEntityType()->getBundleEntityType()) {
++      return $this->entityTypeManager->getStorage($bundle_entity_type)->load($entity->bundle());
++    }
++    return NULL;
++  }
++
+   /**
+    * Ajax callback.
+    *
+@@ -190,7 +278,6 @@
+    */
+   public function save(array $form, FormStateInterface $form_state) {
+     $entity = $this->layoutParagraphsLayout->getEntity();
+-
+     $response = new AjaxResponse();
+     $t_args = [
+       '@type' => $entity->getEntityType()->getLabel(),
+@@ -237,7 +324,21 @@
+       $entity->setRevisionLogMessage($this->t('Updated with the Layout Paragraphs Frontend Builder.'));
+     }
+     $entity->$field_name = $this->layoutParagraphsLayout->getParagraphsReferenceField();
++
++    // Save as a new revision if requested to do so.
++    if ($entity_type->showRevisionUi() && !$form_state->isValueEmpty('revision')) {
++      $entity->setNewRevision();
++      if ($entity instanceof RevisionLogInterface) {
++        // If a new revision is created, save the current user as
++        // revision author.
++        $entity->setRevisionUserId($this->currentUser()->id());
++        $entity->setRevisionCreationTime($this->time->getRequestTime());
++        $log_message_field = $entity_type->getRevisionMetadataKey('revision_log_message');
++        $entity->set($log_message_field, $form_state->getValue($log_message_field));
++      }
++    }
+     $entity->save();
++
+     $this->layoutParagraphsLayout->setParagraphsReferenceField($entity->$field_name);
+     $this->tempstore->set($this->layoutParagraphsLayout);
+   }
+Index: src/Element/LayoutParagraphsBuilder.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Element/LayoutParagraphsBuilder.php b/src/Element/LayoutParagraphsBuilder.php
+--- a/src/Element/LayoutParagraphsBuilder.php	(revision e33ca877666c6e15365a962867653d3f87984a27)
++++ b/src/Element/LayoutParagraphsBuilder.php	(date 1694189250666)
+@@ -197,6 +197,14 @@
+       'data-lpb-id' => $this->layoutParagraphsLayout->id(),
+     ] + ($element['#attributes'] ?? []);
+     $element['#attached']['library'] = ['layout_paragraphs/builder'];
++
++    // Loading default theme library configuration.
++    $default_theme_config = \Drupal::config('layout_paragraphs.default_theme_settings');
++    $enabled = $default_theme_config->get('display_default_theme');
++    if($enabled == 1) {
++      $element['#attached']['library'][] = $default_theme_config->get('default_theme_library');
++    }
++
+     $element['#attached']['drupalSettings']['lpBuilder'][$this->layoutParagraphsLayout->id()] = $this->layoutParagraphsLayout->getSettings();
+     $element['#is_empty'] = $this->layoutParagraphsLayout->isEmpty();
+     $element['#empty_message'] = $this->layoutParagraphsLayout->getSetting('empty_message', $this->t('Start adding content.'));
+Index: src/Form/LayoutParagraphsDefaultThemeForm.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Form/LayoutParagraphsDefaultThemeForm.php b/src/Form/LayoutParagraphsDefaultThemeForm.php
+new file mode 100644
+--- /dev/null	(date 1694189250666)
++++ b/src/Form/LayoutParagraphsDefaultThemeForm.php	(date 1694189250666)
+@@ -0,0 +1,102 @@
++<?php
++
++namespace Drupal\layout_paragraphs\Form;
++
++use Drupal\Core\Config\ConfigFactoryInterface;
++use Drupal\Core\Config\TypedConfigManagerInterface;
++use Drupal\Core\Form\ConfigFormBase;
++use Drupal\Core\Form\FormStateInterface;
++use Symfony\Component\DependencyInjection\ContainerInterface;
++
++/**
++ * Defines a form for modifying Layout Paragraphs default theme settings.
++ */
++class LayoutParagraphsDefaultThemeForm extends ConfigFormBase {
++
++  /**
++   * The typed config service.
++   *
++   * @var \Drupal\Core\Config\TypedConfigManagerInterface
++   */
++  protected $typedConfigManager;
++
++  /**
++   * SettingsForm constructor.
++   *
++   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
++   *   The factory for configuration objects.
++   * @param \Drupal\Core\Config\TypedConfigManagerInterface $typedConfigManager
++   *   The typed config service.
++   */
++  public function __construct(
++    ConfigFactoryInterface $config_factory,
++    TypedConfigManagerInterface $typedConfigManager
++  ) {
++    parent::__construct($config_factory);
++    $this->typedConfigManager = $typedConfigManager;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function create(ContainerInterface $container) {
++    return new static(
++      $container->get('config.factory'),
++      $container->get('config.typed')
++    );
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function getFormId() {
++    return 'layout_paragraphs_default_theme_settings';
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  protected function getEditableConfigNames() {
++    return [
++      'layout_paragraphs.default_theme_settings',
++    ];
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function buildForm(array $form, FormStateInterface $form_state) {
++    $lp_config = $this->configFactory()->getEditable('layout_paragraphs.default_theme_settings');
++    $lp_config_schema = $this->typedConfigManager->getDefinition('layout_paragraphs.default_theme_settings') + ['mapping' => []];
++    $lp_config_schema = $lp_config_schema['mapping'];
++
++    $form['display_default_theme'] = [
++      '#type' => 'checkbox',
++      '#title' => $lp_config_schema['display_default_theme']['label'],
++      '#description' => $lp_config_schema['display_default_theme']['description'],
++      '#default_value' => $lp_config->get('display_default_theme'),
++    ];
++
++    $form['default_theme_library'] = [
++      '#type' => 'textfield',
++      '#title' => $lp_config_schema['default_theme_library']['label'],
++      '#description' => $lp_config_schema['default_theme_library']['description'],
++      '#default_value' => $lp_config->get('default_theme_library'),
++    ];
++
++    return parent::buildForm($form, $form_state);
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function submitForm(array &$form, FormStateInterface $form_state) {
++    $lp_config = $this->configFactory()->getEditable('layout_paragraphs.default_theme_settings');
++    $lp_config->set('display_default_theme', $form_state->getValue('display_default_theme'));
++    $lp_config->set('default_theme_library', $form_state->getValue('default_theme_library'));
++    $lp_config->save();
++    // Confirmation on form submission.
++    $this->messenger()->addMessage($this->t('The Layout Paragraphs default theme settings have been saved.'));
++  }
++
++}
+Index: config/schema/layout_paragraphs.schema.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/config/schema/layout_paragraphs.schema.yml b/config/schema/layout_paragraphs.schema.yml
+--- a/config/schema/layout_paragraphs.schema.yml	(revision e33ca877666c6e15365a962867653d3f87984a27)
++++ b/config/schema/layout_paragraphs.schema.yml	(date 1694189250659)
+@@ -104,3 +104,16 @@
+       sequence:
+         type: string
+         label: 'Layout'
++
++layout_paragraphs.default_theme_settings:
++  type: config_object
++  label: 'Layout Paragraphs default theme settings'
++  mapping:
++    display_default_theme:
++      type: integer
++      label: 'Display default theme in admin'
++      description: 'This option allows to show the Paragraphs templates and styles from default theme in admin add/edit form'
++    default_theme_library:
++      type: string
++      label: 'Default theme library'
++      description: 'Default theme library to load inside (theme/library)'
+Index: layout_paragraphs.links.task.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/layout_paragraphs.links.task.yml b/layout_paragraphs.links.task.yml
+--- a/layout_paragraphs.links.task.yml	(revision e33ca877666c6e15365a962867653d3f87984a27)
++++ b/layout_paragraphs.links.task.yml	(date 1694189250659)
+@@ -14,3 +14,9 @@
+   title: 'Modal Settings'
+   base_route: layout_paragraphs.label_settings
+   weight: 200
++
++layout_paragraphs.default_theme:
++  route_name: layout_paragraphs.default_theme
++  title: 'Default Theme'
++  base_route: layout_paragraphs.label_settings
++  weight: 300
+Index: layout_paragraphs.routing.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/layout_paragraphs.routing.yml b/layout_paragraphs.routing.yml
+--- a/layout_paragraphs.routing.yml	(revision e33ca877666c6e15365a962867653d3f87984a27)
++++ b/layout_paragraphs.routing.yml	(date 1694189250663)
+@@ -109,3 +109,11 @@
+         type: entity:paragraphs_type
+   requirements:
+     _layout_paragraphs_builder_access: 'TRUE'
++
++layout_paragraphs.default_theme:
++  path: '/admin/config/content/layout_paragraphs/default-theme'
++  defaults:
++    _form: '\Drupal\layout_paragraphs\Form\LayoutParagraphsDefaultThemeForm'
++    _title: 'Layout Paragraphs Default Theme'
++  requirements:
++    _permission: 'administer site configuration'

@@ -1,0 +1,12 @@
+{% set tabtitle = [] %}
+{% set tabcontent = [] %}
+
+{% for key, item in items|filter((value, key) => key|first != '#') %}
+  {% set tabtitle = tabtitle|merge([item.content['#paragraph'].field_sf_title.0.value]) %}
+  {% set tabcontent = tabcontent|merge([item.content['#paragraph'].field_sf_wysiwyg.0|view]) %}
+{% endfor %}
+
+{% include '@siteden-components/tabs.html.twig' with {
+  titles: tabtitle,
+  content: tabcontent
+} %}

@@ -1,0 +1,19 @@
+uuid: 323158e2-a45a-47c9-a105-6898de2bd1ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+      - page-menu
+    parent: 'main:'
+name: 'LTI Tool'
+type: lti_application
+description: 'Info about Learning Tools Interoperability (LTI) integrations, tools, and services for use with the Canvas LMS.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

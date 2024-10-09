@@ -1,0 +1,19 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: ae7745c4-07f4-4a33-adbe-48cf5766df86
+  bundle: sf_university_header
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Main Departmental Header'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true

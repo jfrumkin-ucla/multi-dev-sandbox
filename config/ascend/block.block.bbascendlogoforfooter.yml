@@ -1,0 +1,30 @@
+uuid: 17e5e530-aad0-438e-8f31-75167f2208f4
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:3b265dd3-fa28-475b-8171-1bbeb00ed711'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: bbascendlogoforfooter
+theme: siteden_surface
+region: footer
+weight: -13
+provider: null
+plugin: 'block_content:3b265dd3-fa28-475b-8171-1bbeb00ed711'
+settings:
+  id: 'block_content:3b265dd3-fa28-475b-8171-1bbeb00ed711'
+  label: 'BB: ascend logo for footer'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

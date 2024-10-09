@@ -1,0 +1,24 @@
+uuid: 2a40f2b9-9d31-4147-93e2-797da9d15fc7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - siteden_surface
+id: breadcrumbs
+theme: siteden_surface
+region: title
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/rcp*"

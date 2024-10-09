@@ -1,0 +1,36 @@
+uuid: 6d127d03-a808-438e-b41c-c07cc85b7a0e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_university_header:a2cd5c51-8646-43f9-bc1e-8472b46f45ad'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: csoemsdepartmentalheader
+theme: siteden_surface
+region: university_header
+weight: 0
+provider: null
+plugin: 'block_content:a2cd5c51-8646-43f9-bc1e-8472b46f45ad'
+settings:
+  id: 'block_content:a2cd5c51-8646-43f9-bc1e-8472b46f45ad'
+  label: 'CSO & EMS Departmental Header'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/cso*\r\n/ems*"

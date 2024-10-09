@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+name: sf_hero_banner_molecule
+label: 'Hero Banner Molecule'
+effects:
+  sf_hero_banner_focal_point_scale_and_crop:
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 2100
+      height: 710
+      crop_type: focal_point

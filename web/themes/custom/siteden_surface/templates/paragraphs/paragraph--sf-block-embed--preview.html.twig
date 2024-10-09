@@ -1,0 +1,20 @@
+{% extends "paragraph.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a Block embed paragraph.
+ *
+ * Available variables:
+ * - Look in the paragraph.html.twig file for available variables.
+ */
+#}
+
+{% block content %}
+  <div class="sf_block-embed">
+    <div class="sf_block-embed__preview">
+      <div>{{ content.field_sf_block.0['#id'] }}</div>
+      <div>{{ content.field_sf_block.0['#configuration']['webform_id'] }}</div>
+    </div>
+  </div>
+{% endblock %}
+

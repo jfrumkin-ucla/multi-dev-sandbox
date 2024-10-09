@@ -1,0 +1,27 @@
+uuid: b1d018b2-85df-4650-be7b-59c6500d4549
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - siteden_surface
+_core:
+  default_config_hash: mpxlHLVC97j8cRkLObtzODqxDZSgcMSzUeoGnV1-vmI
+id: siteden_surface_page_title
+theme: siteden_surface
+region: title
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '<front>'

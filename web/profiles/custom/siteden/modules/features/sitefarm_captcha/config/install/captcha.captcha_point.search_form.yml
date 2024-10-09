@@ -1,0 +1,6 @@
+langcode: en
+status: false
+dependencies: {  }
+formId: search_form
+captchaType: recaptcha/reCAPTCHA
+label: search_form

@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Theme override for a the Unit Leader Title field on Unit Taxonomy Term.
+ *
+ */
+#}
+{%
+  set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+  margin_bottom ? 'u-space-mb--large'
+]
+%}
+{%
+  set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+  is_heading ? 'heading--primary'
+]
+%}
+
+{% if label_hidden %}
+  {% if multiple %}
+    <div{{attributes.addClass(classes,'field__items')}}>
+      {% for item in items %}
+        <h2{{item.attributes.addClass('field__item')}}>{{ item.content }}</h2>
+      {% endfor %}
+    </div>
+  {% else %}
+    {% for item in items %}
+      <h2{{attributes.addClass(classes,'field__item')}}>{{ item.content }}</h2>
+    {% endfor %}
+  {% endif %}
+{% else %}
+  <div{{attributes.addClass(classes)}}>
+    <div{{title_attributes.addClass(title_classes)}}>{{ label }}</div>
+    {% if multiple %}
+      <div class="field__items {{ field_items_class }}">
+      {% endif %}
+      {% for item in items %}
+        <h2{{item.attributes.addClass('field__item')}}>{{ item.content }}</h2>
+      {% endfor %}
+      {% if multiple %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
+

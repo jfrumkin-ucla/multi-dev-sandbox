@@ -1,0 +1,23 @@
+uuid: 63ce1b16-40d4-41bf-8a0b-376253ad1ee5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.z_research_project
+  module:
+    - text
+id: node.z_research_project.body
+field_name: body
+entity_type: node
+bundle: z_research_project
+label: 'Project Description and Details'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

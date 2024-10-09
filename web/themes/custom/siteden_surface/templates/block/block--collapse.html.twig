@@ -1,0 +1,25 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a Basic Block Collapse.
+ *
+ * Available variables:
+ * - Look in the block.html.twig file for available variables.
+ */
+#}
+{% set attributes = attributes.addClass('accordion') %}
+
+{% block title %}
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <h3 class="accordion__label">
+    {{ label }}
+  </h3>
+{% endblock %}
+
+{% block content %}
+  <div class="accordion__content">
+    {{ content }}
+  </div>
+{% endblock %}

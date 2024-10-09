@@ -1,0 +1,21 @@
+uuid: a5d97b86-7cbf-4add-b8c9-12e456d341df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_circuit_joined
+    - node.type.circuit_profile
+_core:
+  default_config_hash: iOPBF_Y38SokyHR9g_VuARGU_BsEB_n3O9AX-j3DA-Q
+id: node.circuit_profile.field_circuit_joined
+field_name: field_circuit_joined
+entity_type: node
+bundle: circuit_profile
+label: 'Joined UCLA in'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

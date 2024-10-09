@@ -1,0 +1,21 @@
+uuid: 50511f98-2abb-4056-8da7-24b1120fa7fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sf_first_name
+    - node.type.circuit_profile
+_core:
+  default_config_hash: QkEPt29wlVVR3CrFYepTL1I7ngdeShfC-J0Kqy9k49w
+id: node.circuit_profile.field_sf_first_name
+field_name: field_sf_first_name
+entity_type: node
+bundle: circuit_profile
+label: 'First Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

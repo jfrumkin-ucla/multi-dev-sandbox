@@ -1,0 +1,31 @@
+uuid: 7eb13b0f-93de-40b7-bb8f-abae70233589
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dgc_project_news
+    - node.type.dgc_fact_sheet
+    - taxonomy.vocabulary.newsroom_tags
+_core:
+  default_config_hash: vZ1wNwP5PaEWBQz9Ti6u3RmxebMgtRZi4UR9apIF7Xg
+id: node.dgc_fact_sheet.field_dgc_project_news
+field_name: field_dgc_project_news
+entity_type: node
+bundle: dgc_fact_sheet
+label: 'Project News'
+description: 'Select tags for Newsroom items that are related to this fact sheet.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      newsroom_tags: newsroom_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

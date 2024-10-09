@@ -1,0 +1,25 @@
+uuid: fb5822c6-cc02-404e-a393-bf3a828f9719
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chr_percent_complete
+    - node.type.chr_project
+_core:
+  default_config_hash: 0hNRUNrSJn7mU0KVyuC7ptPWT4pkvHpFVVZQJa1wBbY
+id: node.chr_project.field_chr_percent_complete
+field_name: field_chr_percent_complete
+entity_type: node
+bundle: chr_project
+label: 'Percentage Complete'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: ''
+field_type: integer

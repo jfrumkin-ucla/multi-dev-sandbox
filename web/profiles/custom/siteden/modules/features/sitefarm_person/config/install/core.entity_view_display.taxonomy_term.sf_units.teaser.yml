@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - field.field.taxonomy_term.sf_units.field_sf_unit_leaders
+    - field.field.taxonomy_term.sf_units.field_sf_unit_leaders_title
+    - taxonomy.vocabulary.sf_units
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: taxonomy_term.sf_units.teaser
+targetEntityType: taxonomy_term
+bundle: sf_units
+mode: teaser
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_sf_unit_leaders: true
+  field_sf_unit_leaders_title: true

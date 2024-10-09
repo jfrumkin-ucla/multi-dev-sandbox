@@ -1,0 +1,117 @@
+uuid: 59376489-a278-4ba1-8b13-bf61a114cfed
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_basic
+    - core.entity_view_mode.node.teaser
+    - field.field.node.funding_opportunity.body
+    - field.field.node.funding_opportunity.field_funding_admin_unit
+    - field.field.node.funding_opportunity.field_funding_award_amount
+    - field.field.node.funding_opportunity.field_funding_award_details
+    - field.field.node.funding_opportunity.field_funding_due_date
+    - field.field.node.funding_opportunity.field_funding_due_date_details
+    - field.field.node.funding_opportunity.field_funding_eligible
+    - field.field.node.funding_opportunity.field_funding_eligible_details
+    - field.field.node.funding_opportunity.field_funding_info_source
+    - field.field.node.funding_opportunity.field_funding_internal_notes
+    - field.field.node.funding_opportunity.field_funding_type
+    - field.field.node.funding_opportunity.field_sf_related_links
+    - node.type.funding_opportunity
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          93eb8325-6432-47eb-83ef-4c1a6f934570:
+            uuid: 93eb8325-6432-47eb-83ef-4c1a6f934570
+            region: content
+            configuration:
+              id: 'field_block:node:funding_opportunity:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          7c26f2a1-c3eb-4d86-a5ac-f4f264fb0ae6:
+            uuid: 7c26f2a1-c3eb-4d86-a5ac-f4f264fb0ae6
+            region: content
+            configuration:
+              id: 'field_block:node:funding_opportunity:field_funding_admin_unit'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          20a10e68-29f4-4d3a-8040-0f475818ce6b:
+            uuid: 20a10e68-29f4-4d3a-8040-0f475818ce6b
+            region: content
+            configuration:
+              id: 'inline_block:sf_basic'
+              label: separator
+              label_display: '0'
+              provider: layout_builder
+              view_mode: full
+              block_revision_id: 721
+              block_serialized: null
+              context_mapping: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+id: node.funding_opportunity.teaser
+targetEntityType: node
+bundle: funding_opportunity
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_funding_admin_unit:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  content_moderation_control: true
+  field_funding_award_amount: true
+  field_funding_award_details: true
+  field_funding_due_date: true
+  field_funding_due_date_details: true
+  field_funding_eligible: true
+  field_funding_eligible_details: true
+  field_funding_info_source: true
+  field_funding_internal_notes: true
+  field_funding_type: true
+  field_sf_related_links: true
+  links: true

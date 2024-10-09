@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sf_display_options
+    - node.type.sf_page
+  module:
+    - options
+id: node.sf_page.field_sf_display_options
+field_name: field_sf_display_options
+entity_type: node
+bundle: sf_page
+label: 'Display Options'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

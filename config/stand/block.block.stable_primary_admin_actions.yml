@@ -1,0 +1,20 @@
+uuid: baaf972b-18ff-4f5b-9891-755bea1f31c4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - stable
+_core:
+  default_config_hash: shL48jMXYAlbzMzZrPfv-hOCNb_4SCupengKTOFYb6M
+id: stable_primary_admin_actions
+theme: stable
+region: sidebar_first
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

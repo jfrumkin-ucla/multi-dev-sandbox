@@ -1,0 +1,32 @@
+uuid: 184e5660-eb12-4ac8-8daa-b1550d984eaf
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_basic:4c4bb173-d5ce-446d-bb16-d19ae36d493a'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: servicealertcurrentlyclosed
+theme: siteden_surface
+region: university_header
+weight: 0
+provider: null
+plugin: 'block_content:4c4bb173-d5ce-446d-bb16-d19ae36d493a'
+settings:
+  id: 'block_content:4c4bb173-d5ce-446d-bb16-d19ae36d493a'
+  label: 'Service Alert: Currently Closed'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

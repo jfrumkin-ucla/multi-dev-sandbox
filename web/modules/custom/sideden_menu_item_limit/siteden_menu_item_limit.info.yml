@@ -1,0 +1,7 @@
+name: 'Siteden Menu Item Limit'
+type: module
+description: 'Allows to control the amount of items per menu.'
+package: SiteDen
+core_version_requirement: ^9.1 || ^10
+dependencies:
+  - drupal:menu_ui

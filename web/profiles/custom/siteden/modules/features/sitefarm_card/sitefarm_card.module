@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function sitefarm_card_preprocess_block(&$variables) {
+  $bundle = (isset($variables['content']['#block_content']) ? $variables['content']['#block_content']->bundle() : FALSE);
+
+  if (isset($bundle) && $bundle == 'sf_card') {
+    // Make gray the default.
+    $variables['card_type'] = 'gray';
+    if (isset($variables['configuration']['block_styles']['card_type']['card_type'])) {
+      $variables['card_type'] = $variables['configuration']['block_styles']['card_type']['card_type'];
+    }
+  }
+}

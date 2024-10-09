@@ -1,0 +1,26 @@
+uuid: 867521bc-bc6c-4943-9ac8-1abacd481794
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sf_person
+  module:
+    - text
+_core:
+  default_config_hash: ZMpSdyO0-BzhYQ-M2VwR5o8V7j_mgkLN76jZqTOV2TU
+id: node.sf_person.body
+field_name: body
+entity_type: node
+bundle: sf_person
+label: Bio
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

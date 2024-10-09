@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.sf_video_media_type.field_media_oembed_video
+    - field.field.media.sf_video_media_type.field_sf_media_category
+    - field.field.media.sf_video_media_type.field_sf_media_description
+    - media.type.sf_video_media_type
+  module:
+    - media
+_core:
+id: media.sf_video_media_type.default
+targetEntityType: media
+bundle: sf_video_media_type
+mode: default
+content:
+  field_media_oembed_video:
+    type: oembed
+    label: hidden
+    settings:
+      max_width: 0
+      max_height: 0
+      loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_sf_media_category: true
+  field_sf_media_description: true
+  name: true
+  thumbnail: true
+  uid: true

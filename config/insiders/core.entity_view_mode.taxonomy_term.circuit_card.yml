@@ -1,0 +1,13 @@
+uuid: b30508ef-d96a-4b46-b143-27aa8470a15d
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: u5btvWAQSqv5EjznF9Yz8hKrtx8P8U-5p3jxzkSra_c
+id: taxonomy_term.circuit_card
+label: 'Circuit Card'
+description: ''
+targetEntityType: taxonomy_term
+cache: true

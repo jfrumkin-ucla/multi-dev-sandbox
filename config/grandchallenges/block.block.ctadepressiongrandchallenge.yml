@@ -1,0 +1,30 @@
+uuid: 923d634d-993e-49ca-894d-c9a80d264b41
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:sf_call_to_action:027a424b-0f21-445e-9136-21d7c76e05f6'
+  module:
+    - block_content
+    - system
+  theme:
+    - siteden_surface
+id: ctadepressiongrandchallenge
+theme: siteden_surface
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:027a424b-0f21-445e-9136-21d7c76e05f6'
+settings:
+  id: 'block_content:027a424b-0f21-445e-9136-21d7c76e05f6'
+  label: 'CTA: Depression Grand Challenge'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

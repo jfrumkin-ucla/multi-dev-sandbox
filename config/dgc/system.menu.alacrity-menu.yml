@@ -1,0 +1,8 @@
+uuid: 14363b89-5b53-4448-beea-b8a848b1b98f
+langcode: en
+status: true
+dependencies: {  }
+id: alacrity-menu
+label: 'Alacrity menu'
+description: ''
+locked: false

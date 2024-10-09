@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_article
+    - paragraphs.paragraphs_type.sf_slider_sc_item
+_core:
+id: paragraph.sf_slider_sc_item.field_article
+field_name: field_article
+entity_type: paragraph
+bundle: sf_slider_sc_item
+label: Article
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: published_node_filter
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

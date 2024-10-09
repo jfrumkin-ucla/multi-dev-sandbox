@@ -1,0 +1,84 @@
+uuid: d8702681-9eed-40ff-badd-da1d6b47682e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_building
+field_name: field_building
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: boelter
+      label: Boelter
+    -
+      value: broad
+      label: Broad
+    -
+      value: bunche
+      label: Bunche
+    -
+      value: dodd
+      label: Dodd
+    -
+      value: fowler
+      label: Fowler
+    -
+      value: franz
+      label: Franz
+    -
+      value: geology
+      label: Geology
+    -
+      value: haines
+      label: Haines
+    -
+      value: kaplan
+      label: Kaplan
+    -
+      value: kaufman
+      label: Kaufman
+    -
+      value: kinsey_pavilion
+      label: 'Kinsey Pavilion'
+    -
+      value: la_kretz
+      label: 'La Kretz'
+    -
+      value: mathematical_sciences
+      label: 'Mathematical Sciences'
+    -
+      value: moore
+      label: Moore
+    -
+      value: perloff
+      label: Perloff
+    -
+      value: physics_astronomy
+      label: 'Physics & Astronomy'
+    -
+      value: public_affairs
+      label: 'Public Affairs'
+    -
+      value: rolfe
+      label: Rolfe
+    -
+      value: royce
+      label: Royce
+    -
+      value: slichter
+      label: Slichter
+    -
+      value: wg_young
+      label: 'WG Young'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

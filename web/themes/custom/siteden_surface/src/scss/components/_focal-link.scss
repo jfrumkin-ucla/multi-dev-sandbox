@@ -1,0 +1,75 @@
+@use "../utilities/colors";
+
+$focal-link-size: 64px;
+
+.focal-link,
+.ucla .focal-link {
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:not(.page):visited:hover,
+  &:not(.page):visited:focus {
+    background-color: transparent;
+
+    .focal-link__body {
+      background-color: colors.$button-hover;
+    }
+
+    .focal-link__figure {
+      background-color: transparent;
+    }
+  }
+
+  &__figure {
+    color: colors.$grey-80;
+    margin-right: 1em;
+
+    // Sizing uploaded img's to match svg sprite
+    img {
+      width: $focal-link-size;
+    }
+
+    .fa,
+    .far,
+    .fas {
+      text-align: center;
+      width: 1.5em;
+    }
+  }
+
+  &__body {
+    background-color: colors.$ucla-gold;
+    color: colors.$grey-80;
+    display: block;
+    flex: 1;
+    font-size: 1.125rem;
+    padding: 1rem;
+
+    &,
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    .focal-link__text {
+      font-weight: bolder;
+
+      &.link--external {
+        &:after {
+          content: "";
+          background-image: url("../images/surface-icons/external-link.svg");
+          background-repeat: no-repeat;
+          display: inline-block;
+          filter: colors.$filter-color-black;
+          height: 14px;
+          margin-left: 4px;
+          min-width: 14px;
+          vertical-align: baseline;
+          width: 14px;
+        }
+      }
+    }
+  }
+}

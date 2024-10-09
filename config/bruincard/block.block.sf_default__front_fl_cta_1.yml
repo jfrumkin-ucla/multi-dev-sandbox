@@ -1,0 +1,33 @@
+uuid: 18412329-3de5-45e5-98b7-fd61471d86cf
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_focal_link:49853ab0-3ea2-4622-a924-e082a7716293'
+  module:
+    - block_content
+    - system
+  theme:
+    - siteden_surface
+_core:
+  default_config_hash: SQ79xK4UJfi_FyMYs0gtlgHTEbJufVO41sn6Nd0MaDM
+id: sf_default__front_fl_cta_1
+theme: siteden_surface
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'block_content:49853ab0-3ea2-4622-a924-e082a7716293'
+settings:
+  id: 'block_content:49853ab0-3ea2-4622-a924-e082a7716293'
+  label: 'FL: Demo CTA Link'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

@@ -1,0 +1,53 @@
+uuid: eb176f7b-35eb-41ff-9e24-479d5ef911aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_focus_box
+    - field.field.block_content.sf_focus_box.body
+    - field.field.block_content.sf_focus_box.field_sf_m_block_primary_img
+    - field.field.block_content.sf_focus_box.field_sf_title
+  module:
+    - media_library
+    - text
+_core:
+  default_config_hash: _uu5sHf25M1Vd1TzflqCiMRAQteSu4IPf7x-W6FKnGI
+id: block_content.sf_focus_box.default
+targetEntityType: block_content
+bundle: sf_focus_box
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 4
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_sf_m_block_primary_img:
+    type: media_library_widget
+    weight: 3
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_sf_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

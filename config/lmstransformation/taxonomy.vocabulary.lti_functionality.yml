@@ -1,0 +1,8 @@
+uuid: b45bd9a3-411a-4648-a2bc-1f2d4419c806
+langcode: en
+status: true
+dependencies: {  }
+name: 'LTI Functionality'
+vid: lti_functionality
+description: 'Primary categories of LTI tool functions'
+weight: 0

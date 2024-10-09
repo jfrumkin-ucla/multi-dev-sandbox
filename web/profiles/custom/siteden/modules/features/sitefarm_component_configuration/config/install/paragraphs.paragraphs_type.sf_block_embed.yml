@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+id: sf_block_embed
+label: 'Block embed'
+icon_uuid: null
+icon_default: null
+description: 'The block embed component allows users to select from a list of blocks to place on a page.'
+behavior_plugins:
+  style_options:
+    enabled: true

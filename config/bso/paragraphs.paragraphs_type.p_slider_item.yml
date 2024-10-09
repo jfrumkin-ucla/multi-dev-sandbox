@@ -1,0 +1,16 @@
+uuid: ac11ec22-568e-4427-a162-341a68a71970
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+_core:
+  default_config_hash: fWrp-8zEploqc3gaFz-pBRUeOq_ANDJOSIPOUuXKk-s
+id: p_slider_item
+label: 'Photo Slider Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  style_options:
+    enabled: true

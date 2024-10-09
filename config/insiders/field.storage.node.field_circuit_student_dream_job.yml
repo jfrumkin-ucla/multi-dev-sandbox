@@ -1,0 +1,21 @@
+uuid: 01886dc9-6dae-4e98-9d5c-89924c53caa3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: Dwo8UvSk26bl0nObPtURVbYOLQpDBd4fMwtIDyooBwM
+id: node.field_circuit_student_dream_job
+field_name: field_circuit_student_dream_job
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

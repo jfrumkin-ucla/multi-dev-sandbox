@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - style_options
+id: sf_people
+label: 'People grid'
+icon_uuid: null
+icon_default: null
+description: 'A grid of people. Use this block type for shorter ad hoc lists that do not need to integrate with the Person content type.'
+behavior_plugins:
+  style_options:
+    enabled: true

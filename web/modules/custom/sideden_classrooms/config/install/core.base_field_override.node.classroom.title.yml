@@ -1,0 +1,18 @@
+uuid: 701b87ba-3bc9-4d2c-9734-c5fcae8430fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.classroom
+id: node.classroom.title
+field_name: title
+entity_type: node
+bundle: classroom
+label: 'Room Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

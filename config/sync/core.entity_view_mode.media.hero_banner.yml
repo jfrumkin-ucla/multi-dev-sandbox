@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+id: media.hero_banner
+label: 'Hero Banner'
+description: ''
+targetEntityType: media
+cache: true

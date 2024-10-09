@@ -1,0 +1,32 @@
+uuid: e3205f94-69b4-4e1d-aa7c-9b8a5dffec19
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+_core:
+  default_config_hash: mpxlHLVC97j8cRkLObtzODqxDZSgcMSzUeoGnV1-vmI
+id: siteden_surface_page_title
+theme: siteden_surface
+region: title
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: People
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '<front>'

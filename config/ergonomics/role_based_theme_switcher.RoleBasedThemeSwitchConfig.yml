@@ -1,0 +1,22 @@
+roletheme:
+  anonymous:
+    id: ''
+    weight: 0
+  contributor:
+    id: ''
+    weight: 1
+  editor:
+    id: ''
+    weight: 2
+  site_manager:
+    id: gin
+    weight: 3
+  site_builder:
+    id: ''
+    weight: 4
+  administrator:
+    id: gin
+    weight: 5
+  authenticated:
+    id: ''
+    weight: 6

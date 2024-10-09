@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+id: time_zones
+label: 'Time zones'
+category: 'Date and time'
+likert: false
+options: ''

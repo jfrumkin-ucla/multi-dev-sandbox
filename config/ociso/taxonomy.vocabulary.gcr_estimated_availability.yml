@@ -1,0 +1,8 @@
+uuid: cb8ee678-e990-40ea-8880-120d710551ce
+langcode: en
+status: true
+dependencies: {  }
+name: 'TPRM- Estimated Availability'
+vid: gcr_estimated_availability
+description: 'Anticipated academic terms for campus use'
+weight: 0

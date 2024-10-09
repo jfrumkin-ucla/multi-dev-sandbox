@@ -1,0 +1,101 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sf_article.body
+    - field.field.node.sf_article.field_sf_article_byline
+    - field.field.node.sf_article.field_sf_article_category
+    - field.field.node.sf_article.field_sf_article_type
+    - field.field.node.sf_article.field_sf_authors
+    - field.field.node.sf_article.field_sf_content
+    - field.field.node.sf_article.field_sf_featured_media
+    - field.field.node.sf_article.field_sf_featured_status
+    - field.field.node.sf_article.field_sf_meta_tags
+    - field.field.node.sf_article.field_sf_photo_gallery_reference
+    - field.field.node.sf_article.field_sf_summary
+    - field.field.node.sf_article.field_sf_tags
+    - node.type.sf_article
+  module:
+    - layout_paragraphs
+    - metatag
+    - user
+_core:
+id: node.sf_article.default
+targetEntityType: node
+bundle: sf_article
+mode: default
+content:
+  field_sf_article_byline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_sf_article_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_sf_authors:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_sf_content:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_sf_featured_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: landscape_16x9
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_sf_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sf_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  sharemessage__sf_social_share_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  body: true
+  content_moderation_control: true
+  field_sf_article_type: true
+  field_sf_featured_status: true
+  field_sf_photo_gallery_reference: true
+  field_sf_summary: true

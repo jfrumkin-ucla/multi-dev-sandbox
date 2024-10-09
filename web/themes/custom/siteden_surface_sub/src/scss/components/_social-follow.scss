@@ -1,0 +1,41 @@
+@use "../utilities/colors";
+@use "lists";
+
+.social-follow {
+  ul {
+    @include lists.reset-list();
+
+    a {
+      img {
+        filter: colors.$filter-color-white;
+        height: 2em;
+        width: 2em;
+        max-width: 100%;
+      }
+
+      &:hover {
+        background-color: inherit;
+
+        img {
+          filter: colors.$filter-color-yellow;
+        }
+      }
+
+      &.social-media-link-icon {
+        &--twitter {
+          img {
+          height:2.2em;
+          width: 2.2em;
+          }
+        }
+
+         &--threads {
+          img {
+          height:2.2em;
+          width: 2.2em;
+          }
+        }
+      }
+    }
+  }
+}

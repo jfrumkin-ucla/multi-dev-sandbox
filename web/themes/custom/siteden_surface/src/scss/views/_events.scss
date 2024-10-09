@@ -1,0 +1,38 @@
+.view-sf-events-listing.view-display-id-page_1 {
+  .view-content > div {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.view.view-sf-events-upcoming {
+  .view-content > div {
+    margin-bottom: 1.5rem;
+  }
+
+  .view-mode--listing {
+    .event__title {
+      h3 {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .event__meta {
+      ul {
+        font-weight: bold;
+
+        li {
+          border-right: 1px solid #999;
+          display: inline-block;
+          line-height: 1;
+          margin-right: 0.25rem;
+          padding-right: 0.5rem;
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}

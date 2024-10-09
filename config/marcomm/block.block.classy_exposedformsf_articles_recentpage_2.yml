@@ -1,0 +1,35 @@
+uuid: 9b36922b-a9aa-45d9-9297-e89ab464d673
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sf_articles_recent
+  module:
+    - block_style_plugins
+    - system
+    - views
+  theme:
+    - classy
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+_core:
+  default_config_hash: VYiemMzKJEQhhThBBU9JOKUkNaHI65d1q0QP9he-kys
+id: classy_exposedformsf_articles_recentpage_2
+theme: classy
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'views_exposed_filter_block:sf_articles_recent-page_2'
+settings:
+  id: 'views_exposed_filter_block:sf_articles_recent-page_2'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: 'Filter Articles'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/articles/news\r\n/articles/blog\r\n/articles/news/*\r\n/articles/blog/*"

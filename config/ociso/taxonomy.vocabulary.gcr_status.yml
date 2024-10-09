@@ -1,0 +1,8 @@
+uuid: 9fdb8ee8-4c36-4ba2-a9a6-e0bba719687b
+langcode: en
+status: true
+dependencies: {  }
+name: 'TPRM Status'
+vid: gcr_status
+description: 'TPRM Approval status'
+weight: 0

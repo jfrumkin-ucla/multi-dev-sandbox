@@ -1,0 +1,37 @@
+uuid: bda715f6-83bc-4a95-adf7-2ccdc0d3dc5d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:f7e59956-7d7e-4db5-905f-0554f4a7c1c8'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: headertest
+theme: siteden_surface
+region: full_width_top
+weight: 0
+provider: null
+plugin: 'block_content:f7e59956-7d7e-4db5-905f-0554f4a7c1c8'
+settings:
+  id: 'block_content:f7e59956-7d7e-4db5-905f-0554f4a7c1c8'
+  label: 'header test'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: ''

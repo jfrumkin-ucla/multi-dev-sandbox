@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ *
+ * This function removes CAPTCHA elements from various Drupal forms
+ * where the behavior is undesired.
+ */
+function sitefarm_captcha_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  $bypass_form_ids = [
+    'install_settings_form',
+    'install_configure_form',
+    'install_select_profile_form',
+    'install_select_language_form',
+    'views_exposed_form',
+    'search_block_form',
+  ];
+
+  if (in_array($form_id, $bypass_form_ids)) {
+    unset($form['captcha']);
+  }
+}

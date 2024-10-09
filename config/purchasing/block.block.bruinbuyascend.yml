@@ -1,0 +1,38 @@
+uuid: b22353b9-5789-4b06-95f2-da24eaf94c90
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:6a5fba21-d58a-4420-8dfa-f09b34472498'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    full_width:
+      full_width: 0
+id: bruinbuyascend
+theme: siteden_surface
+region: sidebar_second
+weight: -13
+provider: null
+plugin: 'block_content:6a5fba21-d58a-4420-8dfa-f09b34472498'
+settings:
+  id: 'block_content:6a5fba21-d58a-4420-8dfa-f09b34472498'
+  label: 'BruinBuy & Ascend '
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/accounts-payable\r\n/purchasing/campus-purchasing"

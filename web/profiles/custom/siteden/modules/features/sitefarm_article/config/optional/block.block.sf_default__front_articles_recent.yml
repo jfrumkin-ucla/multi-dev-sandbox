@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sf_articles_recent
+  module:
+    - system
+    - views
+  theme:
+    - siteden_surface
+id: sf_default__front_articles_recent
+theme: siteden_surface
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_block:sf_articles_recent-block_1'
+settings:
+  id: 'views_block:sf_articles_recent-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

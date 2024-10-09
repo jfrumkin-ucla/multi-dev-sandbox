@@ -1,0 +1,32 @@
+uuid: f3f95a26-4cbc-4fde-8a3d-ab0151382d97
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:5bbceca1-b699-41f1-afd3-c701f0314158'
+  module:
+    - block_content
+    - block_style_plugins
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: bikefriendlyuniversitylogo
+theme: siteden_surface
+region: footer_nav
+weight: 0
+provider: null
+plugin: 'block_content:5bbceca1-b699-41f1-afd3-c701f0314158'
+settings:
+  id: 'block_content:5bbceca1-b699-41f1-afd3-c701f0314158'
+  label: 'Bike Friendly University Logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

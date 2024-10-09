@@ -1,0 +1,96 @@
+<?php
+
+/**
+ * @file
+ * Module install file. */
+
+use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Entity\Query\QueryInterface;
+
+/**
+ * Add some terms to the Category vocabulary.
+ */
+function siteden_hashed_fields_convert_install() {
+
+  $query = \Drupal::entityQuery('taxonomy_term');
+  $query->condition('vid', "sf_article_category");
+  $tids = $query->accessCheck(FALSE)->execute();
+  $terms = \Drupal\taxonomy\Entity\Term::loadMultiple($tids);
+  foreach ($terms as $term) {
+    $field_sf_m_tax_primary_image = $term->get('field_sf_m_tax_primary_image')->getValue();
+    $term->set('field_sf_tax_pimage', $field_sf_m_tax_primary_image);
+    $term->save();
+  }
+
+  $query = \Drupal::entityQuery('taxonomy_term');
+  $query->condition('vid', "sf_units");
+  $tids = $query->accessCheck(FALSE)->execute();
+  $terms = \Drupal\taxonomy\Entity\Term::loadMultiple($tids);
+  foreach ($terms as $term) {
+    $field_sf_unit_leaders_title = $term->get('field_sf_unit_leaders_title')->getValue();
+    $term->set('field_sf_leader_title', $field_sf_unit_leaders_title);
+    $term->save();
+  }
+  $query = \Drupal::entityQuery('block_content');
+  $blocks = \Drupal::entityTypeManager()->getStorage('block_content')
+    ->loadByProperties([
+      'type' => 'sf_university_header',
+    ]);
+  foreach ($blocks as $block) {
+    $field_sf_departmental_breadcrumb = $block->get('field_sf_departmental_breadcrumb')->getValue();
+    $block->set('field_dept_brdcrum', $field_sf_departmental_breadcrumb);
+    $block->save();
+  }
+  $blocks = \Drupal::entityTypeManager()->getStorage('block_content')
+    ->loadByProperties([
+      'type' => 'sf_focal_link',
+    ]);
+  foreach ($blocks as $block) {
+    $field_sf_m_block_primary_img = $block->get('field_sf_m_block_primary_img')->getValue();
+    $block->set('field_sf_block_pimg', $field_sf_m_block_primary_img);
+    $block->save();
+  }
+  $blocks = \Drupal::entityTypeManager()->getStorage('block_content')
+    ->loadByProperties([
+      'type' => 'sf_focus_box',
+    ]);
+  foreach ($blocks as $block) {
+    $field_sf_m_block_primary_img = $block->get('field_sf_m_block_primary_img')->getValue();
+    $block->set('field_sf_block_pimg', $field_sf_m_block_primary_img);
+    $block->save();
+  }
+  $blocks = \Drupal::entityTypeManager()->getStorage('block_content')
+    ->loadByProperties([
+      'type' => 'sf_hero_banner',
+    ]);
+  foreach ($blocks as $block) {
+    $field_sf_m_block_primary_img = $block->get('field_sf_m_block_primary_img')->getValue();
+    $block->set('field_sf_block_pimg', $field_sf_m_block_primary_img);
+    $block->save();
+  }
+
+  $blocks = \Drupal::entityTypeManager()->getStorage('block_content')
+    ->loadByProperties([
+      'type' => 'sf_marketing_highlight',
+    ]);
+  foreach ($blocks as $block) {
+    $field_sf_m_block_primary_img = $block->get('field_sf_m_block_primary_img')->getValue();
+    $field_sf_mh_call_to_action = $block->get('field_sf_mh_call_to_action')->getValue();
+    $block->set('field_sf_block_pimg', $field_sf_m_block_primary_img);
+    $block->set('field_sf_cta', $field_sf_mh_call_to_action);
+    $block->save();
+  }
+
+  $blocks = \Drupal::entityTypeManager()->getStorage('block_content')
+    ->loadByProperties([
+      'type' => 'sf_marketing_highlight_horizntl',
+    ]);
+  foreach ($blocks as $block) {
+    $field_sf_m_block_primary_img = $block->get('field_sf_m_block_primary_img')->getValue();
+    $field_sf_mh_call_to_action = $block->get('field_sf_mh_call_to_action')->getValue();
+    $block->set('field_sf_block_pimg', $field_sf_m_block_primary_img);
+    $block->set('field_sf_cta', $field_sf_mh_call_to_action);
+    $block->save();
+  }
+
+}

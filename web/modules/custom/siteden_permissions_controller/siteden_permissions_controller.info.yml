@@ -1,0 +1,6 @@
+name: 'Siteden Permissions Controller'
+type: module
+description: 'Provides a permissions controller for Siteden sites.'
+package: 'Siteden'
+version: '1.0.0'
+core_version_requirement: ^9 || ^10

@@ -1,0 +1,30 @@
+uuid: d7814fdd-53ec-4286-a0aa-ec66fb8d6753
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - classy
+_core:
+  default_config_hash: jQvQ3y5A_ZwDqZ9ridAmmFdfwhecVdGvtCOgpU-LmUM
+id: classy_sf_default__front_fl_cta_2
+theme: classy
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'block_content:828c84c7-76e8-4f0e-bd51-887dd31cb5d7'
+settings:
+  id: 'block_content:828c84c7-76e8-4f0e-bd51-887dd31cb5d7'
+  label: 'FL: Another Call to Action'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

@@ -1,0 +1,87 @@
+<?php
+
+/**
+ * @file
+ * Contains siteden_node_author.module.
+ */
+
+use Drupal\user\Entity\Role;
+use Drupal\user\RoleInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\Entity\User;
+
+
+/**
+ * Implements hook_entity_presave().
+ */
+
+function siteden_node_author_entity_presave(\Drupal\Core\Entity\EntityInterface $entity) {
+  if($entity->getEntityTypeId()=='node'){
+    if($entity->get('uid')->getValue()[0]['target_id']==0){
+      if(\Drupal::config('siteden_node_author.settings')->get('anonymous_author_override_uid')){
+        $uid = (int)\Drupal::config('siteden_node_author.settings')->get('anonymous_author_override_uid');
+        if($uid > 0){
+          $entity->set('uid', $uid);
+        }        
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_form_alter().
+ */
+
+function siteden_node_author_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  if($form_id == 'user_cancel_form' || $form_id == 'user_multiple_cancel_confirm'){
+   $form['user_cancel_method']['#disabled'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_install().
+ */
+
+function siteden_node_author_install() {
+  $count = 0;
+  $site_editor_query = \Drupal::entityQuery('user')
+    ->condition('name', 'Site Editor')
+    ->accessCheck(TRUE);
+  $site_editor_results = $site_editor_query->execute();
+  foreach($site_editor_results as $query_result_id => $uid){
+    $user_id = (int)$uid; 
+  }
+  if(isset($user_id)){
+    if($user_id > 0){
+      $query = \Drupal::entityQuery('node')
+        ->condition('uid', 0, '=')
+        ->accessCheck(TRUE);
+      $results = $query->execute();
+      foreach($results as $nid){
+        $count++;
+        \Drupal::entityTypeManager()->getStorage('node')->load($nid)->set('uid', $user_id)->save();
+      }
+    }
+  } else {
+    // Create user object.
+    $user = User::create();
+     
+    // Mandatory settings.
+    $user->setUsername('Site Editor'); // This username must be unique and accept only [a-Z,0-9, - _ @].
+    $user->setPassword('ksdhfjkhsd!K');
+    $user->setEmail('siteeditor1@ucla.edu');
+    $user->enforceIsNew();
+    $user->activate();
+    $user->save();    
+    $user_id = $user->id();
+  }
+
+  // Set default values for config which require dynamic values.
+  \Drupal::configFactory()->getEditable('siteden_node_author.settings')
+    ->set('anonymous_author_override_uid', $user_id)
+    ->save();
+
+    $message = "Site Editor user account located with uid = ".$user_id.". Anonymous node update count: ".$count;
+    \Drupal::messenger()->addMessage($message, 'status', TRUE);
+}

@@ -1,0 +1,37 @@
+uuid: 62401918-cfb4-40f2-8e33-ef2b903b25cd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_basic:81800359-001b-47ff-9679-f44c59ebaf1c'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    collapse:
+      collapse: 0
+    remove_vertical_heading_bar:
+      title_style: 0
+id: nontereimb_quickaccess
+theme: siteden_surface
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'block_content:81800359-001b-47ff-9679-f44c59ebaf1c'
+settings:
+  id: 'block_content:81800359-001b-47ff-9679-f44c59ebaf1c'
+  label: 'Non-T&E Reimb_Quick Access'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /accounts-payable/non-TE-reimbursements

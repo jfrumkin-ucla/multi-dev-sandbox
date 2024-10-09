@@ -1,0 +1,30 @@
+uuid: ea0c2b5c-f94c-4558-afd0-d28656085c7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_bso_status
+field_name: field_bso_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: alert--success
+      label: 'Campus is Operating Normally'
+    -
+      value: alert--warning
+      label: 'Heightened Alert'
+    -
+      value: alert--error
+      label: 'Emergency on Campus'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

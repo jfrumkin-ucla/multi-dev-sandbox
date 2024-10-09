@@ -1,0 +1,21 @@
+uuid: e044930a-82ea-411a-96bf-06e510f9f064
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tablet_desk
+    - node.type.classroom
+id: node.classroom.field_tablet_desk
+field_name: field_tablet_desk
+entity_type: node
+bundle: classroom
+label: 'Moveable Tablet Desk'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,35 @@
+uuid: 37baab9c-189b-4389-8aae-3b0445dfa598
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.events_slider.field_events_slider_items
+    - field.field.paragraph.events_slider.field_per_slide
+    - paragraphs.paragraphs_type.events_slider
+  module:
+    - entity_reference_revisions
+    - options
+_core:
+  default_config_hash: 16PG_J8TUlGdnH0yUBisV47k-Tl7QWmHFtsZjknjkS8
+id: paragraph.events_slider.default
+targetEntityType: paragraph
+bundle: events_slider
+mode: default
+content:
+  field_events_slider_items:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_per_slide:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -1,0 +1,36 @@
+uuid: 2470db07-8b22-430f-8e19-e1f4c5366edf
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_branding_block:916dbf46-5342-42bb-8886-733e4c9bbd5e'
+  module:
+    - block_content
+    - block_style_plugins
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: bbfooterlogocso
+theme: siteden_surface
+region: footer
+weight: -15
+provider: null
+plugin: 'block_content:916dbf46-5342-42bb-8886-733e4c9bbd5e'
+settings:
+  id: 'block_content:916dbf46-5342-42bb-8886-733e4c9bbd5e'
+  label: 'BB: footer logo - cso'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/cso*'

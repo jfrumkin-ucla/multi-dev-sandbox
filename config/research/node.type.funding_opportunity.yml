@@ -1,0 +1,17 @@
+uuid: 1e899c11-618e-4676-85d6-ce698ef92a6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Internal Funding Opportunity'
+type: funding_opportunity
+description: 'Add a funding opportunity to the directory of internal funding opportunities'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

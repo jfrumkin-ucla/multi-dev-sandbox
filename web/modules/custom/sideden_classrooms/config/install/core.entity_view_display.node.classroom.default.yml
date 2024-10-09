@@ -1,0 +1,83 @@
+uuid: 61a85245-e64d-414a-a207-789f2aae1749
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.classroom.body
+    - field.field.node.classroom.field_av_display
+    - field.field.node.classroom.field_av_source_options
+    - field.field.node.classroom.field_bruincast_audio
+    - field.field.node.classroom.field_bruincast_video
+    - field.field.node.classroom.field_building
+    - field.field.node.classroom.field_capacity
+    - field.field.node.classroom.field_capacity_range
+    - field.field.node.classroom.field_classroom_computer
+    - field.field.node.classroom.field_classroom_layout
+    - field.field.node.classroom.field_classroom_photo
+    - field.field.node.classroom.field_interactive_display
+    - field.field.node.classroom.field_live_stream_text
+    - field.field.node.classroom.field_moveable_chairs
+    - field.field.node.classroom.field_moveable_tables
+    - field.field.node.classroom.field_room
+    - field.field.node.classroom.field_room_type
+    - field.field.node.classroom.field_sound_system
+    - field.field.node.classroom.field_tablet_desk
+    - field.field.node.classroom.field_updated
+    - field.field.node.classroom.field_video_playback
+    - field.field.node.classroom.field_voice_amplification
+    - field.field.node.classroom.field_wireless_network
+    - field.field.node.classroom.field_zoom_streaming
+    - node.type.classroom
+  module:
+    - media
+    - text
+    - user
+_core:
+  default_config_hash: '-B1LbkeGnl9QRn1S6hk3TFutfM_keAT_xEGBOm0_5hE'
+id: node.classroom.default
+targetEntityType: node
+bundle: classroom
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_classroom_photo:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_av_display: true
+  field_av_source_options: true
+  field_bruincast_audio: true
+  field_bruincast_video: true
+  field_building: true
+  field_capacity: true
+  field_capacity_range: true
+  field_classroom_computer: true
+  field_classroom_layout: true
+  field_interactive_display: true
+  field_live_stream_text: true
+  field_moveable_chairs: true
+  field_moveable_tables: true
+  field_room: true
+  field_room_type: true
+  field_sound_system: true
+  field_tablet_desk: true
+  field_updated: true
+  field_video_playback: true
+  field_voice_amplification: true
+  field_wireless_network: true
+  field_zoom_streaming: true
+  links: true

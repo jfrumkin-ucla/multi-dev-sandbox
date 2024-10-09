@@ -1,0 +1,18 @@
+_core:
+  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+langcode: en
+uuid: b8114a21-ba99-4ccc-b94e-5f766659a6bc
+name: 'Depression Grand Challenge'
+mail: portaleditor@it.ucla.edu
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/3
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null
+credit_info:
+  value: ''
+  format: sf_basic_html

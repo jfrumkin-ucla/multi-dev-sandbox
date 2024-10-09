@@ -1,0 +1,41 @@
+uuid: 2c10ad5d-9662-4621-9794-6093b60ebf8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.bruin-voice-footer
+  module:
+    - block_style_plugins
+    - menu_block
+    - system
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: bruinvoicefooter1
+theme: siteden_surface
+region: footer_nav
+weight: -13
+provider: null
+plugin: 'menu_block:bruin-voice-footer'
+settings:
+  id: 'menu_block:bruin-voice-footer'
+  label: Resources
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'bruin-voice-footer:'
+  suggestion: bruin_voice_footer
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/it-ucla/key-initiatives/bruin-voice*'

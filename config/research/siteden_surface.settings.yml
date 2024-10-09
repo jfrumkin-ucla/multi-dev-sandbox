@@ -1,0 +1,17 @@
+_core:
+  default_config_hash: rxDkVPB_NS9croaOKuPSjN1Gz5OeaJ72p9fZIOtXVBs
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  use_default: true
+css_enabled: 1
+css: "/*\r\n * These styles are for customizations to the Internal Funding content type display \r\n */\r\n\r\n/* adds more space before each field label */\r\n.node--type-funding-opportunity .block .field__label {\r\n  margin-top: 1em;\r\n}\r\n\r\n/* adds the yellow line at the top of the link field */\r\n.node--type-funding-opportunity .layout__region--second .field--type-link {\r\n  border-top: 1px solid #e5e5e5;\r\n  margin-top: 2rem;\r\n}\r\n\r\n/* temporarily fix the exposed filter fields to stay in their region */\r\n.block-views-exposed-filter-blockinternal-funding-opportunities-listing-funding-page select {\r\n  overflow-x: scroll;\r\n  width: 100%;\r\n}\r\n\r\n/* change the field label text for last updated */\r\n\r\n.node--type-funding-opportunity .field--name-changed .field__label {\r\n  visibility: hidden;\r\n  position: relative;\r\n}\r\n\r\n.node--type-funding-opportunity .field--name-changed .field__label:after {\r\n  content: \"Last Updated\";\r\n  visibility: visible;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n}\r\n"
+plaintext_enabled: 0
+autopreview_enabled: 0
+preview_path: ''
+surface_next: '1'

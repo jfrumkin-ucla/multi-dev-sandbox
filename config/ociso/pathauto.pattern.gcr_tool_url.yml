@@ -1,0 +1,22 @@
+uuid: c49e0a44-11b3-46b8-923c-58344c50e2fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: gcr_tool_url
+label: 'TPRM Tool URL'
+type: 'canonical_entities:node'
+pattern: 'tprm-list/[node:title]'
+selection_criteria:
+  52f7e4a0-16f8-469c-b054-24b113517859:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 52f7e4a0-16f8-469c-b054-24b113517859
+    context_mapping:
+      node: node
+    bundles:
+      gcr_tool: gcr_tool
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.evnt_sl_itm.field_event_item
+    - paragraphs.paragraphs_type.evnt_sl_itm
+id: paragraph.evnt_sl_itm.default
+targetEntityType: paragraph
+bundle: evnt_sl_itm
+mode: default
+content:
+  field_event_item:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,29 @@
+uuid: e1809f95-e89d-444c-9fc7-bdf48d2d29cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gcr_estimated_availability
+    - node.type.gcr_tool
+    - taxonomy.vocabulary.gcr_estimated_availability
+id: node.gcr_tool.field_gcr_estimated_availability
+field_name: field_gcr_estimated_availability
+entity_type: node
+bundle: gcr_tool
+label: 'TPRM Estimated Availability'
+description: 'Estimated term for use'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      gcr_estimated_availability: gcr_estimated_availability
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

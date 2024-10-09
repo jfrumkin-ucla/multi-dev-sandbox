@@ -1,0 +1,60 @@
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+    <div class="person__content">
+      {% if pronouns %}
+        <div class="person__pronouns">({{ pronouns }})</div>
+      {% endif %}
+      {% if position or units %}
+        <div class="person__meta">
+          {% if position %}
+            <div class="person__position">{{ position }}</div>
+          {% endif %}
+          {% if units %}
+            {{ units }}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if body %}
+      {{ body }}
+      {% endif %}
+    </div>
+
+  <div class="person__info">
+
+  {% if media %}
+    <div class="person__media">
+      {{ media }}
+    </div>
+  {% endif %}
+
+  {% if phone_numbers.0 or emails.0 or units.0 or websites.0 or office_location.0 or address.0 or office_hours.0 %}
+    <div class="person__contacts">
+      <h2 class="panel__title">Contact Info</h2>
+        {% if phone_numbers.0 or emails.0 or units.0 or websites.0 %}
+          <div class="person__contacts--virtual">
+            {{ phone_numbers }}
+            {{ emails }}
+            {{ websites }}
+          </div>
+        {% endif %}
+        {% if office_location.0 or address.0 or office_hours.0 %}
+          <div class="person__contacts--physical">
+            {{ office_location }}
+            {{ address }}
+            {{ office_hours }}
+          </div>
+        {% endif %}
+    </div>
+  {% endif %}
+
+
+  </div>
+
+  {% if extra_content %}
+    {{ extra_content }}
+  {% endif %}
+
+  {{ tags }}
+</article>

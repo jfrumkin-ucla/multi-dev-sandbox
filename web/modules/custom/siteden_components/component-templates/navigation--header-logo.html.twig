@@ -1,0 +1,17 @@
+<div class="header-logo">
+  <div class="header-logo__wrap">
+    <a href="https://www.ucla.edu/">
+      <img class="header-logo__image" src="/{{ directory }}/assets/images/surface-images/logo-ucla.svg" alt="UCLA Logo" />
+    </a>
+
+    {% if departments.0 %}
+    <ul class="breadcrumb breadcrumb--white">
+
+    {% for i in departments['#items'] | keys %}
+      <li class="breadcrumb__item">{{ departments[i] }}</li>
+    {% endfor %}
+
+    </ul>
+    {% endif %}
+  </div>
+</div>

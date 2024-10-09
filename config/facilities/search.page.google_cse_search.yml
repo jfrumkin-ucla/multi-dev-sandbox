@@ -1,0 +1,43 @@
+uuid: c7ecf8b3-2470-45be-8b08-9dd5fbdcf245
+langcode: en
+status: true
+dependencies:
+  module:
+    - google_cse
+_core:
+  default_config_hash: hmR1QpVvkR9EdVsuFOQkgMGxE7dW9H8Dl1OjLBjRguM
+id: google_cse_search
+label: 'Google CSE Search'
+path: google
+weight: 0
+plugin: google_cse_search
+configuration:
+  cx: '006855704751877854816:8sok52zby3c'
+  results_tab: ''
+  results_width: ''
+  cof_here: ''
+  cof_google: ''
+  results_prefix: ''
+  results_suffix: ''
+  results_searchbox_width: ''
+  results_display: here
+  results_display_images: 0
+  no_results_message: ''
+  sitesearch: ''
+  sitesearch_form: ''
+  sitesearch_option: ''
+  sitesearch_default: 0
+  domain: facilities.ucla.edu
+  limit_domain: ''
+  cr: ''
+  gl: ''
+  hl: ''
+  locale_hl: 0
+  ie: ''
+  lr: ''
+  locale_lr: 0
+  oe: ''
+  safe: ''
+  custom_css: ''
+  custom_results_display: results-only
+  use_adv: 0

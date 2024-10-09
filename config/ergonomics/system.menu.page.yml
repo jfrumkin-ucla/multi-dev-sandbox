@@ -1,0 +1,8 @@
+uuid: bda18289-48a5-4e7e-9f85-f82031d30b7b
+langcode: en
+status: true
+dependencies: {  }
+id: page
+label: 'Page Menu'
+description: ''
+locked: false

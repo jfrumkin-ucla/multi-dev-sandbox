@@ -1,0 +1,21 @@
+uuid: bfd28c05-a09f-47ca-adac-246ec36fe1da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bruincast_video
+    - node.type.classroom
+id: node.classroom.field_bruincast_video
+field_name: field_bruincast_video
+entity_type: node
+bundle: classroom
+label: 'BruinCast Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

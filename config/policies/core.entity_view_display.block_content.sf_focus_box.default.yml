@@ -1,0 +1,43 @@
+uuid: 058adde8-9cb9-459e-8b52-a74088d1adb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sf_focus_box
+    - field.field.block_content.sf_focus_box.body
+    - field.field.block_content.sf_focus_box.field_sf_m_block_primary_img
+    - field.field.block_content.sf_focus_box.field_sf_title
+  module:
+    - text
+_core:
+  default_config_hash: If-aaqC4zPffMIUT521jk70jdpXn2Te1WbyX8KWW1i4
+id: block_content.sf_focus_box.default
+targetEntityType: block_content
+bundle: sf_focus_box
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sf_m_block_primary_img:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: focus_box
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_sf_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

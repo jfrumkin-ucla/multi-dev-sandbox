@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+id: yes_no
+label: Yes/No
+category: General
+likert: false
+options: |
+  Yes: Yes
+  No: No

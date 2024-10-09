@@ -1,0 +1,94 @@
+uuid: 42759e57-3599-4a7d-9a4b-4c177302edee
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.sf_basic_html
+  module:
+    - ckeditor
+    - editor_file
+third_party_settings:
+  editor_file:
+    status: true
+    scheme: public
+    directory: inline-files
+    extensions: 'txt zip xls xlsx doc docx pdf'
+    max_size: ''
+_core:
+  default_config_hash: uUboZ4GZV8yP3epIvHwxRmGRFhuTw-PzrTC6Yx8wZOc
+format: sf_basic_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Strike
+            - '-'
+            - RemoveFormat
+        -
+          name: Linking
+          items:
+            - Link
+            - Unlink
+            - Anchor
+        -
+          name: 'Lists and Align'
+          items:
+            - BulletedList
+            - NumberedList
+            - Indent
+            - Outdent
+            - '-'
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+        -
+          name: 'Description List'
+          items:
+            - DescriptionList
+            - DescriptionTerm
+            - descriptionValue
+        -
+          name: Tools
+          items:
+            - Undo
+            - Redo
+            - Source
+        -
+          name: 'Full Screen'
+          items:
+            - Maximize
+        -
+          name: Styles
+          items:
+            - Styles
+        -
+          name: Media
+          items:
+            - DrupalMediaLibrary
+        -
+          name: 'Special Elements'
+          items:
+            - HorizontalRule
+            - Blockquote
+            - Table
+            - SpecialChar
+            - '-'
+  plugins:
+    autosave:
+      enable: 1
+    stylescombo:
+      styles: "p|Normal\r\np.lead|Lead Copy\r\nh2|Heading 2\r\nh3|Heading 3\r\nh4|Heading 4\r\nh5|Heading 5\r\nh2.heading--bar|Heading 2 Bar\r\nh2.heading--highlight|Heading 2 Highlight\r\nh2.heading--ribbon-branding|Heading 2 Ribbon\r\nh2.heading--ribbon-highlight|Heading 2 Ribbon Highlight\r\np.u-clear|Clear Aligns\r\na.btn.btn--primary|Button Primary\r\na.btn.btn--secondary|Button Secondary\r\na.btn.btn--invert|Button Inverted\r\na.icon-link.icon-link--internal|Arrow Link\r\na.icon-link.icon-link--download|Download Link\r\na.icon-link.icon-link--external|External Link\r\ndiv.alert|Alert\r\ndiv.alert.alert--success|Alert - Success\r\ndiv.alert.alert--warning|Alert - Warning\r\ndiv.alert.alert--error|Alert - Error\r\nblockquote.pullquote|Pullquote\r\nblockquote.pullquote.u-align--left.u-width--half|Pullquote - Left\r\nblockquote.pullquote.u-align--right.u-width--half|Pullquote - Right\r\nul.list--link|Link List\r\nul.list--link-icon|Link List with Icons\r\nul.list--flush|Flush List\r\nul.list--pipe|Pipe List\r\nul.list--wraparound|Wraparound List (Bulleted)\r\nol.list--wraparound|Wraparound List (Numbered)\r\nol.list--upper-roman|Upper Roman List\r\nol.list--upper-alpha|Upper Alpha List\r\nol.list--lower-roman|Lower Roman List\r\nol.list--lower-alpha|Lower Alpha List\r\nol.list--none|No Marker List\r\ntable.table|Data Table Striped Rows\r\ntable.table--plain|Data Table Plain\r\ndiv.label.label--primary|UCLA Blue Label\r\ndiv.label.label--gray|Basic Gray Label\r\ndiv.label.label--secondary|UCLA Gold Label\r\ndiv.label.label--outline|UCLA Blue Outline Label"
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: '3 MB'
+  max_dimensions:
+    width: null
+    height: null

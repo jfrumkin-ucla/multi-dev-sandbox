@@ -1,0 +1,36 @@
+<div class="banner--ribbon-text">
+
+  <div class="banner--ribbon">
+    <div class="banner--ribbon__image">
+      {{ image }}
+    </div>
+
+    {% if title %}
+      <div class="banner--ribbon__body">
+        <div class="banner--ribbon__body-inner">
+          <div class="banner--ribbon__brand">
+            <h2 class="banner--ribbon__title">{{ title }}</h2>
+            {% if not text and link.url and link.title %}
+              <div class="banner--text__button-group">
+                <a href="{{ link.url }}" class="banner--text__button">{{ link.title }}</a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+  {% if text %}
+    <div class="banner--text">
+      <div class="banner--text__body">
+        {{ text }}
+        <div class="banner--text__button-group">
+          {% if link.url and link.title %}
+            <a href="{{ link.url }}" class="banner--text__button">{{ link.title }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>

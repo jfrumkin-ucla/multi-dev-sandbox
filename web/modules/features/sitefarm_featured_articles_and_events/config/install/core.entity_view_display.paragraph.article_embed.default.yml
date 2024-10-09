@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.article_embed.field_article
+    - paragraphs.paragraphs_type.article_embed
+id: paragraph.article_embed.default
+targetEntityType: paragraph
+bundle: article_embed
+mode: default
+content:
+  field_article:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: featured_article
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

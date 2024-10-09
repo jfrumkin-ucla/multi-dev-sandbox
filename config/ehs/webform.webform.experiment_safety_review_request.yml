@@ -1,0 +1,449 @@
+uuid: 4f1b4c50-394e-43d0-9de7-0569be30b699
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 36
+template: false
+archive: false
+id: experiment_safety_review_request
+title: 'Experiment Safety Review Request'
+description: ''
+categories: {  }
+elements: |-
+  your_name:
+    '#type': webform_name
+    '#title': 'Your Name'
+    '#title__access': false
+    '#middle__access': false
+    '#suffix__access': false
+    '#degree__access': false
+    '#required': true
+  your_uid:
+    '#type': number
+    '#title': 'Your UID'
+    '#placeholder': 'Please enter your 9 digit UID'
+    '#required': true
+  when_do_you_intend_to_begin_your_setup_experiment_:
+    '#type': date
+    '#title': 'When do you intend to begin your setup/experiment?'
+    '#date_date_format': ''
+    '#required': true
+  principal_investigator_pi_name:
+    '#type': textfield
+    '#title': 'Principal Investigator (PI) Name'
+    '#required': true
+  principal_investigator_pi_uid:
+    '#type': number
+    '#title': 'Principal Investigator (PI) UID'
+    '#required': true
+  will_there_be_any_other_research_group_s_collaborating_in_this_e:
+    '#type': radios
+    '#title': 'Will there be any other research group(s) collaborating in this experiment?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#required': true
+  list_the_other_groups_collaborating_on_this_experiment:
+    '#type': textarea
+    '#title': 'List the other groups collaborating on this experiment'
+    '#states':
+      visible:
+        ':input[name="will_there_be_any_other_research_group_s_collaborating_in_this_e"]':
+          value: 'yes'
+    '#required': true
+  building_and_lab_room_number_where_experiment_will_be_carried_ou:
+    '#type': textarea
+    '#title': 'Building and lab room number where experiment will be carried out'
+    '#required': true
+  department_name:
+    '#type': textfield
+    '#title': 'Department Name'
+    '#required': true
+  list_lab_members_last_name_first_name_who_are_involved_in_settin:
+    '#type': textarea
+    '#title': 'List lab members (Last Name, First Name) who are involved in setting up this experiment. Include email address for each member.'
+  is_it_the_first_time_this_type_of_set_up_experiment_will_be_done:
+    '#type': radios
+    '#title': 'Is it the first time this type of set-up/experiment will be done in your lab?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#options_display': side_by_side
+    '#required': true
+  has_this_type_of_set_up_experiment_been_done_elsewhere_:
+    '#type': radios
+    '#title': 'Has this type of set-up/experiment been done elsewhere?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#options_display': side_by_side
+    '#required': true
+  will_chemicals_and_or_compressed_gases_be_used_in_this_set_up_ex:
+    '#type': radios
+    '#title': 'Will chemicals and/or compressed gases be used in this set-up/experiment?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#options_display': side_by_side
+    '#required': true
+  list_chemicals_and_or_compressed_gases_used:
+    '#type': textarea
+    '#title': 'List chemicals and/or compressed gases used'
+    '#states':
+      visible:
+        ':input[name="will_chemicals_and_or_compressed_gases_be_used_in_this_set_up_ex"]':
+          value: 'yes'
+    '#required': true
+  will_biological_materials_be_used_in_this_set_up_experiment_:
+    '#type': radios
+    '#title': 'Will biological materials be used in this set-up/experiment?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#options_display': side_by_side
+    '#required': true
+  list_biological_materials_used:
+    '#type': textarea
+    '#title': 'List biological materials used'
+    '#states':
+      visible:
+        ':input[name="will_biological_materials_be_used_in_this_set_up_experiment_"]':
+          value: 'yes'
+    '#required': true
+  will_lasers_be_used_in_this_set_up_experiment_:
+    '#type': radios
+    '#title': 'Will lasers be used in this set-up/experiment?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#options_display': side_by_side
+    '#required': true
+  list_types_of_lasers_used_please_specify_class_power_output_wave:
+    '#type': textarea
+    '#title': 'List types of lasers used (please specify: Class, power output & wavelength)'
+    '#states':
+      visible:
+        ':input[name="will_lasers_be_used_in_this_set_up_experiment_"]':
+          value: 'yes'
+    '#required': true
+  will_radioactive_materials_be_used_in_this_set_up_experiment_:
+    '#type': radios
+    '#title': 'Will radioactive materials be used in this set-up/experiment?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#required': true
+  list_types_of_radioactive_materials_used:
+    '#type': textarea
+    '#title': 'List types of radioactive materials used'
+    '#states':
+      visible:
+        ':input[name="will_radioactive_materials_be_used_in_this_set_up_experiment_"]':
+          value: 'yes'
+    '#required': true
+  will_radiation_producing_machines_be_used_in_this_set_up_experim:
+    '#type': radios
+    '#title': 'Will radiation-producing machines be used in this set-up/experiment?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#required': true
+  list_type_of_radiation_producing_machines_used:
+    '#type': textarea
+    '#title': 'List type of radiation-producing machines used'
+    '#states':
+      visible:
+        ':input[name="will_radiation_producing_machines_be_used_in_this_set_up_experim"]':
+          value: 'yes'
+    '#required': true
+  what_is_are_the_operating_temperature_s_:
+    '#type': textarea
+    '#title': 'What is/are the operating temperature(s)?'
+    '#required': true
+  will_the_set_up_experiment_involve_autoclaves_:
+    '#type': radios
+    '#title': 'Will the set-up/experiment involve autoclaves?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#options_display': side_by_side
+    '#required': true
+  will_the_set_up_experiment_involve_open_flames_:
+    '#type': radios
+    '#title': 'Will the set-up/experiment involve open flames?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#required': true
+  will_the_set_up_experiment_involve_high_voltage_:
+    '#type': radios
+    '#title': 'Will the set-up/experiment involve high voltage?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#options_display': side_by_side
+    '#required': true
+  will_the_set_up_experiment_involve_hazardous_fumes_:
+    '#type': radios
+    '#title': 'Will the set-up/experiment involve hazardous fumes?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#options_display': side_by_side
+    '#required': true
+  will_the_set_up_experiment_involve_pressure_vessels_:
+    '#type': radios
+    '#title': 'Will the set-up/experiment involve pressure vessels?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#options_display': side_by_side
+    '#required': true
+  will_the_experimental_set_up_need_seismic_restraining_:
+    '#type': radios
+    '#title': 'Will the experimental set-up need seismic restraining?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#options_display': side_by_side
+    '#required': true
+  will_the_set_up_experiment_be_conducted_inside_a_fume_hood_or_ot:
+    '#type': radios
+    '#title': 'Will the set-up/experiment be conducted inside a fume hood (or other engineering controls such as glove box)?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+    '#required': true
+  list_the_personal_protective_equipment_ppe_intended_for_use_in_t:
+    '#type': textarea
+    '#title': 'List the Personal Protective Equipment (PPE) intended for use in this set-up/experiment'
+    '#required': true
+  provide_a_brief_summary_or_abstract_of_the_planned_experiment_be:
+    '#type': textarea
+    '#title': 'Provide a brief summary or abstract of the planned experiment below.'
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: 'Thank you!'
+  confirmation_message: "<p>SUBMISSION SUCCESSFUL</p>\r\n\r\n<p>Thank you for submitting your set-up review questionnaire.&nbsp;<br />\r\n<br />\r\n<a href=\"https://www.ehs.ucla.edu/request-consultation\">Return to the Consultations page</a></p>"
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: laboratorysafety@ehs.ucla.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

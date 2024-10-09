@@ -1,0 +1,38 @@
+uuid: af7d0810-c0ee-4cf2-ae4e-ceb26d3d3b96
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sf_call_to_action:fab6f42f-e5b1-4b76-9d97-4eedd3e44439'
+  module:
+    - block_content
+    - block_style_plugins
+    - user
+  theme:
+    - siteden_surface
+third_party_settings:
+  block_style_plugins:
+    full_width:
+      full_width: 0
+id: siteden_surface_ctapleaseloginusingyouruclalogonidjbruinucla.edu
+theme: siteden_surface
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:fab6f42f-e5b1-4b76-9d97-4eedd3e44439'
+settings:
+  id: 'block_content:fab6f42f-e5b1-4b76-9d97-4eedd3e44439'
+  label: 'CTA: Please log in using your UCLA Logon ID [jbruin@ucla.edu]. '
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
