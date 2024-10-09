@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - media
-id: media.hero_banner_molecule_image
-label: 'Hero Banner Molecule Image'
-targetEntityType: media
-cache: true

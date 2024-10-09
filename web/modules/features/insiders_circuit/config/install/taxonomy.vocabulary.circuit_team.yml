@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Circuit Team'
-vid: circuit_team
-description: '<em>Teams</em> for The Circuit on IT Insiders.'
-weight: 0

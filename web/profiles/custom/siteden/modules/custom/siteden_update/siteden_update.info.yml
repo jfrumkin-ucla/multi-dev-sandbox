@@ -1,9 +1,0 @@
-name: 'SiteDen Update'
-type: module
-description: 'Provides update hook functionality for SiteDen'
-core_version_requirement: ^9 || ^10
-package: 'SiteDen'
-
-dependencies:
-  - features
-  - sitefarm_core

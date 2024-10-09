@@ -1,7 +1,0 @@
-langcode: en
-status: false
-dependencies: {  }
-_core:
-formId: user_pass
-captchaType: default
-label: user_pass

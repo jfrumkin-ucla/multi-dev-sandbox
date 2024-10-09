@@ -1,8 +1,0 @@
-uuid: 3f0a5c89-7b15-4311-8454-7d7199473dfe
-langcode: en
-status: true
-dependencies: {  }
-name: TPRM-Scope
-vid: gcr_scope
-description: 'Scope of agreement'
-weight: 0

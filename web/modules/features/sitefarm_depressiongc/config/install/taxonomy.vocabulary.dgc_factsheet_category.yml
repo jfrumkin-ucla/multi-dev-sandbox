@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Fact Sheet Category'
-vid: dgc_factsheet_category
-description: 'Categories for the fact sheets'
-weight: 0

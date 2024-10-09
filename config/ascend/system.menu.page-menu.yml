@@ -1,8 +1,0 @@
-uuid: f6b5a677-0564-4be3-9ef9-05147effc38c
-langcode: en
-status: true
-dependencies: {  }
-id: page-menu
-label: 'Page Menu'
-description: 'A menu for creating sub navigation in site sections. Left hand nav comes from here.'
-locked: false

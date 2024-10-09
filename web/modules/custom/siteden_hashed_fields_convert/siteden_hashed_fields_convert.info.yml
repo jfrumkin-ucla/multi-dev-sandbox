@@ -1,5 +1,0 @@
-name: 'Siteden Hashed Fields Convert'
-type: module
-description: 'Converts fields with hashed revision tables to shorter length fields'
-package: SiteDen
-core_version_requirement: ^9.1 || ^10

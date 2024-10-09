@@ -1,8 +1,0 @@
-uuid: 4a55050b-be51-49c5-ae18-a1d129e4590f
-langcode: en
-status: true
-dependencies: {  }
-id: hritso-footer
-label: 'HRITSO footer'
-description: ''
-locked: false

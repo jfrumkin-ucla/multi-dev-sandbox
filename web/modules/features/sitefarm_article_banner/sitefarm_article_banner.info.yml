@@ -1,6 +1,0 @@
-name: 'Article Banner'
-description: 'Brings in configs for article embed secondary, and article banner'
-type: module
-core_version_requirement: '^9.4 || ^10'
-version: '1.4'
-package: SiteFarm

@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-_core:
-id: sf_call_to_action
-label: 'Call to Action'
-revision: 0
-description: 'An block with a light gray background, some text, and a linked button.'

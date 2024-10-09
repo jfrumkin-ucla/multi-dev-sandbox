@@ -1,9 +1,0 @@
-name: 'Siteden Classrooms'
-type: module
-description: 'Classroom Conent type & Classroom Search View'
-package: SiteDen
-core_version_requirement: ^9.1 || ^10
-dependencies:
-  - better_exposed_filters:better_exposed_filters
-  - views_ef_fieldset:views_ef_fieldset
-  - single_content_sync:single_content_sync

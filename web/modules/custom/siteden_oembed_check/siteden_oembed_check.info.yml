@@ -1,6 +1,0 @@
-name: 'Siteden oEmbed Resource Validator'
-type: module
-description: 'Validates oEmbed resources on the site'
-package: 'Siteden'
-version: '1.0.0'
-core_version_requirement: ^9 || ^10

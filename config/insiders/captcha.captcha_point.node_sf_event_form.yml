@@ -1,7 +1,0 @@
-uuid: 9b31baef-0b9f-4a0e-b9ba-1fde483b64eb
-langcode: en
-status: false
-dependencies: {  }
-formId: node_sf_event_form
-captchaType: default
-label: node_sf_event_form

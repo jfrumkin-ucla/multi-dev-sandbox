@@ -1,7 +1,0 @@
-name: CkEditor Layout Columns
-type: module
-description: Implements the CKEditor Layout Columns widget plugin
-core_version_requirement: ^9 || ^10
-package: CKEditor
-dependencies:
-  - ckeditor

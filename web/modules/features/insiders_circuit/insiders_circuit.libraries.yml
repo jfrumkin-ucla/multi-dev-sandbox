@@ -1,7 +1,0 @@
-# insiders_circuit.libraries.yml
-circuit:
-  version: 1.x
-  css:
-    theme:
-      css/circuit.css: {}
-

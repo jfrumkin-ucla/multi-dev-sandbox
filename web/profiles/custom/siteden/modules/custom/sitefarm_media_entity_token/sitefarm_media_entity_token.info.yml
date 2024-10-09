@@ -1,7 +1,0 @@
-name: 'SiteFarm Media Entity Token'
-type: module
-description: 'Create custom tokens for url to media entity image and image info'
-core_version_requirement: ^9 || ^10
-package: 'SiteFarm'
-dependencies:
-  - token

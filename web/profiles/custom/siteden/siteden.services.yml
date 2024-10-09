@@ -1,4 +1,0 @@
-services:
-  siteden.profile_install:
-    class: Drupal\siteden\ProfileInstall
-    arguments: ['@entity_type.manager', '@module_installer']

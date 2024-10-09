@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Newsroom Categories'
-vid: dgc_newsroom_categories
-description: 'Categories for the newsroom stories.'
-weight: 0

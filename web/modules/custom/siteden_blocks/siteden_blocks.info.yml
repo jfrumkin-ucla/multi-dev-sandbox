@@ -1,6 +1,0 @@
-name: 'Siteden Blocks'
-type: module
-description: 'Provides custom blocks as needed for SiteDen sites.'
-package: 'Siteden'
-version: '1.0.0'
-core_version_requirement: ^9 || ^10

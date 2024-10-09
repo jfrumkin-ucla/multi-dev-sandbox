@@ -1,8 +1,0 @@
-uuid: df948f36-93d2-4f10-b8d5-8f3ac4cc3033
-langcode: en
-status: true
-dependencies: {  }
-name: 'Funding Opportunity Type'
-vid: funding_opportunity_type
-description: 'Used to categorize Funding Opportunities'
-weight: 0

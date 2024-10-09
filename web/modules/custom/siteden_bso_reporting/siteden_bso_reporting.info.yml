@@ -1,6 +1,0 @@
-name: 'Siteden BSO Report Concerning Behavior Form'
-type: module
-description: 'Provides custom block form for reporting concerning behavior.'
-package: 'Siteden'
-version: '1.0.0'
-core_version_requirement: ^9 || ^10

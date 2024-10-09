@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-_core:
-name: 'Photo Gallery Categories'
-vid: sf_photo_gallery_categories
-description: 'Categories forPhoto Galleries'
-weight: 0

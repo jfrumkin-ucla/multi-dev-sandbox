@@ -1,4 +1,0 @@
-bundle: sitefarm
-excluded:
-  - core.entity_view_mode.media.focal_link
-required: true

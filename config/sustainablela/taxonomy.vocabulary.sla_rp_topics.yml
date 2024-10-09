@@ -1,8 +1,0 @@
-uuid: 63c864e3-cb49-4f48-8647-f8448e36cd4b
-langcode: en
-status: true
-dependencies: {  }
-name: 'Research Project Topics'
-vid: sla_rp_topics
-description: 'Topics for Research Projects'
-weight: 0

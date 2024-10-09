@@ -1,4 +1,0 @@
-services:
-  siteden_update.update:
-    class: Drupal\siteden_update\UpdateHelper
-    arguments: ['@features.manager', '@module_installer']

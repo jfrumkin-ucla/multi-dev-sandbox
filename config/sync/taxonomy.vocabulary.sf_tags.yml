@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-_core:
-name: Tags
-vid: sf_tags
-description: 'Keywords which help to classify an piece of content.'
-weight: 0

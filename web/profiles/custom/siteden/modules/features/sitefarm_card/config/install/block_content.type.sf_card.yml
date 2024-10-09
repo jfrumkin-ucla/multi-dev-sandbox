@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: sf_card
-label: Card
-revision: 0
-description: 'A card block with an image, text, button, and different style options'

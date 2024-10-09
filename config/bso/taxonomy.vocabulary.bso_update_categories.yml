@@ -1,8 +1,0 @@
-uuid: 4823cce2-87aa-4839-b84f-970ee10a28e1
-langcode: en
-status: true
-dependencies: {  }
-name: 'Incident Categories'
-vid: bso_update_categories
-description: 'The categories for status updates'
-weight: 0

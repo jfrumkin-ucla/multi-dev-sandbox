@@ -1,5 +1,0 @@
-path: 'public://css_editor/siteden_surface.css'
-enabled: null
-css: "/* Styles for Unit Leaders in Unit term views */\r\n\r\n.view-id-taxonomy_term .view-content:first-child .vm-teaser {\r\n  background: #cccccc;\r\n}"
-plaintext_enabled: false
-autopreview_enabled: false

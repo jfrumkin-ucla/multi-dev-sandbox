@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - media
-id: media.landscape_4x3
-label: 'Landscape 4x3'
-targetEntityType: media
-cache: true

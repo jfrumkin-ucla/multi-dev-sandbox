@@ -1,7 +1,0 @@
-uuid: a1e8b0aa-72c0-49d2-b28d-53e87f9f201d
-langcode: en
-status: false
-dependencies: {  }
-formId: _views_exposed_form_
-captchaType: default
-label: views_exposed_form

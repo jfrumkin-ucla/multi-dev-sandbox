@@ -1,6 +1,0 @@
-siteden.embed_js:
-  title: 'Embed JS'
-  route_name: siteden_embed_js.embed_js_form
-  description: 'Configure and embed external JavaScript files and iframes into application pages.'
-  parent: sitefarm.admin_index
-  weight: 1

@@ -1,7 +1,0 @@
-uuid: 07b31b8e-71aa-4384-8265-3cc44eb5f7b1
-langcode: en
-status: false
-dependencies: {  }
-formId: node_sf_person_form
-captchaType: default
-label: node_sf_person_form

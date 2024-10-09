@@ -1,7 +1,0 @@
-uuid: 4d84f665-dc6a-4728-a999-963f4b29bb5e
-langcode: en
-status: false
-dependencies: {  }
-formId: node_sf_photo_gallery_form
-captchaType: default
-label: node_sf_photo_gallery_form

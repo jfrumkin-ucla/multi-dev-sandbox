@@ -1,6 +1,0 @@
-name: 'Siteden Anonymous Node Author Controller'
-type: module
-description: 'Provides the ability to override node authors as anonymous in favor of a selectable user account.'
-package: 'Siteden'
-version: '1.0.0'
-core_version_requirement: ^9 || ^10

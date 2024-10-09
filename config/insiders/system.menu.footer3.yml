@@ -1,8 +1,0 @@
-uuid: db8ec726-b559-45f4-9772-4d59d3be4a56
-langcode: en
-status: true
-dependencies: {  }
-id: footer3
-label: Footer3
-description: 'Site information links'
-locked: false

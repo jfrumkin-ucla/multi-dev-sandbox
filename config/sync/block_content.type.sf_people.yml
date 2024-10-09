@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-_core:
-id: sf_people
-label: 'People grid'
-revision: 0
-description: 'Use this block type to create a grid of people, for shorter ad hoc lists that do not need to integrate with the Person content type.'

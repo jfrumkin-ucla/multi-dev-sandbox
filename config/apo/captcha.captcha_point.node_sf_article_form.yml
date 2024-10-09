@@ -1,7 +1,0 @@
-uuid: e646121c-5ed2-4dbb-b2f1-72eff1cb66e0
-langcode: en
-status: false
-dependencies: {  }
-formId: node_sf_article_form
-captchaType: default
-label: node_sf_article_form

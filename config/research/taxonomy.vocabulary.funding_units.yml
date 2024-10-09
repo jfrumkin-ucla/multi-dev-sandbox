@@ -1,8 +1,0 @@
-uuid: d094b8cb-b1f6-451e-9879-528760be2cf2
-langcode: en
-status: true
-dependencies: {  }
-name: 'Funding Opportunity Administrative Units'
-vid: funding_units
-description: 'Used to categorize Funding Opportunities by administrative unit'
-weight: 0

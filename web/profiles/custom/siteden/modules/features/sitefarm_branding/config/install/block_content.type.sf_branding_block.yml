@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: sf_branding_block
-label: 'Branding Block'
-revision: 0
-description: 'Allows an SVG image upload and title. Use for site logo and title and to replace logo and title on micro sites.'

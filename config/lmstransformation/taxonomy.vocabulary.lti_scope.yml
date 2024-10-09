@@ -1,8 +1,0 @@
-uuid: a8814ef7-599c-4c3f-9dd8-31c509424763
-langcode: en
-status: true
-dependencies: {  }
-name: 'LTI Scope'
-vid: lti_scope
-description: 'Scope of LTI apps'
-weight: 0

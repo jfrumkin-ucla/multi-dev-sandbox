@@ -1,8 +1,0 @@
-uuid: 9cc7264e-bf17-4e10-9aa0-1d2fe90d3adf
-langcode: en
-status: true
-dependencies: {  }
-id: photo_slider
-label: 'Photo Slider'
-revision: 0
-description: ''

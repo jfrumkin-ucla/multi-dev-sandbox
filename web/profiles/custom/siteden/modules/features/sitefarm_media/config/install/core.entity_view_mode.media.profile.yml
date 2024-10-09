@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - media
-id: media.profile
-label: Profile
-targetEntityType: media
-cache: true

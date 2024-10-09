@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - media
-id: media.photoswipe
-label: Photoswipe
-targetEntityType: media
-cache: true

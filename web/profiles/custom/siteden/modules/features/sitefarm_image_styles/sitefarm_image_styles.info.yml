@@ -1,8 +1,0 @@
-name: 'Image Styles'
-description: 'Base Image styles for SiteFarm features.'
-type: module
-core_version_requirement: '^9 || ^10'
-dependencies:
-  - 'drupal:image'
-  - 'focal_point:focal_point'
-package: SiteFarm

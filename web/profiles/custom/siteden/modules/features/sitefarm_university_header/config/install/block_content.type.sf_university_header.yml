@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: sf_university_header
-label: 'University Header'
-revision: 1
-description: 'Creates the topmost header bar with UCLA logo and departmental breadcrumb. Use for different departmental breadcrumbs in micro sites.'

@@ -1,8 +1,0 @@
-uuid: 8b2b5b90-1c3c-4139-baa0-8a3ff08f881b
-langcode: en
-status: true
-dependencies: {  }
-name: 'LTI Status'
-vid: lti_app_status
-description: 'Status of LTI Tool'
-weight: 0

@@ -1,5 +1,0 @@
-# Schema for the configuration files of the SiteDen Surface theme.
-
-siteden_surface.settings:
-  type: theme_settings
-  label: 'SiteDen Surface settings'

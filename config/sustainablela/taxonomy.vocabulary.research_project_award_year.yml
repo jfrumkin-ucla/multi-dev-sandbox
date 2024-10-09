@@ -1,8 +1,0 @@
-uuid: cac15556-7b85-44a4-be43-ad3ffe70a1cc
-langcode: en
-status: true
-dependencies: {  }
-name: 'Research Project Award Year'
-vid: research_project_award_year
-description: 'Used to categorize Research Projects by year'
-weight: 0

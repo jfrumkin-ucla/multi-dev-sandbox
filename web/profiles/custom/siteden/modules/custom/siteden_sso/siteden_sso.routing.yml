@@ -1,6 +1,0 @@
-siteden_sso.admin_login:
-  path: '/admin_login'
-  defaults:
-    _controller: '\Drupal\siteden_sso\Controller\LoginController::backdoorLogin'
-  requirements:
-    _user_is_logged_in: 'FALSE'

@@ -1,8 +1,0 @@
-uuid: a500edab-ce0e-440d-917f-46d8175d40d0
-langcode: en
-status: true
-dependencies: {  }
-id: footer3
-label: footer3
-description: 'footer navigation third column'
-locked: false

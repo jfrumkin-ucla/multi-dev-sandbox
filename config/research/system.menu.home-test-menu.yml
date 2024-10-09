@@ -1,8 +1,0 @@
-uuid: f113acbb-4f20-47f1-b4a2-fa525f5ea18b
-langcode: en
-status: true
-dependencies: {  }
-id: home-test-menu
-label: 'Home Test Menu'
-description: 'Main menu for Home Test microsite'
-locked: false

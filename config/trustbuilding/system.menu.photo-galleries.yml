@@ -1,8 +1,0 @@
-uuid: 5c8358bc-a565-4479-92a9-774f4f414b74
-langcode: en
-status: true
-dependencies: {  }
-id: photo-galleries
-label: 'Photo Galleries'
-description: ''
-locked: false

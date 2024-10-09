@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Fact Sheet Tags'
-vid: dgc_factsheet_tags
-description: 'Tags for fact sheets'
-weight: 0

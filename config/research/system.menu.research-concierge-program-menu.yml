@@ -1,8 +1,0 @@
-uuid: c36f737e-c921-4060-a45b-66fe1055d50b
-langcode: en
-status: true
-dependencies: {  }
-id: research-concierge-program-menu
-label: 'Research Concierge Program menu'
-description: 'Main menu for RCP microsite'
-locked: false

@@ -1,8 +1,0 @@
-{
-  "name": "ucdavis/ck_columns",
-  "type": "drupal-module",
-  "description": "Implements the CKEditor Columns plugin",
-  "keywords": ["Drupal"],
-  "minimum-stability": "dev",
-  "require": { }
-}
