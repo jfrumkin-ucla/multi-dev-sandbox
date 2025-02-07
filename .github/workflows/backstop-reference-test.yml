@@ -47,10 +47,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: html_reports
-          path: backstop_test/report
-
+          path: backstop_test/report/report.zip
+          overwrite: true
+      
       - name: Save logs (only if failed)
         uses: actions/upload-artifact@v4
         with:
           name: test_logs
-          path: backstop_test/logs
+          path: backstop_test/logs/log.zip
+          overwrite: true
