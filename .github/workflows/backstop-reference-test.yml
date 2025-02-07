@@ -56,8 +56,8 @@ jobs:
           include-hidden-files: true
 
       - name: "set port for backstop"
-        run: BACKSTOP_REMOTE_HTTP_PORT=3000 backstop remote
-
+        run: BACKSTOP_REMOTE_HTTP_PORT=3000
+        
       - name: "debug backstop"
         run: backstop openReport
         continue-on-error: true
