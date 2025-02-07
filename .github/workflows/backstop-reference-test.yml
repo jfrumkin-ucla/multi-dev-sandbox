@@ -16,6 +16,9 @@ jobs:
   reference-test:
     name: reference-test
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backstop_test
     permissions:
       contents: write
       pull-requests: write
