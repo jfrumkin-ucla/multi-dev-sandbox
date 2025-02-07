@@ -16,6 +16,9 @@ jobs:
   reference-test:
     name: reference-test
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,5 +41,6 @@ jobs:
 
       - name: "debug test"
         run: backstop openReport
+        continue-on-error: true
 
 
