@@ -54,10 +54,12 @@ jobs:
           name: html_reports
           path: backstop_test
           overwrite: true
-      
+          include-hidden-files: true
+
       - name: Save logs (only if failed)
         uses: actions/upload-artifact@v4
         with:
           name: test_logs
           path: backstop_test
           overwrite: true
+          include-hidden-files: true
