@@ -16,10 +16,10 @@
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "Visual Regression Testing Sample",
+      "label": "BackstopJS Homepage",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "http://localhost:4200",
-      "referenceUrl": "",
+      "url": "https://garris.github.io/BackstopJS/",
+      "referenceUrl": "https://garris.github.io/BackstopJS/",
       "readyEvent": "",
       "readySelector": "",
       "delay": 0,
