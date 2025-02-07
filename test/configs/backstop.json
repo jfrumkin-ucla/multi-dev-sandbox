@@ -18,8 +18,8 @@
     {
       "label": "BackstopJS Homepage",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "https://garris.github.io/BackstopJS/",
-      "referenceUrl": "",
+      "url": "https://apo.ucla.edu/",
+      "referenceUrl": "https://dev-ucla-siteden-apo.pantheonsite.io/",
       "readyEvent": "",
       "readySelector": "",
       "delay": 0,
