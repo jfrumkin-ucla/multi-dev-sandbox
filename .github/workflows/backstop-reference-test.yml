@@ -15,7 +15,6 @@ env:
 defaults:
   run:
     shell: bash
-    working-directory: backstop_test
 
 jobs:
   reference-test:
