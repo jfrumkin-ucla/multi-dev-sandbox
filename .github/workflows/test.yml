@@ -1,9 +1,9 @@
-on:
-  push: # Run this action when push event triggers.
-    branches: # Run this action on specified branches
-      - basic-framework # Branch name
+name: Bstop test
 
-name: Run BackstopJS test cases # Name of the action
+on:
+  workflow_dispatch:
+  workflow_call:
+
 jobs:
   Run-BackstopJS-TestCase:
     name: Run BackstopJS test Case #
