@@ -274,7 +274,7 @@ module.exports = {
       return writeReport(config, report).then(function (results) {
         for (let i = 0; i < results.length; i++) {
           if (results[i].state !== 'fulfilled') {
-            logger.error('Failed writing report with error: ' + results[i].value);
+            logger.error('Failed writing report with error: ' + results[i].value + ' - ' + config.projectPath);
           }
         }
 
