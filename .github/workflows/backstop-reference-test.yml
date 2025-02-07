@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./backstop_test
+        working-directory: backstop_test
     permissions:
       contents: write
       pull-requests: write
