@@ -50,9 +50,10 @@ jobs:
         continue-on-error: true
 
       - name: Save HTML reports
+        - run: echo hello > backstop_test/world.txt
         uses: actions/upload-artifact@v4
         with:
-          path: backstop_test/t.zip
+          path: backstop_test/world.txt
           include-hidden-files: true
 
 #--      - name: Save logs (only if failed)
