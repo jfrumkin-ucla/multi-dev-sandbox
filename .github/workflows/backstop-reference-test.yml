@@ -37,6 +37,6 @@ jobs:
         continue-on-error: true
 
       - name: "debug test"
-        run: npm run backstop openReport
+        run: backstop openReport
 
 
