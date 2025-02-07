@@ -41,12 +41,12 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: "execute test"
-        run: npm run reference-test
+      - name: "install backstop"
+        run: npm install -g backstopjs
         continue-on-error: true
 
-      - name: "debug test"
-        run: echo hello > backstop_test/world.txt
+      - name: "execute test"
+        run: npm run reference-test
         continue-on-error: true
 
       - name: Save HTML reports
@@ -55,6 +55,9 @@ jobs:
           path: backstop_test/world.txt
           include-hidden-files: true
 
+      - name: "debug backstop"
+        run: backstop openReport
+        continue-on-error: true
 #--      - name: Save logs (only if failed)
 #        uses: actions/upload-artifact@v4
 #        with:
