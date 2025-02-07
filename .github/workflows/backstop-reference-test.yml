@@ -46,15 +46,17 @@ jobs:
         continue-on-error: true
 
       - name: Save HTML reports
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: html_reports
-          path: backstop_test/report/report.zip
-          overwrite: true
+          path: backstop_test/report
+          retention-days: 2
       
       - name: Save logs (only if failed)
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: test_logs
-          path: backstop_test/logs/log.zip
-          overwrite: true
+          path: backstop_test/logs
+          retention-days: 2
