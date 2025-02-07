@@ -43,4 +43,14 @@ jobs:
         run: backstop openReport
         continue-on-error: true
 
+      - name: Save HTML reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: html_reports
+          path: backstop_test/report
 
+      - name: Save logs (only if failed)
+        uses: actions/upload-artifact@v3
+        with:
+          name: test_logs
+          path: backstop_test/logs
