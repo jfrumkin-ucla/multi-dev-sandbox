@@ -3,7 +3,7 @@ name: Angular CI
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   pullrequest:
