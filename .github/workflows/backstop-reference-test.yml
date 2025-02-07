@@ -35,7 +35,7 @@ jobs:
       - name: "execute test"
         run: npm run reference-test
 
-        - name: "debug test"
-        run: backstop openReport
+      - name: "debug test"
+        run: npm run backstop openReport
 
 
