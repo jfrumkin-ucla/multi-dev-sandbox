@@ -1,7 +1,8 @@
-# SiteDen custom upstream for Pantheon
+# visual-regression-backstop-js-github-actions
 
-This is the repository for the custom upstream used for SiteDen sites hosted on Pantheon. Except in specific situations, code should not be directly modified here. 
+Simple example of a workflow with visual regression testing for a website.
 
-## Source repository
+This example assumes there is only one environment: prod
 
-Please see the source repository at https://github.com/uclait/web-services-siteden-drupal
+The outputs of the visual regression testing are available for devs to doublecheck if no failing regressions are introduced
+
